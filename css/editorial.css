@@ -21,6 +21,9 @@
   --manila-mute: #6b6860;
   --hairline: #d9d4c7;
   --gold: #e8a81c;          /* the garnish */
+  --blue-ghost: rgba(31, 131, 163, 0.48);  /* ephemera: reads as board, not nav */
+  --rust-ghost: rgba(193, 39, 29, 0.45);
+  --ink-ghost: rgba(107, 104, 96, 0.7);
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'Mulish', sans-serif;
   --mono: 'IBM Plex Mono', monospace;
@@ -68,7 +71,7 @@ a { color: inherit; }
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 2px;
-  color: var(--rust);
+  color: var(--rust-ghost);
   text-transform: uppercase;
 }
 
@@ -77,7 +80,7 @@ a { color: inherit; }
 .slugline {
   font-family: var(--mono);
   font-size: 12px;
-  color: var(--blue);
+  color: var(--blue-ghost);
   border-top: 1px solid var(--hairline);
   padding-top: 8px;
   display: flex;
@@ -122,7 +125,7 @@ a { color: inherit; }
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 2px;
-  color: var(--blue);
+  color: var(--blue-ghost);
 }
 
 /* ---------- the premise: body copy + handwritten margin note ---------- */
@@ -210,7 +213,7 @@ a { color: inherit; }
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 2px;
-  color: var(--rust);
+  color: var(--rust-ghost);
 }
 
 .pcard-cue {
@@ -625,7 +628,7 @@ a { color: inherit; }
   max-width: 24ch;
 }
 
-.case-codes { font-family: var(--mono); font-size: 12px; color: var(--blue); margin-bottom: 24px; }
+.case-codes { font-family: var(--mono); font-size: 12px; color: var(--blue-ghost); margin-bottom: 24px; }
 
 .case-media-row {
   display: grid;
@@ -640,7 +643,7 @@ a { color: inherit; }
 .figcap {
   font-family: var(--mono);
   font-size: 11px;
-  color: var(--ink-mute);
+  color: var(--ink-ghost);
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
@@ -677,7 +680,7 @@ a { color: inherit; }
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: 1px;
-  color: var(--rust);
+  color: var(--rust-ghost);
   padding-top: 4px;
   margin: 0;
 }
@@ -717,7 +720,7 @@ a { color: inherit; }
   margin: 10px 0 14px;
 }
 
-.file-count { font-family: var(--mono); font-size: 12px; color: var(--ink-mute); margin: 0; }
+.file-count { font-family: var(--mono); font-size: 12px; color: var(--ink-ghost); margin: 0; }
 
 .flatfile .tabrow { background: var(--paper-dim); }
 .flatfile .tabrow button { background: var(--paper); }
