@@ -249,6 +249,13 @@ a { color: inherit; }
   color: var(--blue);
 }
 
+/* hand-drawn cues: marker sketches, trimmed, on the card's white */
+img.pcard-cue {
+  height: 48px;
+  width: auto;
+  max-width: 100%;
+}
+
 .pcard-cue .cue-accent { stroke: var(--rust); }
 
 .pcard-title {
