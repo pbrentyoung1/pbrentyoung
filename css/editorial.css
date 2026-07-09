@@ -92,18 +92,25 @@ a { color: inherit; }
 /* golden garnish: the approval mark only */
 .slugline .ok, .contact .slugline span:last-child { color: var(--gold); }
 
-/* ---------- department mastheads (Oxford rule) ---------- */
-.dept-head {
-  border-top: 5px solid var(--ink);
-  padding-top: 3px;
-}
+/* ---------- department mastheads: the Oxford rule as Chartpak tape ----------
+   Two strips of crepe tape laid by hand — heavy over fine, slight skew,
+   uneven lengths, ruby lithographer's tape splices at the cutoffs. */
+.dept-head { position: relative; }
 
 .dept-head::before {
   content: "";
   display: block;
-  height: 1px;
-  background: var(--ink);
-  margin-bottom: 5px;
+  height: 12px;
+  margin: 0 -3px 7px -2px;   /* slight overhang past the margin — laid by hand */
+  transform: rotate(-0.14deg);
+  filter: drop-shadow(0 1px 1px rgba(43, 42, 39, 0.22));
+  background:
+    /* sheen across the heavy strip */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 75%) 0 0 / 100% 6px no-repeat,
+    /* heavy strip — ruby splice at the right cutoff */
+    linear-gradient(90deg, #1e1b17 0 calc(100% - 13px), rgba(193, 39, 29, 0.88) calc(100% - 13px) 100%) 0 0 / 100% 6px no-repeat,
+    /* fine strip, cut a little short — ruby splice at the left cutoff */
+    linear-gradient(90deg, rgba(193, 39, 29, 0.88) 0 9px, #1e1b17 9px 100%) 0 100% / calc(100% - 7px) 2px no-repeat;
 }
 
 .dept-row {
@@ -1363,8 +1370,13 @@ a { color: inherit; }
   padding: 56px 0 48px;
 }
 
-.contact .dept-head { border-top-color: var(--paper); }
-.contact .dept-head::before { background: var(--paper); }
+/* reversed masthead: white tape on the ink block, ruby still reads */
+.contact .dept-head::before {
+  filter: none;
+  background:
+    linear-gradient(90deg, var(--paper) 0 calc(100% - 13px), rgba(193, 39, 29, 0.9) calc(100% - 13px) 100%) 0 0 / 100% 6px no-repeat,
+    linear-gradient(90deg, rgba(193, 39, 29, 0.9) 0 9px, var(--paper) 9px 100%) 0 100% / calc(100% - 7px) 2px no-repeat;
+}
 .contact .dept-no { color: var(--blue-line); }
 
 .contact h2 {
