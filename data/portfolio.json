@@ -12,6 +12,8 @@
             "role": "Creative direction, brand design, motion graphics, and launch communications.",
             "craft": "Identity system, animated branding package, and a social announcement series — all built simply enough for volunteers to run after launch day.",
             "impact": "A launch-ready identity the congregation could own and operate from week one.",
+            "principle": "The right story, told the right way",
+            "essay": { "slug": "the-right-story-told-the-right-way", "title": "The Right Story, Told the Right Way" },
             "media": [
                 { "type": "video", "src": "assets/video/forge-sunlight_1.mp4", "poster": "assets/img/vlcsnap-2023-12-27-19h42m47s428.png", "caption": "FIG. 01 — BRAND MOTION PACKAGE" },
                 { "type": "video", "src": "assets/video/forge-announcements-3.mp4", "poster": "assets/img/vlcsnap-2023-12-27-19h48m07s257.png", "caption": "FIG. 02 — ANNOUNCEMENT SERIES" }
@@ -29,6 +31,7 @@
             "role": "Publication design, cover to cover: typography, layout system, and print production.",
             "craft": "A complete layout system — chapter openers, worksheets, and illustration placement — built to serve readers working through difficult material.",
             "impact": "A finished, printed workbook in use in trauma-care programs.",
+            "principle": "Design solves creative problems",
             "media": [
                 { "type": "image", "src": "assets/img/NAWCover.jpg", "poster": "assets/img/NAWCover.jpg", "caption": "FIG. 01 — COVER" },
                 { "type": "pdf", "src": "assets/pdf/NAW_Sample_Pages.pdf", "poster": "assets/img/NAWCover.jpg", "caption": "FIG. 02 — SAMPLE SPREADS (PDF)" }
@@ -46,6 +49,8 @@
             "role": "Creative director: built and ran the network end to end.",
             "craft": "Live YouTube events, a podcast, video series, mobile apps, and national event production — a full communications network from scratch.",
             "impact": "A national communications channel that connected field teams across the company.",
+            "principle": "Systems create creativity",
+            "essay": { "slug": "stop-calling-everything-a-project", "title": "Stop Calling Everything a Project" },
             "media": [
                 { "type": "video", "src": "assets/video/About WIRED IN by FSG.mp4", "poster": "assets/img/wiredInExplanation.jpg", "caption": "FIG. 01 — ABOUT WIRED IN" },
                 { "type": "video", "src": "assets/video/podcastCinematic.mp4", "poster": "assets/img/vlcsnap-2023-12-27-20h03m18s883.png", "caption": "FIG. 02 — PODCAST OPEN" }

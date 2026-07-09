@@ -186,6 +186,11 @@
           meta.appendChild(el("dt", "", esc(pair[0]).toUpperCase()));
           meta.appendChild(el("dd", "", esc(pair[1])));
         });
+      if (cs.principle) {
+        meta.appendChild(el("dt", "", "THE PRINCIPLE"));
+        meta.appendChild(el("dd", "", esc(cs.principle) +
+          (cs.essay ? ' &mdash; <a href="blog.html#' + esc(cs.essay.slug) + '">read the essay: &ldquo;' + esc(cs.essay.title) + '&rdquo;</a>' : "")));
+      }
       sec.appendChild(meta);
 
       sec.appendChild(el("div", "slugline",

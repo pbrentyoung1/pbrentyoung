@@ -144,6 +144,67 @@ a { color: inherit; }
   .premise-note { margin-top: 10px; }
 }
 
+/* ---------- first principles: the conviction cards ---------- */
+.principles { margin-top: 64px; }
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.pcard {
+  background: #ffffff;
+  border: 1px solid var(--hairline);
+  padding: 16px 16px 18px;
+}
+
+.pcard:nth-child(odd) { transform: rotate(-0.35deg); }
+.pcard:nth-child(even) { transform: rotate(0.3deg); }
+
+.pcard-no {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--rust);
+}
+
+.pcard-cue {
+  display: block;
+  margin: 14px 0 12px;
+  color: var(--blue);
+}
+
+.pcard-cue .cue-accent { stroke: var(--rust); }
+
+.pcard-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.pcard-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+@media (max-width: 759px) {
+  .principle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pcard { padding: 12px 12px 14px; }
+  .pcard-title { font-size: 16px; }
+  .pcard-text { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pcard { transform: none !important; }
+}
+
 /* ---------- header ---------- */
 .site-head {
   position: sticky;
