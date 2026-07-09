@@ -245,7 +245,7 @@ a { color: inherit; }
 
 .pcard-cue {
   display: block;
-  margin: 14px 0 12px;
+  margin: 14px auto 12px;
   color: var(--blue);
 }
 
