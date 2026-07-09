@@ -1,7 +1,7 @@
 ---
 title: The Creative Brief Is Ministry
 date: 2026-05-04
-topic: Systems & Workflow
+topic: Creative Leadership
 deck: The least glamorous document in your church might be the most pastoral one. A good brief is clarity, and clarity is care.
 ---
 

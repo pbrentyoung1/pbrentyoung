@@ -179,3 +179,26 @@ The future belongs to people who ask better questions before generating better a
 Not
 
 "Those were good tips."
+---
+
+# Article Structure
+
+Every article follows the beats defined in ARTICLE_TEMPLATE.md:
+
+Big Idea → Question → Problem → Stakes → Reframe → Guide → Before / After → First Step → See It In Practice → Keep Reading → Discussion Question.
+
+Structure serves the reader.
+
+Curiosity first. Answers second.
+
+---
+
+# Content Taxonomy
+
+Article topics must match the pillars in CONTENT_ROADMAP.md:
+
+Brand & Mission. Creative Leadership. Systems & Workflow. Craft. AI.
+
+Manifesto is reserved for cornerstone essays.
+
+Case studies live in the portfolio and each should name the first principle it illustrates.
