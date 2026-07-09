@@ -94,7 +94,9 @@ a { color: inherit; }
 
 /* ---------- department mastheads: the Oxford rule as Chartpak tape ----------
    Two strips of crepe tape laid by hand — heavy over fine, slight skew,
-   uneven lengths, ruby lithographer's tape splices at the cutoffs. */
+   uneven lengths. The cutoffs are made the lithographer's way: a taller
+   vertical piece of ruby tape laid over each end, its straight side edge
+   making the edit. */
 .dept-head { position: relative; }
 
 .dept-head::before {
@@ -107,10 +109,28 @@ a { color: inherit; }
   background:
     /* sheen across the heavy strip */
     linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 75%) 0 0 / 100% 6px no-repeat,
-    /* heavy strip — ruby splice at the right cutoff */
-    linear-gradient(90deg, #1e1b17 0 calc(100% - 13px), rgba(193, 39, 29, 0.88) calc(100% - 13px) 100%) 0 0 / 100% 6px no-repeat,
-    /* fine strip, cut a little short — ruby splice at the left cutoff */
-    linear-gradient(90deg, rgba(193, 39, 29, 0.88) 0 9px, #1e1b17 9px 100%) 0 100% / calc(100% - 7px) 2px no-repeat;
+    /* heavy strip */
+    linear-gradient(#1e1b17, #1e1b17) 0 0 / 100% 6px no-repeat,
+    /* fine strip, cut a little short */
+    linear-gradient(#1e1b17, #1e1b17) 0 100% / calc(100% - 7px) 2px no-repeat;
+}
+
+/* ruby lith tape: vertical pieces, taller than the rules, translucent —
+   the overlap over the black tape reads darker, the way rubylith does */
+.dept-head::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: -8px;
+  right: -9px;
+  height: 26px;
+  pointer-events: none;
+  transform: rotate(0.2deg);
+  background:
+    /* right cutoff: masks the end of the heavy strip */
+    linear-gradient(rgba(193, 39, 29, 0.68), rgba(193, 39, 29, 0.68)) 100% 0 / 10px 100% no-repeat,
+    /* left cutoff: masks the start of the fine strip */
+    linear-gradient(rgba(193, 39, 29, 0.68), rgba(193, 39, 29, 0.68)) 0 0 / 10px 100% no-repeat;
 }
 
 .dept-row {
@@ -1374,8 +1394,14 @@ a { color: inherit; }
 .contact .dept-head::before {
   filter: none;
   background:
-    linear-gradient(90deg, var(--paper) 0 calc(100% - 13px), rgba(193, 39, 29, 0.9) calc(100% - 13px) 100%) 0 0 / 100% 6px no-repeat,
-    linear-gradient(90deg, rgba(193, 39, 29, 0.9) 0 9px, var(--paper) 9px 100%) 0 100% / calc(100% - 7px) 2px no-repeat;
+    linear-gradient(var(--paper), var(--paper)) 0 0 / 100% 6px no-repeat,
+    linear-gradient(var(--paper), var(--paper)) 0 100% / calc(100% - 7px) 2px no-repeat;
+}
+
+.contact .dept-head::after {
+  background:
+    linear-gradient(rgba(193, 39, 29, 0.85), rgba(193, 39, 29, 0.85)) 100% 0 / 10px 100% no-repeat,
+    linear-gradient(rgba(193, 39, 29, 0.85), rgba(193, 39, 29, 0.85)) 0 0 / 10px 100% no-repeat;
 }
 .contact .dept-no { color: var(--blue-line); }
 
