@@ -12,10 +12,11 @@ const state = {
   visible: 12
 };
 
-// videos live on the media subdomain in production — the git deploy
+// videos live on the video subdomain in production — the git deploy
 // mirrors the repo, and assets/video/ is gitignored, so those files
-// only exist locally and on media.pbrentyoung.com (folder contents at root)
-const MEDIA_HOST = "https://media.pbrentyoung.com/";
+// only exist locally and on video.pbrentyoung.com (a standalone site
+// whose root is outside pbrentyoung.com's deploy-managed tree)
+const MEDIA_HOST = "https://video.pbrentyoung.com/";
 const isLocalHost = /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/.test(location.hostname) || location.protocol === "file:";
 
 function mediaSrc(src) {

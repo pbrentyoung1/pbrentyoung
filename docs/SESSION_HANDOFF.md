@@ -67,25 +67,27 @@ One legacy image could not be thumbnailed because ImageMagick reported an invali
 
 ## Video Hosting (RESOLVED 2026-07-10)
 
-Videos are self-hosted on the `media.pbrentyoung.com` subdomain, whose
-document root (`/media`) sits outside the deploy-managed tree, so mirror
-deploys cannot delete them.
+Videos are self-hosted on `video.pbrentyoung.com`, set up as a STANDALONE
+website in hPanel (not a subdomain of pbrentyoung.com), so its document
+root sits outside pbrentyoung.com's deploy-managed tree and mirror
+deploys cannot delete it. (An earlier attempt used media.pbrentyoung.com
+as a subdomain, but Hostinger forces subdomain roots inside public_html.)
 
 How it works:
 
 - The full contents of local `assets/video/` are uploaded flat to the
-  subdomain root, keeping original filenames.
+  video.pbrentyoung.com site root, keeping original filenames.
 - `data/portfolio.json` and `data/projects.json` keep plain local
   `assets/video/...` paths — never edit them for hosting reasons.
 - `mediaSrc()` in BOTH `js/editorial.js` and `js/main.js` translates at
   render time: on production hosts, `assets/video/<file>` becomes
-  `https://media.pbrentyoung.com/<file>`; on localhost the relative path
+  `https://video.pbrentyoung.com/<file>`; on localhost the relative path
   is kept so local dev plays from the local folder.
 - Verified 2026-07-10: all 29 unique video references across both JSON
   files return HTTP 200 with video/* content types on the subdomain,
   and the server supports range requests (HTTP 206) for seeking.
 - New videos: drop the file in local `assets/video/`, upload the same
-  file to the `/media` folder root, reference it in JSON as
+  file to the video.pbrentyoung.com site root, reference it in JSON as
   `assets/video/<file>` — no code changes needed.
 
 ## Deployment Notes
@@ -99,6 +101,7 @@ How it works:
 
 ## Outstanding Follow-Ups
 
-- **URGENT before any redeploy:** the server's `media` folder currently sits INSIDE the main site's web root (proof: files answer on `pbrentyoung.com/media/...`). The next mirror deploy will delete all 10GB. Fix: in hPanel, repoint the `media.pbrentyoung.com` document root to a folder OUTSIDE the deploy-managed web root, then move the files there with File Manager (server-side move, no re-upload). Verified fixed when `media.pbrentyoung.com/<file>` is 200 but `pbrentyoung.com/media/<file>` is 404.
-- After the move, run a redeploy and confirm `/media` survives.
+- Video re-upload to video.pbrentyoung.com in progress (2026-07-10). When done, verify all references resolve (script check) and that `pbrentyoung.com/media/<file>` no longer matters — the old `public_html/media` copy is expected to be deleted by the next deploy, which is now harmless.
+- Run a redeploy after uploads finish: it delivers the updated MEDIA_HOST in both JS files and clears the stale `public_html/media` copy.
+- The old `media.pbrentyoung.com` subdomain can be removed in hPanel once video.pbrentyoung.com is confirmed working.
 - Decide whether to remove `.DS_Store` files from tracking in a future cleanup. They were intentionally included in a prior "commit everything" request.
