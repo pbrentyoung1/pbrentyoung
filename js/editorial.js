@@ -26,6 +26,18 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* videos live on the media subdomain in production — the git deploy
+     mirrors the repo, and assets/video/ is gitignored, so those files
+     only exist locally and on media.pbrentyoung.com */
+  var MEDIA_HOST = "https://media.pbrentyoung.com/";
+  var isLocalHost = /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/.test(location.hostname) || location.protocol === "file:";
+
+  function mediaSrc(src) {
+    src = src || "";
+    if (!isLocalHost && src.indexOf("assets/video/") === 0) return MEDIA_HOST + src;
+    return src;
+  }
+
   /* ---------- helpers ---------- */
   function el(tag, cls, html) {
     var n = document.createElement(tag);
@@ -463,7 +475,7 @@
   });
 
   function mediaHTML(item) {
-    var src = item.src || "";
+    var src = mediaSrc(item.src);
     if (item.type === "embed") {
       return '<iframe src="' + esc(src) + '" allow="autoplay; fullscreen" allowfullscreen title="' + esc(item.title) + '"></iframe>';
     }
