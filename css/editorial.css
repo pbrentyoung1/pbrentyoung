@@ -1774,6 +1774,7 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 
   /* two-up flat file on phones */
   .filegrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .slide-table .filegrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .fcard { padding: 6px; }
   .fcard-title { font-size: 12.5px; min-height: 2.6em; }
   .fcard-slug { font-size: 10px; }
