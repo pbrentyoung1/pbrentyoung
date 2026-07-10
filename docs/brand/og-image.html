@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=Mulish:wght@400;500;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 630px; overflow: hidden; }
+.board {
+  position: relative;
+  width: 1200px; height: 630px;
+  background: #f4f1ea;
+  font-family: 'Mulish', sans-serif;
+  color: #2b2a27;
+}
+/* pasteboard guides */
+.gv, .gh { position: absolute; background: #a8d4e2; opacity: .55; }
+.gv { top: 0; bottom: 0; width: 1px; }
+.gh { left: 0; right: 0; height: 1px; }
+/* crop marks */
+.crop { position: absolute; width: 26px; height: 26px; }
+.crop::before, .crop::after { content: ""; position: absolute; background: #6b6860; }
+.crop::before { width: 26px; height: 1px; }
+.crop::after { width: 1px; height: 26px; }
+.tl { top: 22px; left: 22px; }
+.tr { top: 22px; right: 22px; }
+.bl { bottom: 22px; left: 22px; }
+.br { bottom: 22px; right: 22px; }
+.tl::before, .tl::after { top: 0; left: 0; }
+.tr::before { top: 0; right: 0; } .tr::after { top: 0; right: 0; }
+.bl::before { bottom: 0; left: 0; } .bl::after { bottom: 0; left: 0; }
+.br::before { bottom: 0; right: 0; } .br::after { bottom: 0; right: 0; }
+
+.inner {
+  position: absolute; inset: 0;
+  padding: 90px 110px 70px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.kicker {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 21px; font-weight: 500;
+  letter-spacing: 3px;
+  color: #1f83a3;
+  text-transform: uppercase;
+}
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 1.08;
+  color: #2b2a27;
+  max-width: 950px;
+}
+.edit { position: relative; display: inline-block; white-space: nowrap; }
+.old { position: relative; display: inline-block; color: #6b6860; }
+.old .strike {
+  position: absolute; left: -4px; right: -4px; top: 54%;
+  height: 6px; background: #c1271d; transform: rotate(-2deg); border-radius: 3px;
+}
+.new { font-style: italic; color: #c1271d; }
+.foot {
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-top: 1px solid #d9d4c7;
+  padding-top: 26px;
+}
+.wordmark {
+  font-weight: 700; font-size: 30px; letter-spacing: 5px;
+}
+.wordmark small {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400; font-size: 19px; letter-spacing: 2px;
+  color: #6b6860; margin-left: 18px;
+}
+.url {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px; letter-spacing: 2px; color: #1f83a3;
+}
+</style>
+</head>
+<body>
+<div class="board">
+  <div class="gv" style="left: 64px;"></div>
+  <div class="gv" style="right: 64px;"></div>
+  <div class="gh" style="top: 64px;"></div>
+  <div class="gh" style="bottom: 64px;"></div>
+  <span class="crop tl"></span><span class="crop tr"></span>
+  <span class="crop bl"></span><span class="crop br"></span>
+
+  <div class="inner">
+    <div>
+      <div class="kicker">Proof no. 2 &middot; Montgomery, Texas</div>
+      <h1 style="margin-top: 28px;">
+        The right story,<br>
+        <span class="edit">told <span class="old">good.<span class="strike"></span></span></span>
+        <span class="new">the right way.</span>
+      </h1>
+    </div>
+    <div class="foot">
+      <div class="wordmark">BRENT YOUNG<small>CREATIVE DIRECTOR</small></div>
+      <div class="url">pbrentyoung.com</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

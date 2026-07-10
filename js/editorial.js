@@ -211,7 +211,7 @@
       if (cs.principle) {
         meta.appendChild(el("dt", "", "THE PRINCIPLE"));
         meta.appendChild(el("dd", "", esc(cs.principle) +
-          (cs.essay ? ' &mdash; <a href="blog.html#' + esc(cs.essay.slug) + '">read the essay: &ldquo;' + esc(cs.essay.title) + '&rdquo;</a>' : "")));
+          (cs.essay ? ' &mdash; <a href="blog/' + esc(cs.essay.slug) + '">read the essay: &ldquo;' + esc(cs.essay.title) + '&rdquo;</a>' : "")));
       }
       sec.appendChild(meta);
 
@@ -634,26 +634,39 @@
     }
   }
 
-  /* ---------- the blog (latest posts on index) ---------- */
+  /* ---------- Field Notes (shared featured and shortlist taxonomy) ---------- */
   function renderDesk() {
     var sec = document.getElementById("desk");
-    var host = document.getElementById("deskPosts");
-    if (!sec || !host || !window.ColumnCore) return;
+    var featureHost = document.getElementById("deskFeature");
+    var shortlistHost = document.getElementById("deskShortlist");
+    if (!sec || !featureHost || !shortlistHost || !window.ColumnCore) return;
     window.ColumnCore.load()
       .then(function (posts) {
         if (!posts.length) return;
-        posts.slice(0, 3).forEach(function (p) {
-          var d = new Date(p.date + "T12:00:00")
-            .toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
-            .toUpperCase();
-          var entry = el("article", "entry");
-          entry.innerHTML =
-            '<p class="entry-meta"><span class="kicker">' + esc(p.topic || p.kicker || "Field Notes") + "</span>" +
-            '<span class="mono">' + d + "</span></p>" +
-            '<h3 class="entry-title"><a href="blog.html#' + esc(p.slug) + '">' + esc(p.title) + "</a></h3>" +
-            '<p class="entry-deck">' + esc(p.deck || p.excerpt || "") + "</p>";
-          host.appendChild(entry);
-        });
+        var featured = posts.filter(function (p) { return /^(true|1|yes|on)$/i.test(String(p.featured || "")); })[0] || posts[0];
+        var shortlist = posts.filter(function (p) { return Number(p.shortlist || 0) > 0; })
+          .sort(function (a, b) { return Number(a.shortlist) - Number(b.shortlist); });
+        var topicSlug = function (topic) {
+          return String(topic || "field-notes").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        };
+        var topicLink = function (p) { return "/blog?topic=" + encodeURIComponent(topicSlug(p.topic)); };
+        var postLink = function (p) { return "/blog/" + encodeURIComponent(p.slug); };
+        var date = function (p) {
+          return new Date(p.date + "T12:00:00").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }).toUpperCase();
+        };
+
+        featureHost.innerHTML =
+          '<article class="field-feature" data-topic="' + esc(topicSlug(featured.topic)) + '">' +
+            '<a class="field-feature__image" href="' + postLink(featured) + '"><img src="' + esc(window.ColumnCore.thumbnailPath(featured)) + '" alt="" width="600" height="315"></a>' +
+            '<div class="field-feature__body"><div class="field-meta"><a href="' + topicLink(featured) + '">' + esc(featured.topic || "Field Notes") + '</a><span>' + date(featured) + " &middot; " + esc(window.ColumnCore.readTime(featured)) + '</span></div>' +
+            '<h3><a href="' + postLink(featured) + '">' + esc(featured.title) + '</a></h3>' +
+            '<p>' + esc(featured.deck || "") + '</p>' +
+            '<a class="field-read" href="' + postLink(featured) + '">READ THE FIELD NOTE &rarr;</a></div>' +
+          '</article>';
+
+        shortlistHost.innerHTML = '<p class="field-side-label">THE SHORT LIST</p><ol class="field-shortlist">' + shortlist.map(function (p) {
+          return '<li><a href="' + postLink(p) + '"><span>' + esc(p.topic || "Field Notes") + '</span><strong>' + esc(p.title) + '</strong><small>' + date(p) + " &middot; " + esc(window.ColumnCore.readTime(p)) + '</small></a></li>';
+        }).join("") + '</ol>';
         sec.hidden = false;
       })
       .catch(function () { /* no blog data — section stays hidden */ });

@@ -3,6 +3,8 @@ title: Your Church Already Has a Brand
 date: 2026-06-29
 topic: Brand & Mission
 deck: Whether intentional or accidental, your church is already telling people who it is. The only question is who's doing the telling.
+tags: brand, trust, first impressions
+principle: Brand Builds Trust
 ---
 
 Some churches tell me they don't believe in branding. I understand the instinct — "brand" sounds like something done to soft drinks. But here's the thing: your church already has a brand. It's the sum of what people actually experience and repeat about you. The parking lot has an opinion. The projector font has an opinion. The way your volunteers answer email has an opinion.

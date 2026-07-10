@@ -3,6 +3,8 @@ title: The Most Expensive Word in Church Communications
 date: 2026-06-22
 topic: Brand & Mission
 deck: "I prefer..." Two words, technically. And they cost more than your entire design budget.
+tags: preference, leadership, feedback
+principle: Mission Before Preference
 ---
 
 Every church creative knows the meeting. The work is done. It's on brief, on brand, on time. And then someone senior leans back and says the most expensive words in church communications: "I prefer..."

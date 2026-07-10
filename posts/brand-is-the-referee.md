@@ -3,6 +3,9 @@ title: Brand Is the Referee
 date: 2026-06-15
 topic: Brand & Mission
 deck: Stop arguing preferences. A real brand exists so that nobody in the room — including you — gets to win by opinion.
+tags: brand, preference, creative teams
+principle: Brand Is the Referee
+shortlist: 1
 ---
 
 Most people think a brand is a costume: the logo, the colors, the fonts you wear in public. That's the least useful thing a brand does. The most useful thing a brand does is end arguments.

@@ -19,6 +19,7 @@ These documents are the source of truth for the project. When the website and th
 | [CONTENT_ROADMAP.md](CONTENT_ROADMAP.md) | The plan. Content pillars, planned articles, and long-term projects. |
 | [IDEA_GLOSSARY.md](IDEA_GLOSSARY.md) | The language. Canonical definitions for the ideas the site keeps returning to. |
 | [ARTICLE_TEMPLATE.md](ARTICLE_TEMPLATE.md) | The structure. The editorial beats every article should follow. |
+| [SESSION_HANDOFF.md](SESSION_HANDOFF.md) | The handoff. Current implementation notes, recent decisions, and known follow-ups. |
 
 ## How They Work Together
 

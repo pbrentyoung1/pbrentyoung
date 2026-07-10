@@ -1,0 +1,9 @@
+{
+    "name": "pbrentyoung/editorial-site",
+    "description": "The pbrentyoung.com editorial portfolio and blog.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "league/commonmark": "^2.7"
+    }
+}

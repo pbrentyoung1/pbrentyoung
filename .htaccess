@@ -1,0 +1,17 @@
+# pbrentyoung.com — blog, feed, sitemap, and robots routes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# One canonical index URL: /blog
+RewriteCond %{THE_REQUEST} \s/+blog\.html(?:[?\s]) [NC]
+RewriteRule ^blog\.html$ /blog [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s/+blog/(?:[?\s]) [NC]
+RewriteRule ^blog/$ /blog [R=301,L,NE]
+
+RewriteRule ^blog$ blog.php [L,QSA]
+RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/?$ blog-post.php?slug=$1 [L,QSA]
+RewriteRule ^feed\.xml$ feed.php [L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^robots\.txt$ robots.php [L]
+</IfModule>

@@ -3,6 +3,9 @@ title: The Right Story, Told the Right Way
 date: 2026-07-06
 topic: Manifesto
 deck: Everything on this site — twenty years of it — comes down to one conviction. This is the manifesto.
+tags: story, communication, ministry
+principle: The Right Story, Told the Right Way
+featured: true
 ---
 
 Communication is ministry. Not the support department for ministry. Not the thing you staff after the "real" roles are filled. The actual work of carrying a message to people who need it — that is ministry, and it deserves to be treated like it.

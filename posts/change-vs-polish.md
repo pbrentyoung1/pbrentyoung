@@ -3,6 +3,8 @@ title: Change vs. Polish
 date: 2026-06-01
 topic: Creative Leadership
 deck: Half the frustration in creative work comes from solving the wrong one. Knowing which problem you're actually facing is the leadership skill.
+tags: problem definition, feedback, leadership
+principle: Design Solves Creative Problems
 ---
 
 There are only two kinds of creative problems, and almost every frustrating meeting comes from confusing them.

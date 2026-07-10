@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brent Young — Creative Director</title>
   <meta name="description" content="Brent Young helps churches and mission-driven organizations tell the right story clearly — brand, communications, creative leadership, and the systems that hold them all together.">
+  <meta name="author" content="Brent Young">
+  <meta name="theme-color" content="#f4f1ea">
+  <link rel="canonical" href="https://pbrentyoung.com/">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brent Young">
+  <meta property="og:title" content="Brent Young — Creative Director">
+  <meta property="og:description" content="The right story, told the right way. Brand, communications, and creative leadership for churches and mission-driven organizations.">
+  <meta property="og:url" content="https://pbrentyoung.com/">
+  <meta property="og:image" content="https://pbrentyoung.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brent Young, Creative Director — The right story, told the right way.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brent Young — Creative Director">
+  <meta name="twitter:description" content="The right story, told the right way. Brand, communications, and creative leadership for churches and mission-driven organizations.">
+  <meta name="twitter:image" content="https://pbrentyoung.com/images/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brent Young",
+    "url": "https://pbrentyoung.com/",
+    "jobTitle": "Creative Director",
+    "description": "Brent Young helps churches and mission-driven organizations tell the right story clearly — brand, communications, creative leadership, and the systems that hold them all together.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montgomery",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "knowsAbout": ["Brand strategy", "Church communications", "Creative direction", "Storytelling", "Design systems"]
+  }
+  </script>
+
   <link rel="stylesheet" href="css/editorial.css">
 </head>
 
@@ -16,7 +62,24 @@
         <a class="nav-link" href="#principles">PRINCIPLES</a>
         <a class="nav-link" href="#work">WORK</a>
         <a class="nav-link" href="#flat-file">THE FILE</a>
-        <a class="nav-link" href="blog.html">BLOG</a>
+        <div class="nav-blog">
+          <a class="nav-link nav-blog-toggle" href="/blog" aria-haspopup="true" aria-expanded="false">BLOG</a>
+          <div class="nav-blog-menu" aria-label="Blog sections">
+            <a class="nav-blog-menu__all" href="/blog">ALL ARTICLES &rarr;</a>
+            <span class="nav-blog-menu__label">TOPICS</span>
+            <a href="/blog?topic=brand-mission">Brand &amp; Mission</a>
+            <a href="/blog?topic=creative-leadership">Creative Leadership</a>
+            <a href="/blog?topic=systems-workflow">Systems &amp; Workflow</a>
+            <a href="/blog?topic=craft">Craft</a>
+            <a href="/blog?topic=ai">AI</a>
+            <span class="nav-blog-menu__label">THE SHORT LIST</span>
+            <div data-nav-shortlist>
+              <a href="/blog/brand-is-the-referee">Brand Is the Referee</a>
+              <a href="/blog/why-your-church-communications-feel-chaotic">Why Your Church Communications Feel Chaotic</a>
+              <a href="/blog/the-creative-brief-is-ministry">The Creative Brief Is Ministry</a>
+            </div>
+          </div>
+        </div>
         <a class="nav-link" href="#contact">CONTACT</a>
         <a class="btn-spec" href="assets/pdf/resume.pdf" target="_blank" rel="noopener">RESUME.PDF</a>
         <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
@@ -52,7 +115,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn-ink" href="#work">Explore the work</a>
-            <a class="btn-ghost" href="blog.html">Read the blog</a>
+            <a class="btn-ghost" href="/blog">Read the blog</a>
           </div>
         </div>
 
@@ -208,20 +271,23 @@
       </div>
     </section>
 
-    <!-- ================= THE BLOG (latest posts) ================= -->
-    <section class="desk wrap" id="desk" aria-label="Latest posts" hidden>
+    <!-- ================= FIELD NOTES ================= -->
+    <section class="field-notes wrap" id="desk" aria-label="Field Notes" hidden>
       <div class="dept-head">
         <div class="dept-row">
-          <h2>The blog</h2>
-          <span class="dept-no">DEPT. 04 &middot; FIELD NOTES</span>
+          <div><span class="kicker">The Blog</span><h2>Field Notes</h2></div>
+          <span class="dept-no">DEPT. 04 &middot; IDEAS IN PRACTICE</span>
         </div>
       </div>
       <p class="hero-sub" style="margin-bottom: 0;">
         Ideas collected from years of designing, filming, writing, building, leading, and
         occasionally getting things wrong.
       </p>
-      <div class="entries" id="deskPosts"></div>
-      <a class="pullmore desk-all" href="blog.html">READ ALL POSTS &rarr;</a>
+      <div class="field-notes-grid">
+        <div id="deskFeature"></div>
+        <aside id="deskShortlist" aria-label="The Short List"></aside>
+      </div>
+      <a class="pullmore desk-all" href="/blog">READ ALL FIELD NOTES &rarr;</a>
     </section>
 
     <!-- ================= CONTACT ================= -->
@@ -260,7 +326,8 @@
 
   <footer class="site-foot">
     <div class="wrap">
-      <span>&copy; <span id="year"></span> BRENT YOUNG &middot; SET IN PLAYFAIR &amp; PLEX MONO</span>
+      <span>&copy; <span id="year"></span> BRENT YOUNG</span>
+      <span class="font-list">SET IN PLAYFAIR DISPLAY &middot; IBM PLEX SANS &middot; IBM PLEX MONO &middot; SOURCE SERIF 4 &middot; CAVEAT &middot; COVERED BY YOUR GRACE &middot; PERMANENT MARKER &middot; IMPACT LABEL / REVERSED</span>
       <button class="spec-toggle" id="specToggle" type="button">SHOW THE BOARD</button>
     </div>
   </footer>

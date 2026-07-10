@@ -3,6 +3,8 @@ title: Stop Calling Everything a Project
 date: 2026-05-18
 topic: Systems & Workflow
 deck: Christmas is a campaign. The sermon graphic is a deliverable. Calling them both "projects" is why your planning meetings go nowhere.
+tags: campaigns, projects, language
+principle: Systems Create Creativity
 ---
 
 Ask a creative team what they're working on and you'll hear the word "project" used to mean four completely different things. The Christmas season? A project. The sermon series that carries it? Also a project. The invite card inside that series? Project. Fixing the typo on the invite card? Believe it or not: project.

@@ -3,6 +3,8 @@ title: Every Deliverable Needs One Job
 date: 2026-05-11
 topic: Systems & Workflow
 deck: The flyer that announces, invites, thanks, recruits, and quotes three verses does none of it. One piece, one job, one action.
+tags: deliverables, clarity, focus
+principle: Design Solves Creative Problems
 ---
 
 Somewhere in your church right now, a flyer is being asked to do five jobs. Announce the event. Invite the unchurched. Thank the volunteers. Recruit new ones. And could we fit the theme verse — actually, all three verses from the series?

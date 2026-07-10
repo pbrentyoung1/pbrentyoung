@@ -3,6 +3,9 @@ title: The Creative Brief Is Ministry
 date: 2026-05-04
 topic: Creative Leadership
 deck: The least glamorous document in your church might be the most pastoral one. A good brief is clarity, and clarity is care.
+tags: creative brief, clarity, care
+principle: Communication is Stewardship
+shortlist: 3
 ---
 
 Nobody gets excited about a creative brief. It's a form. It asks unglamorous questions — who is this for, what's the one job, when does it ship, who approves it. In a culture that prizes spontaneity as a sign of the Spirit, a brief can feel almost faithless.

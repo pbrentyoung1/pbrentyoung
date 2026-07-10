@@ -3,6 +3,8 @@ title: You Can't Polish Your Way Into Relevance
 date: 2026-06-08
 topic: Creative Leadership
 deck: New fonts on an old assumption is still an old assumption. Polish makes true things beautiful — it can't make wrong things true.
+tags: relevance, redesigns, strategy
+principle: Story Before Strategy
 ---
 
 Every so often a church decides it's time to "freshen things up." New logo, new website, new lower thirds. Six months and a decent budget later, everything is undeniably nicer — and nothing is different. Attendance, engagement, first-time guests: flat. The conclusion drawn is usually that design doesn't work.

@@ -18,10 +18,28 @@ title: The Article Title
 date: YYYY-MM-DD
 topic: One of the content pillars (see CONTENT_ROADMAP.md)
 deck: One or two sentences that earn the click honestly. No clickbait.
+tags: two, or three, comma-separated
+principle: The First Principle this article evidences (see FIRST_PRINCIPLES.md)
+featured: true (optional; makes this the lead article on /blog)
+shortlist: 1 (optional; numbered position in The Short List)
 ---
 ```
 
 Allowed `topic:` values: `Brand & Mission`, `Creative Leadership`, `Systems & Workflow`, `Craft`, `AI`, and `Manifesto` (reserved for cornerstone essays).
+
+Optional frontmatter: `banner:` (overrides the default banner path), `bannerAlt:` (alt text for the banner), `draft: true` (hides the post), `featured: true` (selects the lead article), and `shortlist:` (a positive number selects and orders the post in The Short List).
+
+**Banner art.** Every post gets a custom banner designed at **1200 × 630** (the Open Graph size), saved to `assets/img/blog/<slug>.jpg`. One asset serves three jobs: the social share card, the plate at the top of the article page, and the thumbnail on the blog index. The share card already shows the title and deck as text, so the art does not need the title baked in. Until the banner exists, the site shows an FPO placeholder plate.
+
+**Inline images.** Store supporting images beside the article banners using a suffix such as `assets/img/blog/<slug>-01.jpg`, then reference them from Markdown with an alt description and an optional caption:
+
+```
+![A volunteer greeting a visitor](/assets/img/blog/your-church-already-has-a-brand-01.jpg "The first impression starts before the front door.")
+```
+
+The server renders standalone images as editorial figures. The alt text serves accessibility; the optional quoted title becomes the visible caption. Inline images do not need to be 1200 × 630 — use the source dimensions that best fit the image, optimized for the web.
+
+**URLs.** Posts live at `pbrentyoung.com/blog/<slug>`. PHP renders the Markdown, contents navigation, taxonomy, related articles, and per-post social/search metadata before the page is sent. Publishing is unchanged: write the Markdown into `posts/`, add the filename to `posts/index.json`, commit, and deploy. The RSS feed and public sitemap update automatically.
 
 ---
 

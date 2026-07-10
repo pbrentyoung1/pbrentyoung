@@ -3,6 +3,9 @@ title: Why Your Church Communications Feel Chaotic
 date: 2026-05-25
 topic: Systems & Workflow
 deck: It's not the volume. It's not the volunteers. It's that requests outnumber decisions — and the gap is where the chaos lives.
+tags: workflow, requests, burnout
+principle: Systems Create Creativity
+shortlist: 2
 ---
 
 Ask a church communications person how things are going and you'll hear the same word in every time zone: *chaotic*. Requests arrive by text, by hallway, by "hey, real quick after service." Everything is urgent, nothing has a deadline, and the person who asked for the flyer on Tuesday is surprised it isn't done by Wednesday — the same Wednesday somebody else's retreat video was due, which nobody wrote down anywhere.

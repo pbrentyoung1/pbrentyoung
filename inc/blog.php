@@ -1,0 +1,328 @@
+<?php
+
+use League\CommonMark\GithubFlavoredMarkdownConverter;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+function blog_config($key = null) {
+  static $config = null;
+  if ($config === null) $config = require __DIR__ . '/blog-config.php';
+  return $key === null ? $config : ($config[$key] ?? null);
+}
+
+function blog_e($value) {
+  return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+}
+
+function blog_slugify($value) {
+  $value = strtolower(trim((string) $value));
+  $value = preg_replace('/[^a-z0-9]+/', '-', $value);
+  return trim($value, '-');
+}
+
+function blog_truthy($value) {
+  if (is_bool($value)) return $value;
+  return in_array(strtolower(trim((string) $value)), array('1', 'true', 'yes', 'on'), true);
+}
+
+function blog_parse_frontmatter($filename, $text) {
+  $slug = preg_replace('/\.md$/i', '', basename($filename));
+  $post = array(
+    'slug' => $slug,
+    'title' => $slug,
+    'date' => '1970-01-01',
+    'topic' => 'Field Notes',
+    'deck' => '',
+    'tags' => array(),
+    'principle' => '',
+    'banner' => '',
+    'banneralt' => '',
+    'draft' => false,
+    'featured' => false,
+    'shortlist' => 0,
+    'md' => $text,
+  );
+
+  if (preg_match('/^---\s*\R(.*?)\R---\s*\R?/s', $text, $match)) {
+    foreach (preg_split('/\R/', $match[1]) as $line) {
+      if (!preg_match('/^(\w+)\s*:\s*(.*)$/u', $line, $pair)) continue;
+      $key = strtolower($pair[1]);
+      $post[$key] = trim($pair[2]);
+    }
+    $post['md'] = substr($text, strlen($match[0]));
+  }
+
+  $post['tags'] = array_values(array_filter(array_map('trim', explode(',', (string) $post['tags']))));
+  $post['draft'] = blog_truthy($post['draft']);
+  $post['featured'] = blog_truthy($post['featured']);
+  $post['shortlist'] = max(0, (int) $post['shortlist']);
+  $post['topic_slug'] = blog_slugify($post['topic']);
+  $post['banner'] = $post['banner'] ?: 'assets/img/blog/' . $post['slug'] . '.jpg';
+  $post['banneralt'] = $post['banneralt'] ?: $post['title'];
+  $post['word_count'] = blog_word_count($post);
+  $post['read_minutes'] = max(1, (int) round($post['word_count'] / 200));
+
+  return $post;
+}
+
+function blog_word_count($post) {
+  $text = ($post['title'] ?? '') . ' ' . ($post['deck'] ?? '') . ' ' . ($post['md'] ?? '');
+  $text = preg_replace('/https?:\/\/\S+/u', ' ', $text);
+  $text = preg_replace('/[#>*_`!\[\]()\-]+/u', ' ', $text);
+  $words = preg_split('/\s+/u', trim($text), -1, PREG_SPLIT_NO_EMPTY);
+  return count($words);
+}
+
+function blog_posts() {
+  static $posts = null;
+  if ($posts !== null) return $posts;
+
+  $index = json_decode((string) @file_get_contents(__DIR__ . '/../posts/index.json'), true);
+  $posts = array();
+  if (!is_array($index)) return $posts;
+
+  foreach ($index as $filename) {
+    $filename = basename((string) $filename);
+    $text = @file_get_contents(__DIR__ . '/../posts/' . $filename);
+    if ($text === false) continue;
+    $post = blog_parse_frontmatter($filename, $text);
+    if (!$post['draft']) $posts[] = $post;
+  }
+
+  usort($posts, function ($a, $b) {
+    $date = strcmp($b['date'], $a['date']);
+    return $date !== 0 ? $date : strcmp($a['title'], $b['title']);
+  });
+  return $posts;
+}
+
+function blog_find_post($slug) {
+  foreach (blog_posts() as $post) if ($post['slug'] === $slug) return $post;
+  return null;
+}
+
+function blog_featured_post($posts = null) {
+  $posts = $posts ?: blog_posts();
+  foreach ($posts as $post) if ($post['featured']) return $post;
+  return $posts[0] ?? null;
+}
+
+function blog_shortlist($posts = null) {
+  $posts = $posts ?: blog_posts();
+  $list = array_values(array_filter($posts, function ($post) { return $post['shortlist'] > 0; }));
+  usort($list, function ($a, $b) { return $a['shortlist'] <=> $b['shortlist']; });
+  return $list;
+}
+
+function blog_topic_counts($posts = null) {
+  $counts = array();
+  foreach ($posts ?: blog_posts() as $post) {
+    $slug = $post['topic_slug'];
+    if (!isset($counts[$slug])) $counts[$slug] = array('name' => $post['topic'], 'count' => 0);
+    $counts[$slug]['count']++;
+  }
+  return $counts;
+}
+
+function blog_filter_posts($posts, $topic = '', $tag = '', $query = '') {
+  $topic = blog_slugify($topic);
+  $tag = blog_slugify($tag);
+  $query = trim($query);
+
+  return array_values(array_filter($posts, function ($post) use ($topic, $tag, $query) {
+    if ($topic && $post['topic_slug'] !== $topic) return false;
+    if ($tag) {
+      $tagSlugs = array_map('blog_slugify', $post['tags']);
+      if (!in_array($tag, $tagSlugs, true)) return false;
+    }
+    if ($query !== '') {
+      $haystack = implode(' ', array(
+        $post['title'], $post['deck'], $post['topic'], $post['principle'],
+        implode(' ', $post['tags']), $post['md'],
+      ));
+      if (mb_stripos($haystack, $query) === false) return false;
+    }
+    return true;
+  }));
+}
+
+function blog_site_url($path = '') {
+  return rtrim(blog_config('site_url'), '/') . '/' . ltrim($path, '/');
+}
+
+function blog_post_url($post, $absolute = false) {
+  $path = '/blog/' . rawurlencode($post['slug']);
+  return $absolute ? blog_site_url($path) : $path;
+}
+
+function blog_index_url($params = array(), $absolute = false) {
+  $params = array_filter($params, function ($value) { return $value !== '' && $value !== null && $value !== false; });
+  $path = '/blog' . ($params ? '?' . http_build_query($params, '', '&', PHP_QUERY_RFC3986) : '');
+  return $absolute ? blog_site_url($path) : $path;
+}
+
+function blog_banner_url($post, $absolute = false) {
+  $path = '/' . ltrim($post['banner'], '/');
+  if (!is_file(__DIR__ . '/..' . $path)) $path = '/images/og-image.png';
+  return $absolute ? blog_site_url($path) : $path;
+}
+
+function blog_thumbnail_url($post, $absolute = false) {
+  $path = '/assets/img/blog/thumbs/' . $post['slug'] . '.jpg';
+  if (!is_file(__DIR__ . '/..' . $path)) return blog_banner_url($post, $absolute);
+  return $absolute ? blog_site_url($path) : $path;
+}
+
+function blog_date($iso, $format = 'F j, Y') {
+  $time = strtotime($iso . 'T12:00:00');
+  return $time ? date($format, $time) : $iso;
+}
+
+function blog_markdown($markdown) {
+  static $converter = null;
+  if ($converter === null) {
+    $converter = new GithubFlavoredMarkdownConverter(array(
+      'html_input' => 'strip',
+      'allow_unsafe_links' => false,
+    ));
+  }
+
+  $html = (string) $converter->convert($markdown);
+  $html = preg_replace('/<blockquote>\s*<p>!\s*(.*?)<\/p>\s*<\/blockquote>/s', '<aside class="pull">$1</aside>', $html);
+
+  $seen = array();
+  $toc = array();
+  $html = preg_replace_callback('/<h2>(.*?)<\/h2>/s', function ($match) use (&$seen, &$toc) {
+    $label = trim(html_entity_decode(strip_tags($match[1]), ENT_QUOTES | ENT_HTML5, 'UTF-8'));
+    $base = blog_slugify($label) ?: 'section';
+    $seen[$base] = ($seen[$base] ?? 0) + 1;
+    $id = $base . ($seen[$base] > 1 ? '-' . $seen[$base] : '');
+    $toc[] = array('id' => $id, 'label' => $label);
+    return '<h2 id="' . blog_e($id) . '">' . $match[1] . '</h2>';
+  }, $html);
+
+  $html = preg_replace_callback('/\s(href|src)="([^"]+)"/', function ($match) {
+    $url = $match[2];
+    if (preg_match('~^(?:[a-z][a-z0-9+.-]*:|/|#)~i', $url)) return $match[0];
+    return ' ' . $match[1] . '="/' . ltrim($url, '/') . '"';
+  }, $html);
+
+  /* A titled, standalone Markdown image becomes an editorial figure. */
+  $html = preg_replace_callback('/<p>(<img\s+[^>]+\/?>)<\/p>/i', function ($match) {
+    $image = $match[1];
+    $caption = '';
+    if (preg_match('/\stitle="([^"]*)"/i', $image, $title)) {
+      $caption = html_entity_decode($title[1], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+      $image = preg_replace('/\s+title="[^"]*"/i', '', $image);
+    }
+    $figure = '<figure class="article-figure">' . $image;
+    if ($caption !== '') $figure .= '<figcaption>' . blog_e($caption) . '</figcaption>';
+    return $figure . '</figure>';
+  }, $html);
+
+  return array('html' => $html, 'toc' => $toc);
+}
+
+function blog_related_posts($post, $limit = 3) {
+  $ranked = array();
+  foreach (blog_posts() as $candidate) {
+    if ($candidate['slug'] === $post['slug']) continue;
+    $score = 0;
+    if ($candidate['topic'] === $post['topic']) $score += 6;
+    if ($candidate['principle'] && $candidate['principle'] === $post['principle']) $score += 4;
+    $sharedTags = array_intersect(array_map('blog_slugify', $candidate['tags']), array_map('blog_slugify', $post['tags']));
+    $score += count($sharedTags) * 2;
+    $ranked[] = array('score' => $score, 'post' => $candidate);
+  }
+  usort($ranked, function ($a, $b) {
+    if ($a['score'] !== $b['score']) return $b['score'] <=> $a['score'];
+    return strcmp($b['post']['date'], $a['post']['date']);
+  });
+  return array_slice(array_column($ranked, 'post'), 0, $limit);
+}
+
+function blog_query_params($overrides = array()) {
+  $params = array(
+    'topic' => isset($_GET['topic']) ? blog_slugify($_GET['topic']) : '',
+    'tag' => isset($_GET['tag']) ? blog_slugify($_GET['tag']) : '',
+    'q' => isset($_GET['q']) ? trim((string) $_GET['q']) : '',
+    'page' => isset($_GET['page']) ? max(1, (int) $_GET['page']) : 1,
+  );
+  foreach ($overrides as $key => $value) $params[$key] = $value;
+  return $params;
+}
+
+function blog_post_card($post, $variant = 'archive') {
+  $topicUrl = blog_index_url(array('topic' => $post['topic_slug']));
+  $html = '<article class="article-card article-card--' . blog_e($variant) . '" data-topic="' . blog_e($post['topic_slug']) . '">';
+  $html .= '<a class="article-card__image" href="' . blog_e(blog_post_url($post)) . '" tabindex="-1" aria-hidden="true">';
+  $html .= '<img src="' . blog_e(blog_thumbnail_url($post)) . '" alt="" loading="lazy" width="600" height="315"></a>';
+  $html .= '<div class="article-card__body"><div class="article-card__meta">';
+  $html .= '<a class="topic-link" href="' . blog_e($topicUrl) . '">' . blog_e($post['topic']) . '</a>';
+  $html .= '<span>' . blog_e($post['read_minutes']) . ' MIN READ</span></div>';
+  $html .= '<h3><a href="' . blog_e(blog_post_url($post)) . '">' . blog_e($post['title']) . '</a></h3>';
+  if ($variant !== 'related' && $post['deck']) $html .= '<p>' . blog_e($post['deck']) . '</p>';
+  $html .= '<time datetime="' . blog_e($post['date']) . '">' . blog_e(strtoupper(blog_date($post['date']))) . '</time>';
+  $html .= '</div></article>';
+  return $html;
+}
+
+function blog_robots_meta() {
+  return blog_config('blog_public') ? 'index, follow' : 'noindex, nofollow';
+}
+
+function blog_nav_menu() {
+  $topics = array(
+    array('brand-mission', 'Brand & Mission'),
+    array('creative-leadership', 'Creative Leadership'),
+    array('systems-workflow', 'Systems & Workflow'),
+    array('craft', 'Craft'),
+    array('ai', 'AI'),
+  );
+  ?>
+  <div class="nav-blog">
+    <a class="nav-link nav-blog-toggle" href="/blog" aria-haspopup="true" aria-expanded="false">BLOG</a>
+    <div class="nav-blog-menu" aria-label="Blog sections">
+      <a class="nav-blog-menu__all" href="/blog">ALL ARTICLES &rarr;</a>
+      <span class="nav-blog-menu__label">TOPICS</span>
+      <?php foreach ($topics as $topic): ?><a href="/blog?topic=<?php echo blog_e($topic[0]); ?>"><?php echo blog_e($topic[1]); ?></a><?php endforeach; ?>
+      <span class="nav-blog-menu__label">THE SHORT LIST</span>
+      <div data-nav-shortlist>
+        <?php foreach (blog_shortlist() as $post): ?><a href="<?php echo blog_e(blog_post_url($post)); ?>"><?php echo blog_e($post['title']); ?></a><?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+  <?php
+}
+
+function blog_site_header() {
+  ?>
+  <header class="site-head">
+    <div class="wrap">
+      <a class="wordmark" href="/index-new.html">BRENT YOUNG</a>
+      <nav class="site-nav" id="siteNav" aria-label="Site">
+        <a class="nav-link" href="/index-new.html#work">WORK</a>
+        <a class="nav-link" href="/index-new.html#flat-file">THE FILE</a>
+        <?php blog_nav_menu(); ?>
+        <a class="nav-link" href="/index-new.html#contact">CONTACT</a>
+        <a class="btn-spec" href="/assets/pdf/resume.pdf" target="_blank" rel="noopener">RESUME.PDF</a>
+        <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">MENU</button>
+    </div>
+  </header>
+  <?php
+}
+
+function blog_site_footer($fonts = 'PLAYFAIR DISPLAY &middot; IBM PLEX SANS &middot; IBM PLEX MONO &middot; SOURCE SERIF 4') {
+  ?>
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>&copy; <?php echo date('Y'); ?> BRENT YOUNG</span>
+      <span class="font-list">SET IN <?php echo $fonts; ?></span>
+      <a class="spec-toggle" href="/index-new.html">BACK TO THE BOARD</a>
+    </div>
+  </footer>
+  <script src="/js/nav.js"></script>
+  <?php
+}
