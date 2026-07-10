@@ -34,7 +34,8 @@
 
   function mediaSrc(src) {
     src = src || "";
-    if (!isLocalHost && src.indexOf("assets/video/") === 0) return MEDIA_HOST + src;
+    /* the media subdomain root holds the folder CONTENTS: strip the local prefix */
+    if (!isLocalHost && src.indexOf("assets/video/") === 0) return MEDIA_HOST + src.slice("assets/video/".length);
     return src;
   }
 
