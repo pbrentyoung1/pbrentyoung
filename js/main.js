@@ -12,6 +12,18 @@ const state = {
   visible: 12
 };
 
+// videos live on the media subdomain in production — the git deploy
+// mirrors the repo, and assets/video/ is gitignored, so those files
+// only exist locally and on media.pbrentyoung.com (folder contents at root)
+const MEDIA_HOST = "https://media.pbrentyoung.com/";
+const isLocalHost = /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/.test(location.hostname) || location.protocol === "file:";
+
+function mediaSrc(src) {
+  src = src || "";
+  if (!isLocalHost && src.startsWith("assets/video/")) return MEDIA_HOST + src.slice("assets/video/".length);
+  return src;
+}
+
 fetch("data/projects.json")
   .then(r => r.json())
   .then(projects => {
@@ -99,7 +111,7 @@ function openModal(p) {
   modal.classList.add("show");
   modal.setAttribute("aria-hidden", "false");
 
-  const src = (p.src || "").trim();
+  const src = mediaSrc((p.src || "").trim());
   const lowerSrc = src.toLowerCase();
   const isEmbed =
     lowerSrc.includes("youtube.com/embed") ||
