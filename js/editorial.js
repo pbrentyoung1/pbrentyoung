@@ -111,6 +111,14 @@
     node.style.setProperty("--lift-scale", between(rand, 1.025, 1.055));
   }
 
+  function scatterSlide(node, seed) {
+    var rand = seeded(seed);
+    var rot = between(rand, -2.4, 2.4);
+    node.style.setProperty("--slide-x", between(rand, -4, 4) + "px");
+    node.style.setProperty("--slide-y", between(rand, -5, 5) + "px");
+    node.style.setProperty("--slide-rot", rot + "deg");
+  }
+
   /* ---------- FPO lazy loader ---------- */
   var io = "IntersectionObserver" in window
     ? new IntersectionObserver(function (entries) {
@@ -236,9 +244,11 @@
   function fileCard(item, idx, animIdx) {
     var b = el("button", "fcard");
     b.type = "button";
+    if (item.title.length <= 20) b.classList.add("fcard-short-title");
     b.style.animationDelay = (animIdx * 40) + "ms";
     scatterPaste(b, item.title + "|" + idx, 0.95);
     scatterLift(b, item.title + "|lift|" + idx);
+    scatterSlide(b, item.title + "|slide|" + idx);
 
     var media = el("div", "fcard-media");
     var frame = fpoFrame(item.poster, item.title);

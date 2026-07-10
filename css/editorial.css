@@ -4,7 +4,23 @@
    Palette: Kodachrome (Process K-14) — warm charcoal ink,
    cyan marks, Kodak red accent, golden yellow as a garnish.
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Mulish:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500&family=Caveat:wght@600&family=Covered+By+Your+Grace&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Mulish:wght@400;500;700&family=IBM+Plex+Mono:wght@300;400;500&family=Caveat:wght@600&family=Covered+By+Your+Grace&family=Permanent+Marker&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+
+@font-face {
+  font-family: 'Impact Label';
+  src: url('../assets/fonts/impact_label/Impact%20Label.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Impact Label Reversed';
+  src: url('../assets/fonts/impact_label/Impact%20Label%20Reversed.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --paper: #f4f1ea;
@@ -898,6 +914,272 @@ img.pcard-cue {
 
 .fcard-slug .codes { color: var(--blue); }
 
+/* ---------- experimental flat-file slide table ---------- */
+.slide-table {
+  position: relative;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0) 34%),
+    radial-gradient(circle at 78% 38%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 30%),
+    linear-gradient(180deg, #fbfbf5 0%, #eef3ee 58%, #e4e7dd 100%);
+  border-top: 1px solid rgba(43, 42, 39, 0.12);
+  box-shadow: inset 0 28px 80px rgba(255, 255, 255, 0.72);
+}
+
+.slide-table::before {
+  content: "";
+  position: absolute;
+  top: 410px;
+  left: max(-170px, calc((100vw - 1060px) / 2 - 250px));
+  width: clamp(190px, 20vw, 260px);
+  aspect-ratio: 960 / 1024;
+  pointer-events: none;
+  background: url('../assets/img/loupeExample.png') center / contain no-repeat;
+  border-radius: 50%;
+  filter: drop-shadow(0 22px 28px rgba(43, 42, 39, 0.18));
+  opacity: 0.86;
+  transform: rotate(-16deg);
+  z-index: 0;
+}
+
+.slide-table::after {
+  content: "";
+  position: absolute;
+  top: 230px;
+  right: max(-100px, calc((100vw - 1060px) / 2 - 190px));
+  width: clamp(320px, 34vw, 520px);
+  aspect-ratio: 1499 / 153;
+  pointer-events: none;
+  background: url('../assets/img/nonReproBluePencil.png') center / contain no-repeat;
+  filter: drop-shadow(0 10px 11px rgba(43, 42, 39, 0.18));
+  opacity: 0.86;
+  transform: rotate(8deg);
+  z-index: 0;
+}
+
+.slide-table .filegrid {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+  gap: 24px;
+  padding-top: 34px;
+}
+
+.slide-table .tabrow {
+  position: relative;
+  top: auto;
+  z-index: 1;
+  gap: 10px 12px;
+  padding: 12px 0 4px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.slide-table .tabrow button {
+  position: relative;
+  top: 0;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 1px;
+  padding: 6px 13px 7px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent 14% 86%, rgba(255, 255, 255, 0.06)),
+    #191817;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    0 6px 9px rgba(43, 42, 39, 0.16);
+  color: rgba(238, 245, 246, 0.86);
+  font-family: 'Impact Label Reversed', var(--mono);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.72;
+  transform: rotate(var(--label-rot, -1deg));
+  transition:
+    box-shadow 260ms ease,
+    filter 260ms ease,
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.slide-table .tabrow button:nth-child(2n) { --label-rot: 1.3deg; }
+.slide-table .tabrow button:nth-child(3n) { --label-rot: -0.4deg; }
+.slide-table .tabrow button:nth-child(5n) { --label-rot: 0.8deg; }
+
+.slide-table .tabrow button::before,
+.slide-table .tabrow button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.slide-table .tabrow button::before { left: 7px; }
+.slide-table .tabrow button::after { right: 7px; }
+
+.slide-table .tabrow button:hover {
+  opacity: 0.94;
+  filter: brightness(1.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.72),
+    0 10px 14px rgba(43, 42, 39, 0.2);
+}
+
+.slide-table .tabrow button.on {
+  opacity: 1;
+  filter: brightness(1.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), transparent 34%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1), transparent 14% 86%, rgba(255, 255, 255, 0.08)),
+    #11100f;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.76),
+    0 12px 18px rgba(43, 42, 39, 0.22);
+}
+
+.slide-table .tabrow button.on {
+  padding-bottom: 7px;
+}
+
+.slide-table .fcard {
+  --slide-x: 0;
+  --slide-y: 0;
+  --slide-rot: 0deg;
+  --slide-scale: 1;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  padding: 13px 14px 12px;
+  border: 0;
+  border-radius: 9px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(219, 214, 199, 0.38)),
+    #e9e1cf;
+  box-shadow:
+    0 14px 22px rgba(43, 42, 39, 0.13),
+    inset 0 0 0 1px rgba(134, 125, 105, 0.58),
+    inset 0 0 0 6px rgba(244, 240, 228, 0.82),
+    inset 0 0 16px rgba(255, 255, 255, 0.48);
+  opacity: 0;
+  transform:
+    translate(var(--slide-x, 0), var(--slide-y, 0))
+    rotate(var(--slide-rot, 0deg))
+    scale(1);
+  animation: slideFadeIn 0.9s forwards;
+  transition:
+    box-shadow 900ms cubic-bezier(0.19, 1, 0.22, 1),
+    filter 900ms cubic-bezier(0.19, 1, 0.22, 1),
+    transform 900ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.slide-table .fcard:hover {
+  opacity: 1;
+  transform:
+    translate(var(--slide-x, 0), calc(var(--slide-y, 0) - 8px))
+    rotate(0deg)
+    scale(1.065);
+  box-shadow:
+    0 28px 44px rgba(43, 42, 39, 0.24),
+    0 9px 15px rgba(43, 42, 39, 0.14),
+    inset 0 0 0 1px rgba(134, 125, 105, 0.62),
+    inset 0 0 0 6px rgba(244, 240, 228, 0.86),
+    inset 0 0 16px rgba(255, 255, 255, 0.52);
+  filter: brightness(1.025);
+}
+
+.slide-table .fcard::before,
+.slide-table .fcard::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 4px;
+  border-radius: 0 0 7px 7px;
+  background: rgba(43, 42, 39, 0.34);
+  transform: translateX(-50%);
+}
+
+.slide-table .fcard::before { top: 0; }
+.slide-table .fcard::after { bottom: 0; transform: translateX(-50%) rotate(180deg); }
+
+.slide-table .fcard-media {
+  width: 78%;
+  margin: 51px auto 12px;
+  aspect-ratio: 3 / 2;
+  border: 8px solid rgba(24, 23, 21, 0.92);
+  border-radius: 2px;
+  background: #0f0f0f;
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.78),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.slide-table .fcard-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 18% 82%, rgba(0, 0, 0, 0.18)),
+    radial-gradient(circle at 50% 50%, transparent 0 58%, rgba(0, 0, 0, 0.22) 100%);
+  mix-blend-mode: screen;
+}
+
+.slide-table .fcard-media .fpo {
+  border: 0;
+  background: #151515;
+}
+
+.slide-table .fcard-media .fpo::before,
+.slide-table .fcard-media .fpo::after,
+.slide-table .fcard-media .fpo .fpo-tag { display: none; }
+
+.slide-table .fcard-title {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  top: 17px;
+  height: 40px;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Permanent Marker', var(--hand);
+  font-size: 16px;
+  line-height: 1.05;
+  text-align: center;
+  color: rgba(43, 42, 39, 0.78);
+  transform: rotate(-1.2deg);
+}
+
+.slide-table .fcard-short-title .fcard-title {
+  top: 22px;
+}
+
+.slide-table .fcard-slug {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 22px;
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: rgba(43, 42, 39, 0.42);
+}
+
+@keyframes slideFadeIn { to { opacity: 1; } }
+
 .pullmore {
   display: block;
   margin: 24px auto 0;
@@ -1495,6 +1777,8 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   .fcard { padding: 6px; }
   .fcard-title { font-size: 12.5px; min-height: 2.6em; }
   .fcard-slug { font-size: 10px; }
+  .slide-table::before { display: none; }
+  .slide-table::after { display: none; }
   .case-meta { grid-template-columns: 86px 1fr; font-size: 14px; }
   .jacket-layer { padding: 0; align-items: flex-end; }
   .jacket { width: 100%; max-height: 94vh; border-radius: 12px 12px 0 0; }
