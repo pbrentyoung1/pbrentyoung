@@ -65,30 +65,28 @@ One legacy image could not be thumbnailed because ImageMagick reported an invali
 
 - `assets/img/vlcsnap-2020-07-20-18h13m25s366.png`
 
-## Video Link Finding
+## Video Hosting (RESOLVED 2026-07-10)
 
-Flat-file video links were audited in `data/portfolio.json`.
+Videos are self-hosted on the `media.pbrentyoung.com` subdomain, whose
+document root (`/media`) sits outside the deploy-managed tree, so mirror
+deploys cannot delete them.
 
-Findings:
+How it works:
 
-- Every local video path in `data/portfolio.json` resolves to an existing file on the local machine.
-- The modal renderer in `js/editorial.js` opens local videos with:
-  - `<video controls autoplay playsinline poster="..." src="..."></video>`
-- `assets/video/` is in `.gitignore`.
-- `git ls-files assets/video` returns `0`.
-- Live checks against `pbrentyoung.com` returned `404` for local video paths.
-
-Conclusion:
-
-- The flat-file video links are not broken locally.
-- The online issue is that the video files are not deployed or hosted at those paths.
-- Do not assume GitHub contains the videos.
-
-Likely solutions:
-
-- Upload `assets/video/` directly to Hostinger.
-- Replace local video paths with Vimeo/YouTube embeds.
-- Move videos to a proper media host/CDN and update `src` values.
+- The full contents of local `assets/video/` are uploaded flat to the
+  subdomain root, keeping original filenames.
+- `data/portfolio.json` and `data/projects.json` keep plain local
+  `assets/video/...` paths — never edit them for hosting reasons.
+- `mediaSrc()` in BOTH `js/editorial.js` and `js/main.js` translates at
+  render time: on production hosts, `assets/video/<file>` becomes
+  `https://media.pbrentyoung.com/<file>`; on localhost the relative path
+  is kept so local dev plays from the local folder.
+- Verified 2026-07-10: all 29 unique video references across both JSON
+  files return HTTP 200 with video/* content types on the subdomain,
+  and the server supports range requests (HTTP 206) for seeking.
+- New videos: drop the file in local `assets/video/`, upload the same
+  file to the `/media` folder root, reference it in JSON as
+  `assets/video/<file>` — no code changes needed.
 
 ## Deployment Notes
 
@@ -101,5 +99,6 @@ Likely solutions:
 
 ## Outstanding Follow-Ups
 
-- Decide how videos should be hosted before relying on video links online. Leading option: Vimeo/YouTube embeds (the modal renderer already supports embeds); alternatives: a directory/subdomain outside the deploy root, or object storage/CDN. Self-hosting 10GB of MP4s on shared hosting will stream poorly regardless.
+- Run a redeploy and confirm the `/media` folder survives the mirror deploy (expected: it does, since it sits outside the deploy root).
+- Ensure the live host has the current `js/main.js` and `js/editorial.js` (both carry the mediaSrc() video mapping) — via redeploy or manual upload.
 - Decide whether to remove `.DS_Store` files from tracking in a future cleanup. They were intentionally included in a prior "commit everything" request.
