@@ -99,6 +99,6 @@ How it works:
 
 ## Outstanding Follow-Ups
 
-- Run a redeploy and confirm the `/media` folder survives the mirror deploy (expected: it does, since it sits outside the deploy root).
-- Ensure the live host has the current `js/main.js` and `js/editorial.js` (both carry the mediaSrc() video mapping) — via redeploy or manual upload.
+- **URGENT before any redeploy:** the server's `media` folder currently sits INSIDE the main site's web root (proof: files answer on `pbrentyoung.com/media/...`). The next mirror deploy will delete all 10GB. Fix: in hPanel, repoint the `media.pbrentyoung.com` document root to a folder OUTSIDE the deploy-managed web root, then move the files there with File Manager (server-side move, no re-upload). Verified fixed when `media.pbrentyoung.com/<file>` is 200 but `pbrentyoung.com/media/<file>` is 404.
+- After the move, run a redeploy and confirm `/media` survives.
 - Decide whether to remove `.DS_Store` files from tracking in a future cleanup. They were intentionally included in a prior "commit everything" request.
