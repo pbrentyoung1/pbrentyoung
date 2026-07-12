@@ -1,6 +1,6 @@
 # Session Handoff
 
-Last updated: 2026-07-10 (server-rendered blog rebuild)
+Last updated: 2026-07-12 (server-rendered blog rebuild and author banner)
 
 ## Blog Architecture (NEW — 2026-07-10)
 
@@ -25,8 +25,10 @@ The blog is now server rendered from the Markdown files in `posts/`:
   `assets/img/brentAvatarSquare.png`, and three automatically related banner
   cards.
   The author name, bio, and avatar path live in `inc/blog-config.php` so they
-  can be changed once for every post. `js/article.js` only enhances copy-link
-  behavior.
+  can be changed once for every post. On mobile, the portrait is centered
+  above the category-colored panel and the name and bio are centered inside it;
+  the RSS subscription row follows the author panel. `js/article.js` only
+  enhances copy-link behavior.
 - **Selection frontmatter:** `featured: true` selects the lead story.
   `shortlist: 1` (or another positive number) selects and orders The Short
   List. `draft: true` hides a post. See `docs/ARTICLE_TEMPLATE.md`.
@@ -66,7 +68,7 @@ The blog is now server rendered from the Markdown files in `posts/`:
 
 ## Current Repository State
 
-- `main` is synced with `origin/main` at `27c22f4 Move video hosting to standalone video.pbrentyoung.com site`.
+- `main` is ahead of `origin/main` at `38a5b97 Author bio: engraved avatar assets; mobile figure stands on the band`.
 - The complete blog rebuild, homepage Field Notes preview, thumbnail workflow,
   and shared BLOG dropdown are committed in the current changeset and ready
   for server testing.
