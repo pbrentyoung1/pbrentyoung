@@ -2360,6 +2360,16 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   --topic-accent: var(--rust);
 }
 
+/* topic accents — global, so the homepage Field Notes digest gets the
+   same theme colors as the blog (the .blog-site rules below keep working
+   at higher specificity with identical values) */
+[data-topic="manifesto"] { --topic-accent: #c1271d; }
+[data-topic="brand-mission"] { --topic-accent: #1f83a3; }
+[data-topic="creative-leadership"] { --topic-accent: #bd7a00; }
+[data-topic="systems-workflow"] { --topic-accent: #39745d; }
+[data-topic="craft"] { --topic-accent: #6a5545; }
+[data-topic="ai"] { --topic-accent: #315aa8; }
+
 .blog-site [data-topic="manifesto"],
 .blog-site[data-topic="manifesto"] { --topic-accent: #c1271d; }
 .blog-site [data-topic="brand-mission"],
@@ -3208,29 +3218,51 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   list-style: none;
   margin: 0;
   padding: 0;
-  counter-reset: field-shortlist;
 }
 
 .field-shortlist li {
-  counter-increment: field-shortlist;
   border-top: 1px solid var(--hairline);
-  padding: 15px 0 16px 30px;
-  position: relative;
+  padding: 15px 0 16px;
 }
 
-.field-shortlist li::before {
-  content: "0" counter(field-shortlist);
-  color: var(--rust);
-  font-family: var(--mono);
-  font-size: 10px;
-  left: 0;
-  position: absolute;
-  top: 17px;
+.field-shortlist a {
+  color: var(--ink);
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  text-decoration: none;
 }
 
-.field-shortlist a { color: var(--ink); display: block; text-decoration: none; }
-.field-shortlist a:hover strong { color: var(--rust); }
-.field-shortlist span { color: var(--ink-mute); display: block; font: 9px var(--mono); letter-spacing: 1px; text-transform: uppercase; }
+.field-shortlist a:hover strong { color: var(--topic-accent, var(--rust)); }
+
+.field-shortlist__thumb {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  background: var(--paper-dim);
+  box-shadow: 0 1px 2px rgba(43, 42, 39, 0.1);
+  margin-top: 3px;
+}
+
+.field-shortlist__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.field-shortlist__body { display: block; min-width: 0; }
+
+.field-shortlist__topic {
+  color: var(--topic-accent, var(--rust));
+  display: block;
+  font: 9px var(--mono);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 .field-shortlist strong { display: block; font: 700 18px/1.28 var(--serif); margin: 3px 0 7px; }
 .field-shortlist small { color: var(--ink-mute); display: block; font: 9px var(--mono); letter-spacing: 0.6px; }
 

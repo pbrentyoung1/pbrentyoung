@@ -665,7 +665,13 @@
           '</article>';
 
         shortlistHost.innerHTML = '<p class="field-side-label">THE SHORT LIST</p><ol class="field-shortlist">' + shortlist.map(function (p) {
-          return '<li><a href="' + postLink(p) + '"><span>' + esc(p.topic || "Field Notes") + '</span><strong>' + esc(p.title) + '</strong><small>' + date(p) + " &middot; " + esc(window.ColumnCore.readTime(p)) + '</small></a></li>';
+          return '<li data-topic="' + esc(topicSlug(p.topic)) + '"><a href="' + postLink(p) + '">' +
+            '<span class="field-shortlist__thumb"><img src="' + esc(window.ColumnCore.thumbnailPath(p)) + '" alt="" width="64" height="64" onerror="this.parentNode.style.display=\'none\';"></span>' +
+            '<span class="field-shortlist__body">' +
+            '<span class="field-shortlist__topic">' + esc(p.topic || "Field Notes") + '</span>' +
+            '<strong>' + esc(p.title) + '</strong>' +
+            '<small>' + date(p) + " &middot; " + esc(window.ColumnCore.readTime(p)) + '</small>' +
+            '</span></a></li>';
         }).join("") + '</ol>';
         sec.hidden = false;
       })
