@@ -41,6 +41,22 @@ $banner = blog_banner_url($post, true);
 $shareUrl = rawurlencode($canonical);
 $shareTitle = rawurlencode($post['title']);
 
+/* one set of share buttons, rendered in the desktop sidebar and again
+   at the end of the article for mobile (ids must stay unique, so the
+   copy button is class-based — see js/article.js) */
+$shareButtons = '<span>SHARE</span>'
+  . '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' . $shareUrl . '" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">'
+  . '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3.6 1.5a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2ZM2.2 6h2.9v8.5H2.2V6Zm4.6 0h2.7v1.2h.1c.4-.7 1.3-1.5 2.7-1.5 2.9 0 3.5 1.9 3.5 4.4v4.4h-2.9v-3.9c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2v4H6.8V6Z"/></svg></a>'
+  . '<a href="https://www.facebook.com/sharer/sharer.php?u=' . $shareUrl . '" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">'
+  . '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M10.5 3.2H12V.6C11.7.6 10.8.5 9.8.5c-2 0-3.4 1.3-3.4 3.6v2H4v3h2.4V15h3V9.1h2.3l.4-3H9.4V4.3c0-.8.2-1.1 1.1-1.1Z"/></svg></a>'
+  . '<a href="https://twitter.com/intent/tweet?url=' . $shareUrl . '&amp;text=' . $shareTitle . '" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X">'
+  . '<svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M9.5 6.8 14.9 1h-1.3L9 5.9 5.3 1H1l5.7 7.6L1 15h1.3l5-5.5L11.4 15H16L9.5 6.8Zm-1.5 2-.6-.8L2.8 2h2l3.7 4.9.6.8 4.8 6.4h-2L8 8.8Z"/></svg></a>'
+  . '<a href="mailto:?subject=' . $shareTitle . '&amp;body=' . $shareUrl . '" aria-label="Share by email" title="Share by email">'
+  . '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M1.5 3.5h13v9h-13zM1.5 4l6.5 5 6.5-5"/></svg></a>'
+  . '<button class="copy-link" type="button" data-url="' . blog_e($canonical) . '" aria-label="Copy link" title="Copy link">'
+  . '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.6-2.6a3 3 0 0 0-4.2-4.2L7.7 4.1M9.5 6.5a3 3 0 0 0-4.2 0L2.7 9.1a3 3 0 0 0 4.2 4.2l1.4-1.4"/></svg></button>'
+  . '<span class="share-copied" hidden>COPIED</span>';
+
 $jsonld = array(
   '@context' => 'https://schema.org',
   '@type' => 'BlogPosting',
@@ -112,44 +128,25 @@ header('Content-Type: text/html; charset=utf-8');
     <img src="<?php echo blog_e(blog_banner_url($post)); ?>" alt="<?php echo blog_e($post['banneralt']); ?>" width="1200" height="630">
   </figure>
 
-  <nav class="article-share" aria-label="Share this article">
-    <span>SHARE</span>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo $shareUrl; ?>" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
-      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M3.6 1.5a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2ZM2.2 6h2.9v8.5H2.2V6Zm4.6 0h2.7v1.2h.1c.4-.7 1.3-1.5 2.7-1.5 2.9 0 3.5 1.9 3.5 4.4v4.4h-2.9v-3.9c0-.9 0-2.1-1.3-2.1s-1.5 1-1.5 2v4H6.8V6Z"/></svg>
-    </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $shareUrl; ?>" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
-      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M10.5 3.2H12V.6C11.7.6 10.8.5 9.8.5c-2 0-3.4 1.3-3.4 3.6v2H4v3h2.4V15h3V9.1h2.3l.4-3H9.4V4.3c0-.8.2-1.1 1.1-1.1Z"/></svg>
-    </a>
-    <a href="https://twitter.com/intent/tweet?url=<?php echo $shareUrl; ?>&amp;text=<?php echo $shareTitle; ?>" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X">
-      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M9.5 6.8 14.9 1h-1.3L9 5.9 5.3 1H1l5.7 7.6L1 15h1.3l5-5.5L11.4 15H16L9.5 6.8Zm-1.5 2-.6-.8L2.8 2h2l3.7 4.9.6.8 4.8 6.4h-2L8 8.8Z"/></svg>
-    </a>
-    <a href="mailto:?subject=<?php echo $shareTitle; ?>&amp;body=<?php echo $shareUrl; ?>" aria-label="Share by email" title="Share by email">
-      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M1.5 3.5h13v9h-13zM1.5 4l6.5 5 6.5-5"/></svg>
-    </a>
-    <button id="copyLink" type="button" data-url="<?php echo blog_e($canonical); ?>" aria-label="Copy link" title="Copy link">
-      <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.6-2.6a3 3 0 0 0-4.2-4.2L7.7 4.1M9.5 6.5a3 3 0 0 0-4.2 0L2.7 9.1a3 3 0 0 0 4.2 4.2l1.4-1.4"/></svg>
-    </button>
-    <span class="share-copied" id="copiedNote" hidden>COPIED</span>
-  </nav>
-
   <?php if ($toc): ?>
     <details class="mobile-contents">
       <summary>IN THIS ARTICLE</summary>
       <ol>
-        <?php foreach ($toc as $index => $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><span><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
+        <?php foreach ($toc as $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
       </ol>
     </details>
   <?php endif; ?>
 
-  <div class="article-reading-grid<?php echo $toc ? '' : ' article-reading-grid--no-toc'; ?>">
-    <?php if ($toc): ?>
-      <aside class="desktop-contents">
+  <div class="article-reading-grid">
+    <aside class="desktop-contents">
+      <?php if ($toc): ?>
         <p>IN THIS ARTICLE</p>
         <ol>
-          <?php foreach ($toc as $index => $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><span><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
+          <?php foreach ($toc as $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
         </ol>
-      </aside>
-    <?php endif; ?>
+      <?php endif; ?>
+      <nav class="article-share" aria-label="Share this article"><?php echo $shareButtons; ?></nav>
+    </aside>
 
     <article class="article-content">
       <div class="article-body">
@@ -164,8 +161,18 @@ header('Content-Type: text/html; charset=utf-8');
           </div>
         <?php endif; ?>
         <?php if ($post['principle']): ?><p class="article-principle">FIRST PRINCIPLE: <a href="/index-new.html#principles"><?php echo blog_e(strtoupper($post['principle'])); ?></a></p><?php endif; ?>
-        <div class="article-subscribe"><span>SUBSCRIBE TO THE BLOG</span><a href="/feed.xml">OPEN RSS FEED &rarr;</a></div>
+        <nav class="article-share article-share--mobile" aria-label="Share this article"><?php echo $shareButtons; ?></nav>
       </footer>
+
+      <section class="article-author" aria-labelledby="articleAuthorTitle">
+        <img class="article-author__avatar" src="<?php echo blog_e(blog_config('author_avatar')); ?>" alt="Brent Young">
+        <div class="article-author__copy">
+          <p class="article-author__label">ABOUT THE AUTHOR</p>
+          <h2 id="articleAuthorTitle"><?php echo blog_e(blog_config('author')); ?></h2>
+          <p><?php echo blog_e(blog_config('author_bio')); ?></p>
+        </div>
+      </section>
+      <div class="article-subscribe"><span>SUBSCRIBE TO THE BLOG</span><a href="/feed.xml">OPEN RSS FEED &rarr;</a></div>
     </article>
   </div>
 

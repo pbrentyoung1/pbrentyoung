@@ -2841,26 +2841,28 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 .article-share {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 18px;
-  width: min(920px, 100%);
-  margin: 18px auto 46px;
+  gap: 8px;
   color: var(--ink-mute);
   font-family: var(--mono);
   font-size: 9px;
   letter-spacing: 1px;
 }
 
-.article-share > span:first-child { color: var(--ink); font-weight: 500; }
+.article-share > span:first-child {
+  width: 100%;
+  color: var(--ink);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
 
 .article-share a,
 .article-share button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border: 1px solid var(--hairline);
   border-radius: 50%;
   background: #ffffff;
@@ -2874,6 +2876,22 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 .article-share a:hover,
 .article-share button:hover { color: var(--topic-accent); border-color: var(--topic-accent); }
 .article-share .share-copied { color: var(--blue); }
+
+/* in the sidebar: sits under the contents list */
+.desktop-contents .article-share {
+  margin-top: 20px;
+  border-top: 1px solid var(--hairline);
+  padding-top: 14px;
+}
+
+.desktop-contents .article-share:first-child {
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* end-of-article copy: mobile only, where there is no sidebar */
+.article-share--mobile { display: none; }
 
 .article-reading-grid {
   display: grid;
@@ -2912,23 +2930,13 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 
 .desktop-contents a,
 .mobile-contents a {
-  display: grid;
-  grid-template-columns: 24px minmax(0, 1fr);
-  gap: 8px;
+  display: block;
   color: var(--ink-soft);
   font-family: var(--serif-text);
   font-size: 14px;
   line-height: 1.35;
   padding: 9px 0;
   text-decoration: none;
-}
-
-.desktop-contents a span,
-.mobile-contents a span {
-  color: var(--topic-accent);
-  font-family: var(--mono);
-  font-size: 9px;
-  padding-top: 3px;
 }
 
 .desktop-contents a:hover { color: var(--topic-accent); }
@@ -3016,6 +3024,54 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 }
 
 .article-subscribe a { color: var(--rust); text-decoration: none; }
+
+.article-author {
+  position: relative;
+  min-height: 168px;
+  background: linear-gradient(112deg, color-mix(in srgb, var(--topic-accent) 76%, #ffffff), var(--topic-accent) 56%, color-mix(in srgb, var(--topic-accent) 78%, #000000));
+  margin-top: 104px;
+  padding: 18px 28px 18px 250px;
+}
+
+.article-author__avatar {
+  display: block;
+  position: absolute;
+  left: -8px;
+  bottom: 0;
+  width: 250px;
+  height: 270px;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+}
+
+.article-author__label {
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin: 0 0 5px;
+  opacity: 0.82;
+}
+
+.article-author h2 {
+  color: var(--paper);
+  font-family: var(--serif);
+  font-size: 25px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 0 0 7px;
+}
+
+.article-author__copy > p:last-child {
+  color: var(--paper);
+  font-family: var(--serif-text);
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 62ch;
+  opacity: 0.92;
+}
 
 .related-content {
   border-top: 1px solid var(--hairline);
@@ -3116,6 +3172,23 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   .article-content .article-body > p:first-child { font-size: 19px; }
   .article-content .article-body .pull { font-size: 23px; padding-inline: 4px; }
   .article-subscribe { align-items: flex-start; flex-direction: column; }
+  .article-author { min-height: 0; margin-top: 164px; padding: 20px 18px 24px; text-align: center; }
+  .article-author__avatar {
+    top: auto;
+    right: auto;
+    /* figure stands ON the band: bottom edge tucked 2px into it, no seam */
+    bottom: calc(100% - 2px);
+    left: 50%;
+    /* square box for the square source — no letterbox gap under the figure */
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: translateX(-50%);
+  }
+  .article-author__copy { text-align: center; max-width: 38ch; margin-inline: auto; }
+  .article-author h2 { font-size: 22px; }
+  .article-author__copy > p:last-child { font-size: 14px; line-height: 1.45; margin-inline: auto; }
   .related-content { margin-top: 48px; padding-top: 36px; }
   .pagination { grid-template-columns: 1fr 1fr; gap: 16px; }
   .pagination span { grid-column: 1 / -1; grid-row: 1; text-align: center; }

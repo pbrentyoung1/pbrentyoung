@@ -21,8 +21,12 @@ The blog is now server rendered from the Markdown files in `posts/`:
 - **Article page:** `blog-post.php` renders a centered wide title/banner,
   centered share controls, an 800px reading column, sticky desktop contents
   for posts with 3+ H2s, a native mobile contents disclosure, linked tags
-  and first principle, RSS subscription, and three automatically related
-  banner cards. `js/article.js` only enhances copy-link behavior.
+  and first principle, RSS subscription, an author bio block using
+  `assets/img/brentAvatarSquare.png`, and three automatically related banner
+  cards.
+  The author name, bio, and avatar path live in `inc/blog-config.php` so they
+  can be changed once for every post. `js/article.js` only enhances copy-link
+  behavior.
 - **Selection frontmatter:** `featured: true` selects the lead story.
   `shortlist: 1` (or another positive number) selects and orders The Short
   List. `draft: true` hides a post. See `docs/ARTICLE_TEMPLATE.md`.
