@@ -1715,12 +1715,6 @@ img.pcard-cue {
 
 .article-slug { margin-top: 36px; }
 
-@media (min-width: 900px) {
-  .article-body .pull {
-    width: 120%;
-    margin-left: -10%;
-  }
-}
 
 /* ---------- contact: the colophon (reversed) ---------- */
 .contact {
@@ -2862,15 +2856,18 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 
 .article-share a,
 .article-share button {
-  border: 0;
-  border-bottom: 1px solid var(--hairline);
-  border-radius: 0;
-  background: transparent;
-  color: var(--ink-mute);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(43, 42, 39, 0.08);
+  color: var(--ink-soft);
   cursor: pointer;
-  font: inherit;
-  letter-spacing: inherit;
-  padding: 3px 0;
+  padding: 0;
   text-decoration: none;
 }
 
@@ -2950,6 +2947,7 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 .article-content .article-body > p:first-child {
   color: var(--ink);
   font-size: 21px;
+  font-style: italic;
   line-height: 1.65;
 }
 
