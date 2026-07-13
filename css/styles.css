@@ -58,7 +58,7 @@ a {
 
 .hero h1 {
   font-family: 'Muli', sans-serif;
-  font-size: clamp(55px, 9vw, 120px);
+  font-size: clamp(3.4375rem, 9vw, 7.5rem);
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.8;
@@ -72,7 +72,7 @@ a {
 .hero__subtitle {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: clamp(20px, 2.6vw, 30px);
+  font-size: clamp(1.25rem, 2.6vw, 1.875rem);
   font-weight: 300;
   margin: 0 0 22px;
 }
@@ -153,7 +153,7 @@ h4 {
 
 .company {
   font-family: 'Muli', sans-serif;
-  font-size: 16.64px;
+  font-size: 1.04rem;
   line-height: 19.968px;
   font-weight: 700;
   margin: 0;
@@ -202,7 +202,7 @@ p.description {
 
 .experience__list .description {
   font-family: 'Muli', sans-serif;
-  font-size: 12.8px;
+  font-size: 0.8rem;
   line-height: 15.36px;
   font-weight: 500;
   margin: 0 0 8.96px;
@@ -559,11 +559,11 @@ textarea {
   }
 
   .hero h1 {
-    font-size: 72px;
+    font-size: 4.5rem;
   }
 
   .hero__subtitle {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
@@ -577,13 +577,15 @@ textarea {
   }
 
   .hero h1 {
-    font-size: 55px;
+    font-size: 3.4375rem;
   }
 
   .hero__actions {
     position: static;
     margin-top: 16px;
   }
+
+  .btn--resume { max-width: 100%; }
 }
 
 @media (min-width: 1025px) {
