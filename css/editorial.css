@@ -2594,52 +2594,6 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   margin: 0 0 16px;
 }
 
-.short-list ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  counter-reset: shortlist;
-}
-
-.short-list li {
-  counter-increment: shortlist;
-  border-top: 1px solid var(--hairline);
-  position: relative;
-  padding: 14px 0 15px 34px;
-}
-
-.short-list li::before {
-  content: "0" counter(shortlist);
-  position: absolute;
-  left: 0;
-  top: 16px;
-  color: var(--rust);
-  font-family: var(--mono);
-  font-size: 10px;
-}
-
-.short-list a {
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 1.3;
-  text-decoration: none;
-}
-
-.short-list a:hover { color: var(--rust); }
-
-.short-list a span {
-  display: block;
-  color: var(--ink-mute);
-  font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin-bottom: 3px;
-  text-transform: uppercase;
-}
-
 .archive-heading {
   display: flex;
   justify-content: space-between;
@@ -2941,6 +2895,20 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 
 .desktop-contents a:hover { color: var(--topic-accent); }
 .mobile-contents { display: none; }
+
+/* Share links also live inside the contents sidebar, so restore their
+   circular flex layout after the generic contents-link rule above. */
+.article-share a,
+.article-share button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-share svg {
+  display: block;
+  flex: 0 0 auto;
+}
 
 .article-content { min-width: 0; }
 

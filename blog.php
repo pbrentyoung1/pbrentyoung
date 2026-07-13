@@ -123,10 +123,19 @@ header('Content-Type: text/html; charset=utf-8');
         </section>
         <?php if ($shortlist): ?>
           <section class="short-list">
-            <p class="side-label">THE SHORT LIST</p>
-            <ol>
+            <p class="field-side-label">THE SHORT LIST</p>
+            <ol class="field-shortlist">
               <?php foreach ($shortlist as $item): ?>
-                <li><a href="<?php echo blog_e(blog_post_url($item)); ?>"><span><?php echo blog_e($item['topic']); ?></span><?php echo blog_e($item['title']); ?></a></li>
+                <li data-topic="<?php echo blog_e($item['topic_slug']); ?>">
+                  <a href="<?php echo blog_e(blog_post_url($item)); ?>">
+                    <span class="field-shortlist__thumb"><img src="<?php echo blog_e(blog_thumbnail_url($item)); ?>" alt="" width="64" height="64" loading="lazy" onerror="this.parentNode.style.display='none';"></span>
+                    <span class="field-shortlist__body">
+                      <span class="field-shortlist__topic"><?php echo blog_e($item['topic']); ?></span>
+                      <strong><?php echo blog_e($item['title']); ?></strong>
+                      <small><?php echo blog_e(strtoupper(blog_date($item['date']))); ?> &middot; <?php echo (int) $item['read_minutes']; ?> MIN READ</small>
+                    </span>
+                  </a>
+                </li>
               <?php endforeach; ?>
             </ol>
           </section>
