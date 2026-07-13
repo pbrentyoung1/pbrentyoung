@@ -96,6 +96,8 @@ header('Content-Type: text/html; charset=utf-8');
   <meta property="og:description" content="<?php echo blog_e($post['deck']); ?>">
   <meta property="og:url" content="<?php echo blog_e($canonical); ?>">
   <meta property="og:image" content="<?php echo blog_e($banner); ?>">
+  <meta property="og:image:secure_url" content="<?php echo blog_e($banner); ?>">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
@@ -106,9 +108,11 @@ header('Content-Type: text/html; charset=utf-8');
   <?php foreach ($post['tags'] as $tag): ?><meta property="article:tag" content="<?php echo blog_e($tag); ?>">
   <?php endforeach; ?>
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="<?php echo blog_e($canonical); ?>">
   <meta name="twitter:title" content="<?php echo blog_e($post['title']); ?>">
   <meta name="twitter:description" content="<?php echo blog_e($post['deck']); ?>">
   <meta name="twitter:image" content="<?php echo blog_e($banner); ?>">
+  <meta name="twitter:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
   <script type="application/ld+json"><?php echo json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
   <link rel="stylesheet" href="/css/editorial.css">
 </head>

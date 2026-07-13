@@ -68,12 +68,17 @@ header('Content-Type: text/html; charset=utf-8');
   <meta property="og:description" content="<?php echo blog_e($description); ?>">
   <meta property="og:url" content="<?php echo blog_e($canonical); ?>">
   <meta property="og:image" content="<?php echo blog_e(blog_site_url('/images/og-image.png')); ?>">
+  <meta property="og:image:secure_url" content="<?php echo blog_e(blog_site_url('/images/og-image.png')); ?>">
+  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brent Young — The right story, told the right way.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="<?php echo blog_e($canonical); ?>">
   <meta name="twitter:title" content="<?php echo blog_e($title); ?>">
   <meta name="twitter:description" content="<?php echo blog_e($description); ?>">
   <meta name="twitter:image" content="<?php echo blog_e(blog_site_url('/images/og-image.png')); ?>">
+  <meta name="twitter:image:alt" content="Brent Young — The right story, told the right way.">
   <script type="application/ld+json"><?php echo json_encode($collection, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
   <link rel="stylesheet" href="/css/editorial.css">
 </head>
