@@ -268,7 +268,7 @@ function blog_post_card($post, $variant = 'archive') {
 }
 
 function blog_robots_meta() {
-  return blog_config('blog_public') ? 'index, follow' : 'noindex, nofollow';
+  return blog_config('blog_public') ? 'index, follow' : 'noindex, follow';
 }
 
 function blog_nav_menu() {
