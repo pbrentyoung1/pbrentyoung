@@ -127,3 +127,17 @@ Confused communication is usually trying to accomplish too much.
 A creative brief is not bureaucracy.
 
 It is clarity before creativity.
+
+---
+
+## Intentional Brand vs Unintentional Brand
+
+Every organization has a brand.
+
+The only question is whether it was chosen.
+
+An unintentional brand is assembled by default, one preference at a time, by whoever's taste wins the room that day.
+
+An intentional brand is a standard the organization agreed to on purpose.
+
+Only an intentional brand can referee.
