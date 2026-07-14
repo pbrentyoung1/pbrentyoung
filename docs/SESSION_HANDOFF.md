@@ -1,6 +1,164 @@
 # Session Handoff
 
-Last updated: 2026-07-12 (server-rendered blog rebuild and author banner)
+Last updated: 2026-07-14 (manifesto rewrite, journey tool, and final article artwork)
+
+## Nightly Handoff — 2026-07-14
+
+### The Right Story, Told the Right Way
+
+`posts/the-right-story-told-the-right-way.md` received a substantial voice and
+content pass. The article now centers on one conviction: every church has a
+God-given story worth telling, and church communications is the work of
+faithfully stewarding that story.
+
+The current structure is:
+
+- Communication is ministry. We begin caring for people before we know who
+  they are.
+- Design is hospitality. An invitation asks someone to show up; a welcome
+  prepares a place for them. The grandparent and *Bluey* example carries this
+  idea, along with Jesus saying he would prepare a place for us.
+- Story builds trust. The mission promise and the experience created by our
+  touchpoints must agree.
+- Systems create room for creativity. Chaotic systems cannot scale, especially
+  in church communications where it can feel like the team has twenty
+  supervisors.
+- The close describes post-COVID church communications as preaching to the
+  future congregation. The first campus many people visit is digital, which
+  makes this work a form of evangelism.
+
+The article links to the new Future Congregation Journey tool. A final
+continuity read is still worthwhile before declaring the manifesto finished,
+but the core argument and voice are now established.
+
+The final banner was replaced at
+`assets/img/blog/the-right-story-told-the-right-way.jpg`. Its 600 × 315 card
+derivative was regenerated at
+`assets/img/blog/thumbs/the-right-story-told-the-right-way.jpg` with
+`scripts/generate-blog-thumbnails.sh`.
+
+### Future Congregation Journey
+
+The interactive field tool lives at `/future-congregation-journey` and is
+implemented by `future-congregation-journey.php`.
+
+Its journey is intentionally framed as:
+
+- Awareness
+- Visit
+- Attend
+- Member
+- Minister
+
+Jordan is the fictional future-congregation persona. The persona copy reads:
+“A persona is more than just a demographic. Jordan is a person God has called
+us to prepare a place for.” The Attend-stage question is: “Do I want to come
+back?”
+
+The closing note makes clear that the journey is shared but the timeline is
+not fixed. Some people move through it quickly, some take years, some begin on
+campus, and some arrive having already moved through Awareness and Visit
+online.
+
+Design and behavior decisions:
+
+- The map is a wide editorial field tool that remains visually connected to
+  the portfolio site.
+- Stage headings form one continuous chevron progression rather than five
+  unrelated buttons.
+- Stage labels use IBM Plex Sans at a stronger weight. Selected stages use the
+  site blue.
+- On mobile, the progression remains horizontal and scrollable instead of
+  breaking into rows.
+- Panel changes use a subtle fade, rise, and animated height adjustment.
+- Reduced-motion preferences disable the movement.
+- The closing guide note runs the full width of the frame.
+- Jordan's portrait is stored at `assets/img/journey/jordan-persona.png`.
+
+Production routing was added to `.htaccess`; local routing was added to
+`router.php`; and the tool was added to `sitemap.php`, even while blog indexing
+remains disabled.
+
+Validation completed:
+
+- PHP syntax checks passed for the journey page, router, and sitemap.
+- The inline JavaScript passed a syntax check.
+- `git diff --check` passed before commit.
+- The page was visually checked at desktop and 390px mobile widths.
+- Stage selection, blue active state, transition behavior, and mobile
+  horizontal scrolling were exercised in the browser.
+
+### Related Philosophy and Voice Work
+
+`docs/FIRST_PRINCIPLES.md` now closes with “Stewarding the Story,” reinforcing
+that our responsibility is not to invent a more impressive story but to
+faithfully steward the one God entrusted to us.
+
+`docs/VOICE_NOTES.md` contains the durable writing choices learned while
+editing these posts. Continue adding to it as the collaborative editing process
+refines the voice.
+
+### Commits Published Tonight
+
+- `3bf2896 Add future congregation journey`
+  - Publishes the manifesto rewrite, stewardship note, interactive journey,
+    Jordan portrait, routes, sitemap entry, responsive design, and motion.
+- `ae15c25 Update Right Story artwork`
+  - Publishes the final banner and regenerated 600 × 315 thumbnail.
+
+Both commits are on `main` and pushed to `origin/main`.
+
+### Working Tree at Pack-Up
+
+The branch is synchronized with `origin/main`. The following local items were
+intentionally not included in tonight's commits:
+
+- Modified `.DS_Store`
+- Modified `assets/.DS_Store`
+- Untracked `docs/.DS_Store`
+- Deleted `assets/img/blog/brand-is-the-referee.png`
+
+The deleted PNG appeared after the published work and was not touched or
+staged. Confirm whether it is an intentional cleanup before committing it.
+
+The GitHub CLI token currently reports as invalid, but the repository's normal
+Git/SSH push authentication is working.
+
+### Blog Sharing, Images, and UI Polish
+
+- Blog and site pages now emit complete Open Graph and Twitter metadata. Site
+  pages use `images/og-image.png`; individual articles use their full banner
+  image. Social cards require absolute HTTPS image URLs.
+- `/robots.txt` allows social preview crawlers to fetch `/blog`. When
+  `blog_public` is false, pages remain `noindex, follow` and are omitted from
+  the sitemap so previews work without making the blog searchable.
+- Each banner has a separate 600 × 315 derivative at
+  `assets/img/blog/thumbs/<slug>.jpg`. Regenerate one after changing banner art:
+
+  ```sh
+  magick assets/img/blog/<slug>.jpg \
+    -resize 600x315^ -gravity center -extent 600x315 \
+    -strip -quality 82 assets/img/blog/thumbs/<slug>.jpg
+  ```
+
+- The homepage Field Notes and blog Short List use the derivative; article
+  heroes and social sharing use the full banner.
+- Author name, bio, and avatar source remain centralized in
+  `inc/blog-config.php`. The current avatar artwork is committed in
+  `assets/img/brentAvatarSquare.png` and `assets/img/brentHedcut.png`.
+- `css/editorial.css` uses rem-based typography, shared clamp type tokens,
+  68ch article text measure, widow/orphan protection, controlled hyphenation,
+  and responsive non-splitting rules for figures and pull quotes.
+- The flat-file pencil is desktop/tablet-only and now sits 40px higher so it
+  clears the `SPEC SHEET: RESUME.PDF` button. The legacy mobile resume button
+  is constrained to its content width.
+
+### Local End-of-Day State
+
+- The PHP server was stopped at pack-up. Start it from the repository root with
+  `php -S localhost:8000 router.php` when testing locally.
+- Verify `/index-new.html`, `/blog`, and a post such as
+  `/blog/brand-is-the-referee` after starting the server.
 
 ## Blog Architecture (NEW — 2026-07-10)
 
@@ -19,11 +177,14 @@ The blog is now server rendered from the Markdown files in `posts/`:
   responsive article grid, and 24-post pagination. Topic, tag, search, and
   page state are shareable query-string URLs.
 - **Article page:** `blog-post.php` renders a centered wide title/banner,
-  centered share controls, an 800px reading column, sticky desktop contents
+  an 800px reading column, sticky desktop contents
   for posts with 3+ H2s, a native mobile contents disclosure, linked tags
   and first principle, RSS subscription, an author bio block using
   `assets/img/brentAvatarSquare.png`, and three automatically related banner
   cards.
+  The desktop contents list is unnumbered. Circular social share icons sit
+  beneath it. Pull-quote keylines remain within the article column so they do
+  not collide with the sidebar. The article deck is italic.
   The author name, bio, and avatar path live in `inc/blog-config.php` so they
   can be changed once for every post. On mobile, the portrait is centered
   above the category-colored panel and the name and bio are centered inside it;
@@ -32,10 +193,11 @@ The blog is now server rendered from the Markdown files in `posts/`:
 - **Selection frontmatter:** `featured: true` selects the lead story.
   `shortlist: 1` (or another positive number) selects and orders The Short
   List. `draft: true` hides a post. See `docs/ARTICLE_TEMPLATE.md`.
-- **Banners:** all 10 development posts have simple working-art JPGs at
-  `assets/img/blog/<slug>.jpg`, each exactly 1200×630. The same file appears
+- **Banners:** development posts have JPG artwork at
+  `assets/img/blog/<slug>.jpg`. The same file appears
   in index cards, article heroes, related cards, Open Graph, Twitter, and
-  JSON-LD. Replace these when final article art is ready.
+  JSON-LD. Replace working art as each article is finalized, then regenerate
+  its 600 × 315 thumbnail.
 - **Generated discovery routes:** `/feed.xml`, `/sitemap.xml`, and
   `/robots.txt` are rendered from the same post data. They never require
   manual post lists.
@@ -52,8 +214,11 @@ The blog is now server rendered from the Markdown files in `posts/`:
 
 - `index-new.html` now includes a server-data-compatible **Field Notes**
   section between The File and Contact. It renders the featured post plus the
-  three numbered `shortlist:` posts from `posts/`, with the same topic links,
+  three `shortlist:` posts from `posts/`, with the same topic links,
   dates, read times, banners, and thumbnails used by the blog index.
+- The `THE BLOG` label sits above the Field Notes heading. Short List entries
+  use their artwork instead of numerical markers, and category labels use the
+  color associated with each editorial theme.
 - `js/editorial.js` loads the shared post index for the homepage preview. If no
   post is marked `featured: true`, the newest visible post is used as the
   fallback feature.
@@ -68,10 +233,11 @@ The blog is now server rendered from the Markdown files in `posts/`:
 
 ## Current Repository State
 
-- `main` is ahead of `origin/main` at `38a5b97 Author bio: engraved avatar assets; mobile figure stands on the band`.
+- `main` and `origin/main` are synchronized at
+  `ae15c25 Update Right Story artwork`.
 - The complete blog rebuild, homepage Field Notes preview, thumbnail workflow,
-  and shared BLOG dropdown are committed in the current changeset and ready
-  for server testing.
+  shared BLOG dropdown, manifesto rewrite, and Future Congregation Journey are
+  committed and published.
 - `index.html` remains the classic live homepage. `index-new.html` remains
   the editorial rebuild and is the intentional return destination from blog
   pages during development.
