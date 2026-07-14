@@ -237,3 +237,15 @@ What story will people experience?
 If those questions are answered well...
 
 Everything else becomes easier.
+
+---
+
+## Stewarding the Story
+
+Every church has a God-given story worth telling.
+
+Our responsibility is not to invent a more impressive story. It is to faithfully steward the one God has entrusted to us.
+
+We steward that story by telling it clearly, preparing a place for people to encounter it, and investing the attention, creativity, trust, and influence we have been given.
+
+The right story, told the right way.

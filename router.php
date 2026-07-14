@@ -12,6 +12,11 @@ if ($path === '/blog') {
   return true;
 }
 
+if ($path === '/future-congregation-journey') {
+  require __DIR__ . '/future-congregation-journey.php';
+  return true;
+}
+
 if (preg_match('#^/blog/([a-z0-9][a-z0-9-]*)/?$#', $path, $match)) {
   $_GET['slug'] = $match[1];
   require __DIR__ . '/blog-post.php';

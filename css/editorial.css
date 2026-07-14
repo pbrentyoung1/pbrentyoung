@@ -3351,6 +3351,252 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 
 .field-notes .desk-all { margin-top: 22px; }
 
+/* ---------- future congregation journey ---------- */
+.journey-tool {
+  max-width: 1220px;
+  min-height: 70vh;
+  padding-top: 64px;
+  padding-bottom: 72px;
+}
+
+.journey-tool__masthead {
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 28px;
+  max-width: 780px;
+  padding-bottom: 24px;
+}
+
+.journey-tool__masthead h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1.03;
+  margin: 10px 0 14px;
+  text-wrap: balance;
+}
+
+.journey-tool__masthead > p {
+  color: var(--ink-soft);
+  font-family: var(--serif-text);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 58ch;
+}
+
+.journey-persona {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  box-shadow: 0 10px 26px rgba(43, 42, 39, 0.06);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 92px minmax(0, 1fr) minmax(210px, 0.7fr);
+  margin: 0 0 32px;
+  padding: 24px;
+}
+
+.journey-persona__portrait {
+  align-items: center;
+  background: var(--paper-dim);
+  border: 1px solid var(--blue-line);
+  border-radius: 50%;
+  color: var(--blue);
+  display: flex;
+  height: 88px;
+  justify-content: center;
+  overflow: hidden;
+  width: 88px;
+}
+
+.journey-persona__portrait img { height: 100%; object-fit: cover; width: 100%; }
+
+.journey-persona__label,
+.journey-detail__label,
+.journey-detail__story span {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 1.3px;
+}
+
+.journey-persona h2 {
+  font-family: var(--serif);
+  font-size: 2.125rem;
+  line-height: 1.1;
+  margin: 5px 0 6px;
+}
+
+.journey-persona p { color: var(--ink-soft); margin: 0; }
+
+.journey-persona__note {
+  border-left: 2px solid var(--rust);
+  font-family: var(--serif-text);
+  font-style: italic;
+  line-height: 1.45;
+  padding-left: 16px;
+}
+
+.journey-map { margin: 0; }
+
+.journey-map__rail {
+  display: flex;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  padding: 3px 2px 5px;
+  scroll-snap-type: x proximity;
+}
+
+.journey-stage {
+  background: var(--paper-dim);
+  border: 0;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%);
+  color: var(--ink);
+  cursor: pointer;
+  flex: 1 1 0;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+  margin-left: -10px;
+  min-height: 62px;
+  min-width: 150px;
+  padding: 12px 24px 12px 30px;
+  position: relative;
+  scroll-snap-align: start;
+  text-transform: uppercase;
+  transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.journey-stage:first-child {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%);
+  margin-left: 0;
+  padding-left: 18px;
+}
+
+.journey-stage:last-child {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 18px 50%);
+  padding-right: 18px;
+}
+
+.journey-stage:hover { background: rgba(168, 212, 226, 0.38); color: var(--blue); transform: translateY(-2px); z-index: 1; }
+.journey-stage.is-active { background: var(--blue); border-color: var(--blue); color: var(--paper); transform: translateY(-2px); }
+.journey-stage.is-active:hover { background: var(--blue); color: var(--paper); }
+.journey-stage:focus-visible { outline: 2px solid var(--rust); outline-offset: -4px; z-index: 2; }
+
+.journey-detail {
+  background: #fff;
+  border: 1px solid var(--hairline);
+  box-shadow: 0 10px 26px rgba(43, 42, 39, 0.06);
+  box-sizing: border-box;
+  padding: clamp(24px, 4vw, 52px);
+  transition: height 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 150ms ease, transform 180ms ease;
+}
+
+.journey-detail.is-changing {
+  opacity: 0.35;
+  transform: translateY(5px);
+}
+
+.journey-detail h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin: 8px 0 16px;
+  text-wrap: balance;
+}
+
+.journey-detail__summary {
+  color: var(--ink-soft);
+  font-family: var(--serif-text);
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin: 0 0 34px;
+  max-width: 62ch;
+}
+
+.journey-detail__grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.journey-detail__grid section { border-top: 2px solid var(--ink); padding-top: 12px; }
+
+.journey-detail__grid h3 {
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.journey-detail__grid p,
+.journey-detail__grid li {
+  color: var(--ink-soft);
+  font-family: var(--serif-text);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+
+.journey-detail__grid p { margin: 0; }
+.journey-detail__grid ul { list-style: none; margin: 0; padding: 0; }
+.journey-detail__grid li { margin: 0 0 5px; padding-left: 13px; position: relative; }
+.journey-detail__grid li::before { color: var(--rust); content: '•'; left: 0; position: absolute; }
+
+.journey-detail__story {
+  border-top: 1px solid var(--hairline);
+  margin-top: 34px;
+  padding-top: 17px;
+}
+
+.journey-detail__story p {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-style: italic;
+  line-height: 1.4;
+  margin: 7px 0 0;
+  max-width: 48ch;
+}
+
+.journey-tool__note {
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-mute);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.6px;
+  line-height: 1.55;
+  margin: 20px 0 0;
+  max-width: none;
+  padding-top: 15px;
+  width: 100%;
+}
+
+@media (max-width: 759px) {
+  .journey-tool { padding-top: 44px; padding-bottom: 52px; }
+  .journey-persona { grid-template-columns: 72px minmax(0, 1fr); padding: 20px; }
+  .journey-persona__portrait { height: 68px; width: 68px; }
+  .journey-persona__note { grid-column: 1 / -1; }
+  .journey-map__rail { margin-right: -18px; padding-right: 18px; }
+  .journey-stage { flex-basis: 145px; min-width: 145px; }
+  .journey-detail__grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-stage,
+  .journey-detail {
+    transition: none;
+  }
+
+  .journey-stage:hover,
+  .journey-stage.is-active,
+  .journey-detail.is-changing {
+    transform: none;
+  }
+}
+
 @media (max-width: 759px) {
   .field-notes { padding: 48px 0 42px; }
   .field-notes-grid { grid-template-columns: 1fr; gap: 28px; }

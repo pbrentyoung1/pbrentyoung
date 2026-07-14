@@ -8,6 +8,7 @@ function sitemap_e($value) {
 
 $urls = array(
   array('loc' => blog_site_url('/'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/index.html')), 'priority' => '1.0'),
+  array('loc' => blog_site_url('/future-congregation-journey'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/future-congregation-journey.php')), 'priority' => '0.7'),
 );
 
 if (blog_config('blog_public')) {
