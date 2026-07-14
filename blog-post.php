@@ -16,7 +16,7 @@ if (!$post) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Not found — Brent Young</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="/css/editorial.css">
+    <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
   </head>
   <body class="blog-site">
     <?php blog_site_header(); ?>
@@ -114,7 +114,7 @@ header('Content-Type: text/html; charset=utf-8');
   <meta name="twitter:image" content="<?php echo blog_e($banner); ?>">
   <meta name="twitter:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
   <script type="application/ld+json"><?php echo json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
-  <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
 </head>
 <body class="blog-site article-view" data-topic="<?php echo blog_e($post['topic_slug']); ?>">
 <?php blog_site_header(); ?>

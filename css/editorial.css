@@ -2965,8 +2965,9 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 /* Pull quotes are display text: keep their short line intact even though
    body paragraphs use automatic hyphenation for long reading measure. */
 .article-content .article-body .pull {
-  -webkit-hyphens: none;
-  hyphens: none;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  hyphens: none !important;
   overflow-wrap: normal;
   word-break: normal;
   text-wrap: balance;
