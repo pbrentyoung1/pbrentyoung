@@ -1620,6 +1620,10 @@ img.pcard-cue {
   border-bottom: 1px solid var(--ink);
   padding: 26px 12px;
   margin: 2em 0;
+  -webkit-hyphens: none;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .article-fig { margin: 2em 0; }
@@ -2956,6 +2960,16 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 .article-content .article-body .pull,
 .article-content .article-figure {
   break-inside: avoid;
+}
+
+/* Pull quotes are display text: keep their short line intact even though
+   body paragraphs use automatic hyphenation for long reading measure. */
+.article-content .article-body .pull {
+  -webkit-hyphens: none;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
 }
 
 .article-content .article-body a,
