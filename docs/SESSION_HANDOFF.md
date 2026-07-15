@@ -344,3 +344,68 @@ How it works:
   navigation from `index-new.html` to `/` when the rebuild becomes the live
   homepage, then verify production rewrites and social cards.
 - Decide whether to remove `.DS_Store` files from tracking in a future cleanup.
+
+## Conversation Handoff: Flat File Context Review (2026-07-15)
+
+### Current direction
+
+The homepage portfolio has been consolidated into a single section called **The
+File**. The former standalone case-study section was removed. Detailed work now
+lives inside the same slide-table archive as the rest of the portfolio.
+
+The goal is not to present a gallery of finished objects alone. The File should
+show what Brent was asked to solve, who the work served, what his role was, what
+was made, what changed, and what the work taught him. The work is evidence of the
+ideas and principles developed throughout the site.
+
+Three records currently function as detailed case files:
+
+- Mending the Soul: the Native American workbook
+- Wired In: building a national broadcast network
+- Forge: a church plant, from blank page to launch day
+
+Their archive entries point to detailed records through `caseStudy` IDs in
+`data/portfolio.json`. Detailed records currently support client, discipline
+codes, problem (`challenge`), role, response (`craft`), outcome (`impact`),
+lesson, principle, related essay, and multiple media items.
+
+### Next working session
+
+Review the 65 items in `data/portfolio.json` one at a time, in the order they
+appear in The File. This should be a collaborative editorial interview, not a
+bulk rewrite.
+
+For each item:
+
+- Show Brent the title and existing media.
+- Ask for the context that cannot be learned from the asset alone.
+- Clarify the organization or client, the original need, Brent's role, notable
+  constraints, what he made, the outcome, and what he learned.
+- Decide whether the item needs a concise contextual note or should become a
+  full Case File.
+- Connect it to a first principle or Field Note only when that relationship is
+  meaningful.
+- Update `data/portfolio.json`, verify the opened job jacket, and then move to
+  the next item.
+
+Do not number the public-facing records unless Brent specifically asks for it.
+Use direct, warm, practical language. Do not inflate a project into a case study
+when the honest context is more useful. Preserve the rule that the work supports
+the ideas rather than becoming the destination of the site.
+
+### Uncommitted homepage copy
+
+`index-new.html` currently contains local, uncommitted revisions to the copy in
+Before the Work, The File, Field Notes, and Contact. These revisions clarify the
+narrative progression as calling, evidence, lessons, and invitation. Review or
+commit them separately before beginning unrelated implementation work.
+
+### Repository state at handoff
+
+- Branch: `main`
+- Latest published commit: `e635394 Update author bio`
+- Local change: `index-new.html`
+- `data/portfolio.json` remains the source of truth for The File.
+- `js/editorial.js` renders both ordinary job jackets and expanded Case Files.
+- `css/editorial.css` contains the desktop split layout and stacked mobile
+  treatment for expanded Case Files.
