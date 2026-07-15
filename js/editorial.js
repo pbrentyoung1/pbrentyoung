@@ -60,7 +60,14 @@
     return (item.categories || []).filter(function (c) { return c !== "church"; });
   }
 
+  function caseStudyFor(item) {
+    if (!item || !item.caseStudy) return null;
+    return DATA.featured.filter(function (study) { return study.id === item.caseStudy; })[0] || null;
+  }
+
   function codesFor(item) {
+    var study = caseStudyFor(item);
+    if (study && study.codes && study.codes.length) return study.codes.join(" · ");
     var d = disciplines(item);
     if (!d.length) d = ["church"];
     return d.map(function (c) { return CODE[c] || c.toUpperCase(); }).join(" · ");
@@ -162,83 +169,12 @@
     return f;
   }
 
-  /* ---------- case studies ---------- */
-  function renderCases() {
-    var host = document.getElementById("caseStudies");
-    if (!host) return;
-    DATA.featured.forEach(function (cs) {
-      var sec = el("section", "case wrap");
-      sec.id = cs.id;
-      sec.setAttribute("data-num", String(cs.num).padStart(2, ""));
-
-      var head = el("div", "", '<span class="kicker">Case study ' + esc(cs.num) + "</span>" +
-        '<h2 class="case-title">' + esc(cs.title) + "</h2>" +
-        '<div class="case-codes">' + esc(cs.codes.join(" · ")) +
-        (cs.client ? " &middot; " + esc(cs.client).toUpperCase() : "") +
-        (cs.year ? " &middot; " + esc(cs.year) : "") +
-        (cs.church ? ' &nbsp;<span class="stamp-church">CHURCH</span>' : "") + "</div>");
-      sec.appendChild(head);
-
-      var row = el("div", "case-media-row");
-      cs.media.forEach(function (m, mi) {
-        var fig = el("figure", "case-fig");
-        fig.style.margin = "0";
-        scatterPaste(fig, cs.id + "|figure|" + mi, 0.75);
-        var frame = fpoFrame(m.poster, cs.title + " — figure " + (mi + 1));
-        fig.appendChild(frame);
-        if (m.type === "video" || m.type === "embed") {
-          fig.appendChild(el("span", "play-badge", "▶"));
-        }
-        var cap = el("figcaption", "figcap",
-          "<span>" + esc(m.caption || "") + "</span><span>" + esc(cs.id).toUpperCase() + "-" + jobNo(mi) + "</span>");
-        fig.appendChild(cap);
-        var open = function () { openJacket(caseMediaAsItem(cs, m), null); };
-        frame.style.cursor = "pointer";
-        frame.addEventListener("click", open);
-        fig.setAttribute("tabindex", "0");
-        fig.addEventListener("keydown", function (e) { if (e.key === "Enter") open(); });
-        row.appendChild(fig);
-      });
-      sec.appendChild(row);
-
-      var meta = el("dl", "case-meta");
-      [["Challenge", cs.challenge], ["My role", cs.role], ["The craft", cs.craft], ["Impact", cs.impact]]
-        .forEach(function (pair) {
-          if (!pair[1]) return;
-          meta.appendChild(el("dt", "", esc(pair[0]).toUpperCase()));
-          meta.appendChild(el("dd", "", esc(pair[1])));
-        });
-      if (cs.principle) {
-        meta.appendChild(el("dt", "", "THE PRINCIPLE"));
-        meta.appendChild(el("dd", "", esc(cs.principle) +
-          (cs.essay ? ' &mdash; <a href="blog/' + esc(cs.essay.slug) + '">read the essay: &ldquo;' + esc(cs.essay.title) + '&rdquo;</a>' : "")));
-      }
-      sec.appendChild(meta);
-
-      sec.appendChild(el("div", "slugline",
-        "<span>JOB NO. " + esc(cs.id).toUpperCase() + "-001" +
-        (cs.client ? " &middot; CLIENT: " + esc(cs.client).toUpperCase() : "") +
-        "</span><span>PASTE-UP: B. YOUNG</span>"));
-
-      host.appendChild(sec);
-    });
+  /* ---------- the file ---------- */
+  function filteredFiles(filter) {
+    return DATA.archive.filter(function (item) { return matches(item, filter); })
+      .sort(function (a, b) { return Number(Boolean(b.caseStudy)) - Number(Boolean(a.caseStudy)); });
   }
 
-  function caseMediaAsItem(cs, m) {
-    return {
-      title: cs.title,
-      type: m.type,
-      src: m.src,
-      poster: m.poster,
-      categories: cs.codes.map(function (c) { return c.toLowerCase(); }),
-      church: cs.church,
-      role: cs.role,
-      story: cs.challenge,
-      _caption: m.caption
-    };
-  }
-
-  /* ---------- flat file ---------- */
   function renderTabs() {
     var tabs = document.getElementById("tabs");
     tabs.innerHTML = "";
@@ -257,7 +193,9 @@
 
   function fileCard(item, idx, animIdx) {
     var b = el("button", "fcard");
+    var study = caseStudyFor(item);
     b.type = "button";
+    if (study) b.classList.add("fcard-detailed");
     if (item.title.length <= 20) b.classList.add("fcard-short-title");
     b.style.animationDelay = (animIdx * 40) + "ms";
     scatterPaste(b, item.title + "|" + idx, 0.95);
@@ -283,10 +221,11 @@
 
     b.appendChild(el("div", "fcard-title", esc(item.title)));
     b.appendChild(el("div", "fcard-slug",
-      '<span class="codes">' + codesFor(item) + "</span><span>NO. " + jobNo(idx) + "</span>"));
+      '<span class="codes">' + codesFor(item) + '</span><span class="file-kind">' +
+      (study ? "CASE FILE" : "ON FILE") + "</span>"));
 
     b.addEventListener("click", function () {
-      var list = DATA.archive.filter(function (i) { return matches(i, cur); });
+      var list = filteredFiles(cur);
       openJacket(item, list);
     });
     return b;
@@ -297,7 +236,7 @@
     var count = document.getElementById("fileCount");
     var more = document.getElementById("pullMore");
 
-    var list = DATA.archive.filter(function (i) { return matches(i, cur); });
+    var list = filteredFiles(cur);
     var vis = list.slice(0, shown);
 
     count.textContent = "SHOWING " + vis.length + " OF " + list.length + " JOBS ON FILE";
@@ -500,11 +439,13 @@
     var layer = document.getElementById("jacketLayer");
     var globalIdx = DATA.archive.indexOf(item);
     var no = globalIdx !== -1 ? jobNo(globalIdx) : "CS";
+    var study = caseStudyFor(item);
 
-    document.getElementById("jkNo").textContent = "JOB JACKET · NO. " + no;
+    layer.querySelector(".jacket").classList.toggle("is-detailed", Boolean(study));
+    document.getElementById("jkNo").textContent = study ? "DETAILED CASE FILE" : "JOB JACKET";
     document.getElementById("jkPos").textContent = jacketIdx !== -1
-      ? (jacketIdx + 1) + " / " + jacketList.length + " IN " + cur.toUpperCase()
-      : "FROM CASE STUDY";
+      ? "FILE " + (jacketIdx + 1) + " OF " + jacketList.length + " · " + cur.toUpperCase()
+      : "PROJECT FILE";
 
     var mediaHost = document.getElementById("jkMedia");
     galItems = normalizeGallery(item) || [];
@@ -526,23 +467,42 @@
 
     document.getElementById("jkTitle").textContent = item.title;
     document.getElementById("jkCodes").textContent = codesFor(item) +
-      (item.client ? " · " + item.client.toUpperCase() : "") +
+      ((study && study.client) ? " · " + study.client.toUpperCase() : (item.client ? " · " + item.client.toUpperCase() : "")) +
       (item.year ? " · " + item.year : "");
 
     var meta = document.getElementById("jkMeta");
     meta.innerHTML = "";
-    [["ROLE", item.role], ["STORY", item.story], ["TOOLS", item.tools]].forEach(function (pair) {
+    [
+      ["PROBLEM", study ? study.challenge : item.story],
+      ["ROLE", study ? study.role : item.role],
+      ["RESPONSE", study ? study.craft : item.response],
+      ["OUTCOME", study ? study.impact : item.outcome],
+      ["LESSON", study ? study.lesson : item.lesson],
+      ["TOOLS", item.tools]
+    ].forEach(function (pair) {
       if (!pair[1]) return;
       meta.appendChild(el("dt", "", pair[0]));
       meta.appendChild(el("dd", "", esc(pair[1])));
     });
+    if (study && study.principle) {
+      meta.appendChild(el("dt", "", "PRINCIPLE"));
+      var principle = el("dd", "", esc(study.principle));
+      if (study.essay) {
+        principle.appendChild(document.createTextNode(" · "));
+        var essay = document.createElement("a");
+        essay.href = "/blog/" + encodeURIComponent(study.essay.slug);
+        essay.textContent = "Read “" + study.essay.title + "”";
+        principle.appendChild(essay);
+      }
+      meta.appendChild(principle);
+    }
 
     var prev = document.getElementById("jkPrev");
     var next = document.getElementById("jkNext");
     prev.style.visibility = next.style.visibility = jacketIdx !== -1 ? "visible" : "hidden";
 
     document.getElementById("jkShare").textContent = globalIdx !== -1
-      ? "SHARE THIS JOB → #JOB-" + no
+      ? "COPY FILE LINK"
       : "";
 
     if (globalIdx !== -1 && history.replaceState) {
@@ -629,7 +589,7 @@
     if (!m) return;
     var idx = parseInt(m[1], 10) - 1;
     if (idx >= 0 && idx < DATA.archive.length) {
-      var list = DATA.archive.filter(function (i) { return matches(i, cur); });
+      var list = filteredFiles(cur);
       openJacket(DATA.archive[idx], list);
     }
   }
@@ -697,7 +657,6 @@
       .then(function (r) { return r.json(); })
       .then(function (json) {
         DATA = json;
-        renderCases();
         renderTabs();
         paintGrid();
         wireJacket();
@@ -720,8 +679,8 @@
         }, reduceMotion ? 0 : 350);
       })
       .catch(function (err) {
-        var host = document.getElementById("caseStudies");
-        if (host) host.innerHTML = '<p class="wrap" style="padding:40px 0;">Could not load portfolio data (' + esc(err.message) + "). If you opened this file directly, run it from a web server — fetch() needs http://.</p>";
+        var host = document.getElementById("filegrid");
+        if (host) host.innerHTML = '<p style="padding:40px 0;">Could not load portfolio data (' + esc(err.message) + "). If you opened this file directly, run it from a web server.</p>";
       });
   }
 

@@ -15,6 +15,43 @@ This file complements EDITORIAL_GUIDE.md (the "why") with the concrete "how."
   table, not a lecture about branding in general.
 - When a point can be aimed at the reader, aim it at the reader. Prefer "as the
   senior leader, you..." over "the senior leader..."
+- Use **we, our, and us** when the piece is expressing a shared calling of the
+  church. The manifesto can sound communal without becoming institutional.
+
+## Tone
+
+- Be direct, pastoral, warm, practical, hopeful, and inspirational.
+- Lead with invitation and stewardship. Avoid framing that sounds like a
+  scolding, even when naming a genuine communications problem.
+- Keep the reader's dignity intact. The goal is to help church leaders see a
+  clearer and more caring way forward.
+- Prefer concrete human examples over abstract brand language. A grandparent
+  preparing the house for a grandchild explains hospitality better than a
+  paragraph of design terminology.
+- Avoid words that imply manipulation. For example, “believable” can suggest
+  that communications is manufacturing trust rather than faithfully revealing
+  what is true.
+
+## Durable ideas and language
+
+- Every church has a God-given story worth telling.
+- Our work is to steward the story God has entrusted to us, not invent a more
+  impressive version of the church.
+- Communication is ministry because we begin caring for people before we know
+  who they are.
+- Church communications is preaching to the future congregation. The first
+  campus many people visit is digital: YouTube, Facebook, Instagram, the
+  website, or email.
+- Poor design invites someone. Good design welcomes them by preparing a place
+  and making thoughtful accommodations.
+- Touchpoints are the moments where people encounter the church and decide
+  whether its stated mission agrees with their lived experience.
+- A persona is more than just a demographic. A persona represents a person God
+  has called us to prepare a place for.
+- Healthy systems make room for creativity. Chaotic systems cannot scale and
+  require disproportionate effort as the workload grows.
+- In a church communications department, it can feel like there are twenty
+  supervisors. A clear system gives legitimate requests a shared path.
 
 ## Punctuation
 
