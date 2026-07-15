@@ -9,6 +9,9 @@ RewriteRule ^blog\.html$ /blog [R=301,L,NE]
 RewriteCond %{THE_REQUEST} \s/+blog/(?:[?\s]) [NC]
 RewriteRule ^blog/$ /blog [R=301,L,NE]
 
+# This essay was folded into Change vs. Polish.
+RewriteRule ^blog/you-cant-polish-your-way-into-relevance/?$ /blog/change-vs-polish [R=301,L,NE]
+
 RewriteRule ^blog$ blog.php [L,QSA]
 RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/?$ blog-post.php?slug=$1 [L,QSA]
 RewriteRule ^future-congregation-journey$ future-congregation-journey.php [L,QSA]

@@ -3,6 +3,12 @@
 require_once __DIR__ . '/inc/blog.php';
 
 $slug = isset($_GET['slug']) ? (string) $_GET['slug'] : '';
+
+if ($slug === 'you-cant-polish-your-way-into-relevance') {
+  header('Location: /blog/change-vs-polish', true, 301);
+  exit;
+}
+
 $post = preg_match('/^[a-z0-9][a-z0-9-]*$/', $slug) ? blog_find_post($slug) : null;
 
 if (!$post) {
