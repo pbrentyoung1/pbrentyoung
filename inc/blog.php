@@ -299,12 +299,12 @@ function blog_site_header() {
   ?>
   <header class="site-head">
     <div class="wrap">
-      <a class="wordmark" href="/index-new.html">BRENT YOUNG</a>
+      <a class="wordmark" href="/">BRENT YOUNG</a>
       <nav class="site-nav" id="siteNav" aria-label="Site">
-        <a class="nav-link" href="/index-new.html#work">WORK</a>
-        <a class="nav-link" href="/index-new.html#flat-file">THE FILE</a>
+        <a class="nav-link" href="/#principles">PRINCIPLES</a>
+        <a class="nav-link" href="/#flat-file">THE FILE</a>
         <?php blog_nav_menu(); ?>
-        <a class="nav-link" href="/index-new.html#contact">CONTACT</a>
+        <a class="nav-link" href="/#contact">CONTACT</a>
         <a class="btn-spec" href="/assets/pdf/resume.pdf" target="_blank" rel="noopener">RESUME.PDF</a>
         <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
       </nav>
@@ -320,7 +320,7 @@ function blog_site_footer($fonts = 'PLAYFAIR DISPLAY &middot; IBM PLEX SANS &mid
     <div class="wrap">
       <span>&copy; <?php echo date('Y'); ?> BRENT YOUNG</span>
       <span class="font-list">SET IN <?php echo $fonts; ?></span>
-      <a class="spec-toggle" href="/index-new.html">BACK TO THE BOARD</a>
+      <a class="spec-toggle" href="/">BACK TO THE BOARD</a>
     </div>
   </footer>
   <script src="/js/nav.js"></script>

@@ -1,6 +1,19 @@
 # Session Handoff
 
-Last updated: 2026-07-14 (manifesto rewrite, journey tool, and final article artwork)
+Last updated: 2026-07-15 (editorial homepage promotion)
+
+## Homepage Promotion — 2026-07-15
+
+The editorial rebuild is now the default homepage at `/` and in `index.html`.
+The former classic homepage is preserved as `index_old.html` and marked
+`noindex, nofollow` so it remains available as a reference without competing
+with the canonical homepage.
+
+All shared blog navigation and article links now return to `/` and its homepage
+sections. Requests for the former `/index-new.html` preview URL and explicit
+`/index.html` requests permanently redirect to `/` in both Apache and the local
+PHP router. Case File links using stable IDs such as `#forge`, `#mts-workbook`,
+and `#wired-in` now open the corresponding record in The File.
 
 ## Nightly Handoff — 2026-07-14
 
@@ -157,7 +170,7 @@ Git/SSH push authentication is working.
 
 - The PHP server was stopped at pack-up. Start it from the repository root with
   `php -S localhost:8000 router.php` when testing locally.
-- Verify `/index-new.html`, `/blog`, and a post such as
+- Verify `/`, `/blog`, and a post such as
   `/blog/brand-is-the-referee` after starting the server.
 
 ## Blog Architecture (NEW — 2026-07-10)
@@ -206,13 +219,12 @@ The blog is now server rendered from the Markdown files in `posts/`:
   robots disallows `/blog`, and blog URLs are omitted from the sitemap.
 - **Local server:** start with `php -S 127.0.0.1:8000 router.php`. PHP's
   built-in server does not read `.htaccess`; `router.php` mirrors production.
-- Blog navigation intentionally returns to `index-new.html` until the rebuilt
-  homepage is approved for the root URL.
+- Blog navigation returns to the editorial homepage at `/`.
 - Analytics is intentionally deferred until launch.
 
 ## Homepage Preview and Navigation
 
-- `index-new.html` now includes a server-data-compatible **Field Notes**
+- `index.html` includes a server-data-compatible **Field Notes**
   section between The File and Contact. It renders the featured post plus the
   three `shortlist:` posts from `posts/`, with the same topic links,
   dates, read times, banners, and thumbnails used by the blog index.
@@ -238,9 +250,8 @@ The blog is now server rendered from the Markdown files in `posts/`:
 - The complete blog rebuild, homepage Field Notes preview, thumbnail workflow,
   shared BLOG dropdown, manifesto rewrite, and Future Congregation Journey are
   committed and published.
-- `index.html` remains the classic live homepage. `index-new.html` remains
-  the editorial rebuild and is the intentional return destination from blog
-  pages during development.
+- `index.html` is the editorial homepage. The former classic homepage is
+  preserved as `index_old.html`.
 
 ## Important Recent Commits
 
@@ -331,7 +342,8 @@ How it works:
 - 2026-07-10: Brent manually uploaded `index.html` (classic homepage) and `css/editorial.css` to the live host; verified live — pbrentyoung.com serves the classic homepage and the current editorial.css. The repo now matches this state, so future deploys won't clobber it.
 - Hostinger has previously served stale/old files after GitHub pushes.
 - If live site does not update, verify whether Hostinger is pulling from GitHub or needs manual upload/deploy.
-- `index.html` should remain the older homepage until the user explicitly approves making `index-new.html` the root homepage.
+- The editorial homepage was approved for the root URL on 2026-07-15. Keep
+  `index_old.html` only as a non-indexed reference unless Brent asks to remove it.
 
 ## Outstanding Follow-Ups
 
@@ -340,9 +352,8 @@ How it works:
   is finalized.
 - Review the provisional `tags:` and `principle:` values during copy editing.
 - Revisit the title “The Short List” if a stronger editorial label emerges.
-- At launch, set `blog_public` to `true`, choose analytics, switch blog
-  navigation from `index-new.html` to `/` when the rebuild becomes the live
-  homepage, then verify production rewrites and social cards.
+- At launch, set `blog_public` to `true`, choose analytics, then verify
+  production rewrites and social cards.
 - Decide whether to remove `.DS_Store` files from tracking in a future cleanup.
 
 ## Conversation Handoff: Flat File Context Review (2026-07-15)
@@ -393,18 +404,17 @@ Use direct, warm, practical language. Do not inflate a project into a case study
 when the honest context is more useful. Preserve the rule that the work supports
 the ideas rather than becoming the destination of the site.
 
-### Uncommitted homepage copy
+### Homepage copy
 
-`index-new.html` currently contains local, uncommitted revisions to the copy in
-Before the Work, The File, Field Notes, and Contact. These revisions clarify the
-narrative progression as calling, evidence, lessons, and invitation. Review or
-commit them separately before beginning unrelated implementation work.
+The revised copy in Before the Work, The File, Field Notes, and Contact is now
+part of the default `index.html` homepage. It clarifies the narrative progression
+as calling, evidence, lessons, and invitation.
 
 ### Repository state at handoff
 
 - Branch: `main`
-- Latest published commit: `e635394 Update author bio`
-- Local change: `index-new.html`
+- Latest published commit before this promotion: `40822e5 Add bowling ball illustration`
+- Local homepage promotion is awaiting commit.
 - `data/portfolio.json` remains the source of truth for The File.
 - `js/editorial.js` renders both ordinary job jackets and expanded Case Files.
 - `css/editorial.css` contains the desktop split layout and stacked mobile

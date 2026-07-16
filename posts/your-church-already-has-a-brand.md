@@ -23,6 +23,6 @@ None of this means the church doesn't love people. It means the signals are unsu
 
 The goal isn't to look like a tech company. A church brand done right is just honesty with craft: this is who we are, this is who we're for, and every touchpoint agrees. Small churches can do this as well as big ones — intentionality is free. Consistency costs discipline, not money.
 
-When we built [Forge from a blank page](index-new.html#forge), the brand wasn't a logo delivered at the end. It was the first decision: who is this church for, and what should those people feel at every single touchpoint from Instagram to launch day? Everything else — the marks, the type, the announcements — was that one decision, repeated.
+When we built [Forge from a blank page](/#forge), the brand wasn't a logo delivered at the end. It was the first decision: who is this church for, and what should those people feel at every single touchpoint from Instagram to launch day? Everything else — the marks, the type, the announcements — was that one decision, repeated.
 
 Your church is already telling a story about itself. Stewarding that story on purpose isn't vanity. It's taking responsibility for what you're already saying.

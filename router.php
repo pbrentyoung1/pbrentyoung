@@ -2,6 +2,11 @@
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
+if ($path === '/index.html' || $path === '/index-new.html') {
+  header('Location: /', true, 301);
+  return true;
+}
+
 if ($path === '/blog.html' || $path === '/blog/') {
   header('Location: /blog', true, 301);
   return true;

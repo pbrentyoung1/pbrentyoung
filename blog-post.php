@@ -170,7 +170,7 @@ header('Content-Type: text/html; charset=utf-8');
             <?php foreach ($post['tags'] as $tag): ?><a href="<?php echo blog_e(blog_index_url(array('tag' => blog_slugify($tag)))); ?>"><?php echo blog_e(strtoupper($tag)); ?></a><?php endforeach; ?>
           </div>
         <?php endif; ?>
-        <?php if ($post['principle']): ?><p class="article-principle">FIRST PRINCIPLE: <a href="/index-new.html#principles"><?php echo blog_e(strtoupper($post['principle'])); ?></a></p><?php endif; ?>
+        <?php if ($post['principle']): ?><p class="article-principle">FIRST PRINCIPLE: <a href="/#principles"><?php echo blog_e(strtoupper($post['principle'])); ?></a></p><?php endif; ?>
         <nav class="article-share article-share--mobile" aria-label="Share this article"><?php echo $shareButtons; ?></nav>
       </footer>
 

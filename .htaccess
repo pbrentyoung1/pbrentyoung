@@ -3,6 +3,10 @@
 RewriteEngine On
 RewriteBase /
 
+# The editorial homepage now lives at the canonical root URL.
+RewriteCond %{THE_REQUEST} \s/+index(?:-new)?\.html(?:[?\s]) [NC]
+RewriteRule ^index(?:-new)?\.html$ / [R=301,L,NE]
+
 # One canonical index URL: /blog
 RewriteCond %{THE_REQUEST} \s/+blog\.html(?:[?\s]) [NC]
 RewriteRule ^blog\.html$ /blog [R=301,L,NE]

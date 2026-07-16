@@ -586,8 +586,17 @@
 
   function openFromHash() {
     var m = location.hash.match(/^#job-(\d{3})$/);
-    if (!m) return;
-    var idx = parseInt(m[1], 10) - 1;
+    var idx = -1;
+    if (m) {
+      idx = parseInt(m[1], 10) - 1;
+    } else {
+      var caseId = location.hash.replace(/^#/, "");
+      if (caseId) {
+        idx = DATA.archive.findIndex(function (item) {
+          return item.caseStudy === caseId;
+        });
+      }
+    }
     if (idx >= 0 && idx < DATA.archive.length) {
       var list = filteredFiles(cur);
       openJacket(DATA.archive[idx], list);

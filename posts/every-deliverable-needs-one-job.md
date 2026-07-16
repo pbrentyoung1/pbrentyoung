@@ -34,7 +34,7 @@ Everything else (the extra announcements, the second audience, the third verse) 
 
 ## The one-job test is also a kindness
 
-Here's what took me years to see: "one job" isn't just a design rule, it's respect for the reader. When we built the [Mending the Soul workbook for Native American communities](index-new.html#mts-workbook), the job was singular: make a survivor of trauma feel that this material was made *for them* (their imagery, their context, their dignity) and not adapted at them as an afterthought. Every page decision got measured against that one job. Add a second job to that book and you don't get a more useful book. You get a compromised one, and the reader can feel the compromise even when they can't name it.
+Here's what took me years to see: "one job" isn't just a design rule, it's respect for the reader. When we built the [Mending the Soul workbook for Native American communities](/#mts-workbook), the job was singular: make a survivor of trauma feel that this material was made *for them* (their imagery, their context, their dignity) and not adapted at them as an afterthought. Every page decision got measured against that one job. Add a second job to that book and you don't get a more useful book. You get a compromised one, and the reader can feel the compromise even when they can't name it.
 
 ## Where to enforce it
 
