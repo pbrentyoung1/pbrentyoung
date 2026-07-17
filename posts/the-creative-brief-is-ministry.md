@@ -4,6 +4,7 @@ date: 2026-05-04
 topic: Creative Leadership
 deck: The least glamorous document in your church might be the most pastoral one. A good brief is clarity, and clarity is care.
 tags: creative brief, clarity, care
+terms: creative-brief, audience, campaign, project, deliverable
 principle: Communication is Stewardship
 shortlist: 3
 ---

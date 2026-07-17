@@ -19,6 +19,7 @@ date: YYYY-MM-DD
 topic: One of the content pillars (see CONTENT_ROADMAP.md)
 deck: One or two sentences that earn the click honestly. No clickbait.
 tags: two, or three, comma-separated
+terms: brand, touchpoint, stewardship
 principle: The First Principle this article evidences (see FIRST_PRINCIPLES.md)
 featured: true (optional; makes this the lead article on /blog)
 shortlist: 1 (optional; numbered position in The Short List)
@@ -28,6 +29,8 @@ shortlist: 1 (optional; numbered position in The Short List)
 Allowed `topic:` values: `Brand & Mission`, `Creative Leadership`, `Systems & Workflow`, `Craft`, `AI`, and `Manifesto` (reserved for cornerstone essays).
 
 Optional frontmatter: `banner:` (overrides the default banner path), `bannerAlt:` (alt text for the banner), `draft: true` (hides the post), `featured: true` (selects the lead article), and `shortlist:` (a positive number selects and orders the post in The Short List).
+
+**Glossary terms.** Part of preparing every post is choosing three to five glossary terms that carry the article's working language. `terms:` takes comma-separated glossary *slugs* (not display labels), matching the filenames in `glossary/`, in the order you want them shown. Invalid slugs are ignored quietly, so check spelling against the glossary. Tags and terms do different jobs: tags connect related articles; terms explain the working language used in this one. The site renders them as "Terms in This Article" beside the piece, with quick definitions on tap.
 
 **Banner art.** Every post gets a custom banner designed at **1200 × 630** (the Open Graph size), saved to `assets/img/blog/<slug>.jpg`. One asset serves three jobs: the social share card, the plate at the top of the article page, and the thumbnail on the blog index. The share card already shows the title and deck as text, so the art does not need the title baked in. Until the banner exists, the site shows an FPO placeholder plate.
 

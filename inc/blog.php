@@ -67,6 +67,7 @@ function blog_parse_frontmatter($filename, $text) {
   }
 
   $post['tags'] = array_values(array_filter(array_map('trim', explode(',', (string) $post['tags']))));
+  $post['terms'] = blog_validate_terms($post['terms'] ?? '');
   $post['draft'] = blog_truthy($post['draft']);
   $post['featured'] = blog_truthy($post['featured']);
   $post['shortlist'] = max(0, (int) $post['shortlist']);
@@ -85,6 +86,105 @@ function blog_word_count($post) {
   $text = preg_replace('/[#>*_`!\[\]()\-]+/u', ' ', $text);
   $words = preg_split('/\s+/u', trim($text), -1, PREG_SPLIT_NO_EMPTY);
   return count($words);
+}
+
+/* ---------- the working glossary ---------- */
+
+/* Entries live as Markdown files in /glossary, one per term,
+   edited exactly like posts. Filename = permanent slug.
+   Frontmatter: term (required), aliases, principles,
+   link1..link3 as "Label | /url | note", draft.
+   Body: first paragraph is the definition, following paragraphs
+   are the longer explanation, and optional sections use
+   "## In business", "## In the church", "## What remains true". */
+function blog_glossary_entries() {
+  static $entries = null;
+  if ($entries !== null) return $entries;
+
+  $entries = array();
+  foreach (glob(__DIR__ . '/../glossary/*.md') as $file) {
+    $name = basename($file);
+    if ($name[0] === '_' || $name[0] === '.') continue;
+    $entry = blog_glossary_parse($name, (string) file_get_contents($file));
+    if ($entry && empty($entry['draft'])) $entries[] = $entry;
+  }
+
+  usort($entries, function ($a, $b) { return strcasecmp($a['term'], $b['term']); });
+  return $entries;
+}
+
+function blog_glossary_parse($filename, $text) {
+  $slug = preg_replace('/\.md$/i', '', $filename);
+  $meta = array('term' => '', 'aliases' => '', 'principles' => '', 'draft' => '');
+
+  if (preg_match('/^---\s*\R(.*?)\R---\s*\R?/s', $text, $match)) {
+    foreach (preg_split('/\R/', $match[1]) as $line) {
+      if (preg_match('/^(\w+)\s*:\s*(.*)$/u', $line, $pair)) $meta[strtolower($pair[1])] = trim($pair[2]);
+    }
+    $text = substr($text, strlen($match[0]));
+  }
+
+  if ($meta['term'] === '') return null;
+
+  /* body: definition, longer, and the labeled sections */
+  $sections = preg_split('/^##\s+(.+)$/mu', trim($text), -1, PREG_SPLIT_DELIM_CAPTURE);
+  $lead = trim(array_shift($sections));
+  $parts = preg_split('/\R\s*\R/', $lead, 2);
+  $definition = trim($parts[0] ?? '');
+  $longer = trim($parts[1] ?? '');
+
+  $labeled = array('business' => '', 'church' => '', 'remains' => '');
+  for ($i = 0; $i + 1 < count($sections); $i += 2) {
+    $heading = strtolower(trim($sections[$i]));
+    $bodyText = trim($sections[$i + 1]);
+    if (strpos($heading, 'business') !== false) $labeled['business'] = $bodyText;
+    elseif (strpos($heading, 'church') !== false || strpos($heading, 'ministry') !== false) $labeled['church'] = $bodyText;
+    elseif (strpos($heading, 'remains') !== false) $labeled['remains'] = $bodyText;
+  }
+
+  $links = array();
+  foreach (array('link1', 'link2', 'link3') as $key) {
+    if (empty($meta[$key])) continue;
+    $bits = array_map('trim', explode('|', $meta[$key]));
+    if (count($bits) >= 2 && $bits[0] !== '' && $bits[1] !== '') {
+      $links[] = array('label' => $bits[0], 'url' => $bits[1], 'note' => $bits[2] ?? '');
+    }
+  }
+
+  return array(
+    'term' => $meta['term'],
+    'slug' => $slug,
+    'definition' => $definition,
+    'longer' => $longer,
+    'business' => $labeled['business'],
+    'church' => $labeled['church'],
+    'remains' => $labeled['remains'],
+    'principles' => array_values(array_filter(array_map('trim', explode(',', $meta['principles'])))),
+    'links' => $links,
+    'aliases' => array_values(array_filter(array_map('trim', explode(',', $meta['aliases'])))),
+    'draft' => blog_truthy($meta['draft']),
+  );
+}
+
+function blog_glossary_map() {
+  static $map = null;
+  if ($map === null) {
+    $map = array();
+    foreach (blog_glossary_entries() as $entry) $map[$entry['slug']] = $entry;
+  }
+  return $map;
+}
+
+/* terms: frontmatter lists glossary slugs, comma-separated.
+   Invalid slugs are dropped quietly; editorial order is preserved. */
+function blog_validate_terms($raw) {
+  $map = blog_glossary_map();
+  $terms = array();
+  foreach (explode(',', (string) $raw) as $slug) {
+    $slug = strtolower(trim($slug));
+    if ($slug !== '' && isset($map[$slug]) && !in_array($slug, $terms, true)) $terms[] = $slug;
+  }
+  return $terms;
 }
 
 function blog_posts() {
@@ -315,6 +415,8 @@ function blog_nav_menu() {
       <div data-nav-shortlist>
         <?php foreach (blog_shortlist() as $post): ?><a href="<?php echo blog_e(blog_post_url($post)); ?>"><?php echo blog_e($post['title']); ?></a><?php endforeach; ?>
       </div>
+      <span class="nav-blog-menu__label">REFERENCE</span>
+      <a href="/glossary">A Working Glossary</a>
     </div>
   </div>
   <?php
@@ -345,6 +447,7 @@ function blog_site_footer($fonts = 'PLAYFAIR DISPLAY &middot; IBM PLEX SANS &mid
     <div class="wrap">
       <span>&copy; <?php echo date('Y'); ?> BRENT YOUNG</span>
       <span class="font-list">SET IN <?php echo $fonts; ?></span>
+      <a class="spec-toggle" href="/glossary">GLOSSARY</a>
       <a class="spec-toggle" href="/">BACK TO THE BOARD</a>
     </div>
   </footer>

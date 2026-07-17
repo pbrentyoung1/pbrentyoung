@@ -4,6 +4,7 @@ date: 2026-06-22
 topic: Brand & Mission
 deck: "I prefer..." Two words, technically. And they cost more than your entire design budget.
 tags: preference, leadership, feedback
+terms: brand, creative-brief, audience
 principle: Mission Before Preference
 ---
 

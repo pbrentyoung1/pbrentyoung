@@ -4,6 +4,7 @@ date: 2026-07-06
 topic: Manifesto
 deck: Church communications is more than support work. It is how we begin caring for the people God is bringing to us, long before we know their names.
 tags: story, communication, ministry
+terms: future-congregation, story, touchpoint, hospitality, stewardship
 principle: The Right Story, Told the Right Way
 featured: true
 ---

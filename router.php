@@ -17,6 +17,16 @@ if ($path === '/blog') {
   return true;
 }
 
+if ($path === '/glossary/') {
+  header('Location: /glossary', true, 301);
+  return true;
+}
+
+if ($path === '/glossary') {
+  require __DIR__ . '/glossary.php';
+  return true;
+}
+
 if ($path === '/future-congregation-journey') {
   require __DIR__ . '/future-congregation-journey.php';
   return true;

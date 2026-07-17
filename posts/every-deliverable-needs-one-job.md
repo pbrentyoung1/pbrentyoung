@@ -4,6 +4,7 @@ date: 2026-05-11
 topic: Systems & Workflow
 deck: The flyer that announces, invites, thanks, recruits, and quotes three verses does none of it. One piece, one job, one action.
 tags: deliverables, clarity, focus
+terms: deliverable, audience, call-to-action, storybrand, design
 principle: Design Solves Creative Problems
 ---
 

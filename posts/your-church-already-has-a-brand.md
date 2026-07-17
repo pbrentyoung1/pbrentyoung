@@ -4,6 +4,7 @@ date: 2026-06-29
 topic: Brand & Mission
 deck: Whether intentional or accidental, your church is already telling people who it is. The only question is who's doing the telling.
 tags: brand, trust, first impressions
+terms: brand, touchpoint, trust, story, stewardship
 principle: Brand Builds Trust
 ---
 

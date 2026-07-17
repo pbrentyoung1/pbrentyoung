@@ -4,6 +4,7 @@ date: 2026-06-08
 topic: Creative Leadership
 deck: The first season of Seinfeld was bad. It got great by changing, not by polishing. Knowing which of those two problems you actually have is most of the job.
 tags: change, polish, relevance
+terms: change-vs-polish, design, audience, story
 principle: Design Solves Creative Problems
 ---
 

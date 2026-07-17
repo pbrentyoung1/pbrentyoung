@@ -4,6 +4,7 @@ date: 2026-05-25
 topic: Systems & Workflow
 deck: You cannot out-hustle a conveyor belt. Church communications gets calm when a system carries the schedule, a brand carries the decisions, and templates carry the load.
 tags: workflow, requests, burnout
+terms: campaign, project, deliverable, task, brand
 principle: Systems Create Creativity
 shortlist: 2
 ---

@@ -65,6 +65,22 @@ $shareButtons = '<span>SHARE</span>'
   . '<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6.5 9.5a3 3 0 0 0 4.2 0l2.6-2.6a3 3 0 0 0-4.2-4.2L7.7 4.1M9.5 6.5a3 3 0 0 0-4.2 0L2.7 9.1a3 3 0 0 0 4.2 4.2l1.4-1.4"/></svg></button>'
   . '<span class="share-copied" hidden>COPIED</span>';
 
+/* Terms in This Article: validated glossary slugs, editorial order. */
+$articleTerms = array();
+$termPayload = array();
+$glossMap = blog_glossary_map();
+foreach ($post['terms'] as $slug) {
+  $entry = $glossMap[$slug];
+  $articleTerms[] = $entry;
+  $termPayload[$slug] = array(
+    'term' => $entry['term'],
+    'definition' => $entry['definition'],
+    'business' => isset($entry['business']) ? $entry['business'] : '',
+    'church' => isset($entry['church']) ? $entry['church'] : '',
+    'url' => '/glossary#' . $entry['slug'],
+  );
+}
+
 $jsonld = array(
   '@context' => 'https://schema.org',
   '@type' => 'BlogPosting',
@@ -158,6 +174,14 @@ header('Content-Type: text/html; charset=utf-8');
           <?php foreach ($toc as $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
         </ol>
       <?php endif; ?>
+      <?php if ($articleTerms): ?>
+        <nav class="article-terms" aria-label="Terms in this article">
+          <p class="article-terms__label">TERMS IN THIS ARTICLE</p>
+          <ul>
+            <?php foreach ($articleTerms as $entry): ?><li><a class="term-ref" href="/glossary#<?php echo blog_e($entry['slug']); ?>" data-term="<?php echo blog_e($entry['slug']); ?>"><?php echo blog_e($entry['term']); ?></a></li><?php endforeach; ?>
+          </ul>
+        </nav>
+      <?php endif; ?>
       <nav class="article-share" aria-label="Share this article"><?php echo $shareButtons; ?></nav>
     </aside>
 
@@ -168,6 +192,12 @@ header('Content-Type: text/html; charset=utf-8');
       </div>
 
       <footer class="article-end">
+        <?php if ($articleTerms): ?>
+          <nav class="article-terms article-terms--inline" aria-label="Terms in this article">
+            <span class="article-terms__label">TERMS IN THIS ARTICLE</span>
+            <?php foreach ($articleTerms as $entry): ?><a class="term-ref" href="/glossary#<?php echo blog_e($entry['slug']); ?>" data-term="<?php echo blog_e($entry['slug']); ?>"><?php echo blog_e($entry['term']); ?></a><?php endforeach; ?>
+          </nav>
+        <?php endif; ?>
         <?php if ($post['tags']): ?>
           <div class="article-taxonomy"><span>FILED UNDER</span>
             <?php foreach ($post['tags'] as $tag): ?><a href="<?php echo blog_e(blog_index_url(array('tag' => blog_slugify($tag)))); ?>"><?php echo blog_e(strtoupper($tag)); ?></a><?php endforeach; ?>
@@ -199,7 +229,26 @@ header('Content-Type: text/html; charset=utf-8');
   <?php endif; ?>
 </main>
 
+<?php if ($articleTerms): ?>
+  <div class="term-quickdef" id="termQuickdef" hidden>
+    <div class="term-quickdef__backdrop"></div>
+    <div class="term-quickdef__panel" role="dialog" aria-modal="true" aria-labelledby="termQdTitle" tabindex="-1">
+      <button class="term-quickdef__close" type="button" aria-label="Close definition">&times;</button>
+      <p class="term-quickdef__kicker">FROM THE WORKING GLOSSARY</p>
+      <h2 class="term-quickdef__term" id="termQdTitle"></h2>
+      <p class="term-quickdef__def"></p>
+      <dl class="term-quickdef__contexts" hidden>
+        <dt data-qd="business-dt">IN BUSINESS</dt><dd data-qd="business"></dd>
+        <dt data-qd="church-dt">IN THE CHURCH</dt><dd data-qd="church"></dd>
+      </dl>
+      <a class="term-quickdef__more" href="/glossary">VIEW THE FULL GLOSSARY ENTRY &rarr;</a>
+    </div>
+  </div>
+  <script type="application/json" id="termData"><?php echo json_encode($termPayload, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
+<?php endif; ?>
+
 <?php blog_site_footer(); ?>
 <script src="/js/article.js"></script>
+<script src="/js/term-quickdef.js"></script>
 </body>
 </html>

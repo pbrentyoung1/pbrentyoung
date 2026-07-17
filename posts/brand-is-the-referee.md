@@ -4,6 +4,7 @@ date: 2026-06-15
 topic: Brand & Mission
 deck: A brand isn't a costume. It's a referee that enables your team to create.
 tags: brand, preference, creative teams
+terms: brand, audience, creative-brief, trust, story
 principle: Brand Is the Referee
 shortlist: 1
 ---

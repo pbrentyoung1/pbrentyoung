@@ -4,6 +4,7 @@ date: 2026-05-18
 topic: Systems & Workflow
 deck: Christmas is a campaign. The sermon graphic is a deliverable. Calling them both "projects" is why your planning meetings go nowhere.
 tags: campaigns, projects, language
+terms: campaign, project, deliverable, task, success-metrics
 principle: Systems Create Creativity
 ---
 

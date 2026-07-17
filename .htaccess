@@ -16,6 +16,11 @@ RewriteRule ^blog/$ /blog [R=301,L,NE]
 # This essay was folded into Change vs. Polish.
 RewriteRule ^blog/you-cant-polish-your-way-into-relevance/?$ /blog/change-vs-polish [R=301,L,NE]
 
+# One canonical reference URL: /glossary
+RewriteCond %{THE_REQUEST} \s/+glossary/(?:[?\s]) [NC]
+RewriteRule ^glossary/$ /glossary [R=301,L,NE]
+RewriteRule ^glossary$ glossary.php [L,QSA]
+
 RewriteRule ^blog$ blog.php [L,QSA]
 RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/?$ blog-post.php?slug=$1 [L,QSA]
 RewriteRule ^future-congregation-journey$ future-congregation-journey.php [L,QSA]
