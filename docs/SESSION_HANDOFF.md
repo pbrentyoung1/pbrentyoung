@@ -4,6 +4,27 @@ Last updated: 2026-07-17 (working glossary and article terminology)
 
 ## Nightly Handoff — 2026-07-17
 
+### Shared Header and Footer Architecture
+
+The homepage is now served by `index.php` instead of `index.html` so it can use
+the same server-rendered header as every other public page. The single source
+of truth is `blog_site_header()` in `inc/blog.php`; it is used by the homepage,
+blog index, blog posts, glossary, and Future Congregation Journey. Do not copy
+header markup into an individual page. Header navigation, Short List content,
+REFERENCE links, and future header changes belong in the shared helper.
+
+The canonical shared header follows the latest homepage decision and does not
+include a resume button. Email and Resume remain together in the homepage
+Contact section. Root routing, `DirectoryIndex`, canonical redirects, and the
+sitemap homepage timestamp now point to `index.php`. Explicit requests for
+`/index.php`, `/index.html`, and `/index-new.html` redirect to `/`.
+
+The footer is also rendered from one source, `blog_site_footer()` in
+`inc/blog.php`. Every page shares the complete font list, copyright, glossary
+link, and navigation script. The renderer accepts one contextual option: the
+homepage shows `SHOW THE BOARD`, while interior pages show `BACK TO THE BOARD`.
+Do not copy footer markup or rebuild the font list inside an individual page.
+
 ### A Working Glossary
 
 The site now has a complete working glossary at `/glossary`. It is intended to
@@ -218,15 +239,15 @@ glossary links to it until it enters `posts/index.json`.
 
 ## Homepage Promotion — 2026-07-15
 
-The editorial rebuild is now the default homepage at `/` and in `index.html`.
+The editorial rebuild is now the default homepage at `/` and in `index.php`.
 The former classic homepage is preserved as `index_old.html` and marked
 `noindex, nofollow` so it remains available as a reference without competing
 with the canonical homepage.
 
 All shared blog navigation and article links now return to `/` and its homepage
 sections. Requests for the former `/index-new.html` preview URL and explicit
-`/index.html` requests permanently redirect to `/` in both Apache and the local
-PHP router. Case File links using stable IDs such as `#forge`, `#mts-workbook`,
+`/index.html` or `/index.php` requests permanently redirect to `/` in both
+Apache and the local PHP router. Case File links using stable IDs such as `#forge`, `#mts-workbook`,
 and `#wired-in` now open the corresponding record in The File.
 
 ## Nightly Handoff — 2026-07-14
@@ -438,7 +459,7 @@ The blog is now server rendered from the Markdown files in `posts/`:
 
 ## Homepage Preview and Navigation
 
-- `index.html` includes a server-data-compatible **Field Notes**
+- `index.php` includes a server-data-compatible **Field Notes**
   section between The File and Contact. It renders the featured post plus the
   three `shortlist:` posts from `posts/`, with the same topic links,
   dates, read times, banners, and thumbnails used by the blog index.
@@ -464,7 +485,7 @@ The blog is now server rendered from the Markdown files in `posts/`:
 - The complete blog rebuild, homepage Field Notes preview, thumbnail workflow,
   shared BLOG dropdown, manifesto rewrite, and Future Congregation Journey are
   committed and published.
-- `index.html` is the editorial homepage. The former classic homepage is
+- `index.php` is the editorial homepage. The former classic homepage is
   preserved as `index_old.html`.
 
 ## Important Recent Commits
@@ -621,7 +642,7 @@ the ideas rather than becoming the destination of the site.
 ### Homepage copy
 
 The revised copy in Before the Work, The File, Field Notes, and Contact is now
-part of the default `index.html` homepage. It clarifies the narrative progression
+part of the default `index.php` homepage. It clarifies the narrative progression
 as calling, evidence, lessons, and invitation.
 
 ### Repository state at handoff

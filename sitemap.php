@@ -7,7 +7,7 @@ function sitemap_e($value) {
 }
 
 $urls = array(
-  array('loc' => blog_site_url('/'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/index.html')), 'priority' => '1.0'),
+  array('loc' => blog_site_url('/'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/index.php')), 'priority' => '1.0'),
   array('loc' => blog_site_url('/future-congregation-journey'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/future-congregation-journey.php')), 'priority' => '0.7'),
   array('loc' => blog_site_url('/glossary'), 'lastmod' => date('Y-m-d', max(array_map('filemtime', glob(__DIR__ . '/glossary/*.md') ?: array(__FILE__)))), 'priority' => '0.6'),
 );

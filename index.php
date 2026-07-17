@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/inc/blog.php';
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -69,38 +72,7 @@
 </head>
 
 <body>
-  <header class="site-head">
-    <div class="wrap">
-      <a class="wordmark" href="/">BRENT YOUNG</a>
-      <nav class="site-nav" id="siteNav" aria-label="Site">
-        <a class="nav-link" href="#principles">PRINCIPLES</a>
-        <a class="nav-link" href="#flat-file">THE FILE</a>
-        <div class="nav-blog">
-          <a class="nav-link nav-blog-toggle" href="/blog" aria-haspopup="true" aria-expanded="false">BLOG</a>
-          <div class="nav-blog-menu" aria-label="Blog sections">
-            <a class="nav-blog-menu__all" href="/blog">ALL ARTICLES &rarr;</a>
-            <span class="nav-blog-menu__label">TOPICS</span>
-            <a href="/blog?topic=brand-mission">Brand &amp; Mission</a>
-            <a href="/blog?topic=creative-leadership">Creative Leadership</a>
-            <a href="/blog?topic=systems-workflow">Systems &amp; Workflow</a>
-            <a href="/blog?topic=craft">Craft</a>
-            <a href="/blog?topic=ai">AI</a>
-            <span class="nav-blog-menu__label">THE SHORT LIST</span>
-            <div data-nav-shortlist>
-              <a href="/blog/brand-is-the-referee">Brand Is the Referee</a>
-              <a href="/blog/why-your-church-communications-feel-chaotic">Why Your Church Communications Feel Chaotic</a>
-              <a href="/blog/the-creative-brief-is-ministry">The Creative Brief Is Ministry</a>
-            </div>
-            <span class="nav-blog-menu__label">REFERENCE</span>
-            <a href="/glossary">A Working Glossary</a>
-          </div>
-        </div>
-        <a class="nav-link" href="#contact">CONTACT</a>
-        <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">MENU</button>
-    </div>
-  </header>
+  <?php blog_site_header(); ?>
 
   <main id="top">
     <!-- ================= HERO / THE BOARD ================= -->
@@ -330,14 +302,7 @@
     </section>
   </main>
 
-  <footer class="site-foot">
-    <div class="wrap">
-      <span>&copy; <span id="year"></span> BRENT YOUNG</span>
-      <span class="font-list">SET IN PLAYFAIR DISPLAY &middot; IBM PLEX SANS &middot; IBM PLEX MONO &middot; SOURCE SERIF 4 &middot; CAVEAT &middot; COVERED BY YOUR GRACE &middot; PERMANENT MARKER &middot; IMPACT LABEL / REVERSED</span>
-      <a class="spec-toggle" href="/glossary">GLOSSARY</a>
-      <button class="spec-toggle" id="specToggle" type="button">SHOW THE BOARD</button>
-    </div>
-  </footer>
+  <?php blog_site_footer(true); ?>
 
   <!-- ================= JOB JACKET ================= -->
   <div class="jacket-layer" id="jacketLayer" aria-hidden="false">
@@ -365,8 +330,6 @@
     </div>
   </div>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  <script src="js/nav.js"></script>
   <script src="js/column-core.js"></script>
   <script src="js/editorial.js"></script>
 </body>

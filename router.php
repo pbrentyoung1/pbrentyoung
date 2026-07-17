@@ -2,8 +2,13 @@
 
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-if ($path === '/index.html' || $path === '/index-new.html') {
+if ($path === '/index.php' || $path === '/index.html' || $path === '/index-new.html') {
   header('Location: /', true, 301);
+  return true;
+}
+
+if ($path === '/') {
+  require __DIR__ . '/index.php';
   return true;
 }
 

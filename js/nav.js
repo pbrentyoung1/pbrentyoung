@@ -78,35 +78,4 @@
     });
   }
 
-  var shortlistHost = document.querySelector("[data-nav-shortlist]");
-  if (shortlistHost) {
-    var parse = function (filename, text) {
-      var match = text.match(/^---\s*\n([\s\S]*?)\n---\s*\n?/);
-      var post = { slug: filename.replace(/\.md$/i, ""), title: "", shortlist: 0 };
-      if (match) match[1].split(/\n/).forEach(function (line) {
-        var pair = line.match(/^(\w+)\s*:\s*(.*)$/);
-        if (pair) post[pair[1].toLowerCase()] = pair[2].trim();
-      });
-      return post;
-    };
-    fetch("/posts/index.json")
-      .then(function (r) { return r.json(); })
-      .then(function (files) { return Promise.all(files.map(function (file) {
-        return fetch("/posts/" + file).then(function (r) { return r.ok ? r.text() : null; })
-          .then(function (text) { return text ? parse(file, text) : null; });
-      })); })
-      .then(function (posts) {
-        posts = posts.filter(function (post) { return post && Number(post.shortlist || 0) > 0; })
-          .sort(function (a, b) { return Number(a.shortlist) - Number(b.shortlist); });
-        if (!posts.length) return;
-        shortlistHost.innerHTML = posts.map(function (post) {
-          return '<a href="/blog/' + encodeURIComponent(post.slug) + '">' + esc(post.title) + '</a>';
-        }).join("");
-      })
-      .catch(function () { /* static links remain available */ });
-  }
-
-  function esc(value) {
-    return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-  }
 })();

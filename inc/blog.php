@@ -432,7 +432,6 @@ function blog_site_header() {
         <a class="nav-link" href="/#flat-file">THE FILE</a>
         <?php blog_nav_menu(); ?>
         <a class="nav-link" href="/#contact">CONTACT</a>
-        <a class="btn-spec" href="/assets/pdf/resume.pdf" target="_blank" rel="noopener">RESUME.PDF</a>
         <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
       </nav>
       <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">MENU</button>
@@ -441,14 +440,19 @@ function blog_site_header() {
   <?php
 }
 
-function blog_site_footer($fonts = 'PLAYFAIR DISPLAY &middot; IBM PLEX SANS &middot; IBM PLEX MONO &middot; SOURCE SERIF 4') {
+function blog_site_footer($showBoardToggle = false) {
+  $fonts = 'PLAYFAIR DISPLAY &middot; IBM PLEX SANS &middot; IBM PLEX MONO &middot; SOURCE SERIF 4 &middot; CAVEAT &middot; COVERED BY YOUR GRACE &middot; PERMANENT MARKER &middot; IMPACT LABEL / REVERSED';
   ?>
   <footer class="site-foot">
     <div class="wrap">
       <span>&copy; <?php echo date('Y'); ?> BRENT YOUNG</span>
       <span class="font-list">SET IN <?php echo $fonts; ?></span>
       <a class="spec-toggle" href="/glossary">GLOSSARY</a>
-      <a class="spec-toggle" href="/">BACK TO THE BOARD</a>
+      <?php if ($showBoardToggle): ?>
+        <button class="spec-toggle" id="specToggle" type="button">SHOW THE BOARD</button>
+      <?php else: ?>
+        <a class="spec-toggle" href="/">BACK TO THE BOARD</a>
+      <?php endif; ?>
     </div>
   </footer>
   <script src="/js/nav.js"></script>
