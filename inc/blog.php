@@ -181,6 +181,17 @@ function blog_banner_url($post, $absolute = false) {
   return $absolute ? blog_site_url($path) : $path;
 }
 
+function blog_banner_meta($post) {
+  $path = blog_banner_url($post);
+  $info = @getimagesize(__DIR__ . '/..' . $path);
+
+  return array(
+    'width' => $info ? (int) $info[0] : 1200,
+    'height' => $info ? (int) $info[1] : 630,
+    'mime' => $info && isset($info['mime']) ? $info['mime'] : 'image/jpeg',
+  );
+}
+
 function blog_thumbnail_url($post, $absolute = false) {
   $path = '/assets/img/blog/thumbs/' . $post['slug'] . '.jpg';
   if (!is_file(__DIR__ . '/..' . $path)) return blog_banner_url($post, $absolute);

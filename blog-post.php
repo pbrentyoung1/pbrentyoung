@@ -45,6 +45,7 @@ $toc = count($rendered['toc']) >= 3 ? $rendered['toc'] : array();
 $related = blog_related_posts($post, 3);
 $canonical = blog_post_url($post, true);
 $banner = blog_banner_url($post, true);
+$bannerMeta = blog_banner_meta($post);
 $shareUrl = rawurlencode($canonical);
 $shareTitle = rawurlencode($post['title']);
 
@@ -105,9 +106,9 @@ header('Content-Type: text/html; charset=utf-8');
   <meta property="og:url" content="<?php echo blog_e($canonical); ?>">
   <meta property="og:image" content="<?php echo blog_e($banner); ?>">
   <meta property="og:image:secure_url" content="<?php echo blog_e($banner); ?>">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="<?php echo blog_e($bannerMeta['mime']); ?>">
+  <meta property="og:image:width" content="<?php echo $bannerMeta['width']; ?>">
+  <meta property="og:image:height" content="<?php echo $bannerMeta['height']; ?>">
   <meta property="og:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
   <meta property="og:locale" content="en_US">
   <meta property="article:published_time" content="<?php echo blog_e($post['date']); ?>">
@@ -137,7 +138,7 @@ header('Content-Type: text/html; charset=utf-8');
   </header>
 
   <figure class="article-banner">
-    <img src="<?php echo blog_e(blog_banner_url($post)); ?>" alt="<?php echo blog_e($post['banneralt']); ?>" width="1200" height="630">
+    <img src="<?php echo blog_e(blog_banner_url($post)); ?>" alt="<?php echo blog_e($post['banneralt']); ?>" width="<?php echo $bannerMeta['width']; ?>" height="<?php echo $bannerMeta['height']; ?>">
   </figure>
 
   <?php if ($toc): ?>
