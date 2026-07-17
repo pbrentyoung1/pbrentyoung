@@ -14,16 +14,18 @@ header markup into an individual page. Header navigation, Short List content,
 REFERENCE links, and future header changes belong in the shared helper.
 
 The canonical shared header follows the latest homepage decision and does not
-include a resume button. Email and Resume remain together in the homepage
-Contact section. Root routing, `DirectoryIndex`, canonical redirects, and the
+include a resume button. Email and Resume remain together in the shared
+Contact footer. Root routing, `DirectoryIndex`, canonical redirects, and the
 sitemap homepage timestamp now point to `index.php`. Explicit requests for
 `/index.php`, `/index.html`, and `/index-new.html` redirect to `/`.
 
 The footer is also rendered from one source, `blog_site_footer()` in
-`inc/blog.php`. Every page shares the complete font list, copyright, glossary
-link, and navigation script. The renderer accepts one contextual option: the
-homepage shows `SHOW THE BOARD`, while interior pages show `BACK TO THE BOARD`.
-Do not copy footer markup or rebuild the font list inside an individual page.
+`inc/blog.php`. Every page shares identical markup: the full Contact section
+with Email and Resume actions, complete font list, copyright, glossary link,
+and navigation script. The homepage-only `SHOW THE BOARD` control lives in the
+homepage content immediately before the footer rather than branching the
+shared component. Do not copy footer markup or rebuild the font list inside an
+individual page.
 
 ### A Working Glossary
 

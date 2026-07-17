@@ -266,43 +266,13 @@ require_once __DIR__ . '/inc/blog.php';
       <a class="pullmore desk-all" href="/blog">READ ALL FIELD NOTES &rarr;</a>
     </section>
 
-    <!-- ================= CONTACT ================= -->
-    <section class="contact" id="contact" aria-label="Contact">
-      <div class="wrap">
-        <div class="dept-head">
-          <div class="dept-row">
-            <h2>Let&rsquo;s tell the right story.</h2>
-            <span class="dept-no">DEPT. 04 &middot; FINAL PROOF</span>
-          </div>
-        </div>
-        <p class="contact-intro">
-          Maybe your story is clear, but the way people experience it is not. Maybe your
-          team is doing good work inside systems that make everything harder than it needs
-          to be. Or maybe you know something needs to change, but you are not sure where to
-          begin. I would love to hear what you are working through. No pitch and no packages,
-          just a conversation about the story God has given you to tell and how we might
-          help people experience it more clearly.
-        </p>
-        <div class="contact-grid">
-          <div class="contact-info">
-            <p><strong>Brent Young</strong> &middot; Montgomery, Texas</p>
-            <p class="mono">PHONE: (562) 964-4562</p>
-            <p class="mono">EMAIL: PBRENTYOUNG@GMAIL.COM</p>
-          </div>
-          <div class="hero-actions">
-            <a class="btn-ink" href="mailto:pbrentyoung@gmail.com">Email Brent</a>
-            <a class="btn-ghost" href="assets/pdf/resume.pdf" target="_blank" rel="noopener">Resume</a>
-          </div>
-        </div>
-        <div class="slugline" style="margin-top: 36px;">
-          <span>JOB NO. BY-2026 &middot; APPROVED FOR RELEASE</span>
-          <span>OK &#10003;</span>
-        </div>
-      </div>
-    </section>
+    <div class="wrap slugline" style="margin-top: 36px; margin-bottom: 36px;">
+      <span>PRODUCTION NOTES</span>
+      <button class="spec-toggle" id="specToggle" type="button">SHOW THE BOARD</button>
+    </div>
   </main>
 
-  <?php blog_site_footer(true); ?>
+  <?php blog_site_footer(); ?>
 
   <!-- ================= JOB JACKET ================= -->
   <div class="jacket-layer" id="jacketLayer" aria-hidden="false">
