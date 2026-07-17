@@ -7,6 +7,6 @@ return array(
   'author_bio' => 'Brent Young helps churches and mission-driven organizations tell the right story clearly, across brand, design, and the systems that hold it together.',
   'author_avatar' => '/assets/img/brentAvatarSquare.png',
   'google_tag_id' => 'G-KKQYWP70WN',
-  'blog_public' => false,
+  'blog_public' => true,
   'posts_per_page' => 24,
 );

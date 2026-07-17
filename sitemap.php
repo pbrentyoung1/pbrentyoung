@@ -12,9 +12,20 @@ $urls = array(
 );
 
 if (blog_config('blog_public')) {
-  $urls[] = array('loc' => blog_site_url('/blog'), 'lastmod' => date('Y-m-d', filemtime(__DIR__ . '/posts/index.json')), 'priority' => '0.8');
-  foreach (blog_posts() as $post) {
-    $urls[] = array('loc' => blog_post_url($post, true), 'lastmod' => $post['date'], 'priority' => $post['featured'] ? '0.9' : '0.7');
+  $posts = blog_posts();
+  $blogModified = filemtime(__DIR__ . '/posts/index.json');
+
+  foreach ($posts as $post) {
+    $postFile = __DIR__ . '/posts/' . $post['slug'] . '.md';
+    if (is_file($postFile)) $blogModified = max($blogModified, filemtime($postFile));
+  }
+
+  $urls[] = array('loc' => blog_site_url('/blog'), 'lastmod' => date('Y-m-d', $blogModified), 'priority' => '0.8');
+
+  foreach ($posts as $post) {
+    $postFile = __DIR__ . '/posts/' . $post['slug'] . '.md';
+    $lastmod = is_file($postFile) ? date('Y-m-d', filemtime($postFile)) : $post['date'];
+    $urls[] = array('loc' => blog_post_url($post, true), 'lastmod' => $lastmod, 'priority' => $post['featured'] ? '0.9' : '0.7');
   }
 }
 
