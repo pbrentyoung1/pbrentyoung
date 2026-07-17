@@ -1,6 +1,220 @@
 # Session Handoff
 
-Last updated: 2026-07-15 (editorial homepage promotion)
+Last updated: 2026-07-17 (working glossary and article terminology)
+
+## Nightly Handoff — 2026-07-17
+
+### A Working Glossary
+
+The site now has a complete working glossary at `/glossary`. It is intended to
+hold the shared language behind the essays, principles, frameworks, systems,
+and portfolio work. The glossary is not a generic SEO dictionary. It records
+how these ideas are used here and, where useful, distinguishes business usage
+from church usage without losing what remains true in both.
+
+The glossary currently contains 33 published terms. Each term lives in its own
+Markdown file under `glossary/`; the filename is its permanent URL slug. The
+editing pattern is documented in `glossary/_TEMPLATE.md`.
+
+Glossary frontmatter supports:
+
+- `term:` for the display name.
+- `aliases:` for alternate names.
+- `principles:` for links back to First Principles.
+- `link1:` through `link3:` for books, tools, published essays, and related
+  reference material.
+- `draft:` when a definition should not render yet.
+
+The body begins with the shared definition. Longer entries may add `In
+business`, `In the church`, and `What remains true` sections. This structure is
+especially useful when a business concept carries different weight in
+ministry.
+
+The page is rendered by `glossary.php` from the parser in `inc/blog.php`. It is
+server-rendered, has permanent anchor IDs, DefinedTermSet structured data,
+canonical/Open Graph/Twitter metadata, the Google tag, an alphabetical rail,
+copy-link controls, reduced-motion behavior, and responsive layouts. Production
+and local routes live in `.htaccess` and `router.php`; `/glossary/` redirects to
+the canonical `/glossary`. The glossary is included in `sitemap.php`.
+
+The glossary is linked quietly from the Blog navigation under REFERENCE and
+from the global footer. A homepage glossary promotion was designed as a thin
+reference strip, but it did not have enough visual distinction and began to
+read like the colophon for First Principles. It was deliberately removed
+before publication. Revisit the homepage placement after a fresh design pass.
+The preferred direction discussed tonight was an ink-colored typographic
+reference plate with `REFERENCE · 33 TERMS ON FILE`, a large Playfair headline,
+an oversized low-contrast `A–Z`, and a simple text link. A manila index card is
+the quieter alternative.
+
+### Terms in This Article
+
+Published posts now support a comma-separated `terms:` frontmatter field using
+glossary slugs. The parser validates terms against the glossary, preserves
+editorial order, removes duplicates, and quietly drops invalid slugs.
+`docs/ARTICLE_TEMPLATE.md` now documents the discipline: choose three to five
+terms that genuinely carry the article's working language. Tags connect
+articles; terms explain the language used inside one.
+
+On desktop, Terms in This Article appears in the sticky article sidebar below
+the table of contents and above Share. On tablet and mobile, it appears at the
+bottom of the article so it does not interrupt the opening flow. Every term is
+a real `/glossary#slug` link and works without JavaScript.
+
+Plain clicks receive an enhanced quick definition. Desktop uses a bordered
+paper panel beside the link; mobile uses a bottom sheet with a dimmed backdrop.
+Modifier clicks and open-in-new-tab continue to the glossary. The component
+supports Escape, focus trapping and return, body scroll lock, and reduced
+motion. It is implemented in `js/term-quickdef.js`; glossary copy-link behavior
+lives in `js/glossary.js`.
+
+All nine published posts were audited and now expose three to five valid terms:
+
+- *The Right Story, Told the Right Way*: Future Congregation, Story,
+  Touchpoint, Hospitality, Stewardship.
+- *Your Church Already Has a Brand*: Brand, Touchpoint, Trust, Story,
+  Stewardship.
+- *The Most Expensive Word in Church Communications*: Brand, Creative Brief,
+  Audience.
+- *Brand Is the Referee*: Brand, Audience, Creative Brief, Trust, Story.
+- *Change vs. Polish*: Change vs. Polish, Design, Audience, Story.
+- *Why Your Church Communications Feel Chaotic*: Campaign, Project,
+  Deliverable, Task, Brand.
+- *Stop Calling Everything a Project*: Campaign, Project, Deliverable, Task,
+  Success Metrics.
+- *Every Deliverable Needs One Job*: Deliverable, Audience, Call to Action,
+  StoryBrand, Design.
+- *The Creative Brief Is Ministry*: Creative Brief, Audience, Campaign,
+  Project, Deliverable.
+
+Desktop and mobile render paths were checked for every published post. The
+unpublished `posts/how-people-change.md` draft was intentionally excluded from
+the commit. Glossary links from Conversion and Transformation to that draft
+were removed in a follow-up commit. Every remaining glossary link to a blog
+post now points to an article present in `posts/index.json`.
+
+### Important Definition Decisions
+
+The glossary work clarified several pieces of house language.
+
+**Future Congregation** means the people God is calling us to care for before
+we know who they are. They may already be driving past, searching, watching a
+sermon on YouTube, encountering social media, visiting the website, or opening
+an email. The future congregation is not a market to capture. They are people
+God has called us to prepare a place for. Communications can begin ministry
+before someone arrives, and the first campus many people visit is digital.
+
+**Evangelistic Marketing** now draws on Seth Godin's description of marketing
+as the generous act of helping someone solve their problem and become who they
+seek to become. The church-specific guardrail is explicit: we do not
+manufacture desire, manipulate decisions, or create transformation. We prepare
+a place, remove unnecessary barriers, tell the truth clearly, help people take
+an honest next step toward Jesus, and serve the people God is already drawing.
+The entry links to the Adaptive Marketer discussion of *This Is Marketing*.
+
+**StoryBrand** is described in the house voice rather than as a formal product
+summary. Donald Miller's framework puts the audience at the center: they are
+the hero; we are the guide. A guide earns trust through empathy and authority:
+“I've been there. I know how to help.” In the church, empathy says, “I see you.
+I understand what you are carrying.” Authority says, “I know how to help you
+take the next step.” The guardrail remains: StoryBrand is a messaging
+framework, not a theology. The Gospel is not a product, people are not
+prospects to capture, and transformation belongs to God. The entry links to
+*Building a StoryBrand 2.0* and The StoryBrand Podcast.
+
+**Campaign, Project, and Deliverable** were substantially revised after working
+through a VBS example and a year-long social engagement campaign:
+
+- A campaign is a coordinated, time-bound effort that brings multiple projects
+  together around one shared purpose or measurable objective. Projects may
+  pursue different outcomes as long as every outcome serves the same purpose.
+- Projects can be organized by audience, channel, discipline, event, or
+  recurring content stream. A social campaign might use Instagram and Facebook
+  projects, or sermon clip, inspiring quote, and Sunday gallery projects.
+- A project is bounded work within a campaign that pursues a specific outcome
+  through defined deliverables. It has an owner, scope, timeline, definition of
+  done, and a budget of time, money, and resources. Completion and success are
+  not the same; a project can finish, be evaluated, and teach the team even
+  when it misses the intended result.
+- A deliverable is finished work produced by a project and handed off,
+  published, installed, performed, or otherwise put into use. It is not the
+  outcome. It is what the team produces in service of the outcome. Every
+  deliverable has one job, although `one audience, one message, one action`
+  applies specifically to communication deliverables.
+
+The useful ladder now reads:
+
+`Campaign purpose → Project outcome → Deliverable job → Task action`
+
+### Follow-Ups from the Terminology Audit
+
+The glossary definitions are ahead of several older articles and one graphic.
+These should be revised before treating the systems series as final:
+
+- `glossary/task.md` remains too thin. Recommended definition: “A single,
+  assignable action completed in service of a deliverable.” A task needs an
+  owner, clear instruction, enough context to act, and an observable finish
+  condition. A stuck task may be unclear, blocked, oversized, or at the wrong
+  altitude, not necessarily “a deliverable wearing a disguise.”
+- `posts/stop-calling-everything-a-project.md` still teaches the older “season
+  with a goal / one coordinated effort / thing that ships” definitions. Its
+  evaluation paragraph also overstates craft as the measure of a deliverable.
+- `assets/img/blog/stop-calling-everything-a-project-01.png` visually teaches
+  the same older definitions and should be rebuilt after the article copy is
+  settled.
+- `posts/the-creative-brief-is-ministry.md` says the creative brief belongs
+  only at campaign altitude. The new model needs a campaign-level strategic
+  brief, project briefs where audience or outcome differs, and focused
+  specifications for individual deliverables when needed.
+- `posts/why-your-church-communications-feel-chaotic.md` says “promote the
+  men's breakfast” becomes a deliverable. It may instead become a project with
+  several deliverables; define the work before assigning its altitude.
+- `docs/IDEA_GLOSSARY.md` still contains the old one-outcome Campaign wording.
+  Update it or label it archival so it does not compete with the working
+  glossary.
+
+### Validation Completed
+
+- PHP syntax checks passed for `glossary.php`, `blog-post.php`, `inc/blog.php`,
+  `router.php`, and `sitemap.php`.
+- JavaScript syntax checks passed for both glossary scripts.
+- `git diff --check` passed before each commit.
+- The glossary rendered 33 entries locally, including StoryBrand and Future
+  Congregation anchors.
+- Google Analytics rendered once on the glossary page.
+- All nine published posts rendered the expected term links in both desktop
+  and mobile placements.
+- The homepage glossary strip was confirmed absent after removal.
+- No rendered glossary link points to the unpublished *How People Change*
+  draft.
+
+### Commits Published Tonight
+
+- `83cf876 Add working glossary and article terms`
+  - Publishes the complete glossary mechanic, 33 term files, article quick
+    definitions, desktop/mobile placements, routes, sitemap, analytics,
+    navigation/footer links, and terms for all published posts.
+- `4a6d669 Remove unpublished glossary links`
+  - Removes the Conversion and Transformation links to the unpublished *How
+    People Change* draft.
+
+Both commits are on `main` and pushed to `origin/main`.
+
+### Working Tree at Pack-Up
+
+`main` and `origin/main` are synchronized at `4a6d669`.
+
+The following local items were intentionally not staged or committed:
+
+- Modified `.DS_Store`
+- Modified `assets/.DS_Store`
+- Modified `assets/img/.DS_Store`
+- Untracked `inc/.DS_Store`
+- Untracked `posts/how-people-change.md` with `draft: true`
+
+The draft is the beginning of the Evangelistic Marketing / John 4 series and
+should remain unpublished until the copy is intentionally resumed. Do not add
+glossary links to it until it enters `posts/index.json`.
 
 ## Homepage Promotion — 2026-07-15
 
