@@ -27,6 +27,24 @@ homepage content immediately before the footer rather than branching the
 shared component. Do not copy footer markup or rebuild the font list inside an
 individual page.
 
+### Blog subscriptions
+
+The blog index and every published article share one email subscription
+mechanic. `blog_subscribe_link()` renders the triggers and
+`blog_subscribe_dialog()` renders the accessible panel and Brevo form. Both
+live in `inc/blog.php`; interaction lives in `js/subscribe.js`, and the
+site-owned presentation lives at the end of `css/editorial.css`. The Brevo
+submission URL is stored once as `brevo_form_action` in
+`inc/blog-config.php`. Do not paste Brevo's generated iframe or inline visual
+styles into individual pages.
+
+Brevo handles validation, confirmation, and list management while the site
+owns the reader-facing design. The direct Brevo URL remains the no-JavaScript
+fallback. `/feed.xml` remains available as a secondary option for readers who
+prefer RSS. Brevo's free account currently limits sending to 300 messages per
+day, so revisit the service or plan before the active list passes that
+threshold.
+
 ### A Working Glossary
 
 The site now has a complete working glossary at `/glossary`. It is intended to

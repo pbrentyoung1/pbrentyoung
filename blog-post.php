@@ -139,6 +139,7 @@ header('Content-Type: text/html; charset=utf-8');
   <meta name="twitter:image" content="<?php echo blog_e($banner); ?>">
   <meta name="twitter:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
   <script type="application/ld+json"><?php echo json_encode($jsonld, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
+  <?php blog_subscribe_head(); ?>
   <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
 </head>
 <body class="blog-site article-view" data-topic="<?php echo blog_e($post['topic_slug']); ?>">
@@ -215,7 +216,7 @@ header('Content-Type: text/html; charset=utf-8');
           <p><?php echo blog_e(blog_config('author_bio')); ?></p>
         </div>
       </section>
-      <div class="article-subscribe"><span>SUBSCRIBE TO THE BLOG</span><a href="/feed.xml">OPEN RSS FEED &rarr;</a></div>
+      <div class="article-subscribe"><span>FOLLOW THE NEXT IDEA</span><span class="article-subscribe__actions"><?php echo blog_subscribe_link(); ?><a class="rss-link" href="/feed.xml">RSS</a></span></div>
     </article>
   </div>
 
@@ -247,6 +248,7 @@ header('Content-Type: text/html; charset=utf-8');
   <script type="application/json" id="termData"><?php echo json_encode($termPayload, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
 <?php endif; ?>
 
+<?php blog_subscribe_dialog(); ?>
 <?php blog_site_footer(); ?>
 <script src="/js/article.js"></script>
 <script src="/js/term-quickdef.js"></script>

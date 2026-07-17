@@ -396,6 +396,78 @@ function blog_robots_meta() {
   return blog_config('blog_public') ? 'index, follow' : 'noindex, follow';
 }
 
+function blog_subscribe_head() {
+  ?>
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+  <?php
+}
+
+function blog_subscribe_link($label = 'SUBSCRIBE BY EMAIL &rarr;') {
+  $url = blog_config('brevo_form_action');
+  return '<a class="subscribe-link" href="' . blog_e($url) . '" data-subscribe-open>' . $label . '</a>';
+}
+
+function blog_subscribe_dialog() {
+  $url = blog_config('brevo_form_action');
+  ?>
+  <div class="subscribe-dialog" id="subscribeDialog" hidden>
+    <div class="subscribe-dialog__backdrop" data-subscribe-close></div>
+    <section class="subscribe-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="subscribeTitle" tabindex="-1">
+      <button class="subscribe-dialog__close" type="button" aria-label="Close subscription form" data-subscribe-close>&times;</button>
+      <p class="subscribe-dialog__kicker">FIELD NOTES &middot; FROM THE DESK OF BRENT YOUNG</p>
+      <h2 id="subscribeTitle">Follow the next idea.</h2>
+      <p class="subscribe-dialog__intro">New field notes on communication, design, leadership, ministry, and the systems that help good work survive real life. Sent when there is something worth sharing.</p>
+
+      <div id="sib-form-container" class="subscribe-dialog__form">
+        <div id="error-message" class="sib-form-message-panel subscribe-message subscribe-message--error" role="alert">
+          <div class="sib-form-message-panel__text"><span class="sib-form-message-panel__inner-text">Your subscription could not be saved. Please try again.</span></div>
+        </div>
+        <div id="success-message" class="sib-form-message-panel subscribe-message subscribe-message--success" role="status">
+          <div class="sib-form-message-panel__text"><span class="sib-form-message-panel__inner-text">You are on the list. Check your inbox to confirm your subscription.</span></div>
+        </div>
+        <div id="sib-container" class="sib-container--large sib-container--vertical">
+          <form id="sib-form" method="post" action="<?php echo blog_e($url); ?>" data-type="subscription">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label" for="EMAIL" data-required="*">EMAIL ADDRESS</label>
+                  <div class="subscribe-field-row entry__field">
+                    <input class="input" type="email" id="EMAIL" name="EMAIL" autocomplete="email" placeholder="YOU@EXAMPLE.COM" data-required="true" required>
+                    <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+                      <svg class="clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/></svg>
+                      SUBSCRIBE
+                    </button>
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary"></label>
+                <p class="entry__specification">No noise. Just the next useful idea. Unsubscribe whenever you like.</p>
+              </div>
+            </div>
+            <input type="text" name="email_address_check" value="" class="input--hidden" tabindex="-1" aria-hidden="true">
+            <input type="hidden" name="locale" value="en">
+          </form>
+        </div>
+      </div>
+      <p class="subscribe-dialog__rss">PREFER A FEED READER? <a href="/feed.xml">OPEN THE RSS FEED &rarr;</a></p>
+    </section>
+  </div>
+  <script>
+    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+    window.LOCALE = 'en';
+    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = 'Please enter a valid email address.';
+    window.REQUIRED_ERROR_MESSAGE = 'Please enter your email address.';
+    window.GENERIC_INVALID_MESSAGE = 'Please review the information and try again.';
+    window.INVALID_NUMBER = 'Please review the information and try again.';
+    window.INVALID_DATE = 'Please enter a valid date.';
+    window.REQUIRED_MULTISELECT_MESSAGE = 'Please select at least one option.';
+    window.translation = { common: { selectedList: '{quantity} list selected', selectedLists: '{quantity} lists selected', selectedOption: '{quantity} selected', selectedOptions: '{quantity} selected' } };
+    var AUTOHIDE = false;
+  </script>
+  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+  <script defer src="/js/subscribe.js"></script>
+  <?php
+}
+
 function blog_nav_menu() {
   $topics = array(
     array('brand-mission', 'Brand & Mission'),

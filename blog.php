@@ -81,7 +81,8 @@ header('Content-Type: text/html; charset=utf-8');
   <meta name="twitter:image" content="<?php echo blog_e(blog_site_url('/images/og-image.png')); ?>">
   <meta name="twitter:image:alt" content="Brent Young — The right story, told the right way.">
   <script type="application/ld+json"><?php echo json_encode($collection, JSON_UNESCAPED_SLASHES | JSON_HEX_TAG); ?></script>
-  <link rel="stylesheet" href="/css/editorial.css">
+  <?php blog_subscribe_head(); ?>
+  <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
 </head>
 <body class="blog-site blog-index-page">
 <?php blog_site_header(); ?>
@@ -125,7 +126,8 @@ header('Content-Type: text/html; charset=utf-8');
         <section class="subscribe-block">
           <p class="side-label">SUBSCRIBE TO THE BLOG</p>
           <h2>Follow the next idea.</h2>
-          <a href="/feed.xml">OPEN RSS FEED &rarr;</a>
+          <p>New Field Notes, delivered when there is something worth sharing.</p>
+          <div class="subscribe-actions"><?php echo blog_subscribe_link(); ?><a class="rss-link" href="/feed.xml">RSS</a></div>
         </section>
         <?php if ($shortlist): ?>
           <section class="short-list">
@@ -183,6 +185,7 @@ header('Content-Type: text/html; charset=utf-8');
   </section>
 </main>
 
+<?php blog_subscribe_dialog(); ?>
 <?php blog_site_footer(); ?>
 </body>
 </html>
