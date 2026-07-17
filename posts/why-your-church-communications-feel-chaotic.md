@@ -6,7 +6,7 @@ deck: You cannot out-hustle a conveyor belt. Church communications gets calm whe
 tags: workflow, requests, burnout
 terms: campaign, project, deliverable, task, brand
 principle: Systems Create Creativity
-shortlist: 2
+shortlist: 3
 ---
 
 There is a scene in I Love Lucy that every church communicator knows by heart, even if they have never seen it.

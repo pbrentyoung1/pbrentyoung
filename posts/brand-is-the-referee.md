@@ -6,7 +6,7 @@ deck: A brand isn't a costume. It's a referee that enables your team to create.
 tags: brand, preference, creative teams
 terms: brand, audience, creative-brief, trust, story
 principle: Brand Is the Referee
-shortlist: 1
+shortlist: 2
 ---
 
 If you have spent more than a minute in creative leadership, you have probably been in a meeting like this.
