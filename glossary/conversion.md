@@ -1,6 +1,5 @@
 ---
 term: Conversion
-link1: How People Change | /blog/how-people-change | Why the deeper yes cannot be rushed
 ---
 
 The moment a person says yes to an invitation and crosses from one level of engagement into another.

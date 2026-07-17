@@ -1,6 +1,5 @@
 ---
 term: Transformation
-link1: How People Change | /blog/how-people-change | The pace and pattern of real change
 ---
 
 A meaningful change in understanding, identity, relationship, or behavior.
