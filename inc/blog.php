@@ -14,6 +14,20 @@ function blog_e($value) {
   return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
 }
 
+function blog_google_tag() {
+  $id = trim((string) blog_config('google_tag_id'));
+  if (!preg_match('/^G-[A-Z0-9]+$/', $id)) return '';
+
+  return '<!-- Google tag (gtag.js) -->' . "\n"
+    . '<script async src="https://www.googletagmanager.com/gtag/js?id=' . blog_e($id) . '"></script>' . "\n"
+    . '<script>' . "\n"
+    . '  window.dataLayer = window.dataLayer || [];' . "\n"
+    . '  function gtag(){dataLayer.push(arguments);}' . "\n"
+    . "  gtag('js', new Date());" . "\n\n"
+    . "  gtag('config', '" . $id . "');" . "\n"
+    . '</script>';
+}
+
 function blog_slugify($value) {
   $value = strtolower(trim((string) $value));
   $value = preg_replace('/[^a-z0-9]+/', '-', $value);

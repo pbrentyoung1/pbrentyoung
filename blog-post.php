@@ -22,6 +22,7 @@ if (!$post) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Not found — Brent Young</title>
     <meta name="robots" content="noindex, nofollow">
+    <?php echo blog_google_tag(); ?>
     <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
   </head>
   <body class="blog-site">
@@ -91,6 +92,7 @@ header('Content-Type: text/html; charset=utf-8');
   <meta name="robots" content="<?php echo blog_e(blog_robots_meta()); ?>">
   <meta name="theme-color" content="#f4f1ea">
   <link rel="canonical" href="<?php echo blog_e($canonical); ?>">
+  <?php echo blog_google_tag(); ?>
   <link rel="alternate" type="application/rss+xml" title="Brent Young Blog" href="/feed.xml">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
