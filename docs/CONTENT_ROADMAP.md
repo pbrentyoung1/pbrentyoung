@@ -34,8 +34,7 @@ Titles marked ✍️ have working drafts in `posts/` (written with AI assistance
 # Creative Leadership
 
 - Preference vs Brand
-- Change vs Polish ✍️
-- You Can't Polish Your Way Into Relevance ✍️
+- Change vs Polish ✍️ *(merged in You Can't Polish Your Way Into Relevance)*
 - Giving Better Feedback
 - The Creative Brief Is Ministry ✍️
 - Volunteers Don't Need Better Software
