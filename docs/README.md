@@ -21,6 +21,12 @@ These documents are the source of truth for the project. When the website and th
 | [ARTICLE_TEMPLATE.md](ARTICLE_TEMPLATE.md) | The structure. The editorial beats every article should follow. |
 | [SESSION_HANDOFF.md](SESSION_HANDOFF.md) | The handoff. Current implementation notes, recent decisions, and known follow-ups. |
 
+## Project Archives
+
+| Project | Contents |
+| --- | --- |
+| [Evangelistic Marketing](evangelistic-marketing/README.md) | The John 4 thesis, editorial series, journey and visual frameworks, glossary, and research plan. |
+
 ## How They Work Together
 
 FIRST_PRINCIPLES defines **why**.
