@@ -1,2 +1,4 @@
 assets/video/
 media/
+/inc/secrets.local.php
+/var/cache/

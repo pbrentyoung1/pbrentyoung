@@ -314,6 +314,7 @@ function blog_markdown($markdown) {
 
   $html = (string) $converter->convert($markdown);
   $html = preg_replace('/<blockquote>\s*<p>!\s*(.*?)<\/p>\s*<\/blockquote>/s', '<aside class="pull">$1</aside>', $html);
+  $html = preg_replace('/<blockquote>\s*<p>TOOL:\s*(.*?)<\/p>\s*<\/blockquote>/s', '<aside class="article-tool-callout"><p>$1</p></aside>', $html);
 
   $seen = array();
   $toc = array();
@@ -477,18 +478,30 @@ function blog_nav_menu() {
     array('ai', 'AI'),
   );
   ?>
-  <div class="nav-blog">
-    <a class="nav-link nav-blog-toggle" href="/blog" aria-haspopup="true" aria-expanded="false">BLOG</a>
-    <div class="nav-blog-menu" aria-label="Blog sections">
+  <div class="nav-dropdown nav-blog">
+    <a class="nav-link nav-dropdown-toggle" href="/blog" aria-haspopup="true" aria-expanded="false" aria-controls="navBlogMenu">BLOG</a>
+    <div class="nav-dropdown-menu nav-blog-menu" id="navBlogMenu" aria-label="Blog sections">
       <a class="nav-blog-menu__all" href="/blog">ALL ARTICLES &rarr;</a>
-      <span class="nav-blog-menu__label">TOPICS</span>
+      <span class="nav-dropdown-menu__label">TOPICS</span>
       <?php foreach ($topics as $topic): ?><a href="/blog?topic=<?php echo blog_e($topic[0]); ?>"><?php echo blog_e($topic[1]); ?></a><?php endforeach; ?>
-      <span class="nav-blog-menu__label">THE SHORT LIST</span>
+      <span class="nav-dropdown-menu__label">THE SHORT LIST</span>
       <div data-nav-shortlist>
         <?php foreach (blog_shortlist() as $post): ?><a href="<?php echo blog_e(blog_post_url($post)); ?>"><?php echo blog_e($post['title']); ?></a><?php endforeach; ?>
       </div>
-      <span class="nav-blog-menu__label">REFERENCE</span>
-      <a href="/glossary">A Working Glossary</a>
+    </div>
+  </div>
+  <?php
+}
+
+function blog_tools_menu() {
+  ?>
+  <div class="nav-dropdown nav-tools">
+    <a class="nav-link nav-dropdown-toggle" href="/community-snapshot" aria-haspopup="true" aria-expanded="false" aria-controls="navToolsMenu">TOOLS</a>
+    <div class="nav-dropdown-menu nav-tools-menu" id="navToolsMenu" aria-label="Tools and reference">
+      <span class="nav-dropdown-menu__label">TOOLS &amp; REFERENCE</span>
+      <a href="/community-snapshot"><strong>Community Snapshot</strong><span>See the people living around your church.</span></a>
+      <a href="/future-congregation-journey"><strong>Future Congregation Journey</strong><span>Follow the path from awareness to ministry.</span></a>
+      <a href="/glossary"><strong>A Working Glossary</strong><span>Explore the language behind the work.</span></a>
     </div>
   </div>
   <?php
@@ -503,7 +516,8 @@ function blog_site_header() {
         <a class="nav-link" href="/#principles">PRINCIPLES</a>
         <a class="nav-link" href="/#flat-file">THE FILE</a>
         <?php blog_nav_menu(); ?>
-        <a class="nav-link" href="/#contact">CONTACT</a>
+        <?php blog_tools_menu(); ?>
+        <a class="nav-link" href="#contact">CONTACT</a>
         <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
       </nav>
       <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">MENU</button>

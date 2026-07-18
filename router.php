@@ -37,6 +37,11 @@ if ($path === '/future-congregation-journey') {
   return true;
 }
 
+if ($path === '/community-snapshot') {
+  require __DIR__ . '/community-snapshot.php';
+  return true;
+}
+
 if (preg_match('#^/blog/([a-z0-9][a-z0-9-]*)/?$#', $path, $match)) {
   $_GET['slug'] = $match[1];
   require __DIR__ . '/blog-post.php';

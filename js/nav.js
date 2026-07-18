@@ -16,8 +16,7 @@
   if (!t || !n) return;
 
   var mq = window.matchMedia("(max-width: 759px)");
-  var blog = n.querySelector(".nav-blog");
-  var blogToggle = blog && blog.querySelector(".nav-blog-toggle");
+  var dropdowns = Array.prototype.slice.call(n.querySelectorAll(".nav-dropdown"));
 
   function set(open) {
     open = open && mq.matches;
@@ -31,7 +30,7 @@
   n.setAttribute("aria-hidden", mq.matches ? "true" : "false");
   t.addEventListener("click", function () { set(!n.classList.contains("open")); });
   n.addEventListener("click", function (e) {
-    if (e.target.closest(".nav-blog-toggle")) return;
+    if (e.target.closest(".nav-dropdown-toggle")) return;
     if (e.target.closest("a")) set(false);
   });
   document.addEventListener("keydown", function (e) {
@@ -49,33 +48,49 @@
   if (mq.addEventListener) mq.addEventListener("change", handleViewportChange);
   else if (mq.addListener) mq.addListener(handleViewportChange);
 
-  /* The BLOG menu is a taxonomy view, not a second content source. */
-  if (blog && blogToggle) {
-    var setBlog = function (open) {
-      blog.classList.toggle("is-open", open);
-      blogToggle.setAttribute("aria-expanded", open ? "true" : "false");
-    };
+  function setDropdown(dropdown, open) {
+    var toggle = dropdown.querySelector(".nav-dropdown-toggle");
+    dropdown.classList.toggle("is-open", open);
+    if (toggle) toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  }
 
-    blog.addEventListener("mouseenter", function () { if (!mq.matches) setBlog(true); });
-    blog.addEventListener("mouseleave", function () { if (!mq.matches) setBlog(false); });
-    blog.addEventListener("focusin", function () { if (!mq.matches) setBlog(true); });
-    blog.addEventListener("focusout", function (e) {
-      if (!mq.matches && !blog.contains(e.relatedTarget)) setBlog(false);
+  dropdowns.forEach(function (dropdown) {
+    var toggle = dropdown.querySelector(".nav-dropdown-toggle");
+    if (!toggle) return;
+
+    dropdown.addEventListener("mouseenter", function () {
+      if (!mq.matches) setDropdown(dropdown, true);
     });
-    blogToggle.addEventListener("click", function (e) {
+    dropdown.addEventListener("mouseleave", function () {
+      if (!mq.matches) setDropdown(dropdown, false);
+    });
+    dropdown.addEventListener("focusin", function () {
+      if (!mq.matches) setDropdown(dropdown, true);
+    });
+    dropdown.addEventListener("focusout", function (e) {
+      if (!mq.matches && !dropdown.contains(e.relatedTarget)) setDropdown(dropdown, false);
+    });
+    toggle.addEventListener("click", function (e) {
       if (!mq.matches) return;
       e.preventDefault();
-      setBlog(!blog.classList.contains("is-open"));
+      var opening = !dropdown.classList.contains("is-open");
+      dropdowns.forEach(function (other) { setDropdown(other, other === dropdown && opening); });
     });
-    document.addEventListener("click", function (e) {
-      if (!blog.contains(e.target)) setBlog(false);
+  });
+
+  document.addEventListener("click", function (e) {
+    dropdowns.forEach(function (dropdown) {
+      if (!dropdown.contains(e.target)) setDropdown(dropdown, false);
     });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && blog.classList.contains("is-open")) {
-        setBlog(false);
-        blogToggle.focus();
-      }
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    dropdowns.forEach(function (dropdown) {
+      if (!dropdown.classList.contains("is-open")) return;
+      var toggle = dropdown.querySelector(".nav-dropdown-toggle");
+      setDropdown(dropdown, false);
+      if (toggle) toggle.focus();
     });
-  }
+  });
 
 })();

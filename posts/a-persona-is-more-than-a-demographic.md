@@ -92,6 +92,8 @@ Demographic data tells us where to look. Behavioral data shows us what happened.
 
 None of those sources is sufficient alone. Together, they replace a room full of guesses with a much better place to begin.
 
+> TOOL: **Begin with the people living around your church.** Build a free Community Snapshot with a fifteen-mile local portrait, county and national comparisons, and a look at how the community is changing. [BUILD YOUR COMMUNITY SNAPSHOT →](/community-snapshot)
+
 ## The danger of finding exactly what we expected
 
 Interviewing recent members will give us valuable information. They can tell us what resonated, what built trust, and what helped them take the next step. But they can only tell us about the path that worked for the people we successfully reached.
