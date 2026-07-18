@@ -87,7 +87,7 @@ body {
 img, video { max-width: 100%; display: block; }
 a { color: inherit; }
 
-.wrap { width: min(1240px, 92vw); margin: 0 auto; }
+.wrap { width: min(1060px, 92vw); margin: 0 auto; }
 
 .kicker {
   font-family: var(--mono);
@@ -2386,7 +2386,7 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
 .blog-site .site-foot .wrap,
 .blog-wrap,
 .article-shell {
-  width: min(1240px, 92vw);
+  width: min(1060px, 92vw);
   margin-inline: auto;
 }
 
