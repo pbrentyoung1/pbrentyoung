@@ -170,17 +170,21 @@ header('Content-Type: text/html; charset=utf-8');
   <div class="article-reading-grid">
     <aside class="desktop-contents">
       <?php if ($toc): ?>
-        <p>IN THIS ARTICLE</p>
-        <ol>
-          <?php foreach ($toc as $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
-        </ol>
+        <details class="sidebar-disclosure" open>
+          <summary>IN THIS ARTICLE</summary>
+          <ol>
+            <?php foreach ($toc as $heading): ?><li><a href="#<?php echo blog_e($heading['id']); ?>"><?php echo blog_e($heading['label']); ?></a></li><?php endforeach; ?>
+          </ol>
+        </details>
       <?php endif; ?>
       <?php if ($articleTerms): ?>
         <nav class="article-terms" aria-label="Terms in this article">
-          <p class="article-terms__label">TERMS IN THIS ARTICLE</p>
-          <ul>
-            <?php foreach ($articleTerms as $entry): ?><li><a class="term-ref" href="/glossary#<?php echo blog_e($entry['slug']); ?>" data-term="<?php echo blog_e($entry['slug']); ?>"><?php echo blog_e($entry['term']); ?></a></li><?php endforeach; ?>
-          </ul>
+          <details class="sidebar-disclosure" open>
+            <summary>TERMS IN THIS ARTICLE</summary>
+            <ul>
+              <?php foreach ($articleTerms as $entry): ?><li><a class="term-ref" href="/glossary#<?php echo blog_e($entry['slug']); ?>" data-term="<?php echo blog_e($entry['slug']); ?>"><?php echo blog_e($entry['term']); ?></a></li><?php endforeach; ?>
+            </ul>
+          </details>
         </nav>
       <?php endif; ?>
       <nav class="article-share" aria-label="Share this article"><?php echo $shareButtons; ?></nav>

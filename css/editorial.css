@@ -87,7 +87,7 @@ body {
 img, video { max-width: 100%; display: block; }
 a { color: inherit; }
 
-.wrap { width: min(1060px, 92vw); margin: 0 auto; }
+.wrap { width: min(1240px, 92vw); margin: 0 auto; }
 
 .kicker {
   font-family: var(--mono);
@@ -2903,7 +2903,13 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   padding-top: 12px;
 }
 
-.desktop-contents > p {
+.sidebar-disclosure summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  list-style: none;
   color: var(--ink);
   font-family: var(--mono);
   font-size: 0.625rem;
@@ -2911,6 +2917,25 @@ body.specs .slugline { color: var(--blue); border-top-color: var(--blue-line); }
   letter-spacing: 1px;
   margin: 0 0 10px;
 }
+
+.sidebar-disclosure summary::-webkit-details-marker { display: none; }
+.sidebar-disclosure summary::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1px solid var(--blue);
+  border-bottom: 1px solid var(--blue);
+  flex: 0 0 auto;
+  margin-bottom: 3px;
+  transform: rotate(45deg);
+  transition: transform 160ms ease, margin 160ms ease;
+}
+
+.sidebar-disclosure[open] summary::after {
+  margin-bottom: 0;
+  transform: rotate(225deg);
+}
+.sidebar-disclosure:not([open]) summary { margin-bottom: 0; }
 
 .desktop-contents ol,
 .mobile-contents ol {
