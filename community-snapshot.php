@@ -227,6 +227,7 @@ header('Cache-Control: no-store, max-age=0');
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="/css/editorial.css?v=<?php echo (int) filemtime(__DIR__ . '/css/editorial.css'); ?>">
 </head>
 <body class="blog-site snapshot-page">
@@ -284,6 +285,18 @@ header('Cache-Control: no-store, max-age=0');
         <button class="snapshot-download" type="button">Download spreadsheet <span>CSV</span></button>
       </div>
       <script class="snapshot-export-data" type="application/json"><?php echo json_encode(snapshot_export_payload($report, $sections, $trendRows), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG); ?></script>
+
+      <section class="snapshot-map" aria-labelledby="snapshotMapHeading">
+        <div class="snapshot-map__intro">
+          <div>
+            <span class="snapshot-label">STUDY AREA</span>
+            <h3 id="snapshotMapHeading">Fifteen miles, as the crow flies.</h3>
+          </div>
+          <p>The blue boundary shows the straight-line area used for this report. It is not the same as a fifteen-mile drive.</p>
+        </div>
+        <div class="snapshot-map__canvas" data-latitude="<?php echo blog_e((string) $report['location']['latitude']); ?>" data-longitude="<?php echo blog_e((string) $report['location']['longitude']); ?>" data-radius-miles="<?php echo blog_e((string) $report['radius_miles']); ?>" role="region" aria-label="Map centered on <?php echo blog_e($report['location']['matched_address']); ?> showing the fifteen-mile study area"></div>
+        <p class="snapshot-map__source">Demographic estimates: U.S. Census Bureau.</p>
+      </section>
 
       <div class="snapshot-note">
         <strong>Demographics show us where to listen.</strong>
@@ -353,6 +366,7 @@ header('Cache-Control: no-store, max-age=0');
 </main>
 
 <?php blog_site_footer(); ?>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
   (function () {
     var form = document.querySelector('.snapshot-form__fields');
@@ -361,6 +375,65 @@ header('Cache-Control: no-store, max-age=0');
     var status = document.getElementById('snapshotResultStatus');
     var submitButton = form.querySelector('button[type="submit"]');
     var activeRequest = null;
+
+    function destroySnapshotMap(report) {
+      var canvas = report ? report.querySelector('.snapshot-map__canvas') : null;
+      if (canvas && canvas._snapshotMap) {
+        canvas._snapshotMap.remove();
+        canvas._snapshotMap = null;
+      }
+    }
+
+    function initSnapshotMap(report) {
+      var canvas = report ? report.querySelector('.snapshot-map__canvas') : null;
+      if (!canvas || canvas._snapshotMap || !window.L) return;
+
+      var latitude = Number(canvas.dataset.latitude);
+      var longitude = Number(canvas.dataset.longitude);
+      var radiusMiles = Number(canvas.dataset.radiusMiles);
+      if (!Number.isFinite(latitude) || !Number.isFinite(longitude) || !Number.isFinite(radiusMiles)) return;
+
+      var center = [latitude, longitude];
+      var map = L.map(canvas, {
+        scrollWheelZoom: false,
+        zoomControl: true,
+        attributionControl: true
+      });
+      canvas._snapshotMap = map;
+      map.setView(center, 9);
+
+      try {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var studyArea = L.circle(center, {
+          radius: radiusMiles * 1609.344,
+          color: '#1f83a3',
+          weight: 2,
+          opacity: 0.9,
+          fillColor: '#1f83a3',
+          fillOpacity: 0.12,
+          interactive: false
+        }).addTo(map);
+
+        L.circleMarker(center, {
+          radius: 6,
+          color: '#f4f1ea',
+          weight: 3,
+          fillColor: '#c1271d',
+          fillOpacity: 1
+        }).addTo(map).bindTooltip('Campus', { direction: 'top', offset: [0, -7] });
+
+        map.fitBounds(studyArea.getBounds(), { padding: [24, 24] });
+      } catch (error) {
+        map.remove();
+        canvas._snapshotMap = null;
+        canvas.classList.add('is-unavailable');
+        canvas.innerHTML = '<p>The field map could not be loaded. The report data is still available below.</p>';
+      }
+    }
 
     function setButtonState(state) {
       if (!submitButton) return;
@@ -376,7 +449,10 @@ header('Cache-Control: no-store, max-age=0');
       activeRequest = null;
       var report = document.querySelector('.snapshot-report');
       var error = document.querySelector('.snapshot-error');
-      if (report) report.remove();
+      if (report) {
+        destroySnapshotMap(report);
+        report.remove();
+      }
       if (error) error.remove();
       form.reset();
       document.getElementById('snapshotAddress').value = '';
@@ -455,8 +531,12 @@ header('Cache-Control: no-store, max-age=0');
 
           if (incomingReport) {
             var newReport = document.importNode(incomingReport, true);
-            if (oldReport) oldReport.replaceWith(newReport);
+            if (oldReport) {
+              destroySnapshotMap(oldReport);
+              oldReport.replaceWith(newReport);
+            }
             else formSection.insertAdjacentElement('afterend', newReport);
+            initSnapshotMap(newReport);
             setButtonState('clear');
             if (status) status.textContent = 'The community snapshot is ready.';
             newReport.scrollIntoView({
@@ -497,6 +577,8 @@ header('Cache-Control: no-store, max-age=0');
           form.removeAttribute('aria-busy');
         });
     });
+
+    initSnapshotMap(document.querySelector('.snapshot-report'));
   }());
 </script>
 </body>

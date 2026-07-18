@@ -4652,6 +4652,82 @@ body.subscribe-open { overflow: hidden; }
 
 .snapshot-export-data { display: none; }
 
+.snapshot-map {
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  margin-top: 26px;
+  padding: 28px 0 14px;
+}
+
+.snapshot-map__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .7fr);
+  gap: clamp(28px, 7vw, 90px);
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.snapshot-map__intro h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.08;
+  margin: 12px 0 0;
+}
+
+.snapshot-map__intro p {
+  color: var(--ink-mute);
+  font-family: var(--serif-text);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.snapshot-map__canvas {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: clamp(330px, 42vw, 440px);
+  border: 1px solid var(--ink);
+  background: var(--paper-dim);
+}
+
+.snapshot-map__canvas.is-unavailable {
+  display: grid;
+  place-items: center;
+  height: 180px;
+  padding: 24px;
+  text-align: center;
+}
+
+.snapshot-map__canvas.is-unavailable p {
+  max-width: 36ch;
+  color: var(--ink-mute);
+  font-family: var(--serif-text);
+}
+
+.snapshot-map__canvas .leaflet-tile-pane {
+  filter: grayscale(.82) sepia(.12) saturate(.62) contrast(.92);
+}
+
+.snapshot-map__canvas .leaflet-control-zoom a {
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+.snapshot-map__canvas .leaflet-control-attribution {
+  background: rgba(244, 241, 234, .9);
+  color: var(--ink-mute);
+  font-family: var(--sans);
+}
+
+.snapshot-map__source {
+  color: var(--ink-mute);
+  font: .68rem/1.5 var(--sans);
+  margin: 8px 0 0;
+}
+
+.snapshot-map__source a { color: inherit; }
+
 .snapshot-report__folio {
   font-family: var(--mono);
   font-size: .7rem;
@@ -4816,10 +4892,12 @@ body.subscribe-open { overflow: hidden; }
   .snapshot-resources h3 { font-size: 2rem; line-height: 1.08; }
   .snapshot-form,
   .snapshot-report__header,
-  .snapshot-listen { grid-template-columns: 1fr; }
+  .snapshot-listen,
+  .snapshot-map__intro { grid-template-columns: 1fr; }
   .snapshot-form__row { flex-direction: column; }
   .snapshot-form__row input { border-right: 1px solid var(--ink); border-bottom: 0; }
   .snapshot-note { flex-direction: column; }
+  .snapshot-map__canvas { height: 320px; }
   .snapshot-listen .snapshot-label,
   .snapshot-listen h3,
   .snapshot-listen > p,
