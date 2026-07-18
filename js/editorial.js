@@ -16,7 +16,7 @@
     ["podcast", "PODCAST"],
     ["church", "CHURCH ✱"]
   ];
-  var PAGE = 15;
+  var PAGE = 16;
 
   var DATA = { featured: [], archive: [] };
   var cur = "all";
