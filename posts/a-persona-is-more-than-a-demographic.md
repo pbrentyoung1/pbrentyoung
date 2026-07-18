@@ -78,9 +78,9 @@ Knowing the person in front of us does not give us permission to change the stor
 
 Good personas are discovered, not invented.
 
-That discovery begins with data. Data cannot love a person, but listening carefully to what it reveals can be one way love takes shape.
+That discovery begins with data. Data can't love a person, but listening carefully to what it reveals can be one way love takes shape.
 
-The [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html) can help a church understand the community around it: age, household composition, language, education, housing, income, internet access, commuting patterns, and how recently people have moved. City and county planning departments, school district reports, community health assessments, libraries, and local nonprofits can add detail that a national dataset cannot see.
+The [American Community Survey](https://www.census.gov/programs-surveys/acs/about.html) can help a church understand the community around it: age, household composition, language, education, housing, income, internet access, commuting patterns, and how recently people have moved. City and county planning departments, school district reports, community health assessments, libraries, and local nonprofits can add detail that a national dataset can't see.
 
 Religious identity requires a different source because the U.S. Census does not ask about religion. The [Pew Research Center’s Religious Landscape Study](https://www.pewresearch.org/religious-landscape-study/about/) can provide useful national, state, and large-metro context about religious belief, belonging, and practice.
 
@@ -98,7 +98,7 @@ None of those sources is sufficient alone. Together, they replace a room full of
 
 Interviewing recent members will give us valuable information. They can tell us what resonated, what built trust, and what helped them take the next step. But they can only tell us about the path that worked for the people we successfully reached.
 
-They cannot tell us why someone visited once and never returned. They cannot speak for the person who watched for six months but never came through the door. They cannot explain why someone abandoned a registration, chose another church, or decided church was not for them in the first place.
+They can't tell us why someone visited once and never returned. They can't speak for the person who watched for six months but never came through the door. They can't explain why someone abandoned a registration, chose another church, or decided church was not for them in the first place.
 
 If we only study the people who made it through our system, the system will look more successful than it actually is.
 
@@ -178,7 +178,7 @@ Then people need to review the work. Read the supporting quotes. Correct the sum
 
 Do not upload counseling notes, prayer requests, medical information, abuse disclosures, or sensitive pastoral records. Remove names and identifying details. Use the privacy and security standards your church has approved. AI can help synthesize what people chose to share for this purpose. It should never become a shortcut around consent or pastoral care.
 
-AI can carry the highlighters. It cannot shepherd people.
+AI can carry the highlighters. It can't shepherd people.
 
 ## What a useful persona contains
 

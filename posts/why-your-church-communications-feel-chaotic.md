@@ -2,7 +2,7 @@
 title: Why Your Church Communications Feel Chaotic
 date: 2026-05-25
 topic: Systems & Workflow
-deck: You cannot out-hustle a conveyor belt. Church communications gets calm when a system carries the schedule, a brand carries the decisions, and templates carry the load.
+deck: You can't out-hustle a conveyor belt. Church communications gets calm when a system carries the schedule, a brand carries the decisions, and templates carry the load.
 tags: workflow, requests, burnout
 terms: campaign, project, deliverable, task, brand
 principle: Systems Create Creativity
@@ -15,7 +15,7 @@ Lucy and Ethel take a job wrapping chocolates on a conveyor belt. The rule is si
 
 That is what communications feels like in a lot of churches. Not because the team is slow or careless (they are usually neither), but because there are no controls on the belt. The requests keep coming (by text, by hallway, by "hey, real quick after service"), and the only plan anyone has is to move faster.
 
-Here is the hard part hiding under the comedy: you cannot out-hustle a conveyor belt. Effort does not fix a flow problem. Without a system, nothing you do scales, and you never get to control your own time. You just get better at stuffing chocolates in your hat.
+Here is the hard part hiding under the comedy: you can't out-hustle a conveyor belt. Effort does not fix a flow problem. Without a system, nothing you do scales, and you never get to control your own time. You just get better at stuffing chocolates in your hat.
 
 The surprising part is that the belt does not speed up because there is too much work. Churches with tiny output feel just as frantic as churches with huge output. The belt speeds up because **requests outnumber decisions**, and that gap is where the chaos lives.
 
@@ -29,7 +29,7 @@ The surprising part is that the belt does not speed up because there is too much
 
 There is a wrinkle that makes church communications harder than the factory ever was. In the factory, the chocolates are just chocolates. In your church, every piece on the belt has a face. The flyer belongs to a volunteer who has been praying over this ministry for a year. The retreat video belongs to a leader you sit next to on Sunday. So when you say "I can't get to your flyer this week," it does not land as a scheduling note. It lands as "your ministry matters less than someone else's." Business and relationship are braided together, and that braid is what makes the work feel political.
 
-This is why goodwill alone cannot carry it. As long as the schedule is negotiated relationship by relationship, every deadline becomes a referendum on how much you value a person. A system is not there to make the church less relational. It is there to protect those relationships by lifting the schedule off of them, so you can manage deadlines and deliverables instead of feelings and influence. A shared path lets you say "here is where your project fits" instead of "here is what I think of you."
+This is why goodwill alone can't carry it. As long as the schedule is negotiated relationship by relationship, every deadline becomes a referendum on how much you value a person. A system is not there to make the church less relational. It is there to protect those relationships by lifting the schedule off of them, so you can manage deadlines and deliverables instead of feelings and influence. A shared path lets you say "here is where your project fits" instead of "here is what I think of you."
 
 ## Three controls for the belt
 
@@ -39,7 +39,7 @@ This is a system problem, and that is good news, because system problems have sy
 
 **A system that runs the schedule, not the relationships.** Right now the schedule lives in relationships: who asked, how loudly, how recently, how senior. That is why it feels political and never ends. A real workflow moves the calendar out of relationships and into a shared path: one intake for every request, real deadlines built from real channel lead times, and a published description of what the team does and does not do. When the system holds the schedule, a legitimate request finally has a path that is not your inbox, and you stop being both the bottleneck and the bad guy.
 
-Part of that path is naming the work accurately. When every request is called a "project" (or just an "urgent"), you cannot sequence any of it, because you cannot tell a season-long campaign from a thirty-minute task. Give the work a real shape: campaigns hold projects, projects hold deliverables, and deliverables hold tasks. Christmas is a campaign. The invite card inside it is a deliverable. Once a request has a name and a size, the calendar can hold it, and "can you promote the men's breakfast?" stops being a vague obligation and becomes a deliverable with a due date and a place in line. (I made this case in [Stop Calling Everything a Project](/blog/stop-calling-everything-a-project).)
+Part of that path is naming the work accurately. When every request is called a "project" (or just an "urgent"), you can't sequence any of it, because you can't tell a season-long campaign from a thirty-minute task. Give the work a real shape: campaigns hold projects, projects hold deliverables, and deliverables hold tasks. Christmas is a campaign. The invite card inside it is a deliverable. Once a request has a name and a size, the calendar can hold it, and "can you promote the men's breakfast?" stops being a vague obligation and becomes a deliverable with a due date and a place in line. (I made this case in [Stop Calling Everything a Project](/blog/stop-calling-everything-a-project).)
 
 **A brand that does the heavy lifting.** An intentional brand is a stack of decisions you already made, so no new piece starts from zero. Color, type, voice, and priority are settled in advance, which means the design nearly makes itself and most of the "which one matters more" fights never start. (That is the referee doing its job. I wrote about it in [Brand Is the Referee](/blog/brand-is-the-referee).) A strong brand is also the thing that makes help possible. Without a clear brand document, outsourcing backfires, because managing a freelancer with no standard to point to costs you more than doing the work yourself. With one, you hand them the document instead of your attention.
 

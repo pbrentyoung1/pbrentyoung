@@ -22,11 +22,11 @@ There are only two kinds of creative problems, and almost every frustrating meet
 
 A **polish problem** means the thing is right but rough: correct message, right audience, weak execution. A **change problem** means the thing itself is wrong: the strategy, the assumption, the offering. Polish problems are solved with craft. Change problems are solved with decisions. Each one is completely immune to the other's medicine.
 
-> ! Craft cannot fix a decision. Decisions cannot fix craft.
+> ! Craft can't fix a decision. Decisions can't fix craft.
 
 ## Polish amplifies, it does not correct
 
-This is why you cannot polish your way into relevance. Polish makes true things beautiful. It cannot make wrong things true. If your announcements are unclear, better typography gives you *beautifully* unclear announcements. If your church is genuinely built for a community that no longer lives in your zip code, a rebrand just hands that mismatch a nicer wardrobe. Craft is an amplifier. It makes whatever signal you feed it louder and cleaner. Feed it the wrong signal and you have paid good money to be wrong more legibly.
+This is why you can't polish your way into relevance. Polish makes true things beautiful. It can't make wrong things true. If your announcements are unclear, better typography gives you *beautifully* unclear announcements. If your church is genuinely built for a community that no longer lives in your zip code, a rebrand just hands that mismatch a nicer wardrobe. Craft is an amplifier. It makes whatever signal you feed it louder and cleaner. Feed it the wrong signal and you have paid good money to be wrong more legibly.
 
 > ! A rebrand is a louder microphone. It is not a better sermon.
 

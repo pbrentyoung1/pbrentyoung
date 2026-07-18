@@ -12,7 +12,7 @@ Ask your team what they're working on and you'll hear the word "project" used to
 
 When one word means everything, planning meetings become archaeology (everyone digging to figure out what layer they're actually discussing).
 
-The confusion costs more than a muddled meeting, because these four are not four sizes of the same thing. Each one needs something different before it can even begin, and each one is aiming at a different goal. A campaign cannot start until you know the season and the people you are trying to reach. A task only needs a clear instruction and a little time. Give a task the approvals and runway of a campaign and it never ends. Ask a campaign to launch on a task's thin brief and it wanders for months with no target.
+The confusion costs more than a muddled meeting, because these four are not four sizes of the same thing. Each one needs something different before it can even begin, and each one is aiming at a different goal. A campaign can't start until you know the season and the people you are trying to reach. A task only needs a clear instruction and a little time. Give a task the approvals and runway of a campaign and it never ends. Ask a campaign to launch on a task's thin brief and it wanders for months with no target.
 
 That is why the right name matters, and why it is not busywork. Naming the work is how you set it up to succeed before anyone lifts a finger, because the name tells you what a piece needs to begin and what "done" will mean. Get the altitude right and you are already pointed at the goal.
 

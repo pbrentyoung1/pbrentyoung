@@ -67,7 +67,7 @@ One of the most spiritual things I have done for a creative team was build a wor
 
 Creative people need room to think, make, collaborate, and rest. Clear briefs, shared calendars, healthy deadlines, and a clear approval path make that room. They help a team spend less energy chasing information and more energy solving the problem in front of them.
 
-Chaotic systems cannot scale. When a system is poorly designed, a team can work four times as hard just to accomplish twice as much. Healthy systems let a team grow without asking people to become heroes every week.
+Chaotic systems can't scale. When a system is poorly designed, a team can work four times as hard just to accomplish twice as much. Healthy systems let a team grow without asking people to become heroes every week.
 
 That is especially true in church communications. It can feel like you have twenty supervisors, each with a legitimate request and a different definition of urgent. A clear system gives those requests a path instead of letting them all land on the same desk at once.
 
