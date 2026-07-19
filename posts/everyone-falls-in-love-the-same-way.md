@@ -6,7 +6,7 @@ deck: Marketing did not invent the customer journey. It noticed how relationship
 tags: hospitality, audience, journey
 terms: customer-journey, touchpoint, hospitality, audience
 principle: Communication is Stewardship
-draft: true
+banneralt: Interwoven colorful line figures moving together along a shared path
 ---
 
 Think about falling in love.
