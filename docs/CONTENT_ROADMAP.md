@@ -26,11 +26,13 @@ Titles marked ✍️ have working drafts in `posts/` (written with AI assistance
 - Marketing Isn't About Selling Jesus
 - Every Church Has a Front Door
 - Every Pixel Is Hospitality
-- Your Church Isn't for Everyone *(companion to A Persona Is More Than a Demographic)*
+- Your Church Isn't for Everyone ✍️ *(companion to A Persona Is More Than a Demographic)*
   - Thesis: The gospel is for everyone. Your church is for someone.
   - Scripture spine: Galatians 2:7-9 (Peter to the circumcised, Paul to the Gentiles, the same gospel deliberately assigned to different audiences); Paul adapting per audience: synagogue history at Antioch (Acts 13), rain and crops at Lystra (Acts 14), altars and poets at Athens (Acts 17); tender at Thessalonica, rhetorical at Corinth; "all things to all people" (1 Corinthians 9:19-23).
-  - Related idea captured with it: the funnel is a description, not a strategy. Jesus described the narrowing himself (the sower's four soils, "many are called, few are chosen"). The shape is not the problem; treating the people inside it as merely prospects is the problem. Could live here or as a sidebar in the persona article.
   - Guardrail: "not for everyone" describes calling and communication focus, never a door policy. Close the exclusion reading explicitly (the homogeneous unit principle went ugly places). Paul adapted his preaching at Athens; he turned no one away at Lystra. Specialization of voice, universality of welcome.
+- Everyone Falls in Love the Same Way *(companion to Your Church Isn't for Everyone)*
+  - Thesis: Marketing did not invent the customer journey. It noticed a pattern intrinsic to human relationships. Everyone begins with awareness and moves toward trust and commitment along the same well-worn path, though the pace and touchpoints change.
+  - Related idea: the funnel is a description, not a strategy. Jesus described the narrowing himself (the sower's four soils, "many are called, few are chosen"). The shape is not the problem; treating the people inside it as merely prospects is the problem.
 
 ---
 

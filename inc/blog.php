@@ -212,6 +212,18 @@ function blog_posts() {
 
 function blog_find_post($slug) {
   foreach (blog_posts() as $post) if ($post['slug'] === $slug) return $post;
+
+  // Let editors review unindexed drafts at their normal URL on localhost.
+  // Production continues to expose only published posts from posts/index.json.
+  $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+  $host = preg_replace('/:\d+$/', '', $host);
+  if (in_array($host, array('localhost', '127.0.0.1', '::1'), true)) {
+    $slug = blog_slugify($slug);
+    $filename = __DIR__ . '/../posts/' . $slug . '.md';
+    $text = @file_get_contents($filename);
+    if ($text !== false) return blog_parse_frontmatter(basename($filename), $text);
+  }
+
   return null;
 }
 

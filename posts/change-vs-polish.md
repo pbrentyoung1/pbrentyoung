@@ -6,6 +6,7 @@ deck: The first season of Seinfeld was bad. It got great by changing, not by pol
 tags: change, polish, relevance
 terms: change-vs-polish, design, audience, story
 principle: Design Solves Creative Problems
+shortlist: 5
 ---
 
 The first season of Seinfeld is bad. Not rough-around-the-edges bad. Actually bad. Five episodes, one of the shortest first seasons in television history, and almost none of the show you remember.

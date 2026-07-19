@@ -108,6 +108,8 @@ Leave room for curiosity.
 
 Every article should challenge assumptions before offering solutions.
 
+Use **Gospel** for the one universal good news of Jesus Christ and **Gospels** for the four biblical accounts. Use **Church** for the universal body of Christ and **church** for a local congregation when the distinction matters.
+
 ---
 
 # What We Avoid
