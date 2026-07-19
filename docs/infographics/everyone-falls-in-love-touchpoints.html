@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trust Is Built at the Touchpoints</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;700&family=Playfair+Display:wght@500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f4f1ea;
+      --paper-dim: #ebe6da;
+      --ink: #2b2a27;
+      --ink-soft: #4a4842;
+      --mute: #6b6860;
+      --hairline: #c9c2b4;
+      --blue: #1f83a3;
+      --blue-2: #3a91ad;
+      --blue-3: #599fb7;
+      --blue-4: #78aec0;
+      --rust: #c1271d;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 1800px; height: 1080px; overflow: hidden; }
+    body { background: var(--paper); color: var(--ink); }
+
+    .canvas {
+      width: 1800px;
+      height: 1080px;
+      padding: 58px 64px 48px;
+      background:
+        linear-gradient(rgba(31, 131, 163, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31, 131, 163, .045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 36px 36px;
+      position: relative;
+    }
+
+    .canvas::before {
+      border: 1px solid rgba(43, 42, 39, .32);
+      content: "";
+      inset: 17px;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .masthead {
+      align-items: end;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+
+    .kicker {
+      color: var(--blue);
+      font: 500 17px/1 'IBM Plex Mono', monospace;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font: 500 58px/1.02 'Playfair Display', Georgia, serif;
+      letter-spacing: -1px;
+      margin: 0;
+    }
+
+    .masthead p {
+      color: var(--ink-soft);
+      font: 400 22px/1.4 'Source Serif 4', Georgia, serif;
+      margin: 0 0 4px;
+      max-width: 585px;
+    }
+
+    .rule {
+      border-top: 6px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      height: 11px;
+      margin-bottom: 25px;
+    }
+
+    .map {
+      background: rgba(255,255,255,.28);
+      border-bottom: 1px solid var(--ink);
+      border-top: 1px solid var(--ink);
+      display: grid;
+      grid-template-columns: 190px repeat(5, 1fr);
+      min-height: 700px;
+    }
+
+    .cell {
+      border-right: 1px solid var(--hairline);
+      padding: 22px 22px 20px;
+    }
+
+    .cell:nth-child(6n) { border-right: 0; }
+
+    .label {
+      align-items: flex-start;
+      color: var(--blue);
+      display: flex;
+      font: 500 16px/1.25 'IBM Plex Mono', monospace;
+      letter-spacing: 1.8px;
+      padding-top: 26px;
+      text-transform: uppercase;
+    }
+
+    .stage-label { min-height: 96px; }
+    .stage {
+      align-items: center;
+      color: white;
+      display: flex;
+      height: 62px;
+      justify-content: center;
+      margin: 0 -23px;
+      padding-left: 18px;
+      position: relative;
+      text-align: center;
+    }
+
+    .stage::after {
+      border-bottom: 31px solid transparent;
+      border-left: 18px solid currentColor;
+      border-top: 31px solid transparent;
+      content: "";
+      filter: brightness(.82);
+      position: absolute;
+      right: -18px;
+      top: 0;
+      z-index: 2;
+    }
+
+    .stage span {
+      font: 700 22px/1 'IBM Plex Sans', sans-serif;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .awareness { background: var(--ink); color: var(--ink); }
+    .visit { background: var(--blue); color: var(--blue); }
+    .attend { background: var(--blue-2); color: var(--blue-2); }
+    .member { background: var(--blue-3); color: var(--blue-3); }
+    .minister { background: var(--rust); color: var(--rust); }
+    .stage span { color: white; position: relative; z-index: 3; }
+
+    .question-label, .question { min-height: 142px; }
+    .question {
+      background: rgba(31, 131, 163, .06);
+      font: 600 25px/1.25 'Source Serif 4', Georgia, serif;
+      padding-top: 31px;
+    }
+
+    .touch-label, .touch { min-height: 258px; }
+    .touch ul { list-style: none; margin: 0; padding: 0; }
+    .touch li {
+      border-bottom: 1px solid rgba(43, 42, 39, .13);
+      font: 500 19px/1.28 'IBM Plex Sans', sans-serif;
+      padding: 9px 0;
+    }
+    .touch li:last-child { border-bottom: 0; }
+
+    .trust-label, .trust { min-height: 170px; }
+    .trust {
+      color: var(--ink-soft);
+      font: 400 21px/1.38 'Source Serif 4', Georgia, serif;
+    }
+
+    .footer {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 18px;
+    }
+
+    .footer strong {
+      font: 500 22px/1 'Playfair Display', Georgia, serif;
+    }
+
+    .footer span {
+      color: var(--rust);
+      font: 500 15px/1 'IBM Plex Mono', monospace;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main class="canvas">
+    <header class="masthead">
+      <div>
+        <div class="kicker">One Person · One Journey · Many Touchpoints</div>
+        <h1>Trust is built at the touchpoints</h1>
+      </div>
+      <p>A touchpoint is any place someone encounters the church. Each one makes a small promise. The next one confirms or contradicts it.</p>
+    </header>
+    <div class="rule"></div>
+
+    <section class="map" aria-label="Touchpoints across the five stages of the future congregation journey">
+      <div class="cell label stage-label">Stage</div>
+      <div class="cell stage-label"><div class="stage awareness"><span>Awareness</span></div></div>
+      <div class="cell stage-label"><div class="stage visit"><span>Visit</span></div></div>
+      <div class="cell stage-label"><div class="stage attend"><span>Attend</span></div></div>
+      <div class="cell stage-label"><div class="stage member"><span>Member</span></div></div>
+      <div class="cell stage-label"><div class="stage minister"><span>Minister</span></div></div>
+
+      <div class="cell label question-label">They are asking</div>
+      <div class="cell question">Who are these people?</div>
+      <div class="cell question">Is this worth exploring?</div>
+      <div class="cell question">Do I want to come back?</div>
+      <div class="cell question">Is this my church?</div>
+      <div class="cell question">How can I prepare a place for someone else?</div>
+
+      <div class="cell label touch-label">Common touchpoints</div>
+      <div class="cell touch"><ul><li>Social media</li><li>YouTube</li><li>Search results</li><li>A friend's invitation</li></ul></div>
+      <div class="cell touch"><ul><li>Website</li><li>Plan-a-visit page</li><li>Parking and signage</li><li>Children's check-in</li></ul></div>
+      <div class="cell touch"><ul><li>Worship experience</li><li>Personal welcome</li><li>Follow-up email</li><li>A second visit</li></ul></div>
+      <div class="cell touch"><ul><li>Membership class</li><li>Small groups</li><li>Pastoral care</li><li>Communication rhythms</li></ul></div>
+      <div class="cell touch"><ul><li>Personal invitation</li><li>Application</li><li>Training</li><li>Scheduling and feedback</li></ul></div>
+
+      <div class="cell label trust-label">Trust grows when</div>
+      <div class="cell trust">The story is clear and recognizable.</div>
+      <div class="cell trust">Anxiety is anticipated and the next step is obvious.</div>
+      <div class="cell trust">The experience keeps the promise made online.</div>
+      <div class="cell trust">Belonging becomes mutual commitment.</div>
+      <div class="cell trust">Gifts are known and expectations are clear.</div>
+    </section>
+
+    <footer class="footer">
+      <strong>The future congregation does not experience our departments. They experience one church.</strong>
+      <span>We begin caring before we know their names</span>
+    </footer>
+  </main>
+</body>
+</html>

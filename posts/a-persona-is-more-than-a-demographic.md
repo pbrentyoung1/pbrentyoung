@@ -156,11 +156,15 @@ The future congregation moves through a recognizable progression: awareness, vis
 - At member, it may be, “Can I belong to and trust this community?”
 - At minister, it becomes, “Is there a meaningful place for what God has entrusted to me?”
 
+![A five-stage funnel showing the future congregation journey from awareness through visit, attend, member, and minister, with the question people ask at each stage.](/assets/img/blog/everyone-falls-in-love-the-same-way-01.png "Everyone begins with awareness. The relationship deepens from first glance to shared purpose.")
+
 The interactive [Future Congregation Journey](/future-congregation-journey) lets you walk through those stages, see the questions people may be asking, and examine the touchpoints that help or hinder their next faithful step.
 
 Each stage has different barriers, touchpoints, and measures of trust. The website, YouTube channel, parking lot, children’s check-in, membership class, volunteer application, training process, and scheduling email are all telling the story together.
 
 This is why personas belong at every stage, not only at the top of the funnel. The person who needs help deciding whether to visit is not in the same moment as the person trying to understand whether serving will fit around shift work and child care. Sometimes they are the same person at different points in the story. Either way, they deserve to be understood where they are.
+
+> TOOL: **See who your current communication is serving.** Use the printable Plot the Journey worksheet to place each communication piece along the five stages, then look for crowded areas, missing handoffs, and parts of the journey your strategy has left quiet. [DOWNLOAD THE PRINTABLE WORKSHEET →](/assets/pdf/plot-the-journey.pdf)
 
 ## Let AI carry the highlighters
 

@@ -513,6 +513,7 @@ function blog_tools_menu() {
       <span class="nav-dropdown-menu__label">TOOLS &amp; REFERENCE</span>
       <a href="/community-snapshot"><strong>Community Snapshot</strong><span>See the people living around your church.</span></a>
       <a href="/future-congregation-journey"><strong>Future Congregation Journey</strong><span>Follow the path from awareness to ministry.</span></a>
+      <a href="/assets/pdf/plot-the-journey.pdf" target="_blank" rel="noopener"><strong>Plot the Journey</strong><span>Map where your communication serves and where the journey goes quiet.</span></a>
       <a href="/glossary"><strong>A Working Glossary</strong><span>Explore the language behind the work.</span></a>
     </div>
   </div>

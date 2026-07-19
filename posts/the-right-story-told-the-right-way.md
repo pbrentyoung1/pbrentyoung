@@ -49,6 +49,8 @@ Every church tells two stories.
 
 Touchpoints are the small moments where people encounter our church and begin forming an impression. A campus sign, a YouTube video, a social post, a website, and a follow-up email are all touchpoints. Each one is quietly telling part of the story.
 
+![A journey map showing the questions, common touchpoints, and trust-building opportunities across awareness, visit, attend, member, and minister.](/assets/img/blog/everyone-falls-in-love-the-same-way-02.png "Every touchpoint makes a small promise. The next one confirms or contradicts it.")
+
 Explore the [Future Congregation Journey](/future-congregation-journey) to see how those moments can shape a path from awareness to ministry.
 
 There is the story we say about ourselves: our mission, our values, and the promise we make to the people who come through the door.
