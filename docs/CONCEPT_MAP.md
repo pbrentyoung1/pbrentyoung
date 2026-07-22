@@ -33,6 +33,7 @@ This concept map exists to keep the vocabulary aligned.
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
 | Marketing | How do we generously invite people toward meaningful change? | Marketing is the generous and disciplined work of understanding the right people, telling honest stories that resonate, earning trust, and helping them take a faithful next step toward who they are seeking to become. |
+| Evangelistic Marketing | How do we invite people toward who God has called them to be? | Evangelistic Marketing is the generous, truthful, and mission-shaped work of helping people move toward the life, community, and transformation God is calling them into. |
 | Stewardship | What are we responsible to invest? | Stewardship is the responsibility to faithfully invest what has been entrusted to us, not merely protect it. |
 
 ---
@@ -215,6 +216,35 @@ A simple working relationship:
 
 ---
 
+## Evangelistic Marketing
+
+Evangelistic Marketing is marketing submitted to the mission of the Gospel.
+
+It is not making church more marketable.
+
+It is not dressing up the Gospel so it feels more attractive.
+
+It is not pressure, performance, manipulation, or religious advertising.
+
+Evangelistic Marketing is the generous, truthful, and mission-shaped work of helping people move toward the life, community, and transformation God is calling them into.
+
+It helps people recognize:
+
+- This story is true.
+- This invitation is for me.
+- This community can help me take a faithful next step.
+- God is calling me toward something more whole, more truthful, and more alive.
+
+Evangelistic Marketing does not invent transformation.
+
+It helps people see, trust, and respond to the transformation God is already inviting them toward.
+
+A simple working relationship:
+
+> Marketing helps people move toward meaningful change. Evangelistic Marketing helps people move toward who God has called them to be.
+
+---
+
 ## Editorial Usage Rules
 
 1. Use **Brand** when referring to perception, reputation, trust, memory, or the story people carry after experiencing an organization.
@@ -224,15 +254,17 @@ A simple working relationship:
 5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
 6. Use **touchpoints** when referring to any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with the organization and begins forming perception.
 7. Use **marketing** when referring to generous, empathetic invitation that helps the right people understand, trust, and move toward meaningful change through honest stories that resonate.
-8. Do not use **Brand** as shorthand for “visual identity.”
-9. Do not use **branding** as shorthand for the whole reputation of an organization.
-10. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
-11. Do not reduce **story** to messaging, slogans, positioning, or spin. Story is the truthful narrative people experience and remember.
-12. Do not reduce **marketing** to promotion, persuasion, interruption, or getting more attention. Marketing serves people before it serves metrics.
-13. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
-14. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
-15. Prefer clear language over clever language when defining terms.
-16. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
+8. Use **Evangelistic Marketing** when referring to marketing submitted to the Gospel: generous, truthful invitation that helps people move toward who God has called them to be.
+9. Do not use **Brand** as shorthand for “visual identity.”
+10. Do not use **branding** as shorthand for the whole reputation of an organization.
+11. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
+12. Do not reduce **story** to messaging, slogans, positioning, or spin. Story is the truthful narrative people experience and remember.
+13. Do not reduce **marketing** to promotion, persuasion, interruption, or getting more attention. Marketing serves people before it serves metrics.
+14. Do not reduce **Evangelistic Marketing** to church advertising, promotion, attendance growth, or making church look more attractive. Evangelistic Marketing serves transformation before visibility.
+15. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
+16. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
+17. Prefer clear language over clever language when defining terms.
+18. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
 
 ---
 
@@ -254,7 +286,8 @@ When writing, reviewing, or leading a creative conversation, move upward through
 12. **Branding** — What expressions will make it tangible?
 13. **Touchpoints** — Where will people actually encounter it?
 14. **Marketing** — How will we generously invite the right people toward meaningful change?
-15. **Brand** — What are people actually perceiving?
+15. **Evangelistic Marketing** — How will we help people move toward who God has called them to be?
+16. **Brand** — What are people actually perceiving?
 
 Preferences belong lower on the ladder.
 
