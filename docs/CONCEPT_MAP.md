@@ -27,7 +27,7 @@ This concept map exists to keep the vocabulary aligned.
 | Story | What narrative are people experiencing? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
-| Touchpoints | Where do people encounter the story? | Touchpoints are the specific moments, places, channels, artifacts, and interactions where people encounter an organization and begin forming perception. |
+| Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, official or unofficial — where someone comes into contact with an organization and begins forming perception. |
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
 | Marketing | How do we invite people to respond? | Marketing is the disciplined work of helping the right people understand, care about, and respond to the right message. |
@@ -99,19 +99,23 @@ A simple working relationship:
 
 ## Touchpoints
 
-Touchpoints are where the framework becomes lived experience.
+Touchpoints are where Brand begins to form.
 
-They are the specific places where people encounter the story: the website, signage, lobby, parking lot, email, sermon graphic, social post, announcement, livestream, volunteer conversation, follow-up text, classroom, printed piece, or hallway moment.
+They are not limited to planned communication channels or designed materials.
+
+A touchpoint is any place someone encounters the church, its people, its story, its reputation, or the effects of its ministry. Some touchpoints are designed: the website, signage, lobby, parking lot, email, sermon graphic, social post, announcement, livestream, follow-up text, classroom, printed piece, or hallway conversation.
+
+Other touchpoints are not designed at all: an overheard conversation at work, a friend's story about visiting, a Google review, a neighbor's impression of the parking lot, the way a volunteer talks about the church at lunch, a social media comment thread, or the memory someone carries from years ago.
 
 Touchpoints matter because people rarely form perception from one official message.
 
-They form perception through repeated encounters.
+They form perception through repeated encounters, many of which happen outside the church's direct control.
 
 A church may say it is welcoming, but the touchpoints either confirm that story or contradict it.
 
 This makes touchpoints the bridge between **branding** and **Brand**:
 
-> Branding creates intentional signals. Touchpoints deliver those signals through real encounters. Brand is the perception people carry after those encounters.
+> Branding creates intentional signals. Touchpoints include every place those signals, behaviors, stories, reputations, and experiences are encountered. Brand is the perception people carry after those encounters.
 
 When reviewing communication, do not ask only:
 
@@ -168,7 +172,7 @@ This is why communication is stewardship.
 1. Use **Brand** when referring to perception, reputation, trust, memory, or the story people carry after experiencing an organization.
 2. Use **branding** when referring to logos, colors, typography, visuals, design systems, voice, messaging, or other expressive elements.
 3. Use **ministry features** when referring to programs, services, groups, events, environments, communication pipelines, or practical capabilities a church builds, changes, launches, or improves in service of mission.
-4. Use **touchpoints** when referring to the concrete encounters where people experience the organization and begin forming perception.
+4. Use **touchpoints** when referring to any encounter — planned or unplanned, official or unofficial — where someone comes into contact with the organization and begins forming perception.
 5. Do not use **Brand** as shorthand for “visual identity.”
 6. Do not use **branding** as shorthand for the whole reputation of an organization.
 7. Do not treat every new ministry feature as strategy. Features serve strategy; they do not replace it.
