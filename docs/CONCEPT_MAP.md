@@ -32,7 +32,7 @@ This concept map exists to keep the vocabulary aligned.
 | Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with an organization and begins forming perception. |
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
-| Marketing | How do we invite people to respond? | Marketing is the disciplined work of helping the right people understand, care about, and respond to the right message. |
+| Marketing | How do we help people move toward meaningful change? | Marketing is the generous and disciplined work of helping the right people see what is possible, understand why it matters, and take a faithful next step toward who they are seeking to become. |
 | Stewardship | What are we responsible to invest? | Stewardship is the responsibility to faithfully invest what has been entrusted to us, not merely protect it. |
 
 ---
@@ -182,6 +182,33 @@ This is why communication is stewardship.
 
 ---
 
+## Marketing as Generous Invitation
+
+When this site talks about marketing, it does not mean manipulation, interruption, pressure, or making the church look more impressive than it is.
+
+Marketing is the generous act of helping people move toward meaningful change.
+
+It begins with empathy: listening for people's struggles, hopes, desires, objections, language, worldview, and sense of belonging.
+
+It focuses on the people who can genuinely be served, not everyone who can possibly be reached.
+
+It earns trust by showing up consistently, telling the truth clearly, and inviting people into next steps that are actually good for them.
+
+For a church, marketing should never be reduced to promotion.
+
+At its best, marketing helps people recognize:
+
+- This is for me.
+- These people understand something I am carrying.
+- There is a next step I can take.
+- This story invites me toward who God is calling me to become.
+
+A simple working relationship:
+
+> Marketing listens with empathy, tells the truthful story generously, earns permission through trust, and invites the right people toward meaningful change.
+
+---
+
 ## Editorial Usage Rules
 
 1. Use **Brand** when referring to perception, reputation, trust, memory, or the story people carry after experiencing an organization.
@@ -190,14 +217,16 @@ This is why communication is stewardship.
 4. Use **ministries** when referring to organized expressions of that work, such as youth, kids, groups, Sunday services, worship, hospitality, tech, care, or outreach.
 5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
 6. Use **touchpoints** when referring to any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with the organization and begins forming perception.
-7. Do not use **Brand** as shorthand for “visual identity.”
-8. Do not use **branding** as shorthand for the whole reputation of an organization.
-9. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
-10. Do not reduce **story** to messaging, slogans, positioning, or spin. Story is the truthful narrative people experience and remember.
-11. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
-12. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
-13. Prefer clear language over clever language when defining terms.
-14. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
+7. Use **marketing** when referring to generous, empathetic invitation that helps the right people understand, trust, and move toward meaningful change.
+8. Do not use **Brand** as shorthand for “visual identity.”
+9. Do not use **branding** as shorthand for the whole reputation of an organization.
+10. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
+11. Do not reduce **story** to messaging, slogans, positioning, or spin. Story is the truthful narrative people experience and remember.
+12. Do not reduce **marketing** to promotion, persuasion, interruption, or getting more attention. Marketing serves people before it serves metrics.
+13. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
+14. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
+15. Prefer clear language over clever language when defining terms.
+16. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
 
 ---
 
@@ -218,7 +247,8 @@ When writing, reviewing, or leading a creative conversation, move upward through
 11. **Communication** — How will we carry that story?
 12. **Branding** — What expressions will make it tangible?
 13. **Touchpoints** — Where will people actually encounter it?
-14. **Brand** — What are people actually perceiving?
+14. **Marketing** — How will we generously invite the right people toward meaningful change?
+15. **Brand** — What are people actually perceiving?
 
 Preferences belong lower on the ladder.
 
