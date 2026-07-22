@@ -2,9 +2,9 @@
 title: Why Your Church Communications Feel Chaotic
 date: 2026-05-25
 topic: Systems & Workflow
-deck: You can't out-hustle a conveyor belt. Church communications gets calm when a system carries the schedule, a brand carries the decisions, and templates carry the load.
+deck: You can't out-hustle a conveyor belt. Church communications gets calm when a system carries the schedule, Brand carries the decisions, and templates carry the routine.
 tags: workflow, requests, burnout
-terms: campaign, project, deliverable, task, brand
+terms: campaign, project, deliverable, task, brand, branding
 principle: Systems Create Creativity
 shortlist: 4
 ---
@@ -35,18 +35,18 @@ This is why goodwill alone can't carry it. As long as the schedule is negotiated
 
 This is a system problem, and that is good news, because system problems have system solutions. There is no button that fixes it overnight. There are three controls you can put on the belt, and together they change the whole job.
 
-![A church communications conveyor belt carries requests through three controls: a system carries the schedule, a brand carries the decisions, and templates carry the routine, producing margin for ministry.](/assets/img/blog/why-your-church-communications-feel-chaotic-01.png "The system carries the schedule. The brand carries the decisions. Templates carry the routine.")
+![A church communications conveyor belt carries requests through three controls: a system carries the schedule, a brand carries the decisions, and templates carry the routine, producing margin for ministry.](/assets/img/blog/why-your-church-communications-feel-chaotic-01.png "The system carries the schedule. Brand carries the decisions. Templates carry the routine.")
 
 **A system that runs the schedule, not the relationships.** Right now the schedule lives in relationships: who asked, how loudly, how recently, how senior. That is why it feels political and never ends. A real workflow moves the calendar out of relationships and into a shared path: one intake for every request, real deadlines built from real channel lead times, and a published description of what the team does and does not do. When the system holds the schedule, a legitimate request finally has a path that is not your inbox, and you stop being both the bottleneck and the bad guy.
 
 Part of that path is naming the work accurately. When every request is called a "project" (or just an "urgent"), you can't sequence any of it, because you can't tell a season-long campaign from a thirty-minute task. Give the work a real shape: campaigns hold projects, projects hold deliverables, and deliverables hold tasks. Christmas is a campaign. The invite card inside it is a deliverable. Once a request has a name and a size, the calendar can hold it, and "can you promote the men's breakfast?" stops being a vague obligation and becomes a deliverable with a due date and a place in line. (I made this case in [Stop Calling Everything a Project](/blog/stop-calling-everything-a-project).)
 
-**A brand that does the heavy lifting.** An intentional brand is a stack of decisions you already made, so no new piece starts from zero. Color, type, voice, and priority are settled in advance, which means the design nearly makes itself and most of the "which one matters more" fights never start. (That is the referee doing its job. I wrote about it in [Brand Is the Referee](/blog/brand-is-the-referee).) A strong brand is also the thing that makes help possible. Without a clear brand document, outsourcing backfires, because managing a freelancer with no standard to point to costs you more than doing the work yourself. With one, you hand them the document instead of your attention.
+**Brand that does the heavy lifting.** An intentional Brand is a stack of decisions you already made, so no new piece starts from zero. The deeper questions are settled in advance: who we are, who we are called to serve, what story we are stewarding, and what should feel consistent across every touchpoint. Branding standards then carry the visible and verbal pieces: color, type, voice, hierarchy, templates, and routine design choices. That means most of the "which one matters more" fights never start. (That is the referee doing its job. I wrote about it in [Brand Is the Referee](/blog/brand-is-the-referee).) A strong Brand is also the thing that makes help possible. Without a clear Brand and branding system, outsourcing backfires, because managing a freelancer with no standard to point to costs you more than doing the work yourself. With one, you hand them the standard instead of your attention.
 
-**Templates so every department can wrap its own chocolates.** Not everything needs to touch your desk. When you build strong, on-brand templates (a Canva set for the easy, recurring pieces), ministries can make the simple things themselves and stay on brand without you standing over their shoulder. You stop being the brand police, and the belt gets lighter, because half the chocolates never reach your station in the first place.
+**Templates so every department can wrap its own chocolates.** Not everything needs to touch your desk. When you build strong, on-brand templates (a Canva set for the easy, recurring pieces), ministries can make the simple things themselves and stay aligned with the Brand without you standing over their shoulder. You stop being the branding police, and the belt gets lighter, because half the chocolates never reach your station in the first place.
 
 ## What the calm is for
 
-None of this is about doing more. It is about getting your best work back. When the system carries the schedule, the brand carries the decisions, and templates carry the routine, the frantic belt finally slows down. What it leaves behind is margin, and margin is where the ministry lives: the story only your church can tell, the guest who needs to feel welcomed long before they reach a door, the good idea you have never had time to have.
+None of this is about doing more. It is about getting your best work back. When the system carries the schedule, Brand carries the decisions, and templates carry the routine, the frantic belt finally slows down. What it leaves behind is margin, and margin is where the ministry lives: the story only your church can tell, the guest who needs to feel welcomed long before they reach a door, the good idea you have never had time to have.
 
 You did not take this job to wrap chocolates faster. You took it to help people meet God. A healthy system hands your creativity back to you, with the room to spend it on the work only you can do.
