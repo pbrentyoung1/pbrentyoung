@@ -649,15 +649,6 @@
 
   /* ---------- boot ---------- */
   function boot() {
-    var specToggle = document.getElementById("specToggle");
-    if (specToggle) {
-      specToggle.addEventListener("click", function () {
-        var boardVisible = document.body.classList.toggle("specs");
-        this.textContent = boardVisible ? "HIDE THE BOARD" : "SHOW THE BOARD";
-        this.setAttribute("aria-pressed", String(boardVisible));
-      });
-    }
-
     Array.prototype.slice.call(document.querySelectorAll(".p-in")).forEach(function (node, i) {
       scatterPaste(node, "hero|" + i + "|" + node.className, i === 2 ? 0.45 : 0.7);
     });

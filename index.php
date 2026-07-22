@@ -266,10 +266,6 @@ require_once __DIR__ . '/inc/blog.php';
       <a class="pullmore desk-all" href="/blog">READ ALL FIELD NOTES &rarr;</a>
     </section>
 
-    <div class="wrap slugline" style="margin-top: 36px; margin-bottom: 36px;">
-      <span>PRODUCTION NOTES</span>
-      <button class="spec-toggle" id="specToggle" type="button" aria-pressed="false">SHOW THE BOARD</button>
-    </div>
   </main>
 
   <?php blog_site_footer(); ?>
