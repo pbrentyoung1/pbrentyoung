@@ -16,7 +16,7 @@ Brand is perception: what people actually believe, remember, feel, and expect af
 
 ![A three-part infographic explaining that branding is what we express, touchpoints are where people encounter it, and Brand is what people perceive afterward.](/assets/img/blog/brand-vs-branding.svg "Branding creates signals. Touchpoints create encounters. Brand is the perception left behind.")
 
-You can choose not to care about branding. You cannot choose not to have a Brand. The parking lot has an opinion. The projector font has an opinion. The way your volunteers answer email has an opinion.
+You can choose not to care about branding. You can't choose not to have a Brand. The parking lot has an opinion. The projector font has an opinion. The way your volunteers answer email has an opinion.
 
 You don't get to choose whether people are forming perception. You only get to choose whether that perception is being stewarded intentionally or accidentally.
 

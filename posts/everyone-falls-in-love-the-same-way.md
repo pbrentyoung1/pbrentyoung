@@ -50,7 +50,7 @@ The “funnel” describes the natural narrowing that happens as people move fro
 
 ## The funnel shows movement. The journey map shows experience.
 
-A funnel can tell you how many people moved from awareness to a visit, from a first visit to a second, or from attending to belonging. It can show you where movement slowed or stopped. It cannot tell you what the journey felt like.
+A funnel can tell you how many people moved from awareness to a visit, from a first visit to a second, or from attending to belonging. It can show you where movement slowed or stopped. It can't tell you what the journey felt like.
 
 A journey map adds the person back to the movement. It asks what someone was doing, thinking, and feeling at each stage. It names the touchpoints they encountered, the questions they carried, the friction that made the next step harder, and the moments that gave trust fertile ground to grow in.
 
@@ -66,7 +66,7 @@ The sermon clip introduces a voice. The website answers a question. The parking 
 
 Each touchpoint makes a small promise about who the church is. The next touchpoint confirms or contradicts it.
 
-That is why communications cannot be separated from hospitality, ministry systems, or the experience on campus. The future congregation does not experience our departments. They experience the one unified story of our church.
+That is why communications can't be separated from hospitality, ministry systems, or the experience on campus. The future congregation does not experience our departments. They experience the one unified story of our church.
 
 > ! We begin caring for people before we know who they are.
 
