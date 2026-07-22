@@ -268,7 +268,7 @@ require_once __DIR__ . '/inc/blog.php';
 
     <div class="wrap slugline" style="margin-top: 36px; margin-bottom: 36px;">
       <span>PRODUCTION NOTES</span>
-      <button class="spec-toggle" id="specToggle" type="button">SHOW THE BOARD</button>
+      <button class="spec-toggle" id="specToggle" type="button" aria-pressed="false">SHOW THE BOARD</button>
     </div>
   </main>
 
