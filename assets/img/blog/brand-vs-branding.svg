@@ -1,54 +1,92 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 752" role="img" aria-labelledby="title desc">
   <title id="title">Brand versus branding</title>
   <desc id="desc">Branding is the intentional expression of identity, mission, and story. Touchpoints are where people encounter those signals and experiences. Brand is the perception people carry afterward.</desc>
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#2e241b" flood-opacity="0.18"/>
+    <filter id="plateShadow" x="-8%" y="-8%" width="116%" height="118%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2b2a27" flood-opacity="0.16"/>
     </filter>
-    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
-      <path d="M2,2 L10,6 L2,10 Z" fill="#2e241b"/>
-    </marker>
+    <filter id="tapeShadow" x="-30%" y="-40%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#2b2a27" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="tapeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcf9f0" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#f0ead8" stop-opacity="0.56"/>
+    </linearGradient>
+    <style>
+      .h    { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; fill: #2b2a27; }
+      .mono { font-family: 'IBM Plex Mono', Consolas, monospace; }
+      .body { font-family: 'Source Serif 4', Georgia, serif; fill: #4a4842; font-size: 23px; }
+    </style>
   </defs>
 
-  <rect width="1400" height="760" fill="#f4f1ea"/>
-  <rect x="48" y="48" width="1304" height="664" rx="32" fill="#fffaf1" stroke="#2e241b" stroke-width="3"/>
+  <!-- background transparent: the article's grid shows around the plate -->
 
-  <text x="700" y="116" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#2e241b" font-weight="700">Branding vs. Brand</text>
-  <text x="700" y="160" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="18" fill="#6d5f50" letter-spacing="2">EXPRESSION  →  ENCOUNTER  →  PERCEPTION</text>
+  <!-- the plate, tilted and lifted, taped to the board below -->
+  <g transform="rotate(-0.5 700 384)">
+    <rect x="40" y="44" width="1320" height="676" fill="#ebe6da" stroke="#d9d4c7" stroke-width="1" filter="url(#plateShadow)"/>
 
-  <g filter="url(#shadow)">
-    <rect x="98" y="220" width="350" height="390" rx="24" fill="#f7d68a" stroke="#2e241b" stroke-width="3"/>
-    <rect x="525" y="220" width="350" height="390" rx="24" fill="#d9ead3" stroke="#2e241b" stroke-width="3"/>
-    <rect x="952" y="220" width="350" height="390" rx="24" fill="#cbdcf5" stroke="#2e241b" stroke-width="3"/>
+    <!-- header -->
+    <text x="104" y="118" class="mono" font-size="16" letter-spacing="3" fill="#1f83a3">FIELD DIAGRAM &#183; BRAND &amp; MISSION</text>
+    <text x="104" y="172" class="h" font-size="52">Branding vs. Brand</text>
+    <text x="104" y="208" class="mono" font-size="17" letter-spacing="3" fill="#6b6860">EXPRESSION&#160;&#160;&#183;&#160;&#160;ENCOUNTER&#160;&#160;&#183;&#160;&#160;PERCEPTION</text>
+
+    <!-- Oxford double rule -->
+    <rect x="104" y="230" width="1192" height="3" fill="#2b2a27"/>
+    <rect x="104" y="236" width="1192" height="1" fill="#2b2a27"/>
+
+    <!-- Branding : gold (what we express) -->
+    <rect x="104" y="288" width="346" height="352" fill="#ffffff" stroke="#d9d4c7" stroke-width="1.5"/>
+    <rect x="104" y="288" width="346" height="8" fill="#e8a81c"/>
+    <text x="277" y="352" text-anchor="middle" class="h" font-size="38">Branding</text>
+    <text x="277" y="384" text-anchor="middle" class="mono" font-size="15" letter-spacing="2" fill="#6b6860">WHAT WE EXPRESS</text>
+    <g class="body">
+      <text x="142" y="436"><tspan fill="#e8a81c">&#8226;</tspan>&#160;&#160;Logos &amp; marks</text>
+      <text x="142" y="474"><tspan fill="#e8a81c">&#8226;</tspan>&#160;&#160;Color &amp; typography</text>
+      <text x="142" y="512"><tspan fill="#e8a81c">&#8226;</tspan>&#160;&#160;Voice &amp; messaging</text>
+      <text x="142" y="550"><tspan fill="#e8a81c">&#8226;</tspan>&#160;&#160;Visual systems</text>
+      <text x="142" y="588"><tspan fill="#e8a81c">&#8226;</tspan>&#160;&#160;Designed signals</text>
+    </g>
+
+    <!-- Touchpoints : blue (where encountered) -->
+    <rect x="527" y="288" width="346" height="352" fill="#ffffff" stroke="#d9d4c7" stroke-width="1.5"/>
+    <rect x="527" y="288" width="346" height="8" fill="#1f83a3"/>
+    <text x="700" y="352" text-anchor="middle" class="h" font-size="38">Touchpoints</text>
+    <text x="700" y="384" text-anchor="middle" class="mono" font-size="15" letter-spacing="2" fill="#6b6860">WHERE PEOPLE ENCOUNTER IT</text>
+    <g class="body">
+      <text x="565" y="436"><tspan fill="#1f83a3">&#8226;</tspan>&#160;&#160;Website &amp; signage</text>
+      <text x="565" y="474"><tspan fill="#1f83a3">&#8226;</tspan>&#160;&#160;Service experience</text>
+      <text x="565" y="512"><tspan fill="#1f83a3">&#8226;</tspan>&#160;&#160;Conversations</text>
+      <text x="565" y="550"><tspan fill="#1f83a3">&#8226;</tspan>&#160;&#160;Reviews &amp; memories</text>
+      <text x="565" y="588"><tspan fill="#1f83a3">&#8226;</tspan>&#160;&#160;Planned or unplanned</text>
+    </g>
+
+    <!-- Brand : rust (what is perceived) -->
+    <rect x="950" y="288" width="346" height="352" fill="#ffffff" stroke="#d9d4c7" stroke-width="1.5"/>
+    <rect x="950" y="288" width="346" height="8" fill="#c1271d"/>
+    <text x="1123" y="352" text-anchor="middle" class="h" font-size="38">Brand</text>
+    <text x="1123" y="384" text-anchor="middle" class="mono" font-size="15" letter-spacing="2" fill="#6b6860">WHAT PEOPLE PERCEIVE</text>
+    <g class="body">
+      <text x="988" y="436"><tspan fill="#c1271d">&#8226;</tspan>&#160;&#160;Trust or distrust</text>
+      <text x="988" y="474"><tspan fill="#c1271d">&#8226;</tspan>&#160;&#160;Memory &amp; expectation</text>
+      <text x="988" y="512"><tspan fill="#c1271d">&#8226;</tspan>&#160;&#160;Reputation</text>
+      <text x="988" y="550"><tspan fill="#c1271d">&#8226;</tspan>&#160;&#160;Felt consistency</text>
+      <text x="988" y="588"><tspan fill="#c1271d">&#8226;</tspan>&#160;&#160;The story they carry</text>
+    </g>
+
+    <!-- reversed caption bar (the colophon) -->
+    <rect x="104" y="668" width="1192" height="44" fill="#2b2a27"/>
+    <text x="700" y="696" text-anchor="middle" class="mono" font-size="16" letter-spacing="1.5" fill="#f4f1ea">BRANDING CREATES SIGNALS&#160;&#183;&#160;TOUCHPOINTS CREATE ENCOUNTERS&#160;&#183;&#160;BRAND IS THE PERCEPTION LEFT BEHIND</text>
   </g>
 
-  <text x="273" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Branding</text>
-  <text x="273" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHAT WE EXPRESS</text>
-  <text x="138" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Logos &amp; marks</text>
-  <text x="138" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Color &amp; typography</text>
-  <text x="138" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Voice &amp; messaging</text>
-  <text x="138" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Visual systems</text>
-  <text x="138" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Designed signals</text>
-
-  <text x="700" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Touchpoints</text>
-  <text x="700" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHERE PEOPLE ENCOUNTER IT</text>
-  <text x="565" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Website &amp; signage</text>
-  <text x="565" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Service experience</text>
-  <text x="565" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Conversations</text>
-  <text x="565" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Reviews &amp; memories</text>
-  <text x="565" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Planned or unplanned</text>
-
-  <text x="1127" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Brand</text>
-  <text x="1127" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHAT PEOPLE PERCEIVE</text>
-  <text x="992" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Trust or distrust</text>
-  <text x="992" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Memory &amp; expectation</text>
-  <text x="992" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Reputation</text>
-  <text x="992" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Felt consistency</text>
-  <text x="992" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• The story they carry</text>
-
-  <line x1="468" y1="415" x2="502" y2="415" stroke="#2e241b" stroke-width="5" marker-end="url(#arrow)"/>
-  <line x1="895" y1="415" x2="929" y2="415" stroke="#2e241b" stroke-width="5" marker-end="url(#arrow)"/>
-
-  <rect x="190" y="642" width="1020" height="42" rx="21" fill="#2e241b" opacity="0.92"/>
-  <text x="700" y="670" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="18" fill="#fffaf1" letter-spacing="1.2">BRANDING CREATES SIGNALS. TOUCHPOINTS CREATE ENCOUNTERS. BRAND IS THE PERCEPTION LEFT BEHIND.</text>
+  <!-- tape holding the plate to the board -->
+  <g transform="rotate(-3.5 360 46)">
+    <rect x="270" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/>
+    <line x1="270" y1="26" x2="270" y2="66" stroke="#c9c2af" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+    <line x1="450" y1="26" x2="450" y2="66" stroke="#c9c2af" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
+  <g transform="rotate(2.6 1040 46)">
+    <rect x="950" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/>
+    <line x1="950" y1="26" x2="950" y2="66" stroke="#c9c2af" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+    <line x1="1130" y1="26" x2="1130" y2="66" stroke="#c9c2af" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+  </g>
 </svg>
