@@ -38,7 +38,7 @@ A persona serves personhood. It never replaces it.
 
 ## Where your mission and your persona meet
 
-Your mission and brand answer one set of questions: Who has God called us to be? What story has He given us to tell? What promise are we responsible for keeping?
+Your mission and Brand answer one set of questions: Who has God called us to be? What story has He given us to tell? What promise are we responsible for keeping?
 
 Your personas answer another: Who are we serving? What are they carrying? What might keep them from hearing that story or trusting that promise?
 
@@ -224,7 +224,7 @@ Then ask a harder question:
 
 Personas do not make ministry less personal. Done well, they restore faces to dashboards, names to strategies, and human questions to communication plans.
 
-Your mission names the story God has called you to tell. Your brand helps every part of the church tell that story consistently. A persona helps you prepare a place where a real person can hear it, understand it, and take the next faithful step.
+Your mission names the story God has called you to tell. Your Brand helps every part of the church tell that story consistently. A persona helps you prepare a place where a real person can hear it, understand it, and take the next faithful step.
 
 That is not targeting.
 
