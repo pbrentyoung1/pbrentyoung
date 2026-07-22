@@ -29,7 +29,7 @@ This concept map exists to keep the vocabulary aligned.
 | Story | What narrative are people experiencing and remembering? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. Story is how people are wired to communicate and remember. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
-| Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, official or unofficial — where someone comes into contact with an organization and begins forming perception. |
+| Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with an organization and begins forming perception. |
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
 | Marketing | How do we invite people to respond? | Marketing is the disciplined work of helping the right people understand, care about, and respond to the right message. |
@@ -189,7 +189,7 @@ This is why communication is stewardship.
 3. Use **Ministry** when referring to the whole work of the church.
 4. Use **ministries** when referring to organized expressions of that work, such as youth, kids, groups, Sunday services, worship, hospitality, tech, care, or outreach.
 5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
-6. Use **touchpoints** when referring to any encounter — planned or unplanned, official or unofficial — where someone comes into contact with the organization and begins forming perception.
+6. Use **touchpoints** when referring to any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with the organization and begins forming perception.
 7. Do not use **Brand** as shorthand for “visual identity.”
 8. Do not use **branding** as shorthand for the whole reputation of an organization.
 9. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
