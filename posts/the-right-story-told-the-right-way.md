@@ -47,7 +47,7 @@ Jesus told his disciples that he was going to prepare a place for them. Good des
 
 Every church tells two stories.
 
-Touchpoints are the small moments where people encounter our church and begin forming an impression. A campus sign, a YouTube video, a social post, a website, and a follow-up email are all touchpoints. Each one is quietly telling part of the story.
+Touchpoints are any encounters where people meet our church and begin forming perception. A campus sign, a YouTube video, a social post, a website, a follow-up email, a hallway conversation, or a friend's story about visiting can all become touchpoints. Each one quietly carries part of the story.
 
 ![A journey map showing the questions, common touchpoints, and trust-building opportunities across awareness, visit, attend, member, and minister.](/assets/img/blog/everyone-falls-in-love-the-same-way-02.png "Every touchpoint makes a small promise. The next one confirms or contradicts it.")
 
@@ -75,7 +75,7 @@ That is especially true in church communications. It can feel like you have twen
 
 Chaos does not make art. It makes burnout with occasional lucky breaks. Healthy systems give creativity a place to grow.
 
-This site is where I work these ideas out in public. The projects are evidence, not the destination. Behind every brand, website, film, publication, system, and tool is a church or organization trying to make a God-given story clearer.
+This site is where I work these ideas out in public. The projects are evidence, not the destination. Behind every Brand framework, website, film, publication, system, and tool is a church or organization trying to make a God-given story clearer.
 
 In the post-COVID church, communications is preaching to our future congregation. For many people, the first campus they visit will be digital. It will be YouTube, Facebook, Instagram, our website, or an email in their inbox.
 
