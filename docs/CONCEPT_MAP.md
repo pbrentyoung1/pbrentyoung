@@ -306,7 +306,7 @@ This map supports and sharpens the existing first principles in `docs/FIRST_PRIN
 - Brand builds trust.
 - Brand is the referee.
 - Mission before preference.
-- Story before strategy.
+- A path, not a pile.
 - Systems create creativity.
 
 The concept map defines the terms.

@@ -134,15 +134,19 @@ Healthy leadership continually moves conversations upward.
 
 ---
 
-## Story Before Strategy
+## A Path, Not a Pile
 
-People don't remember tactics.
+Communication is not the transfer of information.
 
-They remember stories.
+It creates a path toward understanding, belonging, and action.
 
-Strategy should support story.
+People do not experience the church as a collection of messages.
 
-Never replace it.
+They experience it as a journey.
+
+The goal is not to tell people everything at once.
+
+The goal is to help them take the next faithful step.
 
 ---
 
