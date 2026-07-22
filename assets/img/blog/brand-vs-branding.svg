@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Brand versus branding</title>
+  <desc id="desc">Branding is the intentional expression of identity, mission, and story. Touchpoints are where people encounter those signals and experiences. Brand is the perception people carry afterward.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#2e241b" flood-opacity="0.18"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2e241b"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="760" fill="#f4f1ea"/>
+  <rect x="48" y="48" width="1304" height="664" rx="32" fill="#fffaf1" stroke="#2e241b" stroke-width="3"/>
+
+  <text x="700" y="116" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#2e241b" font-weight="700">Branding vs. Brand</text>
+  <text x="700" y="160" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="18" fill="#6d5f50" letter-spacing="2">EXPRESSION  →  ENCOUNTER  →  PERCEPTION</text>
+
+  <g filter="url(#shadow)">
+    <rect x="98" y="220" width="350" height="390" rx="24" fill="#f7d68a" stroke="#2e241b" stroke-width="3"/>
+    <rect x="525" y="220" width="350" height="390" rx="24" fill="#d9ead3" stroke="#2e241b" stroke-width="3"/>
+    <rect x="952" y="220" width="350" height="390" rx="24" fill="#cbdcf5" stroke="#2e241b" stroke-width="3"/>
+  </g>
+
+  <text x="273" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Branding</text>
+  <text x="273" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHAT WE EXPRESS</text>
+  <text x="138" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Logos &amp; marks</text>
+  <text x="138" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Color &amp; typography</text>
+  <text x="138" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Voice &amp; messaging</text>
+  <text x="138" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Visual systems</text>
+  <text x="138" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Designed signals</text>
+
+  <text x="700" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Touchpoints</text>
+  <text x="700" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHERE PEOPLE ENCOUNTER IT</text>
+  <text x="565" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Website &amp; signage</text>
+  <text x="565" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Service experience</text>
+  <text x="565" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Conversations</text>
+  <text x="565" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Reviews &amp; memories</text>
+  <text x="565" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Planned or unplanned</text>
+
+  <text x="1127" y="284" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#2e241b" font-weight="700">Brand</text>
+  <text x="1127" y="326" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="16" fill="#2e241b" letter-spacing="1.5">WHAT PEOPLE PERCEIVE</text>
+  <text x="992" y="382" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Trust or distrust</text>
+  <text x="992" y="426" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Memory &amp; expectation</text>
+  <text x="992" y="470" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Reputation</text>
+  <text x="992" y="514" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• Felt consistency</text>
+  <text x="992" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="25" fill="#2e241b">• The story they carry</text>
+
+  <line x1="468" y1="415" x2="502" y2="415" stroke="#2e241b" stroke-width="5" marker-end="url(#arrow)"/>
+  <line x1="895" y1="415" x2="929" y2="415" stroke="#2e241b" stroke-width="5" marker-end="url(#arrow)"/>
+
+  <rect x="190" y="642" width="1020" height="42" rx="21" fill="#2e241b" opacity="0.92"/>
+  <text x="700" y="670" text-anchor="middle" font-family="IBM Plex Mono, Consolas, monospace" font-size="18" fill="#fffaf1" letter-spacing="1.2">BRANDING CREATES SIGNALS. TOUCHPOINTS CREATE ENCOUNTERS. BRAND IS THE PERCEPTION LEFT BEHIND.</text>
+</svg>
