@@ -26,7 +26,7 @@ This concept map exists to keep the vocabulary aligned.
 | Ministry | What is the church called to do? | Ministry is the whole work of the church as it lives out its calling, identity, and mission. |
 | Ministries | How does the church organize and carry out that work? | Ministries are the organized expressions of ministry: youth, kids, Sunday services, Bible studies, groups, worship, hospitality, tech, care, outreach, and other mission-shaped areas of work. |
 | Ministry Elements | What specific components make a ministry tangible? | Ministry elements are the lighter supporting parts inside ministries: service times, coffee bars, check-in processes, sermon series, lobby signage, volunteer scripts, text follow-ups, curriculum, service flow, or livestream setup. |
-| Story | What narrative are people experiencing? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. It is not spin or invention. |
+| Story | What narrative are people experiencing and remembering? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. Story is how people are wired to communicate and remember. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
 | Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, official or unofficial — where someone comes into contact with an organization and begins forming perception. |
@@ -172,6 +172,8 @@ When this site talks about story, it does not mean inventing a more attractive v
 
 Story means the truthful narrative being experienced by the people we are trying to reach.
 
+Story is also the way people are wired to communicate and remember. People do not simply retain information, tactics, or announcements. They carry meaning through narrative.
+
 The work is not to manufacture a story.
 
 The work is to discover, steward, clarify, and consistently tell the true story of who God has called us to be.
@@ -191,10 +193,11 @@ This is why communication is stewardship.
 7. Do not use **Brand** as shorthand for “visual identity.”
 8. Do not use **branding** as shorthand for the whole reputation of an organization.
 9. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
-10. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
-11. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
-12. Prefer clear language over clever language when defining terms.
-13. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
+10. Do not reduce **story** to messaging, slogans, positioning, or spin. Story is the truthful narrative people experience and remember.
+11. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
+12. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
+13. Prefer clear language over clever language when defining terms.
+14. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
 
 ---
 
