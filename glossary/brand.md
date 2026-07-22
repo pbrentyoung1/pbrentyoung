@@ -1,23 +1,23 @@
 ---
 term: Brand
-aliases: Intentional brand
+aliases: Perception, Reputation, Trust, Memory
 principles: Brand builds trust, Brand is the referee
 link1: Your Church Already Has a Brand | /blog/your-church-already-has-a-brand | Why the question is intention, not existence
-link2: Brand Is the Referee | /blog/brand-is-the-referee | How brand ends the battle of preferences
+link2: Brand Is the Referee | /blog/brand-is-the-referee | How Brand ends the battle of preferences
 ---
 
-The meaning people learn to believe because of the promises an organization consistently keeps.
+Brand is the perception people carry in their minds after encountering an organization.
 
-Brand is not a logo, a color palette, or a style guide. Those are tools that carry it. Every organization already has a brand. The only question is whether it was chosen on purpose or assembled by default, one preference at a time.
+Brand is not the logo, color palette, font system, website, social media template, or style guide. Those are part of branding. Brand is what people believe, remember, feel, and expect after repeated encounters with an organization. It is formed through consistency, experience, trust, memory, and every touchpoint where the story is confirmed or contradicted.
 
 ## In business
 
-Brand differentiates, builds equity, and lowers the cost of every future introduction.
+Brand is the perception that makes future trust easier or harder. It shapes expectation before a person ever reads the offer, visits the website, meets the team, or buys the product.
 
 ## In the church
 
-Brand is the accumulated answer to whether your stated mission agrees with people's lived experience of you.
+Brand is the accumulated perception people carry after encountering the church, its people, its ministries, its communication, and its reputation. It asks whether the story a church tells about itself agrees with people's lived experience of it.
 
 ## What remains true
 
-Trust grows where consistency exists. The experience confirms or contradicts the story.
+Brand is perception. Branding is expression. Trust grows where the experience consistently confirms the story.
