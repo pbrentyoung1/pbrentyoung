@@ -32,7 +32,7 @@ This concept map exists to keep the vocabulary aligned.
 | Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with an organization and begins forming perception. |
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
-| Marketing | How do we help people move toward meaningful change? | Marketing is the generous and disciplined work of helping the right people see what is possible, understand why it matters, and take a faithful next step toward who they are seeking to become. |
+| Marketing | How do we generously invite people toward meaningful change? | Marketing is the generous and disciplined work of understanding the right people, telling honest stories that resonate, earning trust, and helping them take a faithful next step toward who they are seeking to become. |
 | Stewardship | What are we responsible to invest? | Stewardship is the responsibility to faithfully invest what has been entrusted to us, not merely protect it. |
 
 ---
@@ -194,6 +194,12 @@ It focuses on the people who can genuinely be served, not everyone who can possi
 
 It earns trust by showing up consistently, telling the truth clearly, and inviting people into next steps that are actually good for them.
 
+Marketing also depends on story.
+
+Not spin. Not hype. Not a clever wrapper for something thin.
+
+Marketing tells honest stories that resonate with the people we are trying to serve and gives them language for the change they already long for.
+
 For a church, marketing should never be reduced to promotion.
 
 At its best, marketing helps people recognize:
@@ -205,7 +211,7 @@ At its best, marketing helps people recognize:
 
 A simple working relationship:
 
-> Marketing listens with empathy, tells the truthful story generously, earns permission through trust, and invites the right people toward meaningful change.
+> Marketing listens with empathy, tells honest stories that resonate, earns permission through trust, and generously invites the right people toward meaningful change.
 
 ---
 
@@ -217,7 +223,7 @@ A simple working relationship:
 4. Use **ministries** when referring to organized expressions of that work, such as youth, kids, groups, Sunday services, worship, hospitality, tech, care, or outreach.
 5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
 6. Use **touchpoints** when referring to any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with the organization and begins forming perception.
-7. Use **marketing** when referring to generous, empathetic invitation that helps the right people understand, trust, and move toward meaningful change.
+7. Use **marketing** when referring to generous, empathetic invitation that helps the right people understand, trust, and move toward meaningful change through honest stories that resonate.
 8. Do not use **Brand** as shorthand for “visual identity.”
 9. Do not use **branding** as shorthand for the whole reputation of an organization.
 10. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
