@@ -26,6 +26,7 @@ This concept map exists to keep the vocabulary aligned.
 | Story | What narrative are people experiencing? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
+| Touchpoints | Where do people encounter the story? | Touchpoints are the specific moments, places, channels, artifacts, and interactions where people encounter an organization and begin forming perception. |
 | Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
 | Marketing | How do we invite people to respond? | Marketing is the disciplined work of helping the right people understand, care about, and respond to the right message. |
@@ -53,6 +54,36 @@ A church can update every visual element and still carry the same unclear Brand 
 
 ---
 
+## Touchpoints
+
+Touchpoints are where the framework becomes lived experience.
+
+They are the specific places where people encounter the story: the website, signage, lobby, parking lot, email, sermon graphic, social post, announcement, livestream, volunteer conversation, follow-up text, classroom, printed piece, or hallway moment.
+
+Touchpoints matter because people rarely form perception from one official message.
+
+They form perception through repeated encounters.
+
+A church may say it is welcoming, but the touchpoints either confirm that story or contradict it.
+
+This makes touchpoints the bridge between **branding** and **Brand**:
+
+> Branding creates intentional signals. Touchpoints deliver those signals through real encounters. Brand is the perception people carry after those encounters.
+
+When reviewing communication, do not ask only:
+
+> “Does this look right?”
+
+Ask:
+
+> “What will someone experience here?”
+>
+> “What story does this touchpoint carry?”
+>
+> “Does this encounter reinforce or undermine the Brand we are trying to steward?”
+
+---
+
 ## Calling, Identity, and Mission
 
 These terms are related, but they are not interchangeable.
@@ -71,7 +102,7 @@ Mission names the shared organizational purpose that focuses the work and gives 
 
 A simple working relationship:
 
-> Calling shapes mission. Mission expresses identity. Branding gives that identity visible form. Brand is what people actually perceive.
+> Calling shapes mission. Mission expresses identity. Branding gives that identity visible form. Touchpoints create lived encounters with that expression. Brand is what people actually perceive.
 
 ---
 
@@ -93,11 +124,13 @@ This is why communication is stewardship.
 
 1. Use **Brand** when referring to perception, reputation, trust, memory, or the story people carry after experiencing an organization.
 2. Use **branding** when referring to logos, colors, typography, visuals, design systems, voice, messaging, or other expressive elements.
-3. Do not use **Brand** as shorthand for “visual identity.”
-4. Do not use **branding** as shorthand for the whole reputation of an organization.
-5. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
-6. Prefer clear language over clever language when defining terms.
-7. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
+3. Use **touchpoints** when referring to the concrete encounters where people experience the organization and begin forming perception.
+4. Do not use **Brand** as shorthand for “visual identity.”
+5. Do not use **branding** as shorthand for the whole reputation of an organization.
+6. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
+7. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
+8. Prefer clear language over clever language when defining terms.
+9. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
 
 ---
 
@@ -114,7 +147,8 @@ When writing, reviewing, or leading a creative conversation, move upward through
 7. **Story** — What should people experience and remember?
 8. **Communication** — How will we carry that story?
 9. **Branding** — What expressions will make it tangible?
-10. **Brand** — What are people actually perceiving?
+10. **Touchpoints** — Where will people actually encounter it?
+11. **Brand** — What are people actually perceiving?
 
 Preferences belong lower on the ladder.
 
