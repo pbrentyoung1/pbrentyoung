@@ -23,7 +23,9 @@ This concept map exists to keep the vocabulary aligned.
 | Mission | Why do we exist? | Mission is the shared organizational purpose that gives direction to what we do. |
 | Vision | Where are we going? | Vision is the future we are moving toward as we live out the mission. |
 | Strategy | How will we move toward the mission? | Strategy is the intentional path we choose to move from conviction to action. |
-| Ministry Features | What are we building or offering so people can participate? | Ministry features are the programs, environments, services, groups, events, series, communication pipelines, and practical capabilities a church develops or changes to serve the mission. |
+| Ministry | What is the church called to do? | Ministry is the whole work of the church as it lives out its calling, identity, and mission. |
+| Ministries | How does the church organize and carry out that work? | Ministries are the organized expressions of ministry: youth, kids, Sunday services, Bible studies, groups, worship, hospitality, tech, care, outreach, and other mission-shaped areas of work. |
+| Ministry Elements | What specific components make a ministry tangible? | Ministry elements are the lighter supporting parts inside ministries: service times, coffee bars, check-in processes, sermon series, lobby signage, volunteer scripts, text follow-ups, curriculum, service flow, or livestream setup. |
 | Story | What narrative are people experiencing? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
@@ -55,45 +57,56 @@ A church can update every visual element and still carry the same unclear Brand 
 
 ---
 
-## Ministry Features
+## Ministry, Ministries, and Ministry Elements
 
-This term borrows from product and app development, but it needs to be translated carefully for church life.
+This distinction translates the product-development idea of "features" into church language without making church life sound like software.
 
-In an app, a feature is an ability or behavior the product gains: something it can now do for the people using it.
+In app development, a feature is an ability or behavior added to a product: something the app can now do for the people using it.
 
-In a church, a ministry feature is a practical expression of strategy: something the church builds, changes, launches, or improves so people can participate in the mission more clearly.
+In church life, the better vocabulary is **Ministry**, **Ministries**, and **Ministry Elements**.
 
-Ministry features may include:
+**Ministry is what we do.**
 
-- Bible studies
-- Groups
-- Services
-- Sermon series
-- Communication pipelines
-- Classes
-- Events
-- Volunteer pathways
-- Care processes
-- Follow-up systems
-- Service elements
-- Time changes
-- Lobby experiences
+Ministry names the whole work of the church as it lives out its calling, identity, and mission. It is the broad vocation of serving God and people.
+
+**Ministries are how we organize and carry out that work.**
+
+Ministries are the organized expressions of ministry: youth, kids, Sunday services, Bible studies, groups, worship, hospitality, tech, care, outreach, and other mission-shaped areas of work.
+
+A ministry is not automatically strategic just because it exists.
+
+A church may need to start, stop, combine, rename, strengthen, or clarify ministries when strategy reveals a better way to serve the mission.
+
+**Ministry Elements are the smaller supporting parts that make ministries tangible.**
+
+Ministry elements may include:
+
+- Service times
 - Coffee bars
 - Kids check-in
-- Livestream improvements
+- Sermon series
+- Lobby signage
+- Welcome cards
+- Volunteer scripts
+- Text follow-ups
+- Small-group curriculum
+- Worship set flow
+- Livestream setup
+- Classroom setup
+- Communication pipelines
+- Care processes
+- Event details
 - Digital tools
 
-A ministry feature is not automatically strategic.
+Ministry elements matter because they shape how people actually experience the ministry.
 
-A new event, class, service element, or communication channel only becomes strategic when it clearly serves mission, supports the story, and creates a better path for the people the church is trying to reach or disciple.
+Without strategy, ministries and ministry elements become clutter.
 
-Without strategy, features become clutter.
-
-With strategy, features become ways the mission takes shape.
+With strategy, they become ways the mission takes shape.
 
 A simple working relationship:
 
-> Strategy decides what needs to be built or changed. Ministry features give that strategy practical form. Communication explains and invites people into those features. Touchpoints are where people experience them. Brand is the perception formed through those encounters.
+> Strategy decides what needs to be clarified, built, changed, or strengthened. Ministries organize the work. Ministry elements make that work tangible. Communication explains and invites people into it. Touchpoints are where people encounter it. Brand is the perception formed through those encounters.
 
 ---
 
@@ -149,7 +162,7 @@ Mission names the shared organizational purpose that focuses the work and gives 
 
 A simple working relationship:
 
-> Calling shapes mission. Mission expresses identity. Strategy determines the path forward. Ministry features give that strategy practical form. Branding gives identity visible form. Touchpoints create lived encounters with that expression. Brand is what people actually perceive.
+> Calling shapes mission. Mission expresses identity. Strategy determines the path forward. Ministries organize the work. Ministry elements make that work tangible. Branding gives identity visible form. Touchpoints include every place people encounter the church. Brand is what people actually perceive.
 
 ---
 
@@ -171,15 +184,17 @@ This is why communication is stewardship.
 
 1. Use **Brand** when referring to perception, reputation, trust, memory, or the story people carry after experiencing an organization.
 2. Use **branding** when referring to logos, colors, typography, visuals, design systems, voice, messaging, or other expressive elements.
-3. Use **ministry features** when referring to programs, services, groups, events, environments, communication pipelines, or practical capabilities a church builds, changes, launches, or improves in service of mission.
-4. Use **touchpoints** when referring to any encounter — planned or unplanned, official or unofficial — where someone comes into contact with the organization and begins forming perception.
-5. Do not use **Brand** as shorthand for “visual identity.”
-6. Do not use **branding** as shorthand for the whole reputation of an organization.
-7. Do not treat every new ministry feature as strategy. Features serve strategy; they do not replace it.
-8. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
-9. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
-10. Prefer clear language over clever language when defining terms.
-11. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
+3. Use **Ministry** when referring to the whole work of the church.
+4. Use **ministries** when referring to organized expressions of that work, such as youth, kids, groups, Sunday services, worship, hospitality, tech, care, or outreach.
+5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
+6. Use **touchpoints** when referring to any encounter — planned or unplanned, official or unofficial — where someone comes into contact with the organization and begins forming perception.
+7. Do not use **Brand** as shorthand for “visual identity.”
+8. Do not use **branding** as shorthand for the whole reputation of an organization.
+9. Do not call every new program, event, or service element a strategy. Ministries and ministry elements serve strategy; they do not replace it.
+10. Do not use **touchpoints** as a fancier word for “deliverables.” A deliverable is something produced; a touchpoint is where someone encounters the story.
+11. When writing for general readers, define the distinction plainly before relying on capitalization as a signal.
+12. Prefer clear language over clever language when defining terms.
+13. Treat these definitions as living editorial standards, but do not change them casually. Changes here should ripple through the posts and vocabulary system.
 
 ---
 
@@ -193,12 +208,14 @@ When writing, reviewing, or leading a creative conversation, move upward through
 4. **Mission** — Why do we exist?
 5. **Vision** — Where are we going?
 6. **Strategy** — How will we move there?
-7. **Ministry Features** — What are we building or changing so people can participate?
-8. **Story** — What should people experience and remember?
-9. **Communication** — How will we carry that story?
-10. **Branding** — What expressions will make it tangible?
-11. **Touchpoints** — Where will people actually encounter it?
-12. **Brand** — What are people actually perceiving?
+7. **Ministry** — What is the church called to do?
+8. **Ministries** — How will the church organize and carry out that work?
+9. **Ministry Elements** — What specific components will make the work tangible?
+10. **Story** — What should people experience and remember?
+11. **Communication** — How will we carry that story?
+12. **Branding** — What expressions will make it tangible?
+13. **Touchpoints** — Where will people actually encounter it?
+14. **Brand** — What are people actually perceiving?
 
 Preferences belong lower on the ladder.
 
