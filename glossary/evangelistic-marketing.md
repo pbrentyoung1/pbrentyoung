@@ -1,14 +1,25 @@
 ---
 term: Evangelistic Marketing
-principles: Communication is stewardship, Story before strategy
+aliases: Gospel-shaped marketing, Ministry marketing
+principles: Communication is stewardship, Story before strategy, The right story told the right way
 link1: The Future Congregation Journey | /future-congregation-journey | The John 4 framework, step by step
 link2: What Is Marketing According to Seth Godin? | https://theadaptivemarketer.com/2018/11/13/what-is-marketing-according-to-seth-godin/ | Marketing as empathy, service, and meaningful change
 ---
 
-The faithful stewardship of communication to understand people, meet them where they are, clearly express truth and hope, and invite them toward transformation without coercion.
+Evangelistic Marketing is helping people move toward who God has called them to be.
 
-Seth Godin describes marketing as “the generous act of helping someone solve a problem. Their problem. Marketing helps others become who they seek to become.” That generosity begins with empathy. It asks us to understand another person's questions, hopes, obstacles, and story before deciding what we need to say.
+It is the church-specific expression of marketing as generous invitation. It is not church advertising, attendance-growth language, manipulation, pressure, or making church look more attractive than it is. Evangelistic Marketing tells the truthful story of who God has called a church to be and invites the right people toward transformation, belonging, discipleship, and faithful next steps.
 
-In the church, we are not manufacturing desire or manipulating people toward a decision. We are preparing a place, removing unnecessary barriers, telling the truth clearly, and helping people take an honest next step toward Jesus. We do not create transformation. We faithfully serve the people God is already drawing.
+Seth Godin describes marketing as “the generous act of helping someone solve a problem. Their problem. Marketing helps others become who they seek to become.” That generosity begins with empathy. It asks us to understand another person's questions, hopes, obstacles, worldview, and story before deciding what we need to say.
 
-The pattern is older than the vocabulary. In John 4, Jesus goes to the marketplace, sees a person rather than a demographic, listens for the need beneath the request, and earns every deeper moment of the conversation.
+## In business
+
+Marketing helps people move toward meaningful change by understanding them, telling honest stories that resonate, earning trust, and inviting action.
+
+## In the church
+
+Evangelistic Marketing helps people recognize the Gospel-shaped invitation in front of them and take a faithful next step toward who God is calling them to become. We are not manufacturing desire or manipulating people toward a decision. We are preparing a place, removing unnecessary barriers, telling the truth clearly, and helping people take an honest next step toward Jesus.
+
+## What remains true
+
+Evangelistic Marketing serves transformation before visibility. It does not make the Gospel more powerful; it removes unnecessary confusion so people can hear, trust, and respond.
