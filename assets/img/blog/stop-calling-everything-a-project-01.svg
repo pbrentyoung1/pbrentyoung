@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">The four containers</title><desc id="desc">Campaigns hold projects, projects hold deliverables, and deliverables hold tasks.</desc>
+  <defs>
+    <filter id="plateShadow" x="-8%" y="-8%" width="116%" height="118%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2b2a27" flood-opacity=".16"/></filter>
+    <filter id="tapeShadow" x="-30%" y="-40%" width="160%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#2b2a27" flood-opacity=".12"/></filter>
+    <linearGradient id="tapeGrad"><stop stop-color="#fcf9f0" stop-opacity=".62"/><stop offset="1" stop-color="#f0ead8" stop-opacity=".56"/></linearGradient>
+    <style>.h{font-family:'Playfair Display',Georgia,serif;font-weight:700;fill:#2b2a27}.mono{font-family:'IBM Plex Mono',Consolas,monospace}.body{font-family:'Source Serif 4',Georgia,serif;fill:#4a4842}</style>
+  </defs>
+  <g transform="rotate(.35 700 450)">
+    <rect x="40" y="44" width="1320" height="812" fill="#ebe6da" stroke="#d9d4c7" filter="url(#plateShadow)"/>
+    <text x="104" y="112" class="mono" font-size="16" letter-spacing="3" fill="#34715f">FIELD DIAGRAM · SYSTEMS &amp; WORKFLOW</text>
+    <text x="104" y="166" class="h" font-size="50">The four containers</text>
+    <text x="104" y="202" class="mono" font-size="16" letter-spacing="2.4" fill="#6b6860">EACH ONE HOLDS THE NEXT · LARGER TO SMALLER</text>
+    <rect x="104" y="224" width="1192" height="3" fill="#2b2a27"/><rect x="104" y="230" width="1192" height="1" fill="#2b2a27"/>
+
+    <rect x="270" y="270" width="1026" height="124" rx="12" fill="#215643"/>
+    <rect x="520" y="284" width="776" height="96" rx="11" fill="#34715f"/>
+    <rect x="770" y="298" width="526" height="68" rx="10" fill="#478973"/>
+    <rect x="1020" y="312" width="276" height="40" rx="9" fill="#69a38e"/>
+    <g class="mono" font-size="20" font-weight="700" fill="#fff"><text x="300" y="342">CAMPAIGN</text><text x="550" y="342">PROJECT</text><text x="800" y="342">DELIVERABLE</text><text x="1050" y="340">TASK</text></g>
+
+    <rect x="104" y="420" width="1192" height="320" fill="#fff" stroke="#d9d4c7"/>
+    <g class="mono" font-size="13" letter-spacing="1.3" fill="#6b6860"><text x="126" y="468">IN A WORD</text><text x="126" y="548">EXAMPLE</text><text x="126" y="628">NEEDS TO START</text><text x="126" y="708">DONE WHEN</text></g>
+    <g class="body" font-size="20">
+      <text x="300" y="468">A season with a goal</text><text x="550" y="468"><tspan x="550">One coordinated effort</tspan><tspan x="550" dy="25">with a beginning and end</tspan></text><text x="800" y="468">A thing that ships</text><text x="1050" y="468">A single unit of work</text>
+      <text x="300" y="548">Christmas</text><text x="550" y="548">The sermon series</text><text x="800" y="548">The invite card</text><text x="1050" y="548">Order the banners</text>
+      <text x="300" y="628">A goal and an audience</text><text x="550" y="628">A brief and an owner</text><text x="800" y="628">One job and a spec</text><text x="1050" y="628">A clear instruction</text>
+      <text x="300" y="708">The season did its job</text><text x="550" y="708"><tspan x="550">Shipped on time,</tspan><tspan x="550" dy="25">on brief</tspan></text><text x="800" y="708">The craft is right</text><text x="1050" y="708">It is checked off</text>
+    </g>
+    <g stroke="#d9d4c7"><line x1="104" y1="500" x2="1296" y2="500"/><line x1="104" y1="580" x2="1296" y2="580"/><line x1="104" y1="660" x2="1296" y2="660"/><line x1="270" y1="420" x2="270" y2="740"/><line x1="520" y1="420" x2="520" y2="740"/><line x1="770" y1="420" x2="770" y2="740"/><line x1="1020" y1="420" x2="1020" y2="740"/></g>
+    <rect x="104" y="772" width="1192" height="44" fill="#2b2a27"/><text x="700" y="800" text-anchor="middle" class="mono" font-size="15" letter-spacing="1.2" fill="#f4f1ea">CAMPAIGNS HOLD PROJECTS · PROJECTS HOLD DELIVERABLES · DELIVERABLES HOLD TASKS</text>
+  </g>
+  <g transform="rotate(-3.5 360 46)"><rect x="270" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g><g transform="rotate(2.6 1040 46)"><rect x="950" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g>
+</svg>

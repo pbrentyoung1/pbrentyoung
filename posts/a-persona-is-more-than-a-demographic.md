@@ -156,7 +156,7 @@ The future congregation moves through a recognizable progression: awareness, vis
 - At member, it may be, “Can I belong to and trust this community?”
 - At minister, it becomes, “Is there a meaningful place for what God has entrusted to me?”
 
-![A five-stage funnel showing the future congregation journey from awareness through visit, attend, member, and minister, with the question people ask at each stage.](/assets/img/blog/everyone-falls-in-love-the-same-way-01.png "Everyone begins with awareness. The relationship deepens from first glance to shared purpose.")
+![A five-stage funnel showing the future congregation journey from awareness through visit, attend, member, and minister, with the question people ask at each stage.](/assets/img/blog/everyone-falls-in-love-the-same-way-01.svg "Everyone begins with awareness. The relationship deepens from first glance to shared purpose.")
 
 The interactive [Future Congregation Journey](/future-congregation-journey) lets you walk through those stages, see the questions people may be asking, and examine the touchpoints that help or hinder their next faithful step.
 

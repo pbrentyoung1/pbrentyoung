@@ -33,7 +33,7 @@ When you have a solid, intentional Brand, you already have clarity about voice, 
 
 When your team looks at the options through the same lens, you can usually reach the same answer.
 
-![A comparison table showing preference-driven decisions versus brand-led decisions, plus the shared standard an intentional brand brings: voice, audience, consistency, and hierarchy.](/assets/img/blog/brand-is-the-referee-01.png "Same ideas, two ways to choose. The Brand doesn't pick the winner. It gives the team a shared way to choose.")
+![A comparison table showing preference-driven decisions versus Brand-led decisions, plus the shared standard an intentional Brand brings: voice, audience, consistency, and hierarchy.](/assets/img/blog/brand-is-the-referee-01.svg "Same ideas, two ways to choose. The Brand doesn't pick the winner. It gives the team a shared way to choose.")
 
 ## Rules make the game playable
 

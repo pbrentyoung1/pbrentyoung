@@ -34,7 +34,7 @@ The [Future Congregation Journey](/future-congregation-journey) names the same m
 
 Everyone starts at awareness. Some people move through the path in a weekend. Others take years. Someone may arrive on campus already familiar with the church, because the first stages happened on YouTube, on social media, on the website, or through a trusted friend. They did not enter halfway through the journey. The church simply met them in the middle of a journey that had already begun. The path stays consistent. The pace and the touchpoints change.
 
-![A five-stage funnel showing the future congregation journey from awareness through visit, attend, member, and minister, with the question people ask at each stage.](/assets/img/blog/everyone-falls-in-love-the-same-way-01.png "Everyone begins with awareness. The relationship deepens from first glance to shared purpose.")
+![A five-stage funnel showing the future congregation journey from awareness through visit, attend, member, and minister, with the question people ask at each stage.](/assets/img/blog/everyone-falls-in-love-the-same-way-01.svg "Everyone begins with awareness. The relationship deepens from first glance to shared purpose.")
 
 ## The funnel is a description, not a strategy
 
@@ -70,7 +70,7 @@ That is why communications can't be separated from hospitality, ministry systems
 
 > ! We begin caring for people before we know who they are.
 
-![A journey map showing the questions, common touchpoints, and trust-building opportunities across awareness, visit, attend, member, and minister.](/assets/img/blog/everyone-falls-in-love-the-same-way-02.png "Every touchpoint makes a small promise. The next one confirms or contradicts it.")
+![A journey map showing the questions, common touchpoints, and trust-building opportunities across awareness, visit, attend, member, and minister.](/assets/img/blog/everyone-falls-in-love-the-same-way-02.svg "Every touchpoint makes a small promise. The next one confirms or contradicts it.")
 
 ## A communications plan must serve the whole journey
 

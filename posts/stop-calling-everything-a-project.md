@@ -27,7 +27,7 @@ The fix is a vocabulary with altitude built in.
 
 > ! If it doesn't ship, it's not a deliverable. If it doesn't end, it's not a project.
 
-![Four nested containers: a campaign holds projects, which hold deliverables, which hold tasks. Each level shows what it is, an example, what it needs to start, and when it is done.](/assets/img/blog/stop-calling-everything-a-project-01.png "Campaigns hold projects. Projects hold deliverables. Deliverables hold tasks.")
+![Four nested containers: a campaign holds projects, which hold deliverables, which hold tasks. Each level shows what it is, an example, what it needs to start, and when it is done.](/assets/img/blog/stop-calling-everything-a-project-01.svg "Campaigns hold projects. Projects hold deliverables. Deliverables hold tasks.")
 
 ## Why the altitude matters
 

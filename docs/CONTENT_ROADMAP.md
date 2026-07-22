@@ -8,7 +8,7 @@ Articles carry a `topic:` value in their frontmatter that must match a pillar na
 
 Two special cases:
 
-- **Manifesto** is a reserved topic for cornerstone essays — starting with *The Right Story, Told the Right Way*, which serves as the manifesto for the website, the future book *Evangelistic Marketing*, and the Creative platform.
+- **Foundations** is a reserved topic for cornerstone essays — starting with *The Right Story, Told the Right Way*, which serves as the cornerstone for the website, the future book *Evangelistic Marketing*, and the Creative platform.
 - **Case Studies** is a pillar that lives in the portfolio (`data/portfolio.json`), not the blog. Every case study should name the principle it illustrates and link to the article that explains it.
 
 Titles marked ✍️ have working drafts in `posts/` (written with AI assistance; edit into Brent's voice before treating as published).
@@ -19,7 +19,7 @@ Titles marked ✍️ have working drafts in `posts/` (written with AI assistance
 
 # Brand & Mission
 
-- The Right Story, Told the Right Way ✍️ *(cornerstone — topic: Manifesto)*
+- The Right Story, Told the Right Way ✍️ *(cornerstone — topic: Foundations)*
 - Your Church Already Has a Brand ✍️
 - Brand Is the Referee ✍️
 - The Most Expensive Word in Church Communications ✍️

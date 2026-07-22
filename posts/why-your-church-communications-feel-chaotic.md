@@ -35,7 +35,7 @@ This is why goodwill alone can't carry it. As long as the schedule is negotiated
 
 This is a system problem, and that is good news, because system problems have system solutions. There is no button that fixes it overnight. There are three controls you can put on the belt, and together they change the whole job.
 
-![A church communications conveyor belt carries requests through three controls: a system carries the schedule, a brand carries the decisions, and templates carry the routine, producing margin for ministry.](/assets/img/blog/why-your-church-communications-feel-chaotic-01.png "The system carries the schedule. Brand carries the decisions. Templates carry the routine.")
+![A church communications conveyor belt carries requests through three controls: a system carries the schedule, a Brand carries the decisions, and templates carry the routine, producing margin for ministry.](/assets/img/blog/why-your-church-communications-feel-chaotic-01.svg "The system carries the schedule. Brand carries the decisions. Templates carry the routine.")
 
 **A system that runs the schedule, not the relationships.** Right now the schedule lives in relationships: who asked, how loudly, how recently, how senior. That is why it feels political and never ends. A real workflow moves the calendar out of relationships and into a shared path: one intake for every request, real deadlines built from real channel lead times, and a published description of what the team does and does not do. When the system holds the schedule, a legitimate request finally has a path that is not your inbox, and you stop being both the bottleneck and the bad guy.
 

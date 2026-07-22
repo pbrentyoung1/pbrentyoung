@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">The future congregation journey</title><desc id="desc">Five stages from awareness to minister, with the question people ask and how relationship deepens at each stage.</desc>
+  <defs>
+    <filter id="plateShadow" x="-8%" y="-8%" width="116%" height="118%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2b2a27" flood-opacity=".16"/></filter><filter id="tapeShadow"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#2b2a27" flood-opacity=".12"/></filter>
+    <linearGradient id="tapeGrad"><stop stop-color="#fcf9f0" stop-opacity=".62"/><stop offset="1" stop-color="#f0ead8" stop-opacity=".56"/></linearGradient>
+    <style>.h{font-family:'Playfair Display',Georgia,serif;font-weight:700;fill:#2b2a27}.mono{font-family:'IBM Plex Mono',Consolas,monospace}.body{font-family:'Source Serif 4',Georgia,serif;fill:#4a4842}</style>
+  </defs>
+  <g transform="rotate(.3 700 450)">
+    <rect x="40" y="44" width="1320" height="812" fill="#ebe6da" stroke="#d9d4c7" filter="url(#plateShadow)"/>
+    <text x="104" y="112" class="mono" font-size="16" letter-spacing="3" fill="#1f83a3">FIELD DIAGRAM · RELATIONSHIP JOURNEY</text>
+    <text x="104" y="166" class="h" font-size="50">The future congregation journey</text>
+    <text x="104" y="202" class="mono" font-size="15" letter-spacing="2" fill="#6b6860">AWARENESS · VISIT · ATTEND · MEMBER · MINISTER</text>
+    <rect x="104" y="224" width="1192" height="3" fill="#2b2a27"/><rect x="104" y="230" width="1192" height="1" fill="#2b2a27"/>
+
+    <polygon points="140,280 640,280 590,724 330,724" fill="#fff" opacity=".7"/>
+    <g class="mono" font-size="19" font-weight="700" fill="#fff">
+      <rect x="140" y="282" width="500" height="68" fill="#2b2a27"/><text x="170" y="324">AWARENESS</text><text x="604" y="324" text-anchor="end" font-size="12" letter-spacing="1.5">FIRST GLANCE</text>
+      <rect x="170" y="370" width="440" height="68" fill="#297e9b"/><text x="200" y="412">VISIT</text><text x="574" y="412" text-anchor="end" font-size="12" letter-spacing="1.5">CURIOSITY</text>
+      <rect x="200" y="458" width="380" height="68" fill="#5596ad"/><text x="230" y="500">ATTEND</text><text x="544" y="500" text-anchor="end" font-size="12" letter-spacing="1.5">FAMILIARITY</text>
+      <rect x="230" y="546" width="320" height="68" fill="#91bac8"/><text x="260" y="588" fill="#2b2a27">MEMBER</text><text x="514" y="588" text-anchor="end" font-size="12" letter-spacing="1.5" fill="#2b2a27">COMMITMENT</text>
+      <rect x="260" y="634" width="260" height="68" fill="#c1271d"/><text x="278" y="676" font-size="17">MINISTER</text><text x="506" y="676" text-anchor="end" font-size="10" letter-spacing="1.2">SHARED PURPOSE</text>
+    </g>
+
+    <line x1="710" y1="278" x2="710" y2="720" stroke="#bcb6aa"/>
+    <g><circle cx="710" cy="316" r="7" fill="#1f83a3"/><circle cx="710" cy="404" r="7" fill="#1f83a3"/><circle cx="710" cy="492" r="7" fill="#1f83a3"/><circle cx="710" cy="580" r="7" fill="#1f83a3"/><circle cx="710" cy="668" r="7" fill="#c1271d"/></g>
+    <g class="h" font-size="25"><text x="754" y="310">Who are these people?</text><text x="754" y="398">Is this worth exploring?</text><text x="754" y="486">Do I want to come back?</text><text x="754" y="574">Is this my church?</text><text x="754" y="654"><tspan x="754">How can I prepare a place</tspan><tspan x="754" dy="27">for someone else?</tspan></text></g>
+    <g class="body" font-size="17" fill="#6b6860"><text x="754" y="336">The church enters their awareness.</text><text x="754" y="424">Curiosity becomes a first encounter.</text><text x="754" y="512">Repeated encounters begin building trust.</text><text x="754" y="600">Trust makes belonging possible.</text><text x="754" y="708">Belonging becomes shared purpose.</text></g>
+    <rect x="104" y="772" width="1192" height="44" fill="#2b2a27"/><text x="700" y="800" text-anchor="middle" class="mono" font-size="15" letter-spacing="1.2" fill="#f4f1ea">THE PATH STAYS CONSISTENT · THE PACE AND TOUCHPOINTS CHANGE</text>
+  </g>
+  <g transform="rotate(-3.5 360 46)"><rect x="270" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g><g transform="rotate(2.6 1040 46)"><rect x="950" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g>
+</svg>

@@ -118,6 +118,7 @@ header('Content-Type: text/html; charset=utf-8');
           <div class="article-card__meta"><a class="topic-link" href="<?php echo blog_e(blog_index_url(array('topic' => $featured['topic_slug']))); ?>"><?php echo blog_e($featured['topic']); ?></a><span><?php echo $featured['read_minutes']; ?> MIN READ</span></div>
           <h2><a href="<?php echo blog_e(blog_post_url($featured)); ?>"><?php echo blog_e($featured['title']); ?></a></h2>
           <p><?php echo blog_e($featured['deck']); ?></p>
+          <?php if (!empty($featured['featuredexcerpt'])): ?><p><?php echo blog_e($featured['featuredexcerpt']); ?></p><?php endif; ?>
           <a class="read-link" href="<?php echo blog_e(blog_post_url($featured)); ?>">READ THE ARTICLE &rarr;</a>
         </div>
       </article>

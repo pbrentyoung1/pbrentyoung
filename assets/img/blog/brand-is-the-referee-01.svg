@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 920" role="img" aria-labelledby="title desc">
+  <title id="title">Same ideas, two ways to choose</title>
+  <desc id="desc">A comparison of preference-driven and Brand-led creative decisions.</desc>
+  <defs>
+    <filter id="plateShadow" x="-8%" y="-8%" width="116%" height="118%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#2b2a27" flood-opacity=".16"/></filter>
+    <filter id="tapeShadow" x="-30%" y="-40%" width="160%" height="180%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#2b2a27" flood-opacity=".12"/></filter>
+    <linearGradient id="tapeGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fcf9f0" stop-opacity=".62"/><stop offset="1" stop-color="#f0ead8" stop-opacity=".56"/></linearGradient>
+    <style>.h{font-family:'Playfair Display',Georgia,serif;font-weight:700;fill:#2b2a27}.mono{font-family:'IBM Plex Mono',Consolas,monospace}.body{font-family:'Source Serif 4',Georgia,serif;fill:#4a4842}</style>
+  </defs>
+  <g transform="rotate(-.35 700 460)">
+    <rect x="40" y="44" width="1320" height="832" fill="#ebe6da" stroke="#d9d4c7" filter="url(#plateShadow)"/>
+    <text x="104" y="112" class="mono" font-size="16" letter-spacing="3" fill="#1f83a3">FIELD DIAGRAM · BRAND &amp; MISSION</text>
+    <text x="104" y="166" class="h" font-size="50">Same ideas. Two ways to choose.</text>
+    <text x="104" y="202" class="mono" font-size="16" letter-spacing="2.4" fill="#6b6860">PREFERENCE-DRIVEN · BRAND-LED</text>
+    <rect x="104" y="224" width="1192" height="3" fill="#2b2a27"/><rect x="104" y="230" width="1192" height="1" fill="#2b2a27"/>
+
+    <rect x="104" y="266" width="1192" height="420" fill="#fff" stroke="#d9d4c7"/>
+    <rect x="296" y="266" width="500" height="78" fill="#f5e7e1"/><rect x="796" y="266" width="500" height="78" fill="#e2edf0"/>
+    <rect x="296" y="266" width="500" height="7" fill="#c1271d"/><rect x="796" y="266" width="500" height="7" fill="#1f83a3"/>
+    <text x="328" y="310" class="h" font-size="30" fill="#c1271d">Preference-driven</text>
+    <text x="828" y="310" class="h" font-size="30" fill="#1f83a3">Brand-led</text>
+    <text x="328" y="332" class="mono" font-size="13" letter-spacing="2" fill="#6b6860">PERSONAL TASTE</text>
+    <text x="828" y="332" class="mono" font-size="13" letter-spacing="2" fill="#6b6860">SHARED STANDARD</text>
+
+    <g class="mono" font-size="14" letter-spacing="1.6" fill="#6b6860">
+      <text x="128" y="398">THE QUESTION</text><text x="128" y="486">THE AUTHORITY</text><text x="128" y="574">THE TEAM LEARNS</text><text x="128" y="662">THE NEXT DECISION</text>
+    </g>
+    <g class="body" font-size="25">
+      <text x="328" y="400">Which one do I like?</text><text x="828" y="400">Which one best serves the mission?</text>
+      <text x="328" y="488">The most senior person</text><text x="828" y="488">A shared Brand standard</text>
+      <text x="328" y="576">Guess what the boss wants</text><text x="828" y="576">Evaluate the work together</text>
+      <text x="328" y="664">Starts the argument again</text><text x="828" y="664">Uses the same standard</text>
+    </g>
+    <g stroke="#d9d4c7"><line x1="104" y1="432" x2="1296" y2="432"/><line x1="104" y1="520" x2="1296" y2="520"/><line x1="104" y1="608" x2="1296" y2="608"/><line x1="296" y1="266" x2="296" y2="686"/><line x1="796" y1="266" x2="796" y2="686"/></g>
+
+    <rect x="104" y="712" width="1192" height="64" fill="#fff" stroke="#d9d4c7"/><rect x="104" y="712" width="7" height="64" fill="#1f83a3"/>
+    <text x="132" y="739" class="mono" font-size="13" letter-spacing="1.8" fill="#1f83a3">AN INTENTIONAL BRAND BRINGS</text>
+    <g class="mono" font-size="14" fill="#2b2a27"><text x="132" y="762">VOICE</text><text x="238" y="762">AUDIENCE</text><text x="380" y="762">CONSISTENCY</text><text x="558" y="762">HIERARCHY</text></g>
+    <rect x="104" y="806" width="1192" height="44" fill="#2b2a27"/>
+    <text x="700" y="834" text-anchor="middle" class="mono" font-size="15" letter-spacing="1.2" fill="#f4f1ea">THE BRAND DOESN'T CHOOSE THE IDEA · IT GIVES THE TEAM A SHARED WAY TO CHOOSE</text>
+  </g>
+  <g transform="rotate(-3.5 360 46)"><rect x="270" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g>
+  <g transform="rotate(2.6 1040 46)"><rect x="950" y="26" width="180" height="40" fill="url(#tapeGrad)" filter="url(#tapeShadow)"/></g>
+</svg>

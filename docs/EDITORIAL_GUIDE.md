@@ -201,6 +201,6 @@ Article topics must match the pillars in CONTENT_ROADMAP.md:
 
 Brand & Mission. Creative Leadership. Systems & Workflow. Craft. AI.
 
-Manifesto is reserved for cornerstone essays.
+Foundations is reserved for cornerstone essays.
 
 Case studies live in the portfolio and each should name the first principle it illustrates.

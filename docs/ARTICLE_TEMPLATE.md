@@ -26,9 +26,9 @@ shortlist: 1 (optional; numbered position in The Short List)
 ---
 ```
 
-Allowed `topic:` values: `Brand & Mission`, `Creative Leadership`, `Systems & Workflow`, `Craft`, `AI`, and `Manifesto` (reserved for cornerstone essays).
+Allowed `topic:` values: `Brand & Mission`, `Creative Leadership`, `Systems & Workflow`, `Craft`, `AI`, and `Foundations` (reserved for cornerstone essays).
 
-Optional frontmatter: `banner:` (overrides the default banner path), `bannerAlt:` (alt text for the banner), `draft: true` (hides the post), `featured: true` (selects the lead article), and `shortlist:` (a positive number selects and orders the post in The Short List).
+Optional frontmatter: `banner:` (overrides the default banner path), `bannerAlt:` (alt text for the banner), `draft: true` (hides the post), `featured: true` (selects the lead article), `featuredExcerpt:` (adds supporting copy to the featured treatment on `/blog`), and `shortlist:` (a positive number selects and orders the post in The Short List).
 
 **Glossary terms.** Part of preparing every post is choosing three to five glossary terms that carry the article's working language. `terms:` takes comma-separated glossary *slugs* (not display labels), matching the filenames in `glossary/`, in the order you want them shown. Invalid slugs are ignored quietly, so check spelling against the glossary. Tags and terms do different jobs: tags connect related articles; terms explain the working language used in this one. The site renders them as "Terms in This Article" beside the piece, with quick definitions on tap.
 

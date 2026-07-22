@@ -2345,15 +2345,15 @@ img.pcard-cue {
 /* topic accents — global, so the homepage Field Notes digest gets the
    same theme colors as the blog (the .blog-site rules below keep working
    at higher specificity with identical values) */
-[data-topic="manifesto"] { --topic-accent: #c1271d; }
+[data-topic="foundations"] { --topic-accent: #c1271d; }
 [data-topic="brand-mission"] { --topic-accent: #1f83a3; }
 [data-topic="creative-leadership"] { --topic-accent: #bd7a00; }
 [data-topic="systems-workflow"] { --topic-accent: #39745d; }
 [data-topic="craft"] { --topic-accent: #6a5545; }
 [data-topic="ai"] { --topic-accent: #315aa8; }
 
-.blog-site [data-topic="manifesto"],
-.blog-site[data-topic="manifesto"] { --topic-accent: #c1271d; }
+.blog-site [data-topic="foundations"],
+.blog-site[data-topic="foundations"] { --topic-accent: #c1271d; }
 .blog-site [data-topic="brand-mission"],
 .blog-site[data-topic="brand-mission"] { --topic-accent: #1f83a3; }
 .blog-site [data-topic="creative-leadership"],
