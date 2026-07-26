@@ -4,6 +4,7 @@ aliases: StoryBrand Framework, SB7
 principles: Story before strategy, Communication is stewardship
 link1: Building a StoryBrand 2.0 | https://storybrand.com/building-a-storybrand-book-new/ | Donald Miller's book and the complete framework
 link2: The StoryBrand Podcast | https://podcasts.apple.com/us/podcast/the-storybrand-podcast/id1092751338 | Practical conversations about clear messaging
+link3: Make Plans, Not Piles | /blog/make-plans-not-piles | How a guide turns information into a clear plan
 ---
 
 Donald Miller's framework for making a message easier to understand by putting the audience at the center of the story. They are the hero. We are the guide. We name the problem, offer a plan, and invite them toward a clear next step.
