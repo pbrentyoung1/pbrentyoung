@@ -148,6 +148,8 @@ The goal is not to tell people everything at once.
 
 The goal is to help them take the next faithful step.
 
+Related essay: [Make Plans, Not Piles](/blog/make-plans-not-piles)
+
 ---
 
 ## Systems Create Creativity

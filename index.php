@@ -198,6 +198,7 @@ require_once __DIR__ . '/inc/blog.php';
           <img class="pcard-cue" src="assets/img/principles/story-before-strategy.png" alt="" width="520" height="207">
           <h3 class="pcard-title">A path, not a pile</h3>
           <p class="pcard-text">Good communication helps people take the next faithful step instead of asking them to carry everything at once.</p>
+          <a class="read-link" href="/blog/make-plans-not-piles" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/systems-create-creativity.png" alt="" width="520" height="396">
