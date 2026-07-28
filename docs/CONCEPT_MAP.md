@@ -302,6 +302,7 @@ Healthy leadership keeps moving the conversation upward.
 This map supports and sharpens the existing first principles in `docs/FIRST_PRINCIPLES.md`, especially:
 
 - Communication is stewardship.
+- Stewardship is what you invest.
 - The right story, told the right way.
 - Brand builds trust.
 - Brand is the referee.

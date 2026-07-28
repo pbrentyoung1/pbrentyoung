@@ -178,16 +178,19 @@ require_once __DIR__ . '/inc/blog.php';
           <img class="pcard-cue" src="assets/img/principles/communication-is-stewardship.png" alt="" width="520" height="226">
           <h3 class="pcard-title">Communication is stewardship</h3>
           <p class="pcard-text">We care for each touchpoint because each one shapes how people experience the mission.</p>
+          <a class="read-link" href="/blog/everyone-falls-in-love-the-same-way" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/design-solves-creative-problems.png" alt="" width="520" height="284">
           <h3 class="pcard-title">Design solves creative problems</h3>
           <p class="pcard-text">Good design removes unnecessary work and prepares a place for people.</p>
+          <a class="read-link" href="/blog/change-vs-polish" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/brand-builds-trust.png" alt="" width="520" height="248">
           <h3 class="pcard-title">Brand builds trust</h3>
           <p class="pcard-text">The mission declares the story. The experience confirms or contradicts it.</p>
+          <a class="read-link" href="/blog/your-church-already-has-a-brand" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/brand-is-the-referee.png" alt="" width="520" height="386">
@@ -205,11 +208,13 @@ require_once __DIR__ . '/inc/blog.php';
           <img class="pcard-cue" src="assets/img/principles/systems-create-creativity.png" alt="" width="520" height="396">
           <h3 class="pcard-title">Systems create creativity</h3>
           <p class="pcard-text">Healthy systems give creative people room to think, make, collaborate, and rest.</p>
+          <a class="read-link" href="/blog/why-your-church-communications-feel-chaotic" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/mission-before-preference.png" alt="" width="520" height="347">
           <h3 class="pcard-title">Mission before preference</h3>
           <p class="pcard-text">Preferences have a place at the table, but mission makes the final call.</p>
+          <a class="read-link" href="/blog/the-most-expensive-word-in-church-communications" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/stewardship-isnt-what-you-protect.png" alt="" width="500" height="520">

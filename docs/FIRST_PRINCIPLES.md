@@ -26,7 +26,13 @@ Every email, website, photograph, announcement, video, sermon graphic, social po
 
 Communication is one of the talents we've been entrusted with.
 
-The question isn't whether we'll preserve it.
+Related essay: [Everyone Falls in Love the Same Way](/blog/everyone-falls-in-love-the-same-way)
+
+---
+
+## Stewardship Is What You Invest
+
+The question isn't whether we'll preserve what we've been entrusted with.
 
 The question is whether we'll invest it.
 
@@ -62,6 +68,8 @@ Design is the intentional process of solving communication problems.
 
 Beautiful work is evidence that the problem was understood.
 
+Related essay: [Change vs. Polish](/blog/change-vs-polish)
+
 ---
 
 ## Brand Builds Trust
@@ -73,6 +81,8 @@ Brand is not a color palette.
 Brand is the consistent experience people have with an organization.
 
 Trust grows where consistency exists.
+
+Related essay: [Your Church Already Has a Brand](/blog/your-church-already-has-a-brand)
 
 ---
 
@@ -136,6 +146,8 @@ Kingdom asks:
 
 Healthy leadership continually moves conversations upward.
 
+Related essay: [The Most Expensive Word in Church Communications](/blog/the-most-expensive-word-in-church-communications)
+
 ---
 
 ## Make Plans, Not Piles
@@ -173,6 +185,8 @@ Deliverables contain Tasks.
 Organization serves creativity.
 
 Not the other way around.
+
+Related essay: [Why Your Church Communications Feel Chaotic](/blog/why-your-church-communications-feel-chaotic)
 
 ---
 
