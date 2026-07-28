@@ -94,6 +94,8 @@ Brand doesn't eliminate preferences.
 
 It gives them healthy boundaries.
 
+Related essay: [Brand Is the Referee](/blog/brand-is-the-referee)
+
 ---
 
 ## Preferences Make Wonderful Servants

@@ -193,6 +193,7 @@ require_once __DIR__ . '/inc/blog.php';
           <img class="pcard-cue" src="assets/img/principles/brand-is-the-referee.png" alt="" width="520" height="386">
           <h3 class="pcard-title">Brand is the referee</h3>
           <p class="pcard-text">Brand gives a team a shared standard for making decisions together.</p>
+          <a class="read-link" href="/blog/brand-is-the-referee" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
         <article class="pcard">
           <img class="pcard-cue" src="assets/img/principles/story-before-strategy.png" alt="" width="520" height="207">
