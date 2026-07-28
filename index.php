@@ -215,6 +215,7 @@ require_once __DIR__ . '/inc/blog.php';
           <img class="pcard-cue" src="assets/img/principles/stewardship-isnt-what-you-protect.png" alt="" width="500" height="520">
           <h3 class="pcard-title">Stewardship is what you invest</h3>
           <p class="pcard-text">We steward the story by telling it clearly and investing what we have been given.</p>
+          <a class="read-link" href="/blog/stewardship-is-what-you-invest" style="color: var(--blue); display: inline-block; margin-top: 12px;">READ THE ESSAY &rarr;</a>
         </article>
       </div>
       <div class="slugline" style="margin-top: 26px;">

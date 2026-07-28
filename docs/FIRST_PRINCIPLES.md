@@ -34,6 +34,8 @@ Stewardship isn't what you protect.
 
 Stewardship is what you invest.
 
+Related essay: [Stewardship Is What You Invest](/blog/stewardship-is-what-you-invest)
+
 ---
 
 ## The Right Story, Told the Right Way

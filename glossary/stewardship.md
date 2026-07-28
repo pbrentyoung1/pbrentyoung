@@ -1,7 +1,8 @@
 ---
 term: Stewardship
-principles: Communication is stewardship
-link1: First Principles | /#principles | Where this conviction anchors everything else
+principles: Communication is stewardship, Stewardship is what you invest
+link1: Stewardship Is What You Invest | /blog/stewardship-is-what-you-invest | Why entrusted stories are meant to be put to work
+link2: First Principles | /#principles | Where this conviction anchors everything else
 ---
 
 The faithful investment of resources, attention, trust, influence, and opportunity for the good of others and the mission entrusted to us.
