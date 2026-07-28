@@ -5,7 +5,7 @@ topic: Brand & Mission
 deck: Most church communication hands people groceries and calls it dinner. A plan serves the meal: one reason, one clear next step, and the story underneath.
 tags: clarity, calls to action, storybrand
 terms: clarity, curse-of-knowledge, storybrand, call-to-action, audience, story, hospitality
-principle: Communication is Stewardship
+principle: Make Plans, Not Piles
 banneralt: A person surrounded by overlapping arrows pointing in competing directions
 ---
 

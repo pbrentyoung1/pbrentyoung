@@ -134,7 +134,7 @@ Healthy leadership continually moves conversations upward.
 
 ---
 
-## A Path, Not a Pile
+## Make Plans, Not Piles
 
 Communication is not the transfer of information.
 
