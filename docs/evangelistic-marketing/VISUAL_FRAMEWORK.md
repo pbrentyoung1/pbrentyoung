@@ -53,7 +53,7 @@ Promise → Transformation → Advocacy → Community
 
 Applications
 
-• pbrentyoung.com series landing page  
+• brentyoung.org series landing page
 • Evangelistic Marketing book spread  
 • Creative learning module  
 • Keynote and workshop slides  
@@ -68,4 +68,3 @@ Design Guardrails
 • Scripture remains visually primary  
 • Marketing terms should be translated into human language  
 • The framework should still make sense when printed in black and white  
-

@@ -12,7 +12,7 @@ Modern marketers describe this movement as a customer journey. In ministry, it i
 
 Primary Outputs
 
-• A ten-part blog series for pbrentyoung.com  
+• A ten-part essay series for brentyoung.org
 • A central section of Evangelistic Marketing  
 • A visual journey framework  
 • A conference talk and workshop  
@@ -35,4 +35,3 @@ GLOSSARY — canonical terms and definitions
 Production Rule
 
 Each major idea should eventually exist in four forms: a written article, a visual framework, a spoken presentation, and a book chapter.  
-

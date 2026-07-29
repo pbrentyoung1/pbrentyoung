@@ -29,7 +29,7 @@
   /* videos live on the video subdomain in production — the git deploy
      mirrors the repo, and assets/video/ is gitignored, so those files
      only exist locally and on video.pbrentyoung.com (a standalone site
-     whose root is outside pbrentyoung.com's deploy-managed tree) */
+     whose root is outside the main site's deploy-managed tree) */
   var MEDIA_HOST = "https://video.pbrentyoung.com/";
   var isLocalHost = /^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/.test(location.hostname) || location.protocol === "file:";
 

@@ -10,7 +10,7 @@ require_once __DIR__ . '/inc/blog.php';
   <meta name="description" content="Brent Young helps churches and mission-driven organizations tell the right story clearly: brand, communications, creative leadership, and the systems that hold them all together.">
   <meta name="author" content="Brent Young">
   <meta name="theme-color" content="#f4f1ea">
-  <link rel="canonical" href="https://pbrentyoung.com/">
+  <link rel="canonical" href="https://brentyoung.org/">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKQYWP70WN"></script>
@@ -33,9 +33,9 @@ require_once __DIR__ . '/inc/blog.php';
   <meta property="og:site_name" content="Brent Young">
   <meta property="og:title" content="Brent Young, Creative Director">
   <meta property="og:description" content="The right story, told the right way. Brand, communications, and creative leadership for churches and mission-driven organizations.">
-  <meta property="og:url" content="https://pbrentyoung.com/">
-  <meta property="og:image" content="https://pbrentyoung.com/images/og-image.png">
-  <meta property="og:image:secure_url" content="https://pbrentyoung.com/images/og-image.png">
+  <meta property="og:url" content="https://brentyoung.org/">
+  <meta property="og:image" content="https://brentyoung.org/images/og-image.png">
+  <meta property="og:image:secure_url" content="https://brentyoung.org/images/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -44,10 +44,10 @@ require_once __DIR__ . '/inc/blog.php';
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://pbrentyoung.com/">
+  <meta name="twitter:url" content="https://brentyoung.org/">
   <meta name="twitter:title" content="Brent Young, Creative Director">
   <meta name="twitter:description" content="The right story, told the right way. Brand, communications, and creative leadership for churches and mission-driven organizations.">
-  <meta name="twitter:image" content="https://pbrentyoung.com/images/og-image.png">
+  <meta name="twitter:image" content="https://brentyoung.org/images/og-image.png">
   <meta name="twitter:image:alt" content="Brent Young, Creative Director. The right story, told the right way.">
 
   <script type="application/ld+json">
@@ -55,7 +55,7 @@ require_once __DIR__ . '/inc/blog.php';
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Brent Young",
-    "url": "https://pbrentyoung.com/",
+    "url": "https://brentyoung.org/",
     "jobTitle": "Creative Director",
     "description": "Brent Young helps churches and mission-driven organizations tell the right story clearly: brand, communications, creative leadership, and the systems that hold them all together.",
     "address": {

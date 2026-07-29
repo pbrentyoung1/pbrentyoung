@@ -1,6 +1,6 @@
 # Concept Map
 
-> Canonical working definitions for pbrentyoung.com.
+> Canonical working definitions for brentyoung.org.
 >
 > These terms should guide future articles, vocabulary entries, homepage copy, case studies, and editorial review. The goal is not to make the language academic. The goal is to keep the thinking clear.
 

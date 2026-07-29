@@ -1,6 +1,6 @@
 {
     "name": "pbrentyoung/editorial-site",
-    "description": "The pbrentyoung.com editorial portfolio and blog.",
+    "description": "The brentyoung.org editorial portfolio and essays.",
     "type": "project",
     "license": "proprietary",
     "require": {

@@ -43,7 +43,7 @@ function community_snapshot_http_json($url, $timeout = 30, $cacheIdentity = null
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_CONNECTTIMEOUT => 10,
     CURLOPT_TIMEOUT => $timeout,
-    CURLOPT_USERAGENT => 'pbrentyoung.com Community Snapshot/0.1',
+    CURLOPT_USERAGENT => 'brentyoung.org Community Snapshot/0.1',
     CURLOPT_HTTPHEADER => array('Accept: application/json'),
   ));
 

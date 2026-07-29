@@ -1,9 +1,23 @@
-# pbrentyoung.com — blog, feed, sitemap, and robots routes
+# brentyoung.org — canonical host, legacy redirects, and application routes
 DirectoryIndex index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+# Move the former public domain directly to the new canonical host.
+# The exact host match deliberately excludes video.pbrentyoung.com.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?pbrentyoung\.com$ [NC]
+RewriteRule ^ https://brentyoung.org%{REQUEST_URI} [R=301,L,NE]
+
+# One public hostname for the new site.
+RewriteCond %{HTTP_HOST} ^www\.brentyoung\.org$ [NC]
+RewriteRule ^ https://brentyoung.org%{REQUEST_URI} [R=301,L,NE]
+
+# Enforce HTTPS after hostname canonicalization so redirects stay direct.
+RewriteCond %{HTTP_HOST} ^brentyoung\.org$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://brentyoung.org%{REQUEST_URI} [R=301,L,NE]
 
 # The editorial homepage now lives at the canonical root URL.
 RewriteCond %{THE_REQUEST} \s/+index(?:-new)?\.(?:html|php)(?:[?\s]) [NC]

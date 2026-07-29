@@ -2,7 +2,7 @@
 
 ## Purpose
 
-pbrentyoung.com is not a portfolio.
+brentyoung.org is not a portfolio.
 
 It is a thinking platform.
 
