@@ -1,9 +1,14 @@
-# pbrentyoung.com — blog, feed, sitemap, and robots routes
+# pbrentyoung.com — permanent redirect to brentyoung.org
 DirectoryIndex index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+# Preserve every path and query string while excluding standalone subdomains
+# such as video.pbrentyoung.com.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?pbrentyoung\.com$ [NC]
+RewriteRule ^ https://brentyoung.org%{REQUEST_URI} [R=301,L,NE]
 
 # The editorial homepage now lives at the canonical root URL.
 RewriteCond %{THE_REQUEST} \s/+index(?:-new)?\.(?:html|php)(?:[?\s]) [NC]
