@@ -13,13 +13,13 @@ require_once __DIR__ . '/inc/blog.php';
   <link rel="canonical" href="https://brentyoung.org/">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKQYWP70WN"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1TD8KH28H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-KKQYWP70WN');
+    gtag('config', 'G-F1TD8KH28H');
   </script>
 
   <!-- Icons -->
