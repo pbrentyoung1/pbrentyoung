@@ -37,6 +37,16 @@ if ($path === '/future-congregation-journey') {
   return true;
 }
 
+if ($path === '/evangelistic-marketing-framework/') {
+  header('Location: /evangelistic-marketing-framework', true, 301);
+  return true;
+}
+
+if ($path === '/evangelistic-marketing-framework') {
+  require __DIR__ . '/evangelistic-marketing-framework.php';
+  return true;
+}
+
 if ($path === '/community-snapshot') {
   require __DIR__ . '/community-snapshot.php';
   return true;
