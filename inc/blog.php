@@ -511,6 +511,7 @@ function blog_tools_menu() {
     <a class="nav-link nav-dropdown-toggle" href="/community-snapshot" aria-haspopup="true" aria-expanded="false" aria-controls="navToolsMenu">TOOLS</a>
     <div class="nav-dropdown-menu nav-tools-menu" id="navToolsMenu" aria-label="Tools and reference">
       <span class="nav-dropdown-menu__label">TOOLS &amp; REFERENCE</span>
+      <a href="/evangelistic-marketing-framework"><strong>Evangelistic Marketing Framework</strong><span>Explore how the ideas connect.</span></a>
       <a href="/community-snapshot"><strong>Community Snapshot</strong><span>See the people living around your church.</span></a>
       <a href="/future-congregation-journey"><strong>Future Congregation Journey</strong><span>Follow the path from awareness to ministry.</span></a>
       <a href="/assets/pdf/plot-the-journey.pdf" target="_blank" rel="noopener"><strong>Plot the Journey</strong><span>Map where your communication serves and where the journey goes quiet.</span></a>

@@ -39,6 +39,7 @@ RewriteRule ^glossary$ glossary.php [L,QSA]
 
 RewriteRule ^blog$ blog.php [L,QSA]
 RewriteRule ^blog/([a-z0-9][a-z0-9-]*)/?$ blog-post.php?slug=$1 [L,QSA]
+RewriteRule ^evangelistic-marketing-framework$ evangelistic-marketing-framework.php [L,QSA]
 RewriteRule ^future-congregation-journey$ future-congregation-journey.php [L,QSA]
 RewriteRule ^community-snapshot$ community-snapshot.php [L,QSA]
 RewriteRule ^feed\.xml$ feed.php [L]
