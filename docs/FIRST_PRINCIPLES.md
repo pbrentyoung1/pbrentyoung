@@ -64,7 +64,7 @@ Design is not decoration.
 
 Design is not style.
 
-Design is the intentional process of solving communication problems.
+Design is the intentional process of solving creative problems.
 
 Beautiful work is evidence that the problem was understood.
 

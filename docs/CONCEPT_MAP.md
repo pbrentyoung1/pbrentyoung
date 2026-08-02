@@ -25,16 +25,36 @@ This concept map exists to keep the vocabulary aligned.
 | Strategy | How will we move toward the mission? | Strategy is the intentional path we choose to move from conviction to action. |
 | Ministry | What is the church called to do? | Ministry is the whole work of the church as it lives out its calling, identity, and mission. |
 | Ministries | How does the church organize and carry out that work? | Ministries are the organized expressions of ministry: youth, kids, Sunday services, Bible studies, groups, worship, hospitality, tech, care, outreach, and other mission-shaped areas of work. |
-| Ministry Elements | What specific components make a ministry tangible? | Ministry elements are the lighter supporting parts inside ministries: service times, coffee bars, check-in processes, sermon series, lobby signage, volunteer scripts, text follow-ups, curriculum, service flow, or livestream setup. |
+| Ministry Elements | What decisions support and serve the ministry? | Ministry elements are the decisions that support and serve a ministry, such as service times, coffee bars, check-in, signage, volunteer scripts, follow-up texts, curriculum, or livestream setup. Each shapes the others, and each becomes touchpoints when people interact with it. |
 | Story | What narrative are people experiencing and remembering? | Story is the truthful narrative people encounter through our words, decisions, behaviors, and artifacts. Story is how people are wired to communicate and remember. It is not spin or invention. |
 | Communication | How is the story carried? | Communication is the ongoing work of carrying the story clearly through every interaction and touchpoint. |
 | Branding | How do we intentionally express who we are? | Branding is the visible and verbal expression of identity, mission, and story: logos, colors, typography, language, visuals, environments, and other designed signals. |
-| Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with an organization and begins forming perception. |
-| Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory. |
+| Touchpoints | Where do people encounter the Brand? | Touchpoints are any encounter, planned or unplanned, where someone meets your church and begins forming perception. They are the door where a curated message becomes someone's experience. |
+| Brand | What do people actually perceive? | Brand is the perception people carry in their minds after encountering us. It is formed by consistency, experience, trust, and memory, and it becomes the lens the next encounter is read through. |
 | Design | How do we solve the communication problem? | Design is the intentional process of solving communication problems, not merely making things attractive. |
 | Marketing | How do we generously invite people toward meaningful change? | Marketing is the generous and disciplined work of understanding the right people, telling honest stories that resonate, earning trust, and helping them take a faithful next step toward who they are seeking to become. |
 | Evangelistic Marketing | How do we invite people toward who God has called them to be? | Evangelistic Marketing is the generous, truthful, and mission-shaped work of helping people move toward the life, community, and transformation God is calling them into. |
 | Stewardship | What are we responsible to invest? | Stewardship is the responsibility to faithfully invest what has been entrusted to us, not merely protect it. |
+
+---
+
+## The Threshold: Where Mission Becomes Brand
+
+The framework has an inside and an outside, and a threshold between them.
+
+Inside are the things you author and curate: calling, identity, mission, vision, strategy, and the ministries you build. Outside are the things that form in other people and that you cannot control: trust, Brand, and the transformation only God can give.
+
+Curation is intention. Control is outcome. You can curate the inside. You cannot control the outside.
+
+Mission and Brand are not two subjects. They are the same story named from two sides of a door. Mission is its name at home. Brand is its name once it has left the house and passed through people you will never meet. Mission becomes Brand when it leaves home.
+
+The currency changes at the threshold. Inside, you work by curation. Outside, the only currency is trust. You cannot reach across the door and arrange what someone believes about you. The one lever you have on the far side is faithfulness on the near side. A voice kept consistent, long enough, lets what forms outside agree with what is true inside.
+
+This is the question Jesus asks at Caesarea Philippi. "Who do men say that I am" is the Brand question. "But who do you say that I am" is the identity question. He asks both, standing on either side of the threshold, and he does not try to control the first.
+
+For a church the outside can feel secular precisely because it is uncontrolled, so the instinct is to keep the story inside a curated environment where it still feels sacred. Shepherding runs the other way. The shepherd does not keep the flock in the pen. He leads it out to pasture, into terrain he does not own. The outside is not less sacred. It is simply where you trust instead of control. Evangelistic Marketing is the disciplined nerve to walk the story through that door on purpose.
+
+You steward the inside faithfully so the outside can be trusted. You shepherd one voice across a border you do not control.
 
 ---
 
@@ -108,6 +128,14 @@ With strategy, they become ways the mission takes shape.
 A simple working relationship:
 
 > Strategy decides what needs to be clarified, built, changed, or strengthened. Ministries organize the work. Ministry elements make that work tangible. Communication explains and invites people into it. Touchpoints are where people encounter it. Brand is the perception formed through those encounters.
+
+### Ministry Elements and Touchpoints
+
+Keep these two distinct, because their lists overlap and the blur is where clarity goes to die.
+
+A ministry element is a decision you make to serve the ministry, such as a service start time or a coffee bar. It lives inside, and it shapes other elements. A service start time sets turnaround between services, check-in windows, parking, and traffic flow. A touchpoint is what happens when someone interacts with that element. One element usually creates many touchpoints. The coffee bar is one decision. The line, the volunteer, the first taste, and the sign above it are all touchpoints.
+
+The relationship is the same crossing the rest of the framework describes. Intention becomes interaction becomes perception. In concrete terms, a ministry element becomes a touchpoint becomes Brand. You curate the element. You cannot control what the touchpoint forms in someone, you can only prepare it. And Brand, once formed, becomes the lens the next touchpoint is read through.
 
 ---
 
@@ -252,7 +280,7 @@ A simple working relationship:
 3. Use **Ministry** when referring to the whole work of the church.
 4. Use **ministries** when referring to organized expressions of that work, such as youth, kids, groups, Sunday services, worship, hospitality, tech, care, or outreach.
 5. Use **ministry elements** when referring to the specific components that make ministries tangible, such as service times, coffee bars, check-in processes, sermon series, signage, scripts, follow-up messages, or curriculum.
-6. Use **touchpoints** when referring to any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with the organization and begins forming perception.
+6. Use **touchpoints** when referring to any encounter (planned or unplanned, intentional or unintentional) where someone comes into contact with the organization and begins forming perception.
 7. Use **marketing** when referring to generous, empathetic invitation that helps the right people understand, trust, and move toward meaningful change through honest stories that resonate.
 8. Use **Evangelistic Marketing** when referring to marketing submitted to the Gospel: generous, truthful invitation that helps people move toward who God has called them to be.
 9. Do not use **Brand** as shorthand for “visual identity.”
@@ -272,22 +300,22 @@ A simple working relationship:
 
 When writing, reviewing, or leading a creative conversation, move upward through these questions:
 
-1. **Kingdom** — What does God desire?
-2. **Calling** — What have we been entrusted to steward?
-3. **Identity** — Who are we?
-4. **Mission** — Why do we exist?
-5. **Vision** — Where are we going?
-6. **Strategy** — How will we move there?
-7. **Ministry** — What is the church called to do?
-8. **Ministries** — How will the church organize and carry out that work?
-9. **Ministry Elements** — What specific components will make the work tangible?
-10. **Story** — What should people experience and remember?
-11. **Communication** — How will we carry that story?
-12. **Branding** — What expressions will make it tangible?
-13. **Touchpoints** — Where will people actually encounter it?
-14. **Marketing** — How will we generously invite the right people toward meaningful change?
-15. **Evangelistic Marketing** — How will we help people move toward who God has called them to be?
-16. **Brand** — What are people actually perceiving?
+1. **Kingdom:** What does God desire?
+2. **Calling:** What have we been entrusted to steward?
+3. **Identity:** Who are we?
+4. **Mission:** Why do we exist?
+5. **Vision:** Where are we going?
+6. **Strategy:** How will we move there?
+7. **Ministry:** What is the church called to do?
+8. **Ministries:** How will the church organize and carry out that work?
+9. **Ministry Elements:** What decisions support and serve the ministry?
+10. **Story:** What should people experience and remember?
+11. **Communication:** How will we carry that story?
+12. **Branding:** What expressions will make it tangible?
+13. **Touchpoints:** Where will people actually encounter it?
+14. **Marketing:** How will we generously invite the right people toward meaningful change?
+15. **Evangelistic Marketing:** How will we help people move toward who God has called them to be?
+16. **Brand:** What are people actually perceiving?
 
 Preferences belong lower on the ladder.
 

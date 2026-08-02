@@ -37,6 +37,7 @@ header('Content-Type: text/html; charset=utf-8');
   <meta name="twitter:description" content="<?php echo blog_e($description); ?>">
   <meta name="twitter:image" content="<?php echo blog_e(blog_site_url('/images/og-image.png')); ?>">
   <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="stylesheet" href="/css/framework-map.css">
 </head>
 <body class="blog-site framework-page">
 <?php blog_site_header(); ?>
@@ -173,7 +174,7 @@ header('Content-Type: text/html; charset=utf-8');
         </div>
         <div>
           <dt>Ministry Elements</dt>
-          <dd><strong>What makes a ministry tangible?</strong> Ministry elements are the practical pieces people can see and experience, such as service times, check-in, coffee, curriculum, events, volunteer roles, follow-up, and communication pipelines.</dd>
+          <dd><strong>What decisions support the ministry?</strong> Ministry elements are the decisions that support and serve a ministry, such as service times, check-in, coffee, curriculum, volunteer roles, and follow-up. Each decision shapes the others, and each becomes a touchpoint the moment someone interacts with it.</dd>
         </div>
         <div>
           <dt>Systems</dt>
@@ -371,5 +372,6 @@ header('Content-Type: text/html; charset=utf-8');
 </main>
 
 <?php blog_site_footer(); ?>
+<script src="/js/framework-map.js" defer></script>
 </body>
 </html>

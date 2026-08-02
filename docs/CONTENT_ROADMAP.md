@@ -22,6 +22,11 @@ Titles marked ✍️ have working drafts in `posts/` (written with AI assistance
 - The Right Story, Told the Right Way ✍️ *(cornerstone — topic: Foundations)*
 - Your Church Already Has a Brand ✍️
 - Brand Is the Referee ✍️
+- Mission Becomes Brand When It Leaves Home *(working titles: How Mission Becomes Brand; When the Story Leaves Home; Who Do Men Say That I Am)*
+  - Thesis: Inside your walls you can curate the story. The moment it crosses into other people it becomes Brand, which you can only shepherd, not control. The framework has a threshold between what you author (calling, identity, mission, strategy) and what forms in others (trust, Brand, transformation). At that line control gives way to trust. The story crosses at the touchpoints, which are the door.
+  - Scripture spine: "Who do men say that I am" is the Brand question; "But who do you say that I am" is the identity question (Matthew 16). The one person who could have controlled the narrative asked what was forming outside instead.
+  - Guardrail: the outside is not less sacred than the sanctuary. Churches over-curate because the uncontrolled feels secular. Shepherding leads the flock out to pasture rather than fencing the story inside the pen.
+  - Companion interactive: this essay pairs with the interactive asset planned for the `#evangelisticMarketingMap` mount on `/evangelistic-marketing-framework`. Design direction: an animation of the communications process as a threshold crossing. One story leaves home (mission), passes through the touchpoints (the door), and arrives on the far side as Brand (perception). A consistent voice keeps it recognizable across the crossing; drift scatters it and erodes trust. What forms outside loops back to test whether it agrees with what is true inside. Not a node map. A crossing where control gives way to trust. See CONCEPT_MAP.md "The Threshold: Where Mission Becomes Brand."
 - The Most Expensive Word in Church Communications ✍️
 - Marketing Isn't About Selling Jesus
 - Every Church Has a Front Door

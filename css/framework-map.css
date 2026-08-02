@@ -1,0 +1,321 @@
+.framework-map-mount {
+  min-height: 0;
+  align-items: stretch;
+  padding: clamp(18px, 3vw, 30px);
+}
+
+.emap-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(16px, 3vw, 30px);
+  align-items: start;
+  width: 100%;
+}
+
+.emap-cap {
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  text-align: center;
+}
+
+.emap-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  filter: drop-shadow(0 10px 14px rgba(43, 42, 39, 0.14));
+}
+
+.emap-band {
+  flex: 0 0 auto;
+  max-height: 0;
+  opacity: 0;
+  padding: 0 16px;
+  border-bottom: 0 solid transparent;
+  transform: translateY(10px);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  transition: max-height 0.45s ease, opacity 0.4s ease, padding 0.45s ease,
+    border-bottom-width 0.45s ease, transform 0.45s ease;
+}
+
+.emap-band.in {
+  max-height: 280px;
+  opacity: 1;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-width: 6px;
+  transform: translateY(0);
+}
+
+.emap-band:hover {
+  filter: brightness(1.03);
+}
+
+.emap-band.active {
+  box-shadow: inset 0 0 0 2px var(--ink), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.emap-band__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  opacity: 0;
+  transform: translateX(-22px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.emap-band__row.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.emap-ico {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--hairline);
+  background: var(--paper);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emap-panel__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.emap-panel__ico {
+  display: inline-flex;
+  color: var(--sec, var(--blue));
+}
+
+.emap-panel__ico svg {
+  width: 22px;
+  height: 22px;
+}
+
+.emap-band__title {
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.emap-band__tag {
+  font-family: var(--mono);
+  font-size: 0.5625rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+}
+
+.emap-band__q {
+  font-family: var(--serif-text, Georgia, serif);
+  font-size: 1.05rem;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-top: 3px;
+}
+
+.emap-replay {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  padding: 8px 13px;
+  cursor: pointer;
+}
+
+.emap-panel {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  padding: clamp(16px, 2.5vw, 24px);
+  min-height: 220px;
+}
+
+.emap-panel__label {
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: var(--sec, var(--blue));
+}
+
+.emap-panel__q {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.12;
+  color: var(--ink);
+  margin: 6px 0 0;
+}
+
+.emap-panel__conn {
+  font-family: var(--serif-text, Georgia, serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 12px 0 0;
+}
+
+.emap-terms {
+  margin: 16px 0 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.emap-term {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.emap-term__name {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+.emap-term__q {
+  font-family: var(--serif-text, Georgia, serif);
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+.emap-term__def {
+  font-family: var(--serif-text, Georgia, serif);
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+
+.emap-panel__link {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.emap-panel__link:hover {
+  color: var(--ink);
+}
+
+.emap-qlist {
+  margin-top: 14px;
+  border-left: 3px solid var(--sec-soft, var(--hairline));
+  padding-left: 14px;
+}
+
+.emap-q-item {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.emap-q-item.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.emap-q-item__name {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--sec, var(--blue));
+}
+
+.emap-q-item__q {
+  display: block;
+  font-family: var(--serif-text, Georgia, serif);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-top: 2px;
+}
+
+.framework-section-ico {
+  display: block;
+  line-height: 0;
+  margin-bottom: 8px;
+}
+
+.framework-section-ico svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 820px) {
+  .emap-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .framework-map-mount {
+    padding: clamp(14px, 4vw, 22px);
+  }
+  .emap-panel {
+    padding: 18px;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .emap-band {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .emap-band__tag {
+    display: none;
+  }
+  .emap-ico {
+    width: 38px;
+    height: 38px;
+  }
+  .emap-band__q {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 759px) {
+  .framework-neighborhood__rail {
+    order: 2;
+    border-top: 1px solid var(--hairline);
+    padding-top: 18px;
+    margin-top: 2px;
+  }
+  .framework-neighborhood__rail ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    grid-template-columns: none;
+    margin: 12px 0 16px;
+  }
+  .framework-neighborhood__rail li {
+    border: 1px solid var(--hairline);
+    border-radius: 0;
+    padding: 5px 11px;
+  }
+  .framework-neighborhood__rail .read-link {
+    margin-top: 0;
+  }
+}

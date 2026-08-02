@@ -53,6 +53,20 @@ This file complements EDITORIAL_GUIDE.md (the "why") with the concrete "how."
 - In a church communications department, it can feel like there are twenty
   supervisors. A clear system gives legitimate requests a shared path.
 
+- Mission becomes Brand when it leaves home. The framework has a threshold
+  between what you author and control (calling, identity, mission, strategy) and
+  what forms in other people and you cannot control (trust, Brand,
+  transformation). At that line, control gives way to trust. Shepherding means
+  leading the story across a border you do not own, not fencing it inside a
+  curated room. The outside is not less sacred than the sanctuary.
+
+- Curate, not control. Prefer "curate" for the faithful inside work because it
+  implies intention (shaping the encounter with care). Reserve "control" for the
+  outcome you cannot guarantee and must release (the perception that forms in
+  other people). Churches are tempted to control what forms outside; the faithful
+  posture is to curate inside and trust outside. Curation is intention, control
+  is outcome.
+
 ## Punctuation
 
 - **No em dashes.** They read as an obvious AI tell. Use parentheses for asides,
@@ -64,6 +78,15 @@ This file complements EDITORIAL_GUIDE.md (the "why") with the concrete "how."
   over-symmetry, and "it's not X, it's Y" pile-ups when overused).
 - Don't number ideas, sections, lists, or interface elements unless Brent
   specifically asks for numbering. Let hierarchy come from language and design.
+
+## Ideas and framing
+
+- Funnels are not the enemy; depersonalization is. A funnel simply describes how
+  attention narrows. The problem is treating the people inside it as numbers to
+  move rather than people to serve, which is what makes communication feel
+  impersonal and mechanically linear. Avoid funnel imagery and language that
+  reduces people to conversion stages, but do not overcorrect into pretending the
+  journey has no shape. The journey has a shape; keep it human.
 
 ## Process (how we edit together)
 

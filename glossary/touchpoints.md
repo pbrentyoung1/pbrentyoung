@@ -2,9 +2,14 @@
 term: Touchpoints
 aliases: Encounters, Brand encounters
 principles: Brand builds trust, Communication is stewardship
+link1: Mission | /glossary#mission | The story before it crosses
+link2: Brand | /glossary#brand | The perception it becomes on the other side
+link3: Trust | /glossary#trust | The currency you spend once control is gone
 ---
 
-Touchpoints are any encounter — planned or unplanned, intentional or unintentional — where someone comes into contact with an organization and begins forming perception.
+Touchpoints are any encounter, planned or unplanned, intentional or unintentional, where someone comes into contact with your church and begins forming perception.
+
+Touchpoints are the threshold. They are the door where your story leaves home. Inside, you can curate the message: the words you choose, the design you approve, the way a decision gets explained. At the touchpoint, that message crosses into someone else's experience, beyond anything you can arrange in the moment. What remains yours is preparation. You can ready the encounter, prepare a place, and make the welcome tangible. This is where mission becomes Brand, and every touchpoint either confirms the story you meant to tell or quietly contradicts it.
 
 Touchpoints are not limited to designed materials or official communication channels. They include the website, signage, lobby, parking lot, email, sermon graphic, social post, livestream, follow-up text, classroom, printed piece, and hallway conversation. They also include an overheard conversation at work, a friend's story about visiting, a Google review, a neighbor's impression, a comment thread, or the memory someone still carries from years ago.
 
@@ -18,4 +23,4 @@ Touchpoints are every place people encounter the church, its people, its story, 
 
 ## What remains true
 
-Branding creates intentional signals. Touchpoints include every place those signals, behaviors, stories, reputations, and experiences are encountered. Brand is the perception people carry afterward.
+Branding creates the signals you curate. Touchpoints are the door where those signals cross into experience you cannot control. Brand is the perception people carry away on the other side.

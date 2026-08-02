@@ -4,11 +4,14 @@ aliases: Perception, Reputation, Trust, Memory
 principles: Brand builds trust, Brand is the referee
 link1: Your Church Already Has a Brand | /blog/your-church-already-has-a-brand | Why the question is intention, not existence
 link2: Brand Is the Referee | /blog/brand-is-the-referee | How Brand ends the battle of preferences
+link3: Mission | /glossary#mission | The story before it left home
 ---
 
 Brand is the perception people carry in their minds after encountering an organization.
 
 Brand is not the logo, color palette, font system, website, social media template, or style guide. Those are part of branding. Brand is what people believe, remember, feel, and expect after repeated encounters with an organization. It is formed through consistency, experience, trust, memory, and every touchpoint where the story is confirmed or contradicted.
+
+Brand also runs in reverse. Once it forms, it becomes the lens people read the next encounter through. When people already trust you, a moment that goes wrong is given grace. When trust has thinned, even a good moment reads as suspect. So Brand is not only formed by perception. It quietly shapes the perception that comes next.
 
 ## In business
 
