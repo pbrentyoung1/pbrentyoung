@@ -1,5 +1,6 @@
 <?php
 
+use League\CommonMark\Extension\Footnote\FootnoteExtension;
 use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -322,6 +323,7 @@ function blog_markdown($markdown) {
       'html_input' => 'strip',
       'allow_unsafe_links' => false,
     ));
+    $converter->getEnvironment()->addExtension(new FootnoteExtension());
   }
 
   $html = (string) $converter->convert($markdown);

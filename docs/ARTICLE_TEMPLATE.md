@@ -42,6 +42,8 @@ Optional frontmatter: `banner:` (overrides the default banner path), `bannerAlt:
 
 The server renders standalone images as editorial figures. The alt text serves accessibility; the optional quoted title becomes the visible caption. Inline images do not need to be 1200 × 630 — use the source dimensions that best fit the image, optimized for the web.
 
+**Footnotes.** Use Markdown footnotes when a source should substantiate a claim without interrupting the article's voice. Place `[^1]` immediately after the supported sentence and add the matching `[^1]: Source note` definition at the end of the Markdown file. Keep footnotes concise, identify informal or limited evidence honestly, and link to the primary source when possible.
+
 **URLs.** Posts live at `brentyoung.org/blog/<slug>`. PHP renders the Markdown, contents navigation, taxonomy, related articles, and per-post social/search metadata before the page is sent. Publishing is unchanged: write the Markdown into `posts/`, add the filename to `posts/index.json`, commit, and deploy. The RSS feed and public sitemap update automatically.
 
 ---

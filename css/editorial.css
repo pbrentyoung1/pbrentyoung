@@ -1703,6 +1703,33 @@ img.pcard-cue {
 
 .article-body a:hover { color: var(--rust); text-decoration-color: var(--rust); }
 
+.article-body .footnote-ref {
+  font-family: var(--mono);
+  font-size: 0.68em;
+  line-height: 1;
+  vertical-align: super;
+}
+
+.article-body .footnotes {
+  max-width: 68ch;
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-muted);
+  font-size: 0.82em;
+  line-height: 1.6;
+}
+
+.article-body .footnotes hr { display: none; }
+.article-body .footnotes ol { margin-bottom: 0; }
+.article-body .footnotes p { margin-bottom: 0.65em; }
+
+.article-body .footnote-backref {
+  font-family: var(--mono);
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
 .article-body hr {
   border: none;
   border-top: 1px solid var(--hairline);
