@@ -21,22 +21,28 @@
     { id: 'encounter-perception', title: 'Encounter & Perception', q: 'What do people actually experience?', icon: 'eye', face: '#e6e2d6', edge: '#c9c2ad', ink: '#736c59', tag: 'what people see', order: 4 }
   ];
   var domOrder = cfg.slice().sort(function (a, b) { return b.order - a.order; });
+  var mobileOrder = ['foundations', 'ministry-strategy', 'story-expression', 'encounter-perception', 'invitation-transformation'];
 
   mount.innerHTML =
     '<div class="emap-wrap">' +
       '<div class="emap-left">' +
-        '<div class="emap-cap" style="margin-bottom:14px;">The framework, from the ground up</div>' +
+        '<div class="emap-cap" id="emapCap" style="margin-bottom:14px;">The framework, from the ground up</div>' +
         '<div class="emap-stack" id="emapStack"></div>' +
-        '<div style="display:flex;justify-content:center;margin-top:14px;"><button class="emap-replay" id="emapReplay" type="button">Build again</button></div>' +
+        '<div class="emap-replay-wrap"><button class="emap-replay" id="emapReplay" type="button">Build again</button></div>' +
       '</div>' +
       '<div class="emap-panel" id="emapPanel" role="region" aria-live="polite" aria-label="Selected framework layer"></div>' +
     '</div>';
 
+  var wrap = mount.querySelector('.emap-wrap');
+  var left = mount.querySelector('.emap-left');
   var stack = document.getElementById('emapStack');
   var panel = document.getElementById('emapPanel');
   var replay = document.getElementById('emapReplay');
+  var cap = document.getElementById('emapCap');
   var bandEls = {};
   var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var compactMap = window.matchMedia && window.matchMedia('(max-width: 820px)');
+  var selectedId = null;
 
   domOrder.forEach(function (c) {
     var d = document.createElement('button');
@@ -59,10 +65,54 @@
           '<div class="emap-band__q">' + c.q + '</div>' +
         '</div>' +
       '</div>';
-    d.addEventListener('click', function () { select(c.id); });
+    d.insertAdjacentHTML('beforeend', '<span class="emap-band__toggle" aria-hidden="true"></span>');
+    d.addEventListener('click', function () {
+      if (compactMap.matches && selectedId === c.id && !panel.hidden) collapseMobile();
+      else {
+        select(c.id);
+        if (compactMap.matches) {
+          setTimeout(function () {
+            d.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+          }, 0);
+        }
+      }
+    });
     stack.appendChild(d);
     bandEls[c.id] = d;
   });
+
+  function setBandState(id) {
+    Object.keys(bandEls).forEach(function (k) {
+      var active = k === id;
+      bandEls[k].classList.toggle('active', active);
+      if (compactMap.matches) {
+        bandEls[k].removeAttribute('aria-pressed');
+        bandEls[k].setAttribute('aria-expanded', active ? 'true' : 'false');
+      } else {
+        bandEls[k].setAttribute('aria-pressed', active ? 'true' : 'false');
+        bandEls[k].removeAttribute('aria-expanded');
+      }
+    });
+  }
+
+  function placePanel() {
+    if (compactMap.matches) {
+      mobileOrder.forEach(function (id) { stack.appendChild(bandEls[id]); });
+      cap.textContent = 'Choose a layer to open it';
+      if (selectedId && bandEls[selectedId]) {
+        bandEls[selectedId].insertAdjacentElement('afterend', panel);
+        panel.hidden = false;
+      } else {
+        panel.hidden = true;
+      }
+    } else {
+      domOrder.forEach(function (c) { stack.appendChild(bandEls[c.id]); });
+      cap.textContent = 'The framework, from the ground up';
+      left.insertAdjacentElement('afterend', panel);
+      panel.hidden = false;
+    }
+    setBandState(selectedId);
+  }
 
   function sectionData(id) {
     var sec = document.getElementById(id);
@@ -101,11 +151,8 @@
     var c = null;
     cfg.forEach(function (x) { if (x.id === id) c = x; });
     if (!c) return;
-    Object.keys(bandEls).forEach(function (k) {
-      var active = k === id;
-      bandEls[k].classList.toggle('active', active);
-      bandEls[k].setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
+    selectedId = id;
+    setBandState(id);
     animateIcon(bandEls[id].querySelector('.emap-ico'));
     panel.style.setProperty('--sec', c.ink);
     panel.style.setProperty('--sec-soft', c.edge);
@@ -123,12 +170,19 @@
       '</div>' +
       '<div class="emap-qlist">' + items + '</div>' +
       '<a class="emap-panel__link" href="#' + id + '">Read the ' + esc(c.title) + ' section &rarr;</a>';
+    placePanel();
     animateIcon(panel.querySelector('.emap-panel__ico'));
     panelTimers.forEach(clearTimeout); panelTimers = [];
     var qs = panel.querySelectorAll('.emap-q-item');
     Array.prototype.forEach.call(qs, function (el, i) {
       panelTimers.push(setTimeout(function () { el.classList.add('in'); }, 80 + i * 95));
     });
+  }
+
+  function collapseMobile() {
+    selectedId = null;
+    setBandState(null);
+    panel.hidden = true;
   }
 
   function resetPanel() {
@@ -157,18 +211,20 @@
     built = false;
     replay.disabled = true;
     stack.setAttribute('aria-busy', 'true');
+    selectedId = null;
     resetPanel();
     Object.keys(bandEls).forEach(function (k) {
       bandEls[k].classList.remove('active');
       bandEls[k].setAttribute('aria-pressed', 'false');
       bandEls[k].disabled = true;
     });
+    placePanel();
     stack.style.height = measure() + 'px';
     domOrder.forEach(function (c) {
       bandEls[c.id].classList.remove('in');
       bandEls[c.id].querySelector('.emap-band__row').classList.remove('in');
     });
-    if (reducedMotion) {
+    if (compactMap.matches || reducedMotion) {
       Object.keys(bandEls).forEach(function (k) {
         bandEls[k].classList.add('in');
         bandEls[k].querySelector('.emap-band__row').classList.add('in');
@@ -208,6 +264,25 @@
     clearTimeout(rzTimer);
     rzTimer = setTimeout(function () { stack.style.height = 'auto'; }, 120);
   });
+
+  function handleMapModeChange() {
+    timers.forEach(clearTimeout); timers = [];
+    Object.keys(bandEls).forEach(function (k) {
+      bandEls[k].classList.add('in');
+      bandEls[k].querySelector('.emap-band__row').classList.add('in');
+      bandEls[k].disabled = false;
+    });
+    stack.style.height = 'auto';
+    stack.setAttribute('aria-busy', 'false');
+    replay.disabled = false;
+    built = true;
+    if (!selectedId) selectedId = 'foundations';
+    placePanel();
+    select(selectedId);
+  }
+
+  if (compactMap.addEventListener) compactMap.addEventListener('change', handleMapModeChange);
+  else if (compactMap.addListener) compactMap.addListener(handleMapModeChange);
 
   replay.addEventListener('click', build);
 
