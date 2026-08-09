@@ -510,7 +510,7 @@ function blog_nav_menu() {
 function blog_tools_menu() {
   ?>
   <div class="nav-dropdown nav-tools">
-    <a class="nav-link nav-dropdown-toggle" href="/community-snapshot" aria-haspopup="true" aria-expanded="false" aria-controls="navToolsMenu">TOOLS</a>
+    <a class="nav-link nav-dropdown-toggle" href="/evangelistic-marketing-framework" aria-haspopup="true" aria-expanded="false" aria-controls="navToolsMenu">TOOLS</a>
     <div class="nav-dropdown-menu nav-tools-menu" id="navToolsMenu" aria-label="Tools and reference">
       <span class="nav-dropdown-menu__label">TOOLS &amp; REFERENCE</span>
       <a href="/evangelistic-marketing-framework"><strong>Evangelistic Marketing Framework</strong><span>Explore how the ideas connect.</span></a>
@@ -536,7 +536,13 @@ function blog_site_header() {
         <a class="nav-link" href="#contact">CONTACT</a>
         <span class="nav-colophon">TABLE OF CONTENTS &middot; BY-2026</span>
       </nav>
-      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav">MENU</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open menu">
+        <svg class="menu-toggle__icon" aria-hidden="true" fill="none" viewBox="0 0 24 24">
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
   </header>
   <?php

@@ -23,7 +23,7 @@
     n.classList.toggle("open", open);
     n.setAttribute("aria-hidden", open ? "false" : "true");
     t.setAttribute("aria-expanded", open ? "true" : "false");
-    t.textContent = open ? "CLOSE" : "MENU";
+    t.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     document.body.classList.toggle("nav-open", open);
   }
 
