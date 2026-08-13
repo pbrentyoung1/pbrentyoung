@@ -59,6 +59,7 @@ header('Content-Type: text/html; charset=utf-8');
   <link rel="canonical" href="<?php echo blog_e($canonical); ?>">
   <?php echo blog_google_tag(); ?>
   <link rel="alternate" type="application/rss+xml" title="Brent Young Blog" href="/feed.xml">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

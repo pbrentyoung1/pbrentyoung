@@ -223,6 +223,7 @@ header('Cache-Control: no-store, max-age=0');
   <meta name="theme-color" content="#f4f1ea">
   <link rel="canonical" href="<?php echo blog_e($canonical); ?>">
   <?php echo blog_google_tag(); ?>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" href="/favicon.ico" sizes="48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">

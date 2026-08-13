@@ -527,7 +527,10 @@ function blog_site_header() {
   ?>
   <header class="site-head">
     <div class="wrap">
-      <a class="wordmark" href="/">BRENT YOUNG</a>
+      <a class="wordmark" href="/">
+        <img class="wordmark__mark" src="/favicon.svg" alt="" width="26" height="26" aria-hidden="true">
+        <span class="wordmark__text">BRENT YOUNG</span>
+      </a>
       <nav class="site-nav" id="siteNav" aria-label="Site">
         <a class="nav-link" href="/#principles">PRINCIPLES</a>
         <a class="nav-link" href="/#flat-file">THE FILE</a>

@@ -336,11 +336,27 @@ img.pcard-cue {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--sans);
   font-weight: 700;
   font-size: 0.875rem;
   letter-spacing: 3px;
   text-decoration: none;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.wordmark__mark {
+  display: block;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+}
+
+.wordmark__text {
+  min-width: 0;
 }
 
 .site-nav { display: flex; align-items: center; gap: 18px; }

@@ -144,6 +144,18 @@ The visual result is evidence that the communication problem was understood.
 
 ---
 
+# Visual Identity
+
+The site mark is a funnel-exclamation symbol. It should read first as
+punctuation: attention, emphasis, invitation, and clarity. On second look, the
+stacked upper form can suggest a marketing funnel.
+
+Use it as the favicon and quiet identifier beside the Brent Young wordmark. Keep
+it editorial and restrained. Do not turn it into a labeled funnel diagram, sales
+chart, or generic marketing icon.
+
+---
+
 # Before / After
 
 Every article should illustrate transformation.
