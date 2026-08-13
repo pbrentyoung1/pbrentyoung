@@ -78,6 +78,29 @@ This file complements EDITORIAL_GUIDE.md (the "why") with the concrete "how."
   over-symmetry, and "it's not X, it's Y" pile-ups when overused).
 - Don't number ideas, sections, lists, or interface elements unless Brent
   specifically asks for numbering. Let hierarchy come from language and design.
+- **Avoid the single-sentence-paragraph staccato.** A wall of one-line
+  paragraphs, each on its own, is one of the clearest AI tells. Write like an
+  expert blog writer and pastor: mostly full, connected paragraphs with real
+  transitions and varied rhythm. Keep a short line only when it genuinely lands
+  for emphasis, and use it sparingly. When an outline arrives choppy, prose it
+  up before publishing rather than preserving the chop.
+- **No church-shopping / consumer-choice framing.** Don't write about people
+  "choosing," "picking," or "comparing" churches, or about what "settles the
+  question" or "where a family lands," as though church were a restaurant. A
+  family is drawn to a particular church, senses they could belong, and feels
+  moved to take a next step. Prefer "drawn to," "feels like home," "sense they
+  belong," "inspired to take a next step." This is theological, not just tonal:
+  we don't manufacture desire; God draws people, and we prepare a place and
+  remove barriers. Exception: "choose a church" is fine when it's part of a
+  deliberate exercise or assignment for the reader (for example, "choose a
+  church you've never visited and go experience its communication"), because
+  that's an intentional task, not someone shopping for a spiritual home.
+- **Use contractions. Keep the language conversational.** Prefer "can't" over
+  "cannot" or "can not," "isn't" over "is not," "they've" over "they have,"
+  "you're" over "you are," and so on. The writing should sound like a person
+  talking across a table, not a formal essay. Leave a phrase uncontracted only
+  when the full form is deliberately there for emphasis or rhythm (for example,
+  "It was not the music"). Otherwise, contract it.
 
 ## Ideas and framing
 

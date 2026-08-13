@@ -2,6 +2,11 @@
 
 Last updated: 2026-07-17 (working glossary and article terminology)
 
+> Historical handoff: this document preserves the detailed implementation
+> chronology through July 17. For the current domains, branches, deployment,
+> integrations, and migration state, read
+> [PROJECT_KNOWLEDGE.md](PROJECT_KNOWLEDGE.md) first.
+
 ## Nightly Handoff — 2026-07-17
 
 ### Shared Header and Footer Architecture
