@@ -313,7 +313,11 @@ intentional PNG choice when Brent selects the final raster graphic.
 
 ## Integrations and Private Configuration
 
-- Public contact email: `brent@brentyoung.org`
+- Public website contact email: `brent@brentyoung.org`
+- Brent's everyday personal email remains `pbrentyoung@gmail.com`. It is active
+  and is not being retired. Use the branded address for public website contact,
+  but do not replace, redirect, or remove the Gmail address from Brent's
+  personal workflows.
 - Google Analytics 4 measurement ID: `G-F1TD8KH28H`
 - Microsoft Clarity project ID: `xnj6ziehcb`
 - Brevo handles blog subscriptions. Its public form action lives in
