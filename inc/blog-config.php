@@ -5,6 +5,8 @@ return array(
   'site_name' => 'Brent Young',
   'author' => 'Brent Young',
   'contact_email' => 'brent@brentyoung.org',
+  'contact_phone_display' => '(936) 337-1813',
+  'contact_phone_tel' => '+19363371813',
   'author_bio' => 'Brent Young helps churches and mission-driven organizations tell the right story clearly, across brand, design, and the systems that hold it together.',
   'author_avatar' => '/assets/img/brentAvatarSquare.png',
   'google_tag_id' => 'G-F1TD8KH28H',

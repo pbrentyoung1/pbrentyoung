@@ -588,7 +588,7 @@ function blog_site_footer() {
       <div class="contact-grid">
         <div class="contact-info">
           <p><strong>Brent Young</strong> &middot; Montgomery, Texas</p>
-          <p class="mono">PHONE: (562) 964-4562</p>
+          <p class="mono">PHONE: <a href="tel:<?php echo blog_e(blog_config('contact_phone_tel')); ?>"><?php echo blog_e(blog_config('contact_phone_display')); ?></a></p>
           <p class="mono">EMAIL: <?php echo blog_e(strtoupper(blog_config('contact_email'))); ?></p>
         </div>
         <div class="hero-actions">

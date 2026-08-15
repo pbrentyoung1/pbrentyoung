@@ -314,6 +314,8 @@ intentional PNG choice when Brent selects the final raster graphic.
 ## Integrations and Private Configuration
 
 - Public website contact email: `brent@brentyoung.org`
+- Public website phone: `(936) 337-1813`, routed through Google Voice. Brent's
+  562-area-code personal cell is private and must not appear on the public site.
 - Brent's everyday personal email remains `pbrentyoung@gmail.com`. It is active
   and is not being retired. Use the branded address for public website contact,
   but do not replace, redirect, or remove the Gmail address from Brent's
