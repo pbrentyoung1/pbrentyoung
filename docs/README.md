@@ -24,6 +24,7 @@ These documents are the source of truth for the project. When the website and th
 | [PUBLISHING_ACTION_PLAN.md](PUBLISHING_ACTION_PLAN.md) | The current action plan. Existing-content use, campaign sequence, resource development, community practice, and the 90-day schedule. |
 | [SEO_PHASE_0_AUDIT.md](SEO_PHASE_0_AUDIT.md) | The SEO baseline. Migration, indexation, crawl, measurement, performance, accessibility, previews, authority-map proposal, and ranked Phase 1 backlog. |
 | [SEO_PHASE_1_IMPLEMENTATION.md](SEO_PHASE_1_IMPLEMENTATION.md) | The SEO implementation contract. Analytics events, sitemap modification dates, parameter indexing policy, entity markup, and production verification. |
+| [SEO_QUESTION_ROADMAP.md](SEO_QUESTION_ROADMAP.md) | The search-content roadmap. Prioritized authority pages, supporting questions, SEM and Google Ad Grants guidance, AI-search standards, and cross-area ownership. |
 | [IDEA_GLOSSARY.md](IDEA_GLOSSARY.md) | The language. Canonical definitions for the ideas the site keeps returning to. |
 | [ARTICLE_TEMPLATE.md](ARTICLE_TEMPLATE.md) | The structure. The editorial beats every article should follow. |
 | [PROJECT_KNOWLEDGE.md](PROJECT_KNOWLEDGE.md) | The current state. Domains, branches, architecture, deployment, integrations, and open operational work. |
@@ -55,6 +56,10 @@ shows and what Phase 1 must address first**.
 
 SEO_PHASE_1_IMPLEMENTATION defines **how the first technical search and
 measurement decisions are implemented and verified**.
+
+SEO_QUESTION_ROADMAP defines **which search questions the site should answer,
+in what order, and how pages, resources, essays, and supporting FAQs work
+together**.
 
 IDEA_GLOSSARY defines **what words mean**.
 

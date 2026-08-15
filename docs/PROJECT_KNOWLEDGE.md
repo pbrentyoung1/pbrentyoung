@@ -74,6 +74,14 @@ pagination variants; a stable Person identifier; article `dateModified`; and
 article Breadcrumb markup. The Community Snapshot is now included in the
 generated sitemap, bringing the implementation inventory to 22 canonical URLs.
 
+`docs/SEO_QUESTION_ROADMAP.md` turns current search-language research into a
+prioritized authority-page and FAQ backlog. `Church Communications` is the
+central subject. The first priorities are a defining authority page, a church
+communication planning guide connected to the Planning Starter Kit, and a
+current, source-backed Google Ad Grants guide for churches. Brand, Content,
+Design, Administration, and Distribution each retain their existing ownership
+boundaries while contributing to the shared roadmap.
+
 `docs/DISTRIBUTION_STRATEGY.md` now defines the channel system, publishing
 cadence, calls to action, experiments, measurement, and the role of
 *Evangelistic Marketing* as a central long-term outcome.
@@ -237,6 +245,7 @@ The canonical editorial references are:
 - `docs/CONTENT_ROADMAP.md`
 - `docs/DISTRIBUTION_STRATEGY.md`
 - `docs/PUBLISHING_ACTION_PLAN.md`
+- `docs/SEO_QUESTION_ROADMAP.md`
 - `docs/evangelistic-marketing/`
 
 The most important voice rules are:
