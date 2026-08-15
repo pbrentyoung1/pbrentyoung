@@ -589,10 +589,10 @@ function blog_site_footer() {
         <div class="contact-info">
           <p><strong>Brent Young</strong> &middot; Montgomery, Texas</p>
           <p class="mono">PHONE: (562) 964-4562</p>
-          <p class="mono">EMAIL: PBRENTYOUNG@GMAIL.COM</p>
+          <p class="mono">EMAIL: <?php echo blog_e(strtoupper(blog_config('contact_email'))); ?></p>
         </div>
         <div class="hero-actions">
-          <a class="btn-ink" href="mailto:pbrentyoung@gmail.com">Email Brent</a>
+          <a class="btn-ink" href="mailto:<?php echo blog_e(blog_config('contact_email')); ?>">Email Brent</a>
           <a class="btn-ghost" href="/assets/pdf/resume.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>

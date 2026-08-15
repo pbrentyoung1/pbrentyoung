@@ -313,6 +313,7 @@ intentional PNG choice when Brent selects the final raster graphic.
 
 ## Integrations and Private Configuration
 
+- Public contact email: `brent@brentyoung.org`
 - Google Analytics 4 measurement ID: `G-F1TD8KH28H`
 - Microsoft Clarity project ID: `xnj6ziehcb`
 - Brevo handles blog subscriptions. Its public form action lives in
