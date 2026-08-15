@@ -491,6 +491,13 @@ header('Cache-Control: no-store, max-age=0');
         link.click();
         link.remove();
         window.setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+        if (window.brentTrackEvent) {
+          window.brentTrackEvent('resource_download', {
+            resource_name: 'community_snapshot_csv',
+            resource_path: '/community-snapshot',
+            link_location: 'snapshot_report'
+          });
+        }
         if (status) status.textContent = 'The spreadsheet download is ready.';
       } catch (error) {
         if (status) status.textContent = 'The spreadsheet could not be created.';

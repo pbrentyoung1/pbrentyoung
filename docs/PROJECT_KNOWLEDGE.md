@@ -1,6 +1,6 @@
 # brentyoung.org Project Knowledge
 
-Last consolidated: 2026-07-30
+Last consolidated: 2026-08-15
 
 This is the current operational source of truth for the website. It preserves
 decisions that were previously scattered across Codex and ChatGPT tasks,
@@ -47,6 +47,27 @@ operate as one coherent body of work.
 
 ### Active cross-area handoffs
 
+`docs/SEO_PHASE_0_AUDIT.md` records the 2026-08-13 technical, indexation,
+analytics, conversion, performance, social-preview, and content-architecture
+baseline. The site is publicly crawlable, but Search Console reports only three
+indexed canonical pages and seventeen pages as discovered but not indexed. The
+former domain's Change of Address remains unaccepted because Google's validator
+could not fetch the working old HTTP homepage redirect. Because the former
+domain had little meaningful traffic or search visibility, this is a
+low-priority monitoring item rather than a gate for deployment or publishing.
+The redundant `www` sitemap has been removed, the canonical Search Console
+property is associated with the `New Site` GA4 stream, and that stream now uses
+the apex URL. Phase 1
+should prioritize measurement and discovery work. Administration & Deployment
+can retry the migration signal occasionally after Google's validator refreshes.
+
+`docs/SEO_PHASE_1_IMPLEMENTATION.md` records the first implementation sprint:
+privacy-conscious subscription, resource, related-content, and contact events;
+durable sitemap modification dates; `noindex, follow` for blog filter and
+pagination variants; a stable Person identifier; article `dateModified`; and
+article Breadcrumb markup. The Community Snapshot is now included in the
+generated sitemap, bringing the implementation inventory to 22 canonical URLs.
+
 `docs/DISTRIBUTION_STRATEGY.md` now defines the channel system, publishing
 cadence, calls to action, experiments, measurement, and the role of
 *Evangelistic Marketing* as a central long-term outcome.
@@ -64,17 +85,36 @@ The following reviews remain open:
 - **Content & Blog:** confirm the twelve-week sequence, editorial readiness,
   and final order; establish and own the book content ledger with the
   *Evangelistic Marketing* working documents; keep `How People Change`
-  unpublished until the John 4 readiness rule is met.
+  unpublished until the John 4 readiness rule is met; review the five
+  provisional SEO authority hubs, their names, page assignments, and primary
+  search jobs before architecture work begins.
 - **Brand & Strategy:** review the desired Brand associations, public audience
   promise, three campaign priorities, Planning Starter Kit promise and audience
   fit, book positioning, and the boundary between reader learning and
-  theological or strategic authority.
+  theological or strategic authority; review the five provisional SEO
+  authority hubs so search architecture expresses the Brand instead of
+  redefining it.
 - **Site Design & Development:** support the Planning Starter Kit landing and
   delivery experience; verify newsletter placement, subscription conversion
-  paths and tracking, social-preview quality, and useful related-content paths.
+  paths and tracking, social-preview quality, and useful related-content paths;
+  deploy and production-check the locally completed Phase 1 event, sitemap,
+  parameter-indexing, and entity-markup work; continue the still-open homepage
+  newsletter path, authority-hub architecture, performance, accessibility,
+  dedicated-preview, and related-content work after their dependencies are
+  settled.
 - **Administration & Deployment:** confirm privacy-conscious attribution and
   analytics for channel traffic, subscription conversion, and returning
-  visitors; verify reliable forms, email, and resource delivery.
+  visitors; verify reliable forms, email, and resource delivery; monitor the
+  former domain's Change of Address and retry it occasionally without allowing
+  it to block deployment or publishing. The
+  redundant `www` sitemap removal, canonical Search Console and GA4 association,
+  and GA4 apex stream URL correction were completed on 2026-08-13. After Phase
+  1 deployment, verify controlled events in GA4 Realtime or DebugView and mark
+  confirmed `subscribe_success` and `resource_download` events as key events.
+- **Social Media & Distribution:** after Administration confirms the two key
+  events in production, use `subscribe_success` and `resource_download` as the
+  newsletter and resource conversion baseline. Keep diagnostic events available
+  for learning without treating every interaction as a conversion.
 
 These are routed dependencies, not authorization for the four areas to edit the
 shared worktree simultaneously. Each area should review the dependency with
@@ -262,6 +302,13 @@ intentional PNG choice when Brent selects the final raster graphic.
 - Microsoft Clarity project ID: `xnj6ziehcb`
 - Brevo handles blog subscriptions. Its public form action lives in
   `inc/blog-config.php`.
+- `js/analytics.js` defines the privacy-conscious GA4 event contract. It must
+  not read or send form values, email addresses, Community Snapshot addresses,
+  or archive search phrases. After production verification, mark
+  `subscribe_success` and `resource_download` as GA4 key events.
+- Static sitemap modification dates live in the `sitemap_lastmod` map in
+  `inc/blog-config.php`. Article `lastmod` values use optional `updated`
+  frontmatter and otherwise fall back to the publication `date`.
 - Community Snapshot uses a Census API key stored in
   `inc/secrets.local.php`.
 
@@ -304,17 +351,30 @@ The migration followed this sequence:
   redirect directly to the new HTTPS host instead of taking two hops.
 - `video.pbrentyoung.com` remained active throughout.
 
-Search Console initially cached a `Couldn't fetch` result for
-`http://pbrentyoung.com/`. The direct redirect was later corrected and verified
-publicly, but the final accepted Change of Address state was not captured in
-the reviewed task history. Verify it in Search Console before declaring the
-search migration complete.
+Search Console returned `Couldn't fetch the page http://pbrentyoung.com/` in
+two Change of Address validation attempts on 2026-08-13. Ownership checks for
+both properties passed. Immediate public checks confirmed direct `301`
+redirects from all four old homepage protocol and host variants to the apex
+canonical URL, including with a Googlebot user agent. Google has not accepted
+the move. On 2026-08-15 Brent reclassified this as a low-priority monitoring
+item because the former domain had little meaningful traffic. Preserve the
+working redirects and retry occasionally, but do not let the validator delay
+deployment, publishing, or current SEO work.
 
 ## Open Work and Risks
 
 ### Operational
 
-- Verify Search Console's final Change of Address status.
+- Deploy and production-verify the event contract recorded in
+  `docs/SEO_PHASE_1_IMPLEMENTATION.md`, then mark confirmed
+  `subscribe_success` and `resource_download` events as GA4 key events.
+- Monitor the former domain's Search Console Change of Address and retry it
+  occasionally after Google's failed fetch result has had time to refresh. It
+  is not a deployment or publishing blocker.
+- Preserve the canonical Search Console and GA4 association and the apex web
+  stream URL completed on 2026-08-13.
+- Record Search Console's final accepted Change of Address status if Google
+  eventually accepts it.
 - Continue new work on `migration/brentyoung-org`.
 - After the migration is complete, reconcile the branches and connect
   `brentyoung.org` to `main`.

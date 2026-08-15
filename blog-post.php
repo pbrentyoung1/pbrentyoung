@@ -81,19 +81,42 @@ foreach ($post['terms'] as $slug) {
   );
 }
 
+$personId = blog_site_url('/#person');
 $jsonld = array(
   '@context' => 'https://schema.org',
-  '@type' => 'BlogPosting',
-  'headline' => $post['title'],
-  'description' => $post['deck'],
-  'datePublished' => $post['date'],
-  'articleSection' => $post['topic'],
-  'keywords' => implode(', ', $post['tags']),
-  'image' => $banner,
-  'wordCount' => $post['word_count'],
-  'mainEntityOfPage' => $canonical,
-  'author' => array('@type' => 'Person', 'name' => 'Brent Young', 'url' => blog_config('site_url')),
-  'publisher' => array('@type' => 'Person', 'name' => 'Brent Young', 'url' => blog_config('site_url')),
+  '@graph' => array(
+    array(
+      '@type' => 'Person',
+      '@id' => $personId,
+      'name' => 'Brent Young',
+      'url' => blog_config('site_url'),
+      'image' => blog_site_url(blog_config('author_avatar')),
+    ),
+    array(
+      '@type' => 'BlogPosting',
+      '@id' => $canonical . '#article',
+      'headline' => $post['title'],
+      'description' => $post['deck'],
+      'datePublished' => $post['date'],
+      'dateModified' => $post['modified'],
+      'articleSection' => $post['topic'],
+      'keywords' => implode(', ', $post['tags']),
+      'image' => $banner,
+      'wordCount' => $post['word_count'],
+      'mainEntityOfPage' => array('@type' => 'WebPage', '@id' => $canonical),
+      'author' => array('@id' => $personId),
+      'publisher' => array('@id' => $personId),
+    ),
+    array(
+      '@type' => 'BreadcrumbList',
+      '@id' => $canonical . '#breadcrumb',
+      'itemListElement' => array(
+        array('@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => blog_site_url('/')),
+        array('@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => blog_site_url('/blog')),
+        array('@type' => 'ListItem', 'position' => 3, 'name' => $post['title'], 'item' => $canonical),
+      ),
+    ),
+  ),
 );
 
 header('Content-Type: text/html; charset=utf-8');
@@ -129,6 +152,7 @@ header('Content-Type: text/html; charset=utf-8');
   <meta property="og:image:alt" content="<?php echo blog_e($post['banneralt']); ?>">
   <meta property="og:locale" content="en_US">
   <meta property="article:published_time" content="<?php echo blog_e($post['date']); ?>">
+  <meta property="article:modified_time" content="<?php echo blog_e($post['modified']); ?>">
   <meta property="article:author" content="Brent Young">
   <meta property="article:section" content="<?php echo blog_e($post['topic']); ?>">
   <?php foreach ($post['tags'] as $tag): ?><meta property="article:tag" content="<?php echo blog_e($tag); ?>">
@@ -152,7 +176,7 @@ header('Content-Type: text/html; charset=utf-8');
     <a class="article-topic" href="<?php echo blog_e(blog_index_url(array('topic' => $post['topic_slug']))); ?>"><?php echo blog_e($post['topic']); ?></a>
     <h1><?php echo blog_e($post['title']); ?></h1>
     <p class="article-hero__deck"><?php echo blog_e($post['deck']); ?></p>
-    <p class="article-hero__byline">BY BRENT YOUNG &middot; <time datetime="<?php echo blog_e($post['date']); ?>"><?php echo blog_e(strtoupper(blog_date($post['date']))); ?></time> &middot; <?php echo $post['read_minutes']; ?> MIN READ</p>
+    <p class="article-hero__byline">BY BRENT YOUNG &middot; <time datetime="<?php echo blog_e($post['date']); ?>"><?php echo blog_e(strtoupper(blog_date($post['date']))); ?></time><?php if ($post['modified'] !== $post['date']): ?> &middot; UPDATED <time datetime="<?php echo blog_e($post['modified']); ?>"><?php echo blog_e(strtoupper(blog_date($post['modified']))); ?></time><?php endif; ?> &middot; <?php echo $post['read_minutes']; ?> MIN READ</p>
   </header>
 
   <figure class="article-banner">
@@ -221,12 +245,12 @@ header('Content-Type: text/html; charset=utf-8');
           <p><?php echo blog_e(blog_config('author_bio')); ?></p>
         </div>
       </section>
-      <div class="article-subscribe"><span>FOLLOW THE NEXT IDEA</span><span class="article-subscribe__actions"><?php echo blog_subscribe_link(); ?><a class="rss-link" href="/feed.xml">RSS</a></span></div>
+      <div class="article-subscribe"><span>FOLLOW THE NEXT IDEA</span><span class="article-subscribe__actions"><?php echo blog_subscribe_link('SUBSCRIBE BY EMAIL &rarr;', 'article_end'); ?><a class="rss-link" href="/feed.xml">RSS</a></span></div>
     </article>
   </div>
 
   <?php if ($related): ?>
-    <section class="related-content" aria-labelledby="relatedTitle">
+    <section class="related-content" aria-labelledby="relatedTitle" data-related-source="<?php echo blog_e($post['slug']); ?>">
       <div class="archive-heading"><div><span class="kicker">Continue reading</span><h2 id="relatedTitle">Related articles</h2></div></div>
       <div class="article-grid article-grid--related">
         <?php foreach ($related as $item) echo blog_post_card($item, 'related'); ?>

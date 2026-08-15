@@ -21,9 +21,7 @@ $page = min($params['page'], $totalPages);
 $pagePosts = array_slice($filtered, ($page - 1) * $perPage, $perPage);
 $topics = blog_topic_counts($posts);
 
-$canonicalParams = $params;
-$canonicalParams['page'] = $page > 1 ? $page : '';
-$canonical = blog_index_url($canonicalParams, true);
+$canonical = blog_index_url(array(), true);
 $title = 'The Blog — Brent Young';
 $description = 'Thoughts on communication, design, leadership, ministry, AI, and the systems that help good work survive real life.';
 
@@ -36,11 +34,20 @@ if ($params['q']) $activeLabel = 'Search results for “' . $params['q'] . '”'
 $collection = array(
   '@context' => 'https://schema.org',
   '@type' => 'CollectionPage',
+  '@id' => $canonical . '#collection',
   'name' => $title,
   'description' => $description,
   'url' => $canonical,
+  'author' => array('@id' => blog_site_url('/#person')),
   'mainEntity' => array_map(function ($post) {
-    return array('@type' => 'BlogPosting', 'headline' => $post['title'], 'url' => blog_post_url($post, true));
+    return array(
+      '@type' => 'BlogPosting',
+      'headline' => $post['title'],
+      'url' => blog_post_url($post, true),
+      'datePublished' => $post['date'],
+      'dateModified' => $post['modified'],
+      'author' => array('@id' => blog_site_url('/#person')),
+    );
   }, $pagePosts),
 );
 
@@ -54,7 +61,7 @@ header('Content-Type: text/html; charset=utf-8');
   <title><?php echo blog_e($title); ?></title>
   <meta name="description" content="<?php echo blog_e($description); ?>">
   <meta name="author" content="Brent Young">
-  <meta name="robots" content="<?php echo blog_e(blog_robots_meta()); ?>">
+  <meta name="robots" content="<?php echo blog_e(blog_index_robots_meta($params)); ?>">
   <meta name="theme-color" content="#f4f1ea">
   <link rel="canonical" href="<?php echo blog_e($canonical); ?>">
   <?php echo blog_google_tag(); ?>
@@ -129,7 +136,7 @@ header('Content-Type: text/html; charset=utf-8');
           <p class="side-label">SUBSCRIBE TO THE BLOG</p>
           <h2>Follow the next idea.</h2>
           <p>New Field Notes, delivered when there is something worth sharing.</p>
-          <div class="subscribe-actions"><?php echo blog_subscribe_link(); ?><a class="rss-link" href="/feed.xml">RSS</a></div>
+          <div class="subscribe-actions"><?php echo blog_subscribe_link('SUBSCRIBE BY EMAIL &rarr;', 'blog_feature'); ?><a class="rss-link" href="/feed.xml">RSS</a></div>
         </section>
         <?php if ($shortlist): ?>
           <section class="short-list">

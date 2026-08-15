@@ -55,6 +55,7 @@ require_once __DIR__ . '/inc/blog.php';
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://brentyoung.org/#person",
     "name": "Brent Young",
     "url": "https://brentyoung.org/",
     "jobTitle": "Creative Director",

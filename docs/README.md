@@ -19,6 +19,8 @@ These documents are the source of truth for the project. When the website and th
 | [CONTENT_ROADMAP.md](CONTENT_ROADMAP.md) | The plan. Content pillars, planned articles, and long-term projects. |
 | [DISTRIBUTION_STRATEGY.md](DISTRIBUTION_STRATEGY.md) | The distribution system. Channel roles, publishing cadence, calls to action, goals, experiments, and performance learning. |
 | [PUBLISHING_ACTION_PLAN.md](PUBLISHING_ACTION_PLAN.md) | The current action plan. Existing-content use, campaign sequence, resource development, community practice, and the 90-day schedule. |
+| [SEO_PHASE_0_AUDIT.md](SEO_PHASE_0_AUDIT.md) | The SEO baseline. Migration, indexation, crawl, measurement, performance, accessibility, previews, authority-map proposal, and ranked Phase 1 backlog. |
+| [SEO_PHASE_1_IMPLEMENTATION.md](SEO_PHASE_1_IMPLEMENTATION.md) | The SEO implementation contract. Analytics events, sitemap modification dates, parameter indexing policy, entity markup, and production verification. |
 | [IDEA_GLOSSARY.md](IDEA_GLOSSARY.md) | The language. Canonical definitions for the ideas the site keeps returning to. |
 | [ARTICLE_TEMPLATE.md](ARTICLE_TEMPLATE.md) | The structure. The editorial beats every article should follow. |
 | [PROJECT_KNOWLEDGE.md](PROJECT_KNOWLEDGE.md) | The current state. Domains, branches, architecture, deployment, integrations, and open operational work. |
@@ -44,6 +46,12 @@ project learns from the response**.
 
 PUBLISHING_ACTION_PLAN defines **what the current publishing campaign does
 next**.
+
+SEO_PHASE_0_AUDIT defines **what the current search and discovery evidence
+shows and what Phase 1 must address first**.
+
+SEO_PHASE_1_IMPLEMENTATION defines **how the first technical search and
+measurement decisions are implemented and verified**.
 
 IDEA_GLOSSARY defines **what words mean**.
 

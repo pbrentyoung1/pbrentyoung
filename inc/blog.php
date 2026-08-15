@@ -46,6 +46,7 @@ function blog_parse_frontmatter($filename, $text) {
     'slug' => $slug,
     'title' => $slug,
     'date' => '1970-01-01',
+    'updated' => '',
     'topic' => 'Field Notes',
     'deck' => '',
     'tags' => array(),
@@ -72,6 +73,9 @@ function blog_parse_frontmatter($filename, $text) {
   $post['draft'] = blog_truthy($post['draft']);
   $post['featured'] = blog_truthy($post['featured']);
   $post['shortlist'] = max(0, (int) $post['shortlist']);
+  $post['modified'] = preg_match('/^\d{4}-\d{2}-\d{2}$/', (string) $post['updated'])
+    ? $post['updated']
+    : $post['date'];
   $post['topic_slug'] = blog_slugify($post['topic']);
   $post['banner'] = $post['banner'] ?: 'assets/img/blog/' . $post['slug'] . '.jpg';
   $post['banneralt'] = $post['banneralt'] ?: $post['title'];
@@ -411,15 +415,26 @@ function blog_robots_meta() {
   return blog_config('blog_public') ? 'index, follow' : 'noindex, follow';
 }
 
+function blog_index_robots_meta($params) {
+  if (!blog_config('blog_public')) return 'noindex, follow';
+
+  $hasParameters = !empty($params['topic'])
+    || !empty($params['tag'])
+    || !empty($params['q'])
+    || (!empty($params['page']) && (int) $params['page'] > 1);
+
+  return $hasParameters ? 'noindex, follow' : 'index, follow';
+}
+
 function blog_subscribe_head() {
   ?>
   <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <?php
 }
 
-function blog_subscribe_link($label = 'SUBSCRIBE BY EMAIL &rarr;') {
+function blog_subscribe_link($label = 'SUBSCRIBE BY EMAIL &rarr;', $location = 'site') {
   $url = blog_config('brevo_form_action');
-  return '<a class="subscribe-link" href="' . blog_e($url) . '" data-subscribe-open>' . $label . '</a>';
+  return '<a class="subscribe-link" href="' . blog_e($url) . '" data-subscribe-open data-analytics-location="' . blog_e($location) . '">' . $label . '</a>';
 }
 
 function blog_subscribe_dialog() {
@@ -594,6 +609,7 @@ function blog_site_footer() {
       <a class="spec-toggle" href="/glossary">GLOSSARY</a>
     </div>
   </footer>
+  <script defer src="/js/analytics.js?v=<?php echo (int) filemtime(__DIR__ . '/../js/analytics.js'); ?>"></script>
   <script src="/js/nav.js"></script>
   <?php
 }
