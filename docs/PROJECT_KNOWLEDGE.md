@@ -22,9 +22,15 @@ editorial direction.
 - The portfolio supports the ideas. The ideas are the primary product.
 - Central belief: **The right story, told the right way.**
 
-The public positioning is that Brent helps churches and mission-driven
-organizations communicate with clarity through story, design, leadership, and
-systems.
+The primary public identity is **Brent Young | Church Communications**.
+
+The public promise is:
+
+> Helping churches communicate their heart with clarity, creativity, and
+> conviction.
+
+Story, design, leadership, Brand, and systems describe disciplines within the
+work. They are not a four-part substitute for the three-part public promise.
 
 ## Project Organization
 

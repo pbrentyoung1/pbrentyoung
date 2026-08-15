@@ -271,10 +271,14 @@ convictions:
 - Marketing can be a generous, truthful invitation rather than manipulation.
 - Church communication begins caring for people before we know who they are.
 
-The practical public promise remains:
+The practical public promise is:
 
-> Helping churches and leaders communicate with clarity, creativity, and
+> Helping churches communicate their heart with clarity, creativity, and
 > conviction.
+
+The primary public identity is **Brent Young | Church Communications**. Channel
+bios may add context, but they should not replace that identity with a narrower
+professional label.
 
 The desired Brand is warm, thoughtful, pastoral, observant, practical,
 creative, and trustworthy.

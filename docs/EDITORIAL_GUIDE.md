@@ -16,25 +16,33 @@ Visitors should leave with the impression that Brent doesn't simply make beautif
 
 # Mission
 
-Helping churches and mission-driven organizations communicate with clarity through story, design, leadership, and systems.
+Helping churches communicate their heart with clarity, creativity, and
+conviction.
 
 ---
 
 # Positioning
 
-Creative Director
+The primary public identity is:
 
-Brand Strategist
+**Brent Young | Church Communications**
 
-Storyteller
+The work draws on:
 
-Systems Thinker
+Creative direction
 
-Teacher
+Brand
 
-Problem Solver
+Storytelling
 
-The common thread is helping organizations tell the right story, clearly and intentionally.
+Systems thinking
+
+Teaching
+
+Problem solving
+
+The common thread is helping churches communicate their heart clearly,
+creatively, and with conviction.
 
 ---
 
