@@ -42,6 +42,11 @@ if (!$post) {
 
 $rendered = blog_markdown($post['md']);
 $toc = count($rendered['toc']) >= 3 ? $rendered['toc'] : array();
+if (($post['toc'] ?? '') === 'overview') {
+  $toc = array_values(array_filter($toc, function ($heading) {
+    return !preg_match('/^\d+\.\s/', $heading['label']);
+  }));
+}
 $related = blog_related_posts($post, 3);
 $canonical = blog_post_url($post, true);
 $banner = blog_banner_url($post, true);

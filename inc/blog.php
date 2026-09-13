@@ -53,6 +53,7 @@ function blog_parse_frontmatter($filename, $text) {
     'principle' => '',
     'banner' => '',
     'banneralt' => '',
+    'toc' => '',
     'draft' => false,
     'featured' => false,
     'shortlist' => 0,

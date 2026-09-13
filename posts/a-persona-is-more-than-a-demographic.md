@@ -7,7 +7,7 @@ tags: personas, audience, research
 terms: persona, brand, customer-journey, future-congregation, touchpoint
 principle: Communication is Stewardship
 banneralt: Illustrated portraits representing the different people a church may be called to serve
-shortlist: 2
+shortlist: 3
 ---
 
 Ask a church who they are trying to reach and one answer appears more than almost any other: young families.

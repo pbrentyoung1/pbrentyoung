@@ -6,7 +6,7 @@ deck: Branding is not the referee. Brand is. It gives your team a shared standar
 tags: brand, branding, preference, creative teams
 terms: brand, branding, audience, creative-brief, trust, story
 principle: Brand Is the Referee
-shortlist: 3
+shortlist: 4
 ---
 
 If you have spent more than a minute in creative leadership, you have probably been in a meeting like this.
