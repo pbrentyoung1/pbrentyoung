@@ -8,6 +8,7 @@ principle: Communication is Stewardship
 terms: evangelistic-marketing, audience, communications-funnel, call-to-action, success-metrics
 bannerAlt: An illustrated field of people, gears, arrows, and search symbols representing many ways to use a Google Ad Grant
 toc: overview
+shortlist: 2
 draft: false
 ---
 

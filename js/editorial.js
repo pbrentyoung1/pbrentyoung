@@ -626,7 +626,7 @@
 
         featureHost.innerHTML =
           '<article class="field-feature" data-topic="' + esc(topicSlug(featured.topic)) + '">' +
-            '<a class="field-feature__image" href="' + postLink(featured) + '"><img src="' + esc(window.ColumnCore.thumbnailPath(featured)) + '" alt="" width="600" height="315"></a>' +
+            '<a class="field-feature__image" href="' + postLink(featured) + '"><img src="' + esc(window.ColumnCore.thumbnailPath(featured)) + '" alt="" width="600" height="315" onerror="this.onerror=null;this.src=\'' + esc(window.ColumnCore.bannerPath(featured)) + '\';"></a>' +
             '<div class="field-feature__body"><div class="field-meta"><a href="' + topicLink(featured) + '">' + esc(featured.topic || "Field Notes") + '</a><span>' + date(featured) + " &middot; " + esc(window.ColumnCore.readTime(featured)) + '</span></div>' +
             '<h3><a href="' + postLink(featured) + '">' + esc(featured.title) + '</a></h3>' +
             '<p>' + esc(featured.deck || "") + '</p>' +
@@ -635,7 +635,7 @@
 
         shortlistHost.innerHTML = '<p class="field-side-label">THE SHORT LIST</p><ol class="field-shortlist">' + shortlist.map(function (p) {
           return '<li data-topic="' + esc(topicSlug(p.topic)) + '"><a href="' + postLink(p) + '">' +
-            '<span class="field-shortlist__thumb"><img src="' + esc(window.ColumnCore.thumbnailPath(p)) + '" alt="" width="64" height="64" onerror="this.parentNode.style.display=\'none\';"></span>' +
+            '<span class="field-shortlist__thumb"><img src="' + esc(window.ColumnCore.thumbnailPath(p)) + '" alt="" width="64" height="64" onerror="this.onerror=null;this.src=\'' + esc(window.ColumnCore.bannerPath(p)) + '\';"></span>' +
             '<span class="field-shortlist__body">' +
             '<span class="field-shortlist__topic">' + esc(p.topic || "Field Notes") + '</span>' +
             '<strong>' + esc(p.title) + '</strong>' +

@@ -7,7 +7,7 @@ tags: audience, calling, communication
 terms: audience, persona, stewardship, evangelistic-marketing
 principle: Communication is Stewardship
 banneralt: Layered silhouettes of a diverse crowd with colorful thought bubbles expressing different emotions and questions
-shortlist: 2
+shortlist: 3
 ---
 
 Ask a leadership team who they are trying to reach, and you will likely hear “everyone.”

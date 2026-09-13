@@ -11,7 +11,7 @@
      principle   — the First Principle the article evidences
      banner      — image path; defaults to assets/img/blog/<slug>.jpg
      bannerAlt   — alt text for the banner plate
-     draft       — any value hides the post
+     draft       — true/1/yes/on hides the post
    Slug = filename without .md.
    ============================================================ */
 (function () {
@@ -152,7 +152,7 @@
       .then(function (list) {
         return list
           .filter(Boolean)
-          .filter(function (p) { return !p.draft; })
+          .filter(function (p) { return !/^(true|1|yes|on)$/i.test(String(p.draft || "")); })
           .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
       });
   }
